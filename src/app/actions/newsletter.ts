@@ -39,7 +39,7 @@ export async function subscribeToNewsletter(
 
     return {
       status: 'success',
-      message: "Welcome to the swarm! You'll hear from us soon.",
+      message: "Welcome to the hive! You'll hear from us soon.",
     };
   } catch (err: any) {
     const message = String(err?.message ?? '');

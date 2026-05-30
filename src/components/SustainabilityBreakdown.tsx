@@ -13,7 +13,7 @@ export default function SustainabilityBreakdown({ ratings }: { ratings: any[] })
   return (
     <div className="bg-white border rounded-2xl p-8 shadow-sm">
       <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <Info className="w-6 h-6 text-green-600" />
+        <Info className="w-6 h-6 text-orange-700" />
         Sustainability Breakdown
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -25,22 +25,22 @@ export default function SustainabilityBreakdown({ ratings }: { ratings: any[] })
           const percentage = (score / maxScore) * 100;
 
           return (
-            <div key={rating.id} className="flex flex-col gap-3 p-4 border rounded-xl hover:border-green-200 transition-colors bg-gray-50/50">
+            <div key={rating.id} className="flex flex-col gap-3 p-4 border rounded-xl hover:border-orange-200 transition-colors bg-gray-50/50">
               <div className="flex justify-between items-center">
                 <div className="flex items-center gap-2">
                   <div className="p-2 bg-white rounded-lg border shadow-sm">
-                    <Icon className="w-5 h-5 text-green-600" />
+                    <Icon className="w-5 h-5 text-orange-700" />
                   </div>
                   <span className="font-bold text-gray-700">{pillarName}</span>
                 </div>
-                <span className="text-sm font-bold bg-green-100 text-green-700 px-2 py-0.5 rounded">
+                <span className="text-sm font-bold bg-orange-100 text-orange-800 px-2 py-0.5 rounded">
                   {score}/{maxScore}
                 </span>
               </div>
               
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div 
-                  className="bg-green-500 h-2 rounded-full transition-all duration-500" 
+                  className="bg-orange-600 h-2 rounded-full transition-all duration-500" 
                   style={{ width: `${percentage}%` }}
                 />
               </div>

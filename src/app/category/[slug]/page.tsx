@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { cache } from 'react';
 import Link from 'next/link';
 import { db } from '@/lib/db';
-import { Bug, ShoppingBag, ChevronRight } from 'lucide-react';
+import { ShoppingBag, ChevronRight } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { DEFAULT_OG_IMAGE, SITE_NAME, absoluteUrl } from '@/lib/seo';
+import HummlanBeeMark from '@/components/HummlanBeeMark';
 
 const getCategory = cache(async (slug: string) => {
   const rs = await db.execute({
@@ -122,11 +123,11 @@ export default async function CategoryPage({
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" />
+            <HummlanBeeMark className="w-8 h-8 text-orange-600" />
             Hummlan.com
           </Link>
           <nav className="flex gap-2 items-center text-sm text-gray-500 font-medium">
-            <Link href="/" className="hover:text-green-600">
+            <Link href="/" className="hover:text-orange-700">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -151,13 +152,13 @@ export default async function CategoryPage({
               <div className="flex bg-gray-100 p-1 rounded-xl border">
                 <Link
                   href={`/category/${slug}?sort=sustainability`}
-                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'sustainability' ? 'bg-white shadow-sm text-green-600' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'sustainability' ? 'bg-white shadow-sm text-orange-700' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   Most Sustainable
                 </Link>
                 <Link
                   href={`/category/${slug}?sort=price`}
-                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'price' ? 'bg-white shadow-sm text-green-600' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'price' ? 'bg-white shadow-sm text-orange-700' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   Cheapest
                 </Link>
@@ -173,23 +174,23 @@ export default async function CategoryPage({
                 className="group bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
               >
                 <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
-                  <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-green-100 transition-all duration-500" />
-                  <div className="absolute top-4 right-4 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                  <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-orange-100 transition-all duration-500" />
+                  <div className="absolute top-4 right-4 bg-orange-700 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
                     HSS: {product.brand_score}/100
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <p className="text-xs text-green-600 font-bold uppercase tracking-wider mb-2">
+                  <p className="text-xs text-orange-700 font-bold uppercase tracking-wider mb-2">
                     {product.brand_name}
                   </p>
-                  <h3 className="font-bold text-gray-900 mb-4 group-hover:text-green-700 transition-colors leading-snug flex-grow">
+                  <h3 className="font-bold text-gray-900 mb-4 group-hover:text-orange-800 transition-colors leading-snug flex-grow">
                     {product.name}
                   </h3>
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
                     <p className="text-lg font-extrabold text-gray-900">
                       {product.min_price ? `$${product.min_price}` : 'Check Price'}
                     </p>
-                    <span className="text-sm font-bold text-green-600">Compare Deals →</span>
+                    <span className="text-sm font-bold text-orange-700">Compare Deals →</span>
                   </div>
                 </div>
               </Link>
@@ -202,7 +203,7 @@ export default async function CategoryPage({
               <p className="text-xl text-gray-500 font-medium">No products found in this category yet.</p>
               <Link
                 href="/"
-                className="mt-6 inline-block bg-green-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-green-700 transition-colors"
+                className="mt-6 inline-block bg-orange-700 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-800 transition-colors"
               >
                 Explore Other Categories
               </Link>
