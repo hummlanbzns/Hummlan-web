@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   Award,
   TrendingDown,
+  BookOpen,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import SustainabilityBreakdown from '@/components/SustainabilityBreakdown';
@@ -269,8 +270,23 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* Detailed Sustainability Breakdown */}
-          <div className="max-w-4xl mx-auto mb-16">
+          <div className="max-w-4xl mx-auto mb-8">
             <SustainabilityBreakdown ratings={ratings} />
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-16 border rounded-2xl bg-blue-50 border-blue-100 p-5 flex items-start gap-3">
+            <BookOpen className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
+            <p className="text-sm text-blue-900 leading-relaxed">
+              This score follows our published framework. See{' '}
+              <Link href="/eu-taxonomy" className="underline font-semibold hover:text-blue-950">
+                EU Taxonomy
+              </Link>{' '}
+              and{' '}
+              <Link href="/csrd" className="underline font-semibold hover:text-blue-950">
+                CSRD
+              </Link>{' '}
+              explainers for the evidence logic behind each rating pillar.
+            </p>
           </div>
 
           <NewsletterSignup />
@@ -279,6 +295,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
+            <Link href="/about" className="hover:text-orange-700">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="hover:text-orange-700">EU Taxonomy</Link>
+            <Link href="/csrd" className="hover:text-orange-700">CSRD</Link>
+          </div>
           <p className="text-gray-500 text-sm">
             © 2025 Hummlan.com. Affiliate marketing helps support our stern and fair sustainability
             research.

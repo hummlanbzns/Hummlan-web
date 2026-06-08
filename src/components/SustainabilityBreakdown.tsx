@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import { CloudSun, RefreshCw, FlaskConical, Users, Sprout, Info } from 'lucide-react';
 
 const pillarIcons: Record<string, any> = {
@@ -55,8 +56,16 @@ export default function SustainabilityBreakdown({ ratings }: { ratings: any[] })
       <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100 flex gap-3">
         <Info className="w-5 h-5 text-blue-600 shrink-0" />
         <p className="text-sm text-blue-800">
-          Our ratings are <strong>"stern but fair"</strong>, based on third-party certifications and EU Taxonomy alignment. 
-          We prioritize verifiable data over brand marketing claims.
+          Our ratings are <strong>"stern but fair"</strong>, based on third-party certifications and
+          EU Taxonomy + CSRD alignment. We prioritize verifiable data over brand marketing claims.{' '}
+          <Link href="/eu-taxonomy" className="underline hover:text-blue-950">
+            EU Taxonomy
+          </Link>{' '}
+          and{' '}
+          <Link href="/csrd" className="underline hover:text-blue-950">
+            CSRD
+          </Link>{' '}
+          explain the framework backbone.
         </p>
       </div>
     </div>

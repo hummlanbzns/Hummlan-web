@@ -15,6 +15,8 @@ export default function AboutPage() {
           <nav className="flex gap-8">
             <Link href="/" className="text-gray-600 font-medium hover:text-orange-700">Home</Link>
             <span className="text-orange-700 font-bold border-b-2 border-orange-700">Our Standards</span>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">EU Taxonomy</Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">CSRD</Link>
           </nav>
         </div>
       </header>
@@ -26,6 +28,28 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               In a world of greenwashing, Hummlan.com provides clarity. Our rating system isn't based on brand marketing—it's based on the backbone of EU Taxonomy and CSRD.
             </p>
+          </section>
+
+          <section className="mb-16 bg-white border rounded-2xl p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-4">
+              <Info className="w-6 h-6 text-orange-700" />
+              <h2 className="text-2xl font-bold text-gray-900">Framework Backbone</h2>
+            </div>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              For full transparency, we publish the two frameworks that power our rating logic.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/eu-taxonomy" className="border rounded-xl p-5 hover:border-orange-300 transition-colors bg-gray-50">
+                <p className="text-xs font-bold uppercase tracking-widest text-orange-700 mb-2">Guide</p>
+                <h3 className="font-bold text-gray-900 mb-2">EU Taxonomy Explained</h3>
+                <p className="text-sm text-gray-600">What sustainability means and how we map it into HSS criteria.</p>
+              </Link>
+              <Link href="/csrd" className="border rounded-xl p-5 hover:border-orange-300 transition-colors bg-gray-50">
+                <p className="text-xs font-bold uppercase tracking-widest text-orange-700 mb-2">Guide</p>
+                <h3 className="font-bold text-gray-900 mb-2">CSRD Explained</h3>
+                <p className="text-sm text-gray-600">How disclosure quality and evidence confidence affect ratings.</p>
+              </Link>
+            </div>
           </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -180,6 +204,11 @@ export default function AboutPage() {
 
       <footer className="bg-white border-t py-12 mt-16">
         <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
+            <Link href="/" className="hover:text-orange-700">Home</Link>
+            <Link href="/eu-taxonomy" className="hover:text-orange-700">EU Taxonomy</Link>
+            <Link href="/csrd" className="hover:text-orange-700">CSRD</Link>
+          </div>
           <Link href="/" className="text-orange-700 font-bold hover:underline">← Back to Homepage</Link>
           <p className="text-gray-400 text-sm mt-8">© 2025 Hummlan.com. Methodology version 1.2 (May 2025).</p>
         </div>
