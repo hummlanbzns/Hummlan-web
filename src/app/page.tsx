@@ -97,6 +97,12 @@ export default async function Home() {
             <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">
               Our Stern Standards
             </Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">
+              EU Taxonomy
+            </Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">
+              CSRD
+            </Link>
           </nav>
         </div>
       </header>
@@ -119,7 +125,7 @@ export default async function Home() {
             </h1>
             <p className="text-xl text-orange-50 mb-10 max-w-2xl mx-auto font-medium">
               We find the cheapest prices for products that actually meet our stern "Hummlan
-              Sustainability Score" — based on real EU Taxonomy data.
+              Sustainability Score" — grounded in EU Taxonomy and CSRD-aligned evidence.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
@@ -284,9 +290,15 @@ export default async function Home() {
               <HummlanBeeMark className="w-10 h-10 text-orange-600" />
               Hummlan.com
             </Link>
-            <nav className="flex gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
+            <nav className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
               <Link href="/about" className="hover:text-orange-700">
                 Our Standards
+              </Link>
+              <Link href="/eu-taxonomy" className="hover:text-orange-700">
+                EU Taxonomy
+              </Link>
+              <Link href="/csrd" className="hover:text-orange-700">
+                CSRD
               </Link>
               <Link href="/privacy" className="hover:text-orange-700">
                 Privacy
