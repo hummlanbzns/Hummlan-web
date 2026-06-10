@@ -124,6 +124,30 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const description = getProductDescription(product);
   const ogImage = toOgImageUrl(product.image_url);
 
+  const reviewSchema = ratings.length > 0
+    ? ratings.map((r) => {
+        const pillarName = r.source_name.replace('Hummlan Pillar: ', '');
+        const score = r.rating_score ?? 0;
+        const maxScore = r.max_score ?? 5;
+        const reviewDescription = r.description || `Sustainability rating for ${pillarName}`;
+        return {
+          '@type': 'Review',
+          author: {
+            '@type': 'Organization',
+            name: 'Hummlan.com',
+          },
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: Number(score),
+            bestRating: Number(maxScore),
+            worstRating: 0,
+          },
+          name: `${pillarName} Sustainability Rating`,
+          description: reviewDescription,
+        };
+      })
+    : [];
+
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -144,9 +168,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           ratingValue: Number(product.brand_score) / 20,
           bestRating: 5,
           worstRating: 1,
-          ratingCount: 1,
+          ratingCount: Math.max(ratings.length, 1),
         }
       : undefined,
+    review: reviewSchema.length > 0 ? reviewSchema : undefined,
     offers: links.map((link: any) => ({
       '@type': 'Offer',
       priceCurrency: link.currency || 'USD',
