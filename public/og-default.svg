@@ -1,0 +1,14 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#065F46" />
+      <stop offset="1" stop-color="#14532D" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="64" y="64" width="1072" height="502" rx="28" fill="white" fill-opacity="0.08" />
+  <text x="96" y="220" fill="#FDE047" font-size="58" font-family="Arial, sans-serif" font-weight="700">Hummlan.com</text>
+  <text x="96" y="300" fill="white" font-size="68" font-family="Arial, sans-serif" font-weight="800">Cheapest &amp; Most Sustainable</text>
+  <text x="96" y="360" fill="white" font-size="68" font-family="Arial, sans-serif" font-weight="800">Products, Sternly Rated</text>
+  <text x="96" y="448" fill="#D1FAE5" font-size="34" font-family="Arial, sans-serif" font-weight="500">EU Taxonomy + CSRD-aligned methodology</text>
+</svg>
