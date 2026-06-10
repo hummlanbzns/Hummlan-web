@@ -48,7 +48,19 @@ const guides = [
     date: 'June 2025',
     icon: '👕',
   },
-  // Future guides will be added here
+  {
+    slug: 'affordable-sustainable-home-essentials',
+    title: 'The Most Affordable Sustainable Home Essentials (Under $20)',
+    description:
+      'We found the cheapest eco-friendly dish soaps, laundry detergents, and cleaners that pass our stern EU Taxonomy & CSRD-aligned ratings. Starting at $0.04/use.',
+    primaryKeyword: 'affordable sustainable home essentials',
+    hssRange: '84–93/100',
+    priceRange: '$3.79–$20',
+    brandCount: 5,
+    productCount: 5,
+    date: 'June 2025',
+    icon: '🧹',
+  },
 ];
 
 export default function BestOfHub() {
