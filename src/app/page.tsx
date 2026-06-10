@@ -94,6 +94,9 @@ export default async function Home() {
             <Link href="/" className="text-gray-900 font-medium hover:text-orange-700">
               Home
             </Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">
+              Best Of
+            </Link>
             <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">
               Our Stern Standards
             </Link>
@@ -291,6 +294,9 @@ export default async function Home() {
               Hummlan.com
             </Link>
             <nav className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
+              <Link href="/best-of" className="hover:text-orange-700">
+                Best Of
+              </Link>
               <Link href="/about" className="hover:text-orange-700">
                 Our Standards
               </Link>
