@@ -39,6 +39,7 @@ export default async function ShopPage({
           </Link>
           <nav className="hidden md:flex gap-8">
             <Link href="/" className="text-gray-900 font-medium hover:text-orange-700">Home</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">Best Of</Link>
             <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">Our Standards</Link>
             <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">EU Taxonomy</Link>
             <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">CSRD</Link>
@@ -99,6 +100,7 @@ export default async function ShopPage({
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
+            <Link href="/best-of" className="hover:text-orange-700">Best Of</Link>
             <Link href="/about" className="hover:text-orange-700">Our Standards</Link>
             <Link href="/eu-taxonomy" className="hover:text-orange-700">EU Taxonomy</Link>
             <Link href="/csrd" className="hover:text-orange-700">CSRD</Link>

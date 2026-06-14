@@ -14,6 +14,7 @@ export default function AboutPage() {
           </Link>
           <nav className="flex gap-8">
             <Link href="/" className="text-gray-600 font-medium hover:text-orange-700">Home</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">Best Of</Link>
             <span className="text-orange-700 font-bold border-b-2 border-orange-700">Our Standards</span>
             <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">EU Taxonomy</Link>
             <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">CSRD</Link>
