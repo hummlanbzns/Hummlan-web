@@ -69,26 +69,26 @@ export default function BestOfHub() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" aria-label="Hummlan bumblebee logo" />
+            <Bug className="w-8 h-8 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-600 font-medium hover:text-green-600">Home</Link>
-            <Link href="/best-of" className="text-gray-900 font-bold hover:text-green-600">Best Of</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-green-600">Our Stern Standards</Link>
+            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
+            <Link href="/best-of" className="text-gray-900 font-bold hover:text-brand">Best Of</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Stern Standards</Link>
           </nav>
         </div>
       </header>
 
       <main className="flex-grow">
         {/* Hub Header */}
-        <section className="bg-gradient-to-br from-green-600 to-green-800 py-20 text-center text-white">
+        <section className="bg-gradient-to-br from-brand to-brand-dark py-20 text-center text-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <BookOpen className="w-10 h-10 text-green-200" />
+              <BookOpen className="w-10 h-10 text-brand-light" />
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Best Of Guides</h1>
             </div>
-            <p className="text-xl text-green-50 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-brand-light max-w-2xl mx-auto leading-relaxed">
               Our curated collection of product guides — every pick rigorously vetted by our
               <strong className="text-white"> Stern but Fair Rating System</strong>, backed by EU Taxonomy
               and CSRD principles. No greenwashing. Just the best sustainable products at the
@@ -121,23 +121,23 @@ export default function BestOfHub() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">
+                            <span className="bg-brand-light text-brand-dark text-xs font-bold px-3 py-1 rounded-full">
                               New
                             </span>
                             <span className="text-gray-400 text-sm">{guide.date}</span>
                           </div>
-                          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-brand-dark transition-colors">
                             {guide.title}
                           </h2>
                           <p className="text-gray-600 leading-relaxed mb-6">{guide.description}</p>
 
                           <div className="flex flex-wrap gap-4 mb-6">
                             <div className="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-lg text-sm">
-                              <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                              <Star className="w-4 h-4 text-brand fill-brand" />
                               <span className="font-medium text-gray-700">HSS: {guide.hssRange}</span>
                             </div>
                             <div className="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-lg text-sm">
-                              <TrendingUp className="w-4 h-4 text-green-600" />
+                              <TrendingUp className="w-4 h-4 text-brand" />
                               <span className="font-medium text-gray-700">{guide.priceRange}</span>
                             </div>
                             <div className="bg-gray-50 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700">
@@ -145,7 +145,7 @@ export default function BestOfHub() {
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-2 text-green-600 font-bold group-hover:gap-3 transition-all">
+                          <div className="flex items-center gap-2 text-brand font-bold group-hover:gap-3 transition-all">
                             Read the full guide
                             <ArrowRight className="w-5 h-5" />
                           </div>
@@ -193,7 +193,7 @@ export default function BestOfHub() {
               <p className="text-gray-500 mb-4">Want to understand how we rate products?</p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-green-600 font-bold hover:text-green-700 transition-colors"
+                className="inline-flex items-center gap-2 text-brand font-bold hover:text-brand-dark transition-colors"
               >
                 Read our full methodology →
               </Link>
@@ -206,14 +206,14 @@ export default function BestOfHub() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <Bug className="w-10 h-10 text-yellow-500 fill-yellow-500" aria-label="Hummlan bumblebee logo" />
+              <Bug className="w-10 h-10 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
               Hummlan.com
             </Link>
             <nav className="flex gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <Link href="/best-of" className="hover:text-green-600">Best Of</Link>
-              <Link href="/about" className="hover:text-green-600">Our Standards</Link>
-              <Link href="/privacy" className="hover:text-green-600">Privacy</Link>
-              <Link href="/terms" className="hover:text-green-600">Terms</Link>
+              <Link href="/best-of" className="hover:text-brand">Best Of</Link>
+              <Link href="/about" className="hover:text-brand">Our Standards</Link>
+              <Link href="/privacy" className="hover:text-brand">Privacy</Link>
+              <Link href="/terms" className="hover:text-brand">Terms</Link>
             </nav>
           </div>
           <div className="text-center pt-12 border-t border-gray-100">
