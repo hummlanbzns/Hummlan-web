@@ -47,20 +47,20 @@ export default function CsrdPage() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" />
+            <Bug className="w-8 h-8 text-brand fill-brand" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8 text-sm font-medium">
-            <Link href="/" className="text-gray-600 hover:text-green-600">
+            <Link href="/" className="text-gray-600 hover:text-brand">
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-green-600">
+            <Link href="/about" className="text-gray-600 hover:text-brand">
               Our Standards
             </Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 hover:text-green-600">
+            <Link href="/eu-taxonomy" className="text-gray-600 hover:text-brand">
               EU Taxonomy
             </Link>
-            <span className="text-green-600 font-bold border-b-2 border-green-600">CSRD</span>
+            <span className="text-brand font-bold border-b-2 border-brand">CSRD</span>
           </nav>
         </div>
       </header>
@@ -245,13 +245,13 @@ export default function CsrdPage() {
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/about" className="hover:text-green-600">
+            <Link href="/about" className="hover:text-brand">
               Our Standards
             </Link>
-            <Link href="/eu-taxonomy" className="hover:text-green-600">
+            <Link href="/eu-taxonomy" className="hover:text-brand">
               EU Taxonomy
             </Link>
-            <Link href="/csrd" className="text-green-600">
+            <Link href="/csrd" className="text-brand">
               CSRD
             </Link>
           </div>

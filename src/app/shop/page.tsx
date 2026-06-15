@@ -34,15 +34,15 @@ export default async function ShopPage({
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-orange-600" />
+            <HummlanBeeMark className="w-8 h-8 text-brand" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-900 font-medium hover:text-orange-700">Home</Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">Best Of</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">EU Taxonomy</Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">CSRD</Link>
+            <Link href="/" className="text-gray-900 font-medium hover:text-brand">Home</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
           </nav>
         </div>
       </header>
@@ -58,13 +58,13 @@ export default async function ShopPage({
               <div className="flex bg-gray-100 p-1 rounded-xl border">
                 <Link 
                   href="/shop?sort=sustainability"
-                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'sustainability' ? 'bg-white shadow-sm text-orange-700' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'sustainability' ? 'bg-white shadow-sm text-brand' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   Most Sustainable
                 </Link>
                 <Link 
                   href="/shop?sort=price"
-                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'price' ? 'bg-white shadow-sm text-orange-700' : 'text-gray-500 hover:text-gray-700'}`}
+                  className={`px-4 py-2 rounded-lg text-sm font-bold transition-all ${sort === 'price' ? 'bg-white shadow-sm text-brand' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   Cheapest
                 </Link>
@@ -76,19 +76,19 @@ export default async function ShopPage({
             {products.map((product: any) => (
               <Link key={product.id} href={`/product/${product.slug}`} className="group bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
-                  <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-orange-100 transition-all duration-500" />
-                  <div className="absolute top-4 right-4 bg-orange-700 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                  <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
+                  <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
                     HSS: {product.brand_score}/100
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <p className="text-xs text-orange-700 font-bold uppercase tracking-wider mb-2">{product.brand_name}</p>
-                  <h3 className="font-bold text-gray-900 mb-4 group-hover:text-orange-800 transition-colors leading-snug flex-grow">{product.name}</h3>
+                  <p className="text-xs text-brand font-bold uppercase tracking-wider mb-2">{product.brand_name}</p>
+                  <h3 className="font-bold text-gray-900 mb-4 group-hover:text-brand-dark transition-colors leading-snug flex-grow">{product.name}</h3>
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
                     <p className="text-lg font-extrabold text-gray-900">
                       {product.min_price ? `$${product.min_price}` : 'Check Price'}
                     </p>
-                    <span className="text-sm font-bold text-orange-700">Compare Deals →</span>
+                    <span className="text-sm font-bold text-brand">Compare Deals →</span>
                   </div>
                 </div>
               </Link>
@@ -100,10 +100,10 @@ export default async function ShopPage({
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/best-of" className="hover:text-orange-700">Best Of</Link>
-            <Link href="/about" className="hover:text-orange-700">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="hover:text-orange-700">EU Taxonomy</Link>
-            <Link href="/csrd" className="hover:text-orange-700">CSRD</Link>
+            <Link href="/best-of" className="hover:text-brand">Best Of</Link>
+            <Link href="/about" className="hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="hover:text-brand">CSRD</Link>
           </div>
           <p className="text-gray-500 text-sm">
             © 2025 Hummlan.com. Stern sustainability comparisons.

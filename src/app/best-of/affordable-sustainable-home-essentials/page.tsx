@@ -121,13 +121,13 @@ export default function HomeEssentialsPage() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" aria-label="Hummlan bumblebee logo" />
+            <Bug className="w-8 h-8 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-600 font-medium hover:text-orange-700">Home</Link>
-            <Link href="/best-of" className="text-gray-900 font-bold hover:text-orange-700">Best Of</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">Our Stern Standards</Link>
+            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
+            <Link href="/best-of" className="text-gray-900 font-bold hover:text-brand">Best Of</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Stern Standards</Link>
           </nav>
         </div>
       </header>
@@ -138,16 +138,16 @@ export default function HomeEssentialsPage() {
         <article className="max-w-4xl mx-auto px-4 py-12">
           <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2">
-              <li><Link href="/" className="hover:text-orange-700">Home</Link></li>
+              <li><Link href="/" className="hover:text-brand">Home</Link></li>
               <li>/</li>
-              <li><Link href="/best-of" className="hover:text-orange-700">Best Of</Link></li>
+              <li><Link href="/best-of" className="hover:text-brand">Best Of</Link></li>
               <li>/</li>
               <li className="text-gray-900 font-medium">Sustainable Home Essentials Under $20</li>
             </ol>
           </nav>
 
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            The Most Affordable Sustainable Home Essentials <span className="text-orange-700">(Under $20)</span>
+            The Most Affordable Sustainable Home Essentials <span className="text-brand">(Under $20)</span>
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             <span className="font-bold">Primary keyword:</span> affordable sustainable home essentials &middot;
@@ -258,18 +258,18 @@ export default function HomeEssentialsPage() {
           ].map((prod) => (
             <section key={prod.num} className="mb-16 bg-white rounded-2xl border shadow-sm p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
-                <ShoppingBag className="w-6 h-6 text-orange-700" />
+                <ShoppingBag className="w-6 h-6 text-brand" />
                 <h2 className="text-2xl font-bold text-gray-900">{prod.num}. {prod.name}</h2>
               </div>
-              <p className="text-orange-700 font-bold mb-6">Best for: {prod.best}</p>
+              <p className="text-brand font-bold mb-6">Best for: {prod.best}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div className="space-y-2 text-sm"><div className="flex justify-between"><span className="text-gray-600">Price:</span><span className="font-semibold text-right">{prod.msrp}</span></div><div className="flex justify-between"><span className="text-gray-600">Lowest:</span><span className="font-semibold text-orange-700">{prod.low}</span></div><div className="flex justify-between"><span className="text-gray-600">HSS:</span><span className="font-semibold"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-sm">{prod.hss}</span> — {prod.hssLabel}</span></div></div>
+                <div className="space-y-2 text-sm"><div className="flex justify-between"><span className="text-gray-600">Price:</span><span className="font-semibold text-right">{prod.msrp}</span></div><div className="flex justify-between"><span className="text-gray-600">Lowest:</span><span className="font-semibold text-brand">{prod.low}</span></div><div className="flex justify-between"><span className="text-gray-600">HSS:</span><span className="font-semibold"><span className="bg-brand text-white px-2 py-0.5 rounded text-sm">{prod.hss}</span> — {prod.hssLabel}</span></div></div>
               </div>
               <h3 className="font-bold text-lg text-gray-900 mb-3">💰 Price Breakdown</h3>
               <div className="overflow-x-auto mb-6">
                 <table className="w-full text-sm border-collapse">
                   <thead><tr className="bg-gray-100">{prod.priceRows[0].map((_, ci) => <th key={ci} className="text-left p-3 font-bold text-gray-900 border-b">{['Product','MSRP','Sale Price','Per-Use'][ci]||'Option'}</th>)}</tr></thead>
-                  <tbody>{prod.priceRows.map((row, ri) => <tr key={ri} className={ri%2===0?'bg-white':'bg-gray-50'}>{row.map((cell, ci) => <td key={ci} className={`p-3 border-b ${ci===row.length-1?'font-semibold text-orange-700':''}`}>{cell}</td>)}</tr>)}</tbody>
+                  <tbody>{prod.priceRows.map((row, ri) => <tr key={ri} className={ri%2===0?'bg-white':'bg-gray-50'}>{row.map((cell, ci) => <td key={ci} className={`p-3 border-b ${ci===row.length-1?'font-semibold text-brand':''}`}>{cell}</td>)}</tr>)}</tbody>
                 </table>
               </div>
               <div className="bg-gray-50 rounded-xl p-6 mb-6">
@@ -277,17 +277,17 @@ export default function HomeEssentialsPage() {
                 {prod.summary.map((s, i) => (
                   <div key={i} className="mb-3">
                     <div className="flex items-center gap-2 mb-1">
-                      {s.icon === 'check' ? <CheckCircle className="w-5 h-5 text-green-600" /> : <AlertTriangle className="w-5 h-5 text-amber-500" />}
+                      {s.icon === 'check' ? <CheckCircle className="w-5 h-5 text-brand" /> : <AlertTriangle className="w-5 h-5 text-amber-500" />}
                       <span className="font-bold text-sm">{s.title}</span>
                     </div>
                     <p className="text-gray-700 text-sm ml-7">{s.text}{s.missing ? <span className="text-amber-700 font-medium"> {s.missing}</span> : ''}</p>
                   </div>
                 ))}
-                <div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
-                  <p className="text-orange-900 font-medium text-sm"><strong>👉 Verdict:</strong> {prod.verdict}</p>
+                <div className="mt-4 p-4 bg-brand-light border border-brand-light rounded-lg">
+                  <p className="text-brand-dark font-medium text-sm"><strong>👉 Verdict:</strong> {prod.verdict}</p>
                 </div>
               </div>
-              <a href={prod.affiliate.url} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 bg-orange-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-orange-800 transition-colors shadow-lg">{prod.affiliate.label}<TrendingUp className="w-5 h-5" /></a>
+              <a href={prod.affiliate.url} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-dark transition-colors shadow-lg">{prod.affiliate.label}<TrendingUp className="w-5 h-5" /></a>
             </section>
           ))}
 
@@ -299,7 +299,7 @@ export default function HomeEssentialsPage() {
                 <thead><tr className="bg-gray-100"><th className="text-left p-3 font-bold text-gray-900 border-b">Product</th><th className="text-left p-3 font-bold text-gray-900 border-b">Best For</th><th className="text-left p-3 font-bold text-gray-900 border-b">MSRP</th><th className="text-left p-3 font-bold text-gray-900 border-b">Low Price</th><th className="text-left p-3 font-bold text-gray-900 border-b">Per-Use</th><th className="text-left p-3 font-bold text-gray-900 border-b">HSS</th></tr></thead>
                 <tbody>
                   {[['Meliora Cleaning Bar','Zero plastic / highest HSS','$6.95','$6.95','~$0.04','93'],["Dr. Bronner's 32 oz",'Multi-purpose versatility','$16.99','~$12.50','~$0.05','92'],['Blueland Multi-Surface','Refillable system','$18.00','~$15.00','~$0.10','85'],['Dropps Laundry Pods','Cost-per-load','$19.99','~$15.99','~$0.33','84'],['ECOS Laundry 100 oz','Budget + availability','$13.99','~$10.49','~$0.11','84']].map((r,i) => (
-                    <tr key={i} className={i%2===0?'bg-white':'bg-gray-50'}><td className="p-3 border-b font-semibold">{r[0]}</td><td className="p-3 border-b">{r[1]}</td><td className="p-3 border-b">{r[2]}</td><td className="p-3 border-b text-orange-700 font-semibold">{r[3]}</td><td className="p-3 border-b">{r[4]}</td><td className="p-3 border-b"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-xs">{r[5]}</span></td></tr>
+                    <tr key={i} className={i%2===0?'bg-white':'bg-gray-50'}><td className="p-3 border-b font-semibold">{r[0]}</td><td className="p-3 border-b">{r[1]}</td><td className="p-3 border-b">{r[2]}</td><td className="p-3 border-b text-brand font-semibold">{r[3]}</td><td className="p-3 border-b">{r[4]}</td><td className="p-3 border-b"><span className="bg-brand text-white px-2 py-0.5 rounded text-xs">{r[5]}</span></td></tr>
                   ))}
                 </tbody>
               </table>
@@ -315,7 +315,7 @@ export default function HomeEssentialsPage() {
           </section>
 
           {/* Why stricter */}
-          <section className="mb-16 bg-orange-50 rounded-2xl p-8 border border-orange-200">
+          <section className="mb-16 bg-brand-light rounded-2xl p-8 border border-brand-light">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Hummlan&apos;s Ratings Are Stricter Than Typical &quot;Eco&quot; Lists</h2>
             <ol className="list-decimal pl-5 space-y-4 text-gray-700">
               <li><strong>EU Taxonomy-aligned pillars</strong> — We assess specific environmental objectives, not marketing claims.</li>
@@ -340,7 +340,7 @@ export default function HomeEssentialsPage() {
                 <details key={i} className="bg-white rounded-xl border p-5 group">
                   <summary className="font-bold text-gray-900 cursor-pointer list-none flex items-center justify-between">
                     <span>{faq.q}</span>
-                    <span className="text-orange-700 text-2xl group-open:rotate-45 transition-transform">+</span>
+                    <span className="text-brand text-2xl group-open:rotate-45 transition-transform">+</span>
                   </summary>
                   <p className="mt-4 text-gray-700 text-sm leading-relaxed">{faq.a}</p>
                 </details>
@@ -349,20 +349,20 @@ export default function HomeEssentialsPage() {
           </section>
 
           {/* Final Verdict */}
-          <section className="mb-16 bg-gradient-to-br from-orange-700 to-orange-900 rounded-2xl p-8 text-white">
+          <section className="mb-16 bg-gradient-to-br from-brand to-brand-dark rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-6">Final Verdict</h2>
-            <ul className="list-disc pl-5 space-y-3 text-orange-50">
+            <ul className="list-disc pl-5 space-y-3 text-brand-light">
               <li><strong>Start with Meliora</strong> for zero-waste cleaning at the highest HSS. The $6.95 cleaning bar is the cheapest sustainable product in this guide.</li>
               <li><strong>Use Dr. Bronner's</strong> for multi-purpose versatility. One bottle replaces half your cleaning cabinet.</li>
               <li><strong>Add Blueland</strong> for a convenient refill system with subscription convenience.</li>
               <li><strong>Keep ECOS on hand</strong> for everyday budget-friendly cleaning — $0.11/load for laundry.</li>
               <li><strong>Try Dropps</strong> for the best cost-per-load with Cradle to Cradle material safety.</li>
             </ul>
-            <p className="text-orange-200 text-sm pt-4 italic">Prices and ratings checked as of publication. Scores updated as new evidence becomes available.</p>
+            <p className="text-brand-light text-sm pt-4 italic">Prices and ratings checked as of publication. Scores updated as new evidence becomes available.</p>
           </section>
 
           <div className="text-sm text-gray-500 border-t pt-6">
-            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-orange-700 hover:underline">Best Of hub</Link> · <Link href="/about" className="text-orange-700 hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-orange-700 hover:underline">Shop</Link></p>
+            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-brand hover:underline">Best Of hub</Link> · <Link href="/about" className="text-brand hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-brand hover:underline">Shop</Link></p>
             <p className="mt-2">Guide published: June 2025 | Prices and ratings checked as of publication date.</p>
           </div>
         </article>
@@ -372,14 +372,14 @@ export default function HomeEssentialsPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <Bug className="w-10 h-10 text-yellow-500 fill-yellow-500" aria-label="Hummlan bumblebee logo" />
+              <Bug className="w-10 h-10 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
               Hummlan.com
             </Link>
             <nav className="flex gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <Link href="/best-of" className="hover:text-orange-700">Best Of</Link>
-              <Link href="/about" className="hover:text-orange-700">Our Standards</Link>
-              <Link href="/privacy" className="hover:text-orange-700">Privacy</Link>
-              <Link href="/terms" className="hover:text-orange-700">Terms</Link>
+              <Link href="/best-of" className="hover:text-brand">Best Of</Link>
+              <Link href="/about" className="hover:text-brand">Our Standards</Link>
+              <Link href="/privacy" className="hover:text-brand">Privacy</Link>
+              <Link href="/terms" className="hover:text-brand">Terms</Link>
             </nav>
           </div>
           <div className="text-center pt-12 border-t border-gray-100">

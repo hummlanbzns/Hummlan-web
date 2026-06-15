@@ -60,18 +60,18 @@ export default function EuTaxonomyPage() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" />
+            <Bug className="w-8 h-8 text-brand fill-brand" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8 text-sm font-medium">
-            <Link href="/" className="text-gray-600 hover:text-green-600">
+            <Link href="/" className="text-gray-600 hover:text-brand">
               Home
             </Link>
-            <Link href="/about" className="text-gray-600 hover:text-green-600">
+            <Link href="/about" className="text-gray-600 hover:text-brand">
               Our Standards
             </Link>
-            <span className="text-green-600 font-bold border-b-2 border-green-600">EU Taxonomy</span>
-            <Link href="/csrd" className="text-gray-600 hover:text-green-600">
+            <span className="text-brand font-bold border-b-2 border-brand">EU Taxonomy</span>
+            <Link href="/csrd" className="text-gray-600 hover:text-brand">
               CSRD
             </Link>
           </nav>
@@ -118,7 +118,7 @@ export default function EuTaxonomyPage() {
                   <div key={objective.title} className="border rounded-xl p-5 bg-gray-50/70">
                     <div className="flex items-start gap-3 mb-3">
                       <div className="p-2 bg-white rounded-lg border">
-                        <Icon className="w-5 h-5 text-green-600" />
+                        <Icon className="w-5 h-5 text-brand" />
                       </div>
                       <h3 className="font-bold text-gray-900 leading-snug">{objective.title}</h3>
                     </div>
@@ -151,19 +151,19 @@ export default function EuTaxonomyPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-5">Why this matters when you shop</h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-brand shrink-0 mt-0.5" />
                 Compare products on consistent sustainability criteria
               </li>
               <li className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-brand shrink-0 mt-0.5" />
                 Spot greenwashing faster
               </li>
               <li className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-brand shrink-0 mt-0.5" />
                 Prioritize products with stronger environmental fundamentals
               </li>
               <li className="flex gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-brand shrink-0 mt-0.5" />
                 Support brands making measurable progress
               </li>
             </ul>
@@ -233,14 +233,14 @@ export default function EuTaxonomyPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/shop"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-green-600 text-white font-bold hover:bg-green-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-brand text-white font-bold hover:bg-brand-dark transition-colors"
               >
                 Browse rated products
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-gray-300 text-gray-800 font-bold hover:border-green-400 hover:text-green-700 transition-colors"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-gray-300 text-gray-800 font-bold hover:border-brand hover:text-brand-dark transition-colors"
               >
                 Full methodology
               </Link>
@@ -252,13 +252,13 @@ export default function EuTaxonomyPage() {
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/about" className="hover:text-green-600">
+            <Link href="/about" className="hover:text-brand">
               Our Standards
             </Link>
-            <Link href="/eu-taxonomy" className="text-green-600">
+            <Link href="/eu-taxonomy" className="text-brand">
               EU Taxonomy
             </Link>
-            <Link href="/csrd" className="hover:text-green-600">
+            <Link href="/csrd" className="hover:text-brand">
               CSRD
             </Link>
           </div>

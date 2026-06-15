@@ -191,15 +191,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <header className="bg-white border-b sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-orange-600" />
+            <HummlanBeeMark className="w-8 h-8 text-brand" />
             Hummlan.com
           </Link>
           <nav className="flex gap-2 items-center text-sm text-gray-500">
-            <Link href="/" className="hover:text-orange-700">
+            <Link href="/" className="hover:text-brand">
               Home
             </Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href={`/category/${product.category_slug}`} className="hover:text-orange-700">
+            <Link href={`/category/${product.category_slug}`} className="hover:text-brand">
               {product.category_name}
             </Link>
             <ChevronRight className="w-4 h-4" />
@@ -224,11 +224,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {/* Product Details */}
             <div className="flex flex-col justify-center">
               <div className="mb-8">
-                <p className="text-orange-700 font-bold uppercase tracking-widest mb-2">{product.brand_name}</p>
+                <p className="text-brand font-bold uppercase tracking-widest mb-2">{product.brand_name}</p>
                 <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{product.name}</h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
-                  <div className="bg-orange-700 text-white px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-sm">
+                  <div className="bg-brand text-white px-4 py-1.5 rounded-full text-sm font-bold flex items-center gap-2 shadow-sm">
                     <ShieldCheck className="w-4 h-4" />
                     HSS Rating: {product.brand_score}/100
                   </div>
@@ -246,26 +246,26 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {/* Quick Summary */}
               <div className="bg-white border rounded-xl p-6 shadow-sm mb-8">
                 <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2 mb-3">
-                  <Award className="w-5 h-5 text-orange-700" />
+                  <Award className="w-5 h-5 text-brand" />
                   Expert Verdict
                 </h2>
                 <p className="text-gray-700 leading-relaxed">{product.sustainability_summary}</p>
               </div>
 
               {/* Price Comparison Call-to-Action */}
-              <div className="bg-orange-50 border border-orange-100 rounded-xl p-6">
-                <h2 className="text-xl font-bold text-orange-950 mb-4">Compare Prices & Buy</h2>
+              <div className="bg-brand-light border border-brand-light rounded-xl p-6">
+                <h2 className="text-xl font-bold text-brand-dark mb-4">Compare Prices & Buy</h2>
                 <div className="space-y-3">
                   {links.map((link, index) => (
                     <div
                       key={link.id}
-                      className={`flex items-center justify-between p-3 bg-white border rounded-lg transition-colors shadow-sm ${index === 0 ? 'border-orange-600 ring-1 ring-orange-600 ring-opacity-50' : 'hover:border-orange-300'}`}
+                      className={`flex items-center justify-between p-3 bg-white border rounded-lg transition-colors shadow-sm ${index === 0 ? 'border-brand ring-1 ring-brand ring-opacity-50' : 'hover:border-brand'}`}
                     >
                       <div className="flex flex-col">
                         <div className="flex items-center gap-2">
                           <span className="font-bold text-gray-900">{link.vendor_name}</span>
                           {index === 0 && (
-                            <span className="bg-orange-100 text-orange-800 text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-tighter uppercase">
+                            <span className="bg-brand-light text-brand-dark text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-tighter uppercase">
                               Cheapest
                             </span>
                           )}
@@ -273,12 +273,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                         <span className="text-xs text-gray-400 font-medium">AFFILIATE PARTNER</span>
                       </div>
                       <div className="flex items-center gap-4">
-                        <span className="text-xl font-bold text-orange-800">${link.price}</span>
+                        <span className="text-xl font-bold text-brand-dark">${link.price}</span>
                         <a
                           href={link.affiliate_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-orange-700 text-white px-4 py-2 rounded-lg font-bold hover:bg-orange-800 flex items-center gap-2 transition-colors"
+                          className="bg-brand text-white px-4 py-2 rounded-lg font-bold hover:bg-brand-dark flex items-center gap-2 transition-colors"
                         >
                           Visit Store
                           <ExternalLink className="w-4 h-4" />
@@ -321,9 +321,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <footer className="bg-white border-t py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/about" className="hover:text-orange-700">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="hover:text-orange-700">EU Taxonomy</Link>
-            <Link href="/csrd" className="hover:text-orange-700">CSRD</Link>
+            <Link href="/about" className="hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="hover:text-brand">CSRD</Link>
           </div>
           <p className="text-gray-500 text-sm">
             © 2025 Hummlan.com. Affiliate marketing helps support our stern and fair sustainability
