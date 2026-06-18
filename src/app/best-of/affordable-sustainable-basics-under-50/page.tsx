@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HummlanBeeMark from "@/components/HummlanBeeMark";
 import Link from 'next/link';
 import { Bug, CheckCircle, AlertTriangle, TrendingUp, ShoppingBag, Star } from 'lucide-react';
 import { SITE_NAME, absoluteUrl } from '@/lib/seo';
@@ -203,7 +204,7 @@ export default function AffordableSustainableBasicsPage() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <Bug className="w-8 h-8 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
+            <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8">
@@ -688,7 +689,7 @@ export default function AffordableSustainableBasicsPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <Bug className="w-10 h-10 text-brand fill-brand" aria-label="Hummlan bumblebee logo" />
+              <HummlanBeeMark className="w-10 h-10" />
               Hummlan.com
             </Link>
             <nav className="flex gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
