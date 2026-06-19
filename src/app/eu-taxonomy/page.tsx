@@ -64,17 +64,13 @@ export default function EuTaxonomyPage() {
             <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
-            <Link href="/" className="text-gray-600 hover:text-brand">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-600 hover:text-brand">
-              Our Standards
-            </Link>
-            <span className="text-brand font-bold border-b-2 border-brand">EU Taxonomy</span>
-            <Link href="/csrd" className="text-gray-600 hover:text-brand">
-              CSRD
-            </Link>
+          
+          <nav className="hidden md:flex gap-8">
+            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
           </nav>
         </div>
       </header>

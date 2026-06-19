@@ -9,7 +9,7 @@ export default function AboutPage() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-brand" />
+            <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
           <nav className="flex gap-8">
@@ -103,7 +103,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-6 h-6 text-brand" />
+                    <HummlanBeeMark className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Masters of "Buzz Pollination"</h3>
                 </div>
@@ -115,7 +115,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-6 h-6 text-brand" />
+                    <HummlanBeeMark className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Keystone Pollinators</h3>
                 </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-6 h-6 text-brand" />
+                    <HummlanBeeMark className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Resilience in Harsh Climates</h3>
                 </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-6 h-6 text-brand" />
+                    <HummlanBeeMark className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Hyper-Efficient Foragers</h3>
                 </div>

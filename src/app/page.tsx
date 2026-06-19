@@ -87,25 +87,16 @@ export default async function Home() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-brand" />
+            <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
+          
           <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-900 font-medium hover:text-brand">
-              Home
-            </Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">
-              Best Of
-            </Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">
-              Our Stern Standards
-            </Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">
-              EU Taxonomy
-            </Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">
-              CSRD
-            </Link>
+            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
           </nav>
         </div>
       </header>
@@ -192,7 +183,7 @@ export default async function Home() {
               </div>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
                 <div className="p-3 bg-brand-light rounded-xl">
-                  <HummlanBeeMark className="w-6 h-6 text-brand" />
+                  <HummlanBeeMark className="w-8 h-8" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">EU Taxonomy Standard</h3>
@@ -290,7 +281,7 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <HummlanBeeMark className="w-10 h-10 text-brand" />
+              <HummlanBeeMark className="w-8 h-8" />
               Hummlan.com
             </Link>
             <nav className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">

@@ -34,7 +34,7 @@ export default async function ShopPage({
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-brand" />
+            <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
           <nav className="hidden md:flex gap-8">

@@ -25,7 +25,7 @@ export default function NewsletterSignup() {
     <section className="bg-brand-light border-y border-brand-light py-16">
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <div className="inline-flex p-3 bg-brand-light rounded-2xl mb-6">
-          <HummlanBeeMark className="w-8 h-8 text-brand" />
+          <HummlanBeeMark className="w-8 h-8" />
         </div>
         <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Join the Hive</h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
