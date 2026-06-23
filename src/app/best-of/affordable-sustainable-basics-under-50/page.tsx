@@ -207,10 +207,15 @@ export default function AffordableSustainableBasicsPage() {
             <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
+          
+          
           <nav className="hidden md:flex gap-8">
             <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
-            <Link href="/best-of" className="text-brand-dark font-bold hover:text-brand">Best Of</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Stern Standards</Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
+            <Link href="/shop" className="text-gray-600 font-medium hover:text-brand">Shop</Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
           </nav>
         </div>
       </header>
