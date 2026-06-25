@@ -208,8 +208,6 @@ export default async function Home() {
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
                 <div className="p-3 bg-orange-100 rounded-xl">
                   <HummlanBeeMark className="w-6 h-6 text-orange-700" />
-                <div className="p-3 bg-brand-light rounded-xl">
-                  <HummlanBeeMark className="w-8 h-8" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">EU Taxonomy Standard</h3>
