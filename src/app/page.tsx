@@ -87,12 +87,34 @@ export default async function Home() {
       <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+            <HummlanBeeMark className="w-8 h-8 text-orange-600" />
             <HummlanBeeMark className="w-8 h-8" />
             Hummlan.com
           </Link>
           
           
           <nav className="hidden md:flex gap-8">
+            <Link href="/" className="text-gray-900 font-medium hover:text-orange-700">
+              Home
+            </Link>
+            <Link href="/search" className="text-gray-600 font-medium hover:text-orange-700">
+              Search
+            </Link>
+            <Link href="/learn" className="text-gray-600 font-medium hover:text-orange-700">
+              Learn
+            </Link>
+            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">
+              Best Of
+            </Link>
+            <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">
+              Our Stern Standards
+            </Link>
+            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">
+              EU Taxonomy
+            </Link>
+            <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">
+              CSRD
+            </Link>
             <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
             <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
             <Link href="/shop" className="text-gray-600 font-medium hover:text-brand">Shop</Link>
@@ -110,45 +132,45 @@ export default async function Home() {
         />
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-brand to-brand-dark py-24 text-center text-white relative overflow-hidden">
+        <section className="bg-gradient-to-br from-orange-700 to-orange-900 py-24 text-center text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-400 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
               Sustainable shopping, <br className="hidden md:block" /> without the greenwash.
             </h1>
-            <p className="text-xl text-brand-light mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-xl text-orange-50 mb-10 max-w-2xl mx-auto font-medium">
               We find the cheapest prices for products that actually meet our stern "Hummlan
               Sustainability Score" — grounded in EU Taxonomy and CSRD-aligned evidence.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="#featured"
-                className="bg-white text-brand-dark px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-light transition-colors shadow-lg"
+                className="bg-white text-orange-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg"
               >
                 Shop Sustainable Finds
               </a>
               <Link
                 href="/about"
-                className="bg-brand-dark/50 backdrop-blur-sm border border-brand text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-dark/70 transition-colors"
+                className="bg-orange-800/50 backdrop-blur-sm border border-orange-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-800/70 transition-colors"
               >
                 Our Methodology
               </Link>
             </div>
 
-            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm font-medium text-brand-light">
+            <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm font-medium text-orange-100">
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-brand" />
+                <CheckCircle className="w-5 h-5 text-orange-300" />
                 EU Taxonomy Based
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-brand" />
+                <CheckCircle className="w-5 h-5 text-orange-300" />
                 CSRD Aligned
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-brand" />
+                <CheckCircle className="w-5 h-5 text-orange-300" />
                 Stern & Fair Ratings
               </div>
             </div>
@@ -160,8 +182,8 @@ export default async function Home() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
-                <div className="p-3 bg-brand-light rounded-xl">
-                  <ShieldCheck className="w-6 h-6 text-brand" />
+                <div className="p-3 bg-orange-100 rounded-xl">
+                  <ShieldCheck className="w-6 h-6 text-orange-700" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Stern Ratings</h3>
@@ -184,6 +206,8 @@ export default async function Home() {
                 </div>
               </div>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
+                <div className="p-3 bg-orange-100 rounded-xl">
+                  <HummlanBeeMark className="w-6 h-6 text-orange-700" />
                 <div className="p-3 bg-brand-light rounded-xl">
                   <HummlanBeeMark className="w-8 h-8" />
                 </div>
@@ -209,7 +233,7 @@ export default async function Home() {
                 </h2>
                 <p className="text-gray-600">The best rated products by our stern HSS framework.</p>
               </div>
-              <Link href="/shop" className="text-brand font-bold hover:underline hidden sm:block">
+              <Link href="/shop" className="text-orange-700 font-bold hover:underline hidden sm:block">
                 View All Products →
               </Link>
             </div>
@@ -222,23 +246,23 @@ export default async function Home() {
                   className="group bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
-                    <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
-                    <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                    <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-orange-100 transition-all duration-500" />
+                    <div className="absolute top-4 right-4 bg-orange-700 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
                       HSS: {product.brand_score}/100
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <p className="text-xs text-brand font-bold uppercase tracking-wider mb-2">
+                    <p className="text-xs text-orange-700 font-bold uppercase tracking-wider mb-2">
                       {product.brand_name}
                     </p>
-                    <h3 className="font-bold text-gray-900 mb-4 group-hover:text-brand-dark transition-colors leading-snug flex-grow">
+                    <h3 className="font-bold text-gray-900 mb-4 group-hover:text-orange-800 transition-colors leading-snug flex-grow">
                       {product.name}
                     </h3>
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
                       <p className="text-lg font-extrabold text-gray-900">
                         {product.min_price ? `$${product.min_price}` : 'Check Price'}
                       </p>
-                      <span className="text-sm font-bold text-brand">View Deals →</span>
+                      <span className="text-sm font-bold text-orange-700">View Deals →</span>
                     </div>
                   </div>
                 </Link>
@@ -265,13 +289,13 @@ export default async function Home() {
                 <Link
                   key={category.id}
                   href={`/category/${category.slug}`}
-                  className="group bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-brand hover:bg-gray-800/50 transition-all"
+                  className="group bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-orange-600 hover:bg-gray-800/50 transition-all"
                 >
-                  <h3 className="font-bold text-xl mb-3 group-hover:text-brand transition-colors">
+                  <h3 className="font-bold text-xl mb-3 group-hover:text-orange-400 transition-colors">
                     {category.name}
                   </h3>
                   <p className="text-sm text-gray-400 leading-relaxed mb-6">{category.description}</p>
-                  <span className="text-brand font-bold text-sm">Explore {category.name} →</span>
+                  <span className="text-orange-600 font-bold text-sm">Explore {category.name} →</span>
                 </Link>
               ))}
             </div>
@@ -283,26 +307,33 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
             <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
+              <HummlanBeeMark className="w-10 h-10 text-orange-600" />
               <HummlanBeeMark className="w-8 h-8" />
               Hummlan.com
             </Link>
             <nav className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <Link href="/best-of" className="hover:text-brand">
+              <Link href="/search" className="hover:text-orange-700">
+                Search
+              </Link>
+              <Link href="/learn" className="hover:text-orange-700">
+                Learn
+              </Link>
+              <Link href="/best-of" className="hover:text-orange-700">
                 Best Of
               </Link>
-              <Link href="/about" className="hover:text-brand">
+              <Link href="/about" className="hover:text-orange-700">
                 Our Standards
               </Link>
-              <Link href="/eu-taxonomy" className="hover:text-brand">
+              <Link href="/eu-taxonomy" className="hover:text-orange-700">
                 EU Taxonomy
               </Link>
-              <Link href="/csrd" className="hover:text-brand">
+              <Link href="/csrd" className="hover:text-orange-700">
                 CSRD
               </Link>
-              <Link href="/privacy" className="hover:text-brand">
+              <Link href="/privacy" className="hover:text-orange-700">
                 Privacy
               </Link>
-              <Link href="/terms" className="hover:text-brand">
+              <Link href="/terms" className="hover:text-orange-700">
                 Terms
               </Link>
             </nav>
