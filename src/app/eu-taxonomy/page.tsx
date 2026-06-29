@@ -58,24 +58,6 @@ const objectives = [
 export default function EuTaxonomyPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8" />
-            Hummlan.com
-          </Link>
-          
-          
-          <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
-            <Link href="/shop" className="text-gray-600 font-medium hover:text-brand">Shop</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
-          </nav>
-        </div>
-      </header>
 
       <main className="flex-grow py-16">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -248,22 +230,6 @@ export default function EuTaxonomyPage() {
         </div>
       </main>
 
-      <footer className="bg-white border-t py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/about" className="hover:text-brand">
-              Our Standards
-            </Link>
-            <Link href="/eu-taxonomy" className="text-brand">
-              EU Taxonomy
-            </Link>
-            <Link href="/csrd" className="hover:text-brand">
-              CSRD
-            </Link>
-          </div>
-          <p className="text-gray-400 text-sm">© 2025 Hummlan.com. Educational framework page.</p>
-        </div>
-      </footer>
     </div>
   );
 }

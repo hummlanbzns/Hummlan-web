@@ -120,21 +120,6 @@ export default async function CategoryPage({
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8" />
-            Hummlan.com
-          </Link>
-          <nav className="flex gap-2 items-center text-sm text-gray-500 font-medium">
-            <Link href="/" className="hover:text-brand">
-              Home
-            </Link>
-            <ChevronRight className="w-4 h-4" />
-            <span className="text-gray-900">{category.name}</span>
-          </nav>
-        </div>
-      </header>
 
       <main className="flex-grow py-12">
         <script
@@ -227,18 +212,6 @@ export default async function CategoryPage({
         </div>
       </main>
 
-      <footer className="bg-white border-t py-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/about" className="hover:text-brand">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="hover:text-brand">EU Taxonomy</Link>
-            <Link href="/csrd" className="hover:text-brand">CSRD</Link>
-          </div>
-          <p className="text-gray-500 text-sm">
-            © 2025 Hummlan.com. All products are evaluated by our stern sustainability framework.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

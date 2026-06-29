@@ -83,48 +83,7 @@ export default async function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8 text-orange-600" />
-            <HummlanBeeMark className="w-8 h-8" />
-            Hummlan.com
-          </Link>
-          
-          
-          <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-900 font-medium hover:text-orange-700">
-              Home
-            </Link>
-            <Link href="/search" className="text-gray-600 font-medium hover:text-orange-700">
-              Search
-            </Link>
-            <Link href="/learn" className="text-gray-600 font-medium hover:text-orange-700">
-              Learn
-            </Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-orange-700">
-              Best Of
-            </Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-orange-700">
-              Our Stern Standards
-            </Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-orange-700">
-              EU Taxonomy
-            </Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-orange-700">
-              CSRD
-            </Link>
-            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
-            <Link href="/shop" className="text-gray-600 font-medium hover:text-brand">Shop</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
-          </nav>
-        </div>
-      </header>
-
+    <div className="bg-gray-50">
       <main className="flex-grow">
         <script
           type="application/ld+json"
@@ -300,52 +259,6 @@ export default async function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-white border-t py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-            <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <HummlanBeeMark className="w-10 h-10 text-orange-600" />
-              <HummlanBeeMark className="w-8 h-8" />
-              Hummlan.com
-            </Link>
-            <nav className="flex flex-wrap justify-center gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <Link href="/search" className="hover:text-orange-700">
-                Search
-              </Link>
-              <Link href="/learn" className="hover:text-orange-700">
-                Learn
-              </Link>
-              <Link href="/best-of" className="hover:text-orange-700">
-                Best Of
-              </Link>
-              <Link href="/about" className="hover:text-orange-700">
-                Our Standards
-              </Link>
-              <Link href="/eu-taxonomy" className="hover:text-orange-700">
-                EU Taxonomy
-              </Link>
-              <Link href="/csrd" className="hover:text-orange-700">
-                CSRD
-              </Link>
-              <Link href="/privacy" className="hover:text-orange-700">
-                Privacy
-              </Link>
-              <Link href="/terms" className="hover:text-orange-700">
-                Terms
-              </Link>
-            </nav>
-          </div>
-          <div className="text-center pt-12 border-t border-gray-100">
-            <p className="text-gray-400 text-sm mb-2">© 2025 Hummlan.com. All rights reserved.</p>
-            <p className="text-gray-400 text-xs max-w-2xl mx-auto leading-relaxed">
-              Hummlan is an independent comparison site. We earn affiliate commissions from some of
-              the stores we link to, which helps fund our in-depth sustainability research and stern
-              rating framework.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

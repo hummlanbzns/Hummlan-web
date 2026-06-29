@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import HummlanBeeMark from "@/components/HummlanBeeMark";
 import Link from 'next/link';
-import { Bug, BookOpen, Star, TrendingUp, ArrowRight } from 'lucide-react';
-import { SITE_NAME, absoluteUrl } from '@/lib/seo';
+import { BookOpen, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Best Of — Curated Sustainable Product Guides',
@@ -66,35 +64,16 @@ const guides = [
 
 export default function BestOfHub() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <HummlanBeeMark className="w-8 h-8" />
-            Hummlan.com
-          </Link>
-          
-          
-          <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-600 font-medium hover:text-brand">Home</Link>
-            <Link href="/best-of" className="text-gray-600 font-medium hover:text-brand">Best Of</Link>
-            <Link href="/shop" className="text-gray-600 font-medium hover:text-brand">Shop</Link>
-            <Link href="/about" className="text-gray-600 font-medium hover:text-brand">Our Standards</Link>
-            <Link href="/eu-taxonomy" className="text-gray-600 font-medium hover:text-brand">EU Taxonomy</Link>
-            <Link href="/csrd" className="text-gray-600 font-medium hover:text-brand">CSRD</Link>
-          </nav>
-        </div>
-      </header>
-
+    <div className="bg-gray-50">
       <main className="flex-grow">
         {/* Hub Header */}
-        <section className="bg-gradient-to-br from-brand to-brand-dark py-20 text-center text-white">
+        <section className="bg-gradient-to-br from-orange-700 to-orange-900 py-20 text-center text-white">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <BookOpen className="w-10 h-10 text-brand-light" />
+              <BookOpen className="w-10 h-10 text-orange-200" />
               <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Best Of Guides</h1>
             </div>
-            <p className="text-xl text-brand-light max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-orange-100 max-w-2xl mx-auto leading-relaxed">
               Our curated collection of product guides — every pick rigorously vetted by our
               <strong className="text-white"> Stern but Fair Rating System</strong>, backed by EU Taxonomy
               and CSRD principles. No greenwashing. Just the best sustainable products at the
@@ -127,23 +106,23 @@ export default function BestOfHub() {
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="bg-brand-light text-brand-dark text-xs font-bold px-3 py-1 rounded-full">
+                            <span className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">
                               New
                             </span>
                             <span className="text-gray-400 text-sm">{guide.date}</span>
                           </div>
-                          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-brand-dark transition-colors">
+                          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-orange-800 transition-colors">
                             {guide.title}
                           </h2>
                           <p className="text-gray-600 leading-relaxed mb-6">{guide.description}</p>
 
                           <div className="flex flex-wrap gap-4 mb-6">
                             <div className="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-lg text-sm">
-                              <Star className="w-4 h-4 text-brand fill-brand" />
+                              <Star className="w-4 h-4 text-orange-600 fill-orange-600" />
                               <span className="font-medium text-gray-700">HSS: {guide.hssRange}</span>
                             </div>
                             <div className="flex items-center gap-1.5 bg-gray-50 px-3 py-1.5 rounded-lg text-sm">
-                              <TrendingUp className="w-4 h-4 text-brand" />
+                              <TrendingUp className="w-4 h-4 text-orange-600" />
                               <span className="font-medium text-gray-700">{guide.priceRange}</span>
                             </div>
                             <div className="bg-gray-50 px-3 py-1.5 rounded-lg text-sm font-medium text-gray-700">
@@ -151,7 +130,7 @@ export default function BestOfHub() {
                             </div>
                           </div>
 
-                          <div className="flex items-center gap-2 text-brand font-bold group-hover:gap-3 transition-all">
+                          <div className="flex items-center gap-2 text-orange-700 font-bold group-hover:gap-3 transition-all">
                             Read the full guide
                             <ArrowRight className="w-5 h-5" />
                           </div>
@@ -199,7 +178,7 @@ export default function BestOfHub() {
               <p className="text-gray-500 mb-4">Want to understand how we rate products?</p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-brand font-bold hover:text-brand-dark transition-colors"
+                className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-900 transition-colors"
               >
                 Read our full methodology →
               </Link>
@@ -207,31 +186,6 @@ export default function BestOfHub() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-white border-t py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-            <Link href="/" className="text-3xl font-extrabold text-gray-900 flex items-center gap-2">
-              <HummlanBeeMark className="w-10 h-10" />
-              Hummlan.com
-            </Link>
-            <nav className="flex gap-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
-              <Link href="/best-of" className="hover:text-brand">Best Of</Link>
-              <Link href="/about" className="hover:text-brand">Our Standards</Link>
-              <Link href="/privacy" className="hover:text-brand">Privacy</Link>
-              <Link href="/terms" className="hover:text-brand">Terms</Link>
-            </nav>
-          </div>
-          <div className="text-center pt-12 border-t border-gray-100">
-            <p className="text-gray-400 text-sm mb-2">© 2025 Hummlan.com. All rights reserved.</p>
-            <p className="text-gray-400 text-xs max-w-2xl mx-auto leading-relaxed">
-              Hummlan is an independent comparison site. We earn affiliate commissions from some of
-              the stores we link to, which helps fund our in-depth sustainability research and stern
-              rating framework.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

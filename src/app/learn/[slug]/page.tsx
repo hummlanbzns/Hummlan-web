@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
-import { Calendar, User, Tag, ArrowLeft, BookOpen, Bug } from 'lucide-react';
+import { Calendar, User, Tag, ArrowLeft, BookOpen } from 'lucide-react';
 import { SITE_NAME } from '@/lib/seo';
 
 export const dynamic = 'force-dynamic';
@@ -49,23 +49,7 @@ export default async function LearnArticlePage({ params }: { params: Promise<{ s
   const headingLines = bodyLines.filter((l: string) => l.startsWith('## '));
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
-      <header className="bg-white border-b sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-            <Bug className="w-8 h-8 text-yellow-500 fill-yellow-500" aria-label="Hummlan bee" />
-            Hummlan.com
-          </Link>
-          <nav className="hidden md:flex gap-8">
-            <Link href="/" className="text-gray-600 hover:text-orange-700 font-medium">Home</Link>
-            <Link href="/search" className="text-gray-600 hover:text-orange-700 font-medium">Search</Link>
-            <Link href="/learn" className="text-orange-600 font-bold border-b-2 border-orange-600">Learn</Link>
-            <Link href="/shop" className="text-gray-600 hover:text-orange-700 font-medium">Shop</Link>
-            <Link href="/about" className="text-gray-600 hover:text-orange-700 font-medium">Standards</Link>
-          </nav>
-        </div>
-      </header>
-
+    <div className="bg-gray-50">
       <main className="flex-grow py-12">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Back link */}
@@ -174,19 +158,6 @@ export default async function LearnArticlePage({ params }: { params: Promise<{ s
           </div>
         </div>
       </main>
-
-      <footer className="bg-white border-t py-12 mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 text-sm font-semibold mb-6 text-gray-600">
-            <Link href="/" className="hover:text-orange-700">Home</Link>
-            <Link href="/search" className="hover:text-orange-700">Search</Link>
-            <Link href="/learn" className="hover:text-orange-700">Learn</Link>
-            <Link href="/shop" className="hover:text-orange-700">Shop</Link>
-            <Link href="/about" className="hover:text-orange-700">Standards</Link>
-          </div>
-          <p className="text-gray-400 text-sm">© 2026 Hummlan.com — Stern but Fair Sustainability Ratings</p>
-        </div>
-      </footer>
     </div>
   );
 }
