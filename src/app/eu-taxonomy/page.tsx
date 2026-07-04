@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import HummlanBeeMark from "@/components/HummlanBeeMark";
 import Link from 'next/link';
 import {
   ArrowRight,
