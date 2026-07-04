@@ -101,5 +101,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  // Fetch all brands
+  let brands: any[] = [];
+  try {
+    const rs = await db.execute('SELECT slug, updated_at FROM brands');
+    brands = rs.rows as any[];
+  } catch (e) {
+    console.error('Failed to fetch brands for sitemap:', e);
+  }
+
+  const brandPages: MetadataRoute.Sitemap = brands.map((brand: any) => ({
+    url: `${SITE_URL}/brand/${brand.slug}`,
+    lastModified: brand.updated_at ? new Date(brand.updated_at) : new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...categoryPages, ...productPages, ...brandPages];
 }
