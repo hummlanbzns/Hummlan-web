@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { db } from '@/lib/db';
-import { ShoppingBag, ShieldCheck, Scale, CheckCircle } from 'lucide-react';
+import { ShoppingBag, ShieldCheck, Scale, CheckCircle, Info } from 'lucide-react';
 import NewsletterSignup from '@/components/NewsletterSignup';
-import HummlanBeeMark from '@/components/HummlanBeeMark';
 import {
   DEFAULT_OG_IMAGE,
   SITE_DESCRIPTION,
@@ -107,13 +106,13 @@ export default async function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="#featured"
-                className="bg-white text-orange-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg"
+                className="bg-orange-700 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-800 transition-colors shadow-lg border-2 border-orange-700"
               >
                 Shop Sustainable Finds
               </a>
               <Link
                 href="/about"
-                className="bg-orange-800/50 backdrop-blur-sm border border-orange-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-800/70 transition-colors"
+                className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-colors"
               >
                 Our Methodology
               </Link>
@@ -166,7 +165,7 @@ export default async function Home() {
               </div>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
                 <div className="p-3 bg-orange-100 rounded-xl">
-                  <HummlanBeeMark className="w-6 h-6 text-orange-700" />
+                  <span className="text-xl">🐝</span>
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">EU Taxonomy Standard</h3>
@@ -188,7 +187,7 @@ export default async function Home() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">
                   High Performance, High Sustainability
                 </h2>
-                <p className="text-gray-600">The best rated products by our stern HSS framework.</p>
+                <p className="text-gray-600">The best rated products by our rigorous HSS framework.</p>
               </div>
               <Link href="/shop" className="text-orange-700 font-bold hover:underline hidden sm:block">
                 View All Products →
@@ -204,8 +203,15 @@ export default async function Home() {
                 >
                   <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
                     <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-orange-100 transition-all duration-500" />
-                    <div className="absolute top-4 right-4 bg-orange-700 text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                    <div className="absolute top-4 right-4 bg-orange-700 text-white text-xs font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1">
                       HSS: {product.brand_score}/100
+                      <span className="group/tip relative inline-flex">
+                        <Info className="w-3 h-3 text-white/70 cursor-help" />
+                        <span className="absolute bottom-full right-0 mb-1.5 px-2 py-1 bg-gray-900 text-white text-[10px] rounded shadow-lg opacity-0 group-hover/tip:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none">
+                          Hummlan Sustainability Score out of 100
+                          <span className="absolute top-full right-2 border-4 border-transparent border-t-gray-900"></span>
+                        </span>
+                      </span>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -242,19 +248,28 @@ export default async function Home() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {categories.map((category: any) => (
-                <Link
-                  key={category.id}
-                  href={`/category/${category.slug}`}
-                  className="group bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-orange-600 hover:bg-gray-800/50 transition-all"
-                >
-                  <h3 className="font-bold text-xl mb-3 group-hover:text-orange-400 transition-colors">
-                    {category.name}
-                  </h3>
-                  <p className="text-sm text-gray-400 leading-relaxed mb-6">{category.description}</p>
-                  <span className="text-orange-600 font-bold text-sm">Explore {category.name} →</span>
-                </Link>
-              ))}
+              {categories.map((category: any) => {
+                const categoryHighlights: Record<string, string> = {
+                  'Personal Care': 'Zero-plastic packaging & certified organic ingredients',
+                  'Food': 'Regenerative farming & plastic-neutral supply chains',
+                  'Fashion': 'Fair-trade certified & low-impact natural fibres',
+                  'Household': 'Non-toxic formulations & plastic-waste reduction',
+                };
+                const highlight = categoryHighlights[category.name] || 'Rigorously vetted for EU Taxonomy + CSRD alignment';
+                return (
+                  <Link
+                    key={category.id}
+                    href={`/category/${category.slug}`}
+                    className="group bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-orange-600 hover:bg-gray-800/50 transition-all"
+                  >
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-orange-400 transition-colors">
+                      {category.name}
+                    </h3>
+                    <p className="text-sm text-gray-400 leading-relaxed mb-6">{highlight}</p>
+                    <span className="text-orange-600 font-bold text-sm">Explore {category.name} →</span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -2,10 +2,9 @@ import type { Metadata } from 'next';
 import { cache } from 'react';
 import Link from 'next/link';
 import { db } from '@/lib/db';
-import { ShoppingBag, ChevronRight, BookOpen } from 'lucide-react';
+import { ShoppingBag, ChevronRight, BookOpen, Info } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { DEFAULT_OG_IMAGE, SITE_NAME, absoluteUrl } from '@/lib/seo';
-import HummlanBeeMark from '@/components/HummlanBeeMark';
 
 const getCategory = cache(async (slug: string) => {
   const rs = await db.execute({
@@ -132,7 +131,16 @@ export default async function CategoryPage({
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
                 <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{category.name}</h1>
-                <p className="text-lg text-gray-600 max-w-2xl">{category.description}</p>
+                <p className="text-lg text-gray-600 max-w-2xl">
+                  {
+                    {
+                      'Personal Care': 'Zero-plastic packaging & certified organic ingredients',
+                      'Food': 'Regenerative farming & plastic-neutral supply chains',
+                      'Fashion': 'Fair-trade certified & low-impact natural fibres',
+                      'Household': 'Non-toxic formulations & plastic-waste reduction',
+                    }[category.name] || category.description
+                  }
+                </p>
               </div>
               <div className="flex bg-gray-100 p-1 rounded-xl border">
                 <Link
@@ -175,8 +183,15 @@ export default async function CategoryPage({
               >
                 <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
                   <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
-                  <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
+                  <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1">
                     HSS: {product.brand_score}/100
+                    <span className="group/tip relative inline-flex">
+                      <Info className="w-3 h-3 text-white/70 cursor-help" />
+                      <span className="absolute bottom-full right-0 mb-1.5 px-2 py-1 bg-gray-900 text-white text-[10px] rounded shadow-lg opacity-0 group-hover/tip:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none">
+                        Hummlan Sustainability Score out of 100
+                        <span className="absolute top-full right-2 border-4 border-transparent border-t-gray-900"></span>
+                      </span>
+                    </span>
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">

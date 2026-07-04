@@ -1,7 +1,6 @@
 
 import Link from 'next/link';
 import { ShieldCheck, Scale, CheckCircle, Info, Award, AlertTriangle } from 'lucide-react';
-import HummlanBeeMark from '@/components/HummlanBeeMark';
 
 export default function AboutPage() {
   return (
@@ -88,7 +87,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-8 h-8" />
+                    <span class="text-2xl">🐝</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Masters of "Buzz Pollination"</h3>
                 </div>
@@ -100,7 +99,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-8 h-8" />
+                    <span class="text-2xl">🐝</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Keystone Pollinators</h3>
                 </div>
@@ -112,7 +111,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-8 h-8" />
+                    <span class="text-2xl">🐝</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Resilience in Harsh Climates</h3>
                 </div>
@@ -124,7 +123,7 @@ export default function AboutPage() {
               <div className="bg-white p-8 rounded-2xl border shadow-sm hover:border-brand transition-colors">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-2 bg-brand-light rounded-lg">
-                    <HummlanBeeMark className="w-8 h-8" />
+                    <span class="text-2xl">🐝</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">Hyper-Efficient Foragers</h3>
                 </div>
