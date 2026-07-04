@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import HummlanBeeMark from './HummlanBeeMark';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -12,7 +11,7 @@ const NAV_LINKS = [
   { href: '/learn', label: 'Learn' },
   { href: '/best-of', label: 'Best Of' },
   { href: '/shop', label: 'Shop by Category' },
-  { href: '/about', label: 'Our Stern Standards' },
+  { href: '/about', label: 'Our Standards' },
   { href: '/eu-taxonomy', label: 'EU Taxonomy' },
   { href: '/csrd', label: 'CSRD' },
 ];
@@ -25,8 +24,8 @@ export default function Header() {
     <header className="bg-white border-b sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <HummlanBeeMark className="w-8 h-8" />
-          <span>Hummlan.com</span>
+          <span className="text-2xl" aria-label="Hummlan bumblebee">🐝</span>
+          <span>Hummlan</span>
         </Link>
 
         {/* Desktop Nav */}

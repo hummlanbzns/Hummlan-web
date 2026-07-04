@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import HummlanBeeMark from "@/components/HummlanBeeMark";
 import { ArrowRight, Bug, CheckCircle, FileCheck2, Leaf, Scale, ShieldCheck, Users } from 'lucide-react';
 
 export const metadata: Metadata = {

@@ -104,7 +104,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <meta name="impact-site-verification" value="9e6c5df4-73ca-4a89-ab26-dc02d8a7159e" />
+        <meta name="impact-site-verification" value="d8ab6caf-18a2-497d-841b-b6eb7ffe0dea" />
       </head>
       <body className="min-h-full flex flex-col">
         <script

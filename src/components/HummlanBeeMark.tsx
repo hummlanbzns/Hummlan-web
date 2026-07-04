@@ -1,3 +1,4 @@
+'use client';
 import type { SVGProps } from 'react';
 
 type HummlanBeeMarkProps = SVGProps<SVGSVGElement> & {
