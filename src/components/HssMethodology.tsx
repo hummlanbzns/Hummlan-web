@@ -706,7 +706,99 @@ export default function HssMethodologySection() {
         </div>
       </section>
 
-      {/* ──────── Section 5: Scoring Formula ──────── */}
+      {/* ──────── Section 6: Where Data Comes From ──────── */}
+      <section className="bg-white border rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-3 mb-6">
+          <Database className="w-6 h-6 text-brand" />
+          <h2 className="text-2xl font-bold text-gray-900">Where the Data Comes From</h2>
+        </div>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Every HSS score is built on specific, verifiable data sources. We do not accept marketing claims, brand
+          storytelling, or unverifiable &ldquo;eco-friendly&rdquo; labels. Here are the certifications and disclosure
+          types we treat as credible evidence:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Climate &amp; Energy</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />SBTi (Science Based Targets initiative)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />CDP Climate Disclosure</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Climate Neutral Certified</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />RE100 (renewable energy commitment)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Carbon Trust Standard</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Annual Scope 1-2-3 emissions reports</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Circular Economy</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Cradle to Cradle Certified</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />FSC (Forest Stewardship Council)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />OK Compost / TUV Austria</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Public repair program data</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Take-back / resale scheme data</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Packaging composition disclosures</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Pollution &amp; Chemistry</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Bluesign approved</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />OEKO-TEX Standard 100</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />EWG Verified / Skin Deep</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />MADE SAFE certified</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />ZDHC (Zero Discharge Hazardous Chemicals)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />EPA Safer Choice</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Social &amp; Supply Chain</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Fair Trade Certified</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />B Corp certification</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />SA8000 (social accountability)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Leaping Bunny (cruelty-free)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />PETA Beauty Without Bunnies</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Published factory list with audit scores</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Sourcing &amp; Biodiversity</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />USDA Organic / GOTS</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Regenerative Organic Certified (ROC)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Rainforest Alliance certified</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />RSPO (sustainable palm oil)</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />COSMOS Organic / Natural</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />NATrue certified</li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Public Disclosures</h3>
+            <ul className="space-y-1.5 text-sm text-gray-600">
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Annual sustainability / ESG reports</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />TCFD / TNFD disclosures</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />EU Taxonomy eligibility reports</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />CSRD / ESRS reports</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />SEC climate disclosure filings</li>
+              <li className="flex items-center gap-2"><CheckCircle className="w-3.5 h-3.5 text-green-500 shrink-0" />Product ingredient / material lists</li>
+            </ul>
+          </div>
+        </div>
+        <div className="p-4 bg-brand-light border border-brand rounded-xl">
+          <div className="flex gap-3">
+            <Search className="w-5 h-5 text-brand shrink-0 mt-0.5" />
+            <p className="text-sm text-brand-dark">
+              <strong>Our research process:</strong> Our team actively monitors certification registries, corporate
+              sustainability reports, and regulatory databases. If a brand&rsquo;s certification expires or a controversy
+              emerges, we update the score — you don&rsquo;t need to tell us. We also accept submissions from brands
+              with new verifiable evidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ──────── Section 7: Scoring Formula ──────── */}
       <section className="bg-white border rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <TrendingUp className="w-6 h-6 text-brand" />
@@ -765,7 +857,7 @@ export default function HssMethodologySection() {
         </div>
       </section>
 
-      {/* ──────── Section 6: HSS Score Scale ──────── */}
+      {/* ──────── Section 8: HSS Score Scale ──────── */}
       <section className="bg-white border rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <Award className="w-6 h-6 text-brand" />
@@ -831,7 +923,69 @@ export default function HssMethodologySection() {
         </div>
       </section>
 
-      {/* ──────── Section 7: Sample Assessments ──────── */}
+      {/* ──────── Section 9: Greenwashing Detection ──────── */}
+      <section className="bg-white border-2 border-red-200 rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-3 mb-6">
+          <Search className="w-6 h-6 text-red-600" />
+          <h2 className="text-2xl font-bold text-gray-900">How We Detect Greenwashing</h2>
+        </div>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Greenwashing — when a brand exaggerates or fabricates its environmental credentials — is the single biggest
+          obstacle to honest sustainable shopping. HSS is specifically designed to detect and penalise it. Here&rsquo;s how:
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="bg-red-50 border border-red-200 rounded-xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <ShieldCheck className="w-5 h-5 text-red-600" />
+              <h3 className="font-bold text-gray-900">The DNSH Principle</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Borrowed from the EU Taxonomy: &ldquo;Do No Significant Harm.&rdquo; A brand cannot score highly overall
+              by excelling in one pillar while ignoring others. A clothing brand that uses organic cotton (good for
+              Biodiversity) but pays factory workers poverty wages (bad for Supply Chain) will be heavily penalised.
+              Excellence in one area does not excuse failure in another.
+            </p>
+          </div>
+          <div className="bg-red-50 border border-red-200 rounded-xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <AlertTriangle className="w-5 h-5 text-red-600" />
+              <h3 className="font-bold text-gray-900">No Partial Credit</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              If a brand cannot prove a claim with third-party evidence, we score it as zero for that criterion.
+              &ldquo;Working towards&rdquo; carbon neutrality, &ldquo;committed to&rdquo; fair wages, and
+              &ldquo;aiming for&rdquo; zero waste all receive no points. Intent without verifiable action is not
+              sustainability — it is marketing.
+            </p>
+          </div>
+          <div className="bg-red-50 border border-red-200 rounded-xl p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <Eye className="w-5 h-5 text-red-600" />
+              <h3 className="font-bold text-gray-900">Claim vs. Reality Audit</h3>
+            </div>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              We compare every marketing claim against the underlying evidence. &ldquo;100% recycled packaging&rdquo;
+              requires a certification, not just a label. &ldquo;Carbon neutral&rdquo; requires SBTi-aligned reduction
+              targets, not just offset purchases. Vague terms like &ldquo;eco-friendly,&rdquo; &ldquo;green,&rdquo;
+              and &ldquo;natural&rdquo; receive zero credit unless backed by a specific certification.
+            </p>
+          </div>
+        </div>
+        <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+          <div className="flex gap-3">
+            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+            <p className="text-sm text-red-800">
+              <strong>Real-world example:</strong> A major fashion brand recently claimed &ldquo;carbon neutral
+              collection&rdquo; based on purchased offsets. Our audit found: (1) no reduction in their actual emissions,
+              (2) the offsets were from a non-additional project, and (3) they had no SBTi targets. Result: the
+              &ldquo;carbon neutral&rdquo; claim contributed zero points to their Climate Impact score. Marketing
+              claims are not evidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ──────── Section 10: Sample Assessments ──────── */}
       <section>
         <div className="flex items-center gap-3 mb-6">
           <FileText className="w-6 h-6 text-brand" />
@@ -873,7 +1027,7 @@ export default function HssMethodologySection() {
         </div>
       </section>
 
-      {/* ──────── Section 8: Quality Assurance ──────── */}
+      {/* ──────── Section 11: Quality Assurance & Transparency ──────── */}
       <section className="bg-white border rounded-2xl p-8 shadow-sm">
         <div className="flex items-center gap-3 mb-6">
           <ShieldCheck className="w-6 h-6 text-brand" />
@@ -929,7 +1083,74 @@ export default function HssMethodologySection() {
         </div>
       </section>
 
-      {/* ──────── Section 9: Methodological Distinctions ──────── */}
+      {/* ──────── Section 12: Limitations & Transparency ──────── */}
+      <section className="bg-white border rounded-2xl p-8 shadow-sm">
+        <div className="flex items-center gap-3 mb-6">
+          <Info className="w-6 h-6 text-brand" />
+          <h2 className="text-2xl font-bold text-gray-900">Limitations &amp; Transparency</h2>
+        </div>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          We believe radical transparency includes being honest about what HSS <strong>cannot</strong> measure.
+          Every rating system has limitations, and we want you to understand ours.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-3">What We Don&rsquo;t Rate</h3>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <span><strong>Product carbon footprint:</strong> We rate brands, not individual product footprints. Two products from the same brand may differ, but we assess the brand&rsquo;s overall system and policies.</span>
+              </li>
+              <li className="flex gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <span><strong>Animal welfare:</strong> While cruelty-free certifications (Leaping Bunny) are included in our Pollution Prevention and Supply Chain pillars, we do not have a dedicated animal welfare pillar.</span>
+              </li>
+              <li className="flex gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <span><strong>Nutritional or health claims:</strong> HSS assesses environmental and social sustainability only. A product can be highly sustainable and unhealthy, or healthy and unsustainable.</span>
+              </li>
+              <li className="flex gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <span><strong>Local vs. global:</strong> We do not automatically score local products higher. &ldquo;Local&rdquo; is not a sustainability certification — it is a claim that requires evidence.</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-gray-50 border rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-3">How We Stay Current</h3>
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li className="flex gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                <span><strong>Quarterly updates:</strong> Scores are reviewed and updated every quarter. Prices are updated more frequently.</span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                <span><strong>Controversy monitoring:</strong> We track news, regulatory actions, and NGO reports for any brand in our database. Substantiated controversies trigger immediate score adjustments.</span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                <span><strong>Brand appeals:</strong> Brands can submit new third-party evidence at any time. We review within 30 days and publish all score changes with a public changelog.</span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                <span><strong>Methodology versioning:</strong> When our methodology improves, we re-score all affected brands and publish a changelog. You can always see which version of HSS was used for a given score.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl">
+          <div className="flex gap-3">
+            <Info className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+            <p className="text-sm text-amber-800">
+              <strong>Our commitment:</strong> We will never accept payment from a brand to change a score. Our rating team
+              and our commercial team are strictly separated. Affiliate commissions do not influence ratings —
+              we link to the cheapest store regardless of commission rate. If you see something wrong, email us at
+              <a href="mailto:hello@hummlan.com" className="underline font-medium ml-1">hello@hummlan.com</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ──────── Section 13: Methodological Distinctions ──────── */}
       <section className="bg-brand-light border border-brand rounded-2xl p-8">
         <div className="flex items-center gap-3 mb-4">
           <Info className="w-6 h-6 text-brand shrink-0" />
