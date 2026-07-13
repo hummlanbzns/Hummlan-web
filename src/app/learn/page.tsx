@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpen, GraduationCap, Newspaper, ArrowRight, CloudSun, RefreshCw, FlaskConical, Users, Sprout } from 'lucide-react';
+import { BookOpen, GraduationCap, Newspaper, ArrowRight, CloudSun, RefreshCw, FlaskConical, Users, Sprout, Calendar } from 'lucide-react';
 
 export const metadata: Metadata = { title: 'Sustainability Learning Hub', description: 'Learn what sustainability actually means. EU Taxonomy, CSRD, and the real pros and cons of green initiatives.' };
 
@@ -59,11 +59,24 @@ export default function LearnPage() {
             </div>
           </section>
 
-          <section className="bg-white border-2 border-dashed rounded-2xl p-10 text-center">
-            <Newspaper className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">More Coming Soon</h2>
-            <p className="text-gray-500 max-w-lg mx-auto mb-6">Greenwashing watch, certification guides, policy explainers &mdash; subscribe to be notified.</p>
-            <Link href="/" className="inline-block bg-orange-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-700">Join the Swarm</Link>
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3"><Newspaper className="w-6 h-6 text-orange-600" />Sustainability News</h2>
+            <Link href="/learn/news" className="block bg-white border-2 border-orange-200 rounded-2xl p-8 hover:shadow-lg hover:border-orange-400 transition-all group">
+              <div className="flex items-start justify-between flex-wrap gap-4">
+                <div className="flex-1 min-w-[200px]">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xs font-bold text-orange-600 bg-orange-100 px-2.5 py-1 rounded-full uppercase tracking-wider">New</span>
+                    <span className="text-xs text-gray-400 flex items-center gap-1"><Calendar className="w-3 h-3" />Week of 29 June 2026</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">The Hummlan Hive &mdash; Sustainability Weekly Digest</h3>
+                  <p className="text-gray-600 mb-4">CSRD enforcement begins, EU Taxonomy expands to textiles, H&amp;M faces shareholder revolt, microplastics study, and more. A 5-minute weekly roundup curated for conscious shoppers.</p>
+                  <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Read the digest <ArrowRight className="w-4 h-4" /></span>
+                </div>
+                <div className="hidden sm:flex items-center justify-center w-16 h-16 bg-orange-100 rounded-xl shrink-0">
+                  <Newspaper className="w-8 h-8 text-orange-600" />
+                </div>
+              </div>
+            </Link>
           </section>
         </div>
       </main>
