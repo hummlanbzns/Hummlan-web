@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { ShieldCheck, Scale, CheckCircle, Info, Award, AlertTriangle } from 'lucide-react';
+import HssMethodologySection from '@/components/HssMethodology';
 
 export default function AboutPage() {
   return (
@@ -134,46 +135,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="bg-white border rounded-2xl p-10 shadow-sm mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">The 5 Pillars of Hummlan Score (HSS)</h2>
-            <div className="space-y-8">
-              <div className="flex gap-6">
-                <div className="shrink-0 w-12 h-12 bg-brand-light rounded-full flex items-center justify-center font-bold text-brand-dark">1</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Climate Impact (20%)</h3>
-                  <p className="text-gray-600">Focuses on carbon footprint, renewable energy use in production, and verified science-based targets (SBTi).</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="shrink-0 w-12 h-12 bg-brand-light rounded-full flex items-center justify-center font-bold text-brand-dark">2</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Circular Economy (20%)</h3>
-                  <p className="text-gray-600">Evaluates product durability, repairability, use of recycled materials, and end-of-life take-back programs.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="shrink-0 w-12 h-12 bg-brand-light rounded-full flex items-center justify-center font-bold text-brand-dark">3</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Pollution Prevention (15%)</h3>
-                  <p className="text-gray-600">Checks for hazardous substance avoidance (PFAS, phthalates), microplastic mitigation, and wastewater treatment.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="shrink-0 w-12 h-12 bg-brand-light rounded-full flex items-center justify-center font-bold text-brand-dark">4</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Supply Chain & Social (20%)</h3>
-                  <p className="text-gray-600">Audits worker rights, living wage payments, and full supply chain transparency down to the farm or factory level.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="shrink-0 w-12 h-12 bg-brand-light rounded-full flex items-center justify-center font-bold text-brand-dark">5</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Biodiversity (15%)</h3>
-                  <p className="text-gray-600">Focuses on sustainable sourcing (FSC, organic), protection of ecosystems, and water stewardship in high-stress regions.</p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <HssMethodologySection />
 
           <div className="bg-brand-light border border-brand-light rounded-2xl p-8 flex gap-6 items-start">
             <AlertTriangle className="w-8 h-8 text-brand shrink-0" />
