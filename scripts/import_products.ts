@@ -3,31 +3,29 @@ import { execSync } from 'child_process';
 
 const markdown = readFileSync('/home/team/shared/product_expansion_research.md', 'utf-8');
 const lines = markdown.split('\n');
+const brandData: { id: string; slug: string }[] = JSON.parse(readFileSync('/tmp/brands_lookup.json', 'utf-8'));
 
 // Categories mapping
+// category_id in products must match categories.id (uses underscores, not hyphens)
 const CATEGORY_MAP: Record<string, string> = {
   'fashion': 'fashion',
-  'personal care': 'personal-care',
-  'personal_care': 'personal-care',
+  'personal care': 'personal_care',
+  'personal_care': 'personal_care',
   'household': 'household',
   'food': 'food',
 };
 
-// Slug mapping for special cases where simple _→- conversion doesn't match DB
-const SLUG_OVERRIDES: Record<string, string> = {
-  'fj_llr_ven': 'fjllrven',
-  'schmidt_s': 'schmidts',
-  'mrs_meyer_s': 'mrs-meyers',
-  'justine_s': 'justines',
-  'pact_organic': 'pact-organic', // already handled by _→- but explicit for clarity
-};
-
-function normalizeBrandSlug(slug: string): string {
-  // Check for explicit overrides first
-  if (SLUG_OVERRIDES[slug]) return SLUG_OVERRIDES[slug];
-  // Default: replace underscores with hyphens
-  return slug.replace(/_/g, '-');
+// Build brand lookup: raw markdown slug → brand id
+const brandLookup: Record<string, string> = {};
+for (const brand of brandData) {
+  // key by slug (hyphenated)
+  brandLookup[brand.slug] = brand.id;
+  // key by id (underscore)
+  brandLookup[brand.id] = brand.id;
+  // key by underscore version of slug (for markdown slugs with underscores)
+  brandLookup[brand.slug.replace(/-/g, '_')] = brand.id;
 }
+console.log(`Loaded ${brandData.length} brands, ${Object.keys(brandLookup).length} lookup keys`);
 
 function slugify(text: string): string {
   return text.toLowerCase()
@@ -53,9 +51,8 @@ function execSql(sql: string, label: string) {
 // ============================================================
 // STEP 1: Parse and insert new brands (defined at end of file)
 // ============================================================
-console.log('=== Phase 1: Inserting new brands ===');
+console.log('\n=== Phase 1: Inserting new brands ===');
 
-// Find the "New Brand Candidates" section
 const brandSectionStart = lines.findIndex(l => l.includes('## Phase 2: New Brand Candidates'));
 const brandLines = lines.slice(brandSectionStart);
 
@@ -83,23 +80,28 @@ for (const line of brandLines) {
 }
 if (currentBrand) newBrands.push(currentBrand);
 
-console.log(`Found ${newBrands.length} new brands to add`);
-
+console.log(`Found ${newBrands.length} new brand candidates`);
+let brandInsertCount = 0;
 for (const brand of newBrands) {
+  if (brandLookup[brand.slug]) {
+    continue; // already exists
+  }
   const catId = CATEGORY_MAP[brand.category] || 'general';
-  const sql = `INSERT OR IGNORE INTO brands (id, name, slug, description, overall_sustainability_score) VALUES ('${brand.slug}', '${brand.name.replace(/'/g, "''")}', '${brand.slug}', '${brand.description.replace(/'/g, "''")}', ${brand.hss})`;
+  const brandSlug = brand.slug.replace(/_/g, '-');
+  const sql = `INSERT OR IGNORE INTO brands (id, name, slug, description, overall_sustainability_score) VALUES ('${brand.slug}', '${brand.name.replace(/'/g, "''")}', '${brandSlug}', '${brand.description.replace(/'/g, "''")}', ${brand.hss})`;
   execSql(sql, `brand: ${brand.name}`);
+  brandInsertCount++;
 }
-console.log(`\nDone inserting ${newBrands.length} brands`);
+console.log(`\nDone. Inserted ${brandInsertCount} new brands, skipped ${newBrands.length - brandInsertCount} existing`);
 
 // ============================================================
-// STEP 2: Insert products from the main section
+// STEP 2: Parse products from the main section
 // ============================================================
 console.log('\n=== Phase 2: Parsing products ===');
 
 interface Product {
   name: string;
-  brandSlug: string;
+  brandId: string;
   category: string;
   description: string;
   price: string;
@@ -107,48 +109,46 @@ interface Product {
 }
 
 const products: Product[] = [];
-let currentBrandSlug = '';
-let currentCategory = '';
-
-// Track which section we're in
+let currentBrandId = '';
 let currentSection = '';
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
   
-  // Track which category section we're in
   const sectionMatch = line.match(/^###\s+(.+?)(?:\s+Brands)?$/);
   if (sectionMatch) {
     const sectionName = sectionMatch[1].toLowerCase();
     if (sectionName.includes('fashion')) currentSection = 'fashion';
-    else if (sectionName.includes('personal')) currentSection = 'personal-care';
+    else if (sectionName.includes('personal')) currentSection = 'personal_care';
     else if (sectionName.includes('household')) currentSection = 'household';
     else if (sectionName.includes('food')) currentSection = 'food';
   }
 
-  // Stop at Phase 2
   if (line.includes('## Phase 2:')) break;
 
-  // Parse brand header: #### BrandName (HSS: XX/100) [brand-slug] — X existing product(s)
+  // Parse brand header: #### BrandName (HSS: XX/100) [brand-slug]
   const brandMatch = line.match(/^####\s+.+?\s+\(HSS:\s*\d+\/100\)\s+\[([\w-]+)\]/);
   if (brandMatch) {
-    currentBrandSlug = normalizeBrandSlug(brandMatch[1]);
+    const rawSlug = brandMatch[1];
+    currentBrandId = brandLookup[rawSlug] || rawSlug;
+    if (!brandLookup[rawSlug]) {
+      console.log(`\n  ⚠ No brand found for slug "${rawSlug}" — using raw slug as ID`);
+    }
     continue;
   }
 
   // Parse product: - **Product Name** — *Category*
   const productMatch = line.match(/^-\s+\*\*(.+?)\*\*\s+—\s+\*([^*]+)\*/);
-  if (productMatch && currentBrandSlug) {
+  if (productMatch && currentBrandId) {
     const product: Product = {
       name: productMatch[1].trim(),
-      brandSlug: currentBrandSlug,
+      brandId: currentBrandId,
       category: productMatch[2].trim().toLowerCase(),
       description: '',
       price: '',
       sustainability: '',
     };
 
-    // Look ahead for description, price, and sustainability
     for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
       const nextLine = lines[j];
       if (nextLine.includes('**Description:**')) {
@@ -158,7 +158,6 @@ for (let i = 0; i < lines.length; i++) {
       } else if (nextLine.includes('**Sustainability:**')) {
         product.sustainability = nextLine.split('**Sustainability:**')[1]?.trim() || '';
       }
-      // Stop at next product or brand
       if (nextLine.match(/^-\s+\*\*/) && nextLine !== line) break;
     }
 
@@ -178,14 +177,14 @@ let errorCount = 0;
 
 for (const product of products) {
   const productSlug = slugify(product.name);
-  const id = `prod_${product.brandSlug}_${productSlug}`;
+  const id = `prod_${product.brandId}_${productSlug}`;
   const catId = CATEGORY_MAP[product.category] || CATEGORY_MAP[currentSection] || 'general';
 
   const name = product.name.replace(/'/g, "''");
   const desc = (product.description || '').replace(/'/g, "''");
   const summary = (product.sustainability || '').replace(/'/g, "''");
 
-  const sql = `INSERT OR IGNORE INTO products (id, brand_id, category_id, name, slug, description, sustainability_summary) VALUES ('${id}', '${product.brandSlug}', '${catId}', '${name}', '${productSlug}', '${desc}', '${summary}')`;
+  const sql = `INSERT OR IGNORE INTO products (id, brand_id, category_id, name, slug, description, sustainability_summary) VALUES ('${id}', '${product.brandId}', '${catId}', '${name}', '${productSlug}', '${desc}', '${summary}')`;
   
   try {
     const escaped = sql.replace(/'/g, "'\\''");
@@ -194,9 +193,10 @@ for (const product of products) {
     if (insertCount % 20 === 0) process.stdout.write(`${insertCount}/${products.length}\n`);
   } catch (e: any) {
     if (e.stderr?.includes('UNIQUE constraint')) {
-      insertCount++; // already exists, count it
+      insertCount++;
     } else {
       errorCount++;
+      console.error(`\nError inserting "${product.name}": ${e.stderr?.substring(0, 200) || e.message}`);
     }
   }
 }
