@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { db } from '@/lib/db';
-import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight, Users, Sparkles } from 'lucide-react';
+import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight } from 'lucide-react';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 import SearchForm from '@/components/SearchFormWrapper';
@@ -212,25 +212,6 @@ export default async function Home() {
             <div className="text-center mt-10">
               <Link href="/search" className="inline-flex items-center gap-2 bg-white border-2 border-orange-200 text-orange-700 px-8 py-3 rounded-xl font-bold hover:bg-orange-50 hover:border-orange-400 transition-all">
                 <Search className="w-5 h-5" /> Search All Brands &amp; Products
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Join the Hive CTA */}
-        <section className="py-20 bg-gradient-to-br from-orange-700 to-orange-900 text-white">
-          <div className="container mx-auto px-4 text-center max-w-3xl">
-            <div className="inline-flex p-3 bg-orange-600/30 rounded-2xl mb-4 backdrop-blur-sm"><Sparkles className="w-8 h-8 text-orange-200" /></div>
-            <h2 className="text-4xl font-extrabold mb-4">Join the Hive</h2>
-            <p className="text-lg text-orange-100 mb-8 max-w-xl mx-auto">
-              Be the first to know about new brand ratings, sustainability news, and exclusive deals on products that meet our stern standards.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/learn/news" className="bg-white text-orange-800 px-8 py-3 rounded-xl font-bold hover:bg-orange-50 transition-colors shadow-lg inline-flex items-center gap-2 justify-center">
-                Read the Latest News
-              </Link>
-              <Link href="/about" className="bg-orange-600/50 backdrop-blur-sm border border-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-700/70 transition-colors inline-flex items-center gap-2 justify-center">
-                <Users className="w-5 h-5" /> Learn About Our Mission
               </Link>
             </div>
           </div>
