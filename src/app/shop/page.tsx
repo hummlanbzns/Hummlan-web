@@ -3,6 +3,18 @@ import { db } from '@/lib/db';
 import { ShoppingBag, Filter } from 'lucide-react';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 
+const categoryHighlights: Record<string, string> = {
+  'personal-care': 'Zero-plastic packaging & certified organic ingredients',
+  'food': '100% traceable, organic, & fair-trade certified essentials',
+  'fashion': 'Recycled materials & fair-wear certified supply chains',
+  'household': 'Cruelty-free, plant-based formulas & zero-waste options',
+};
+
+async function getCategories() {
+  const rs = await db.execute('SELECT * FROM categories WHERE parent_id IS NULL');
+  return rs.rows;
+}
+
 async function getAllProducts(sortBy: string = 'sustainability') {
   const orderClause = sortBy === 'price' 
     ? 'MIN(al.price) ASC' 
@@ -27,6 +39,7 @@ export default async function ShopPage({
   searchParams: Promise<{ sort?: string }>
 }) {
   const { sort = 'sustainability' } = await searchParams;
+  const categories = await getCategories();
   const products = await getAllProducts(sort);
 
   return (
@@ -57,13 +70,51 @@ export default async function ShopPage({
             </div>
           </div>
 
+          {/* Category Tiles Grid */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {categories.map((cat: any) => {
+                const highlight = categoryHighlights[cat.slug] || cat.description;
+                return (
+                  <Link
+                    key={cat.id}
+                    href={`/category/${cat.slug}`}
+                    className="group bg-white p-6 rounded-2xl border hover:border-brand hover:shadow-md transition-all flex flex-col justify-between"
+                  >
+                    <div>
+                      <h3 className="font-bold text-lg text-gray-900 group-hover:text-brand transition-colors mb-2">
+                        {cat.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                        {highlight}
+                      </p>
+                    </div>
+                    <span className="text-brand font-bold text-sm flex items-center gap-1 group-hover:underline mt-auto">
+                      Explore Deals →
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">All Products</h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product: any) => (
               <Link key={product.id} href={`/product/${product.slug}`} className="group bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
                   <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
-                  <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm">
-                    HSS: {product.brand_score}/100
+                  <div className="absolute top-4 right-4 group/tooltip relative">
+                    <div className="bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1 cursor-help">
+                      HSS: {product.brand_score}/100
+                      <span className="inline-block w-3 h-3 rounded-full bg-white/20 text-center text-[10px] leading-3 font-bold">i</span>
+                    </div>
+                    <div className="absolute bottom-full right-0 mb-2 w-64 bg-gray-900 text-white text-xs rounded-lg p-2.5 opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50 leading-relaxed font-normal text-left normal-case">
+                      <strong>HSS Rating:</strong> Hummlan's 5-pillar score (0-100) grounded in strict EU Taxonomy & CSRD transparency.
+                      <div className="absolute top-full right-4 -mt-1 border-4 border-transparent border-t-gray-900"></div>
+                    </div>
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
