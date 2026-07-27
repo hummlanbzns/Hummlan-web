@@ -29,7 +29,7 @@ export default function SearchForm({ initialQuery }: { initialQuery: string }) {
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto mb-8">
       <div className="relative group">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-          <Search className="w-5 h-5 text-gray-400 group-focus-within:text-orange-500 transition-colors" />
+          <Search className="w-5 h-5 text-gray-500 group-focus-within:text-orange-500 transition-colors" />
         </div>
         <input ref={inputRef} type="text" value={query}
           onChange={(e) => setQuery(e.target.value)}
