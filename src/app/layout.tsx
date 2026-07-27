@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import NewsletterSignup from '@/components/NewsletterSignup';
 import {
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
@@ -113,6 +114,7 @@ export default function RootLayout({
         />
         <Header />
         {children}
+        <NewsletterSignup />
         <Footer />
       </body>
     </html>
