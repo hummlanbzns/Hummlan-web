@@ -34,10 +34,10 @@ export default function SearchForm({ initialQuery }: { initialQuery: string }) {
         <input ref={inputRef} type="text" value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search any brand (e.g. Patagonia, Dr. Bronner's...)"
-          className="w-full pl-12 pr-14 py-4 text-lg bg-white border-2 border-gray-200 rounded-2xl focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all shadow-sm" />
+          className="w-full pl-12 pr-14 py-4 text-lg text-gray-900 bg-white border-2 border-gray-200 rounded-2xl focus:border-orange-500 focus:ring-4 focus:ring-orange-100 outline-none transition-all shadow-sm" />
         {query && (
           <button type="button" onClick={clearSearch}
-            className="absolute inset-y-0 right-14 flex items-center text-gray-700 hover:text-gray-900" aria-label="Clear">
+            className="absolute inset-y-0 right-14 flex items-center text-gray-600 hover:text-gray-800" aria-label="Clear">
             <X className="w-5 h-5" />
           </button>
         )}
