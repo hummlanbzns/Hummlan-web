@@ -23,7 +23,7 @@ export default function FilterPanel({
       <div className="bg-white border rounded-2xl p-4 shadow-sm">
         <div className="flex flex-wrap items-end gap-4">
           <div className="flex-1 min-w-[180px]">
-            <label className="text-xs font-bold text-gray-500 uppercase mb-1.5 block">Category</label>
+            <label className="text-xs font-bold text-gray-800 uppercase mb-1.5 block">Category</label>
             <select value={selectedCategory} onChange={e => updateParam('category', e.target.value)}
               className="w-full px-3 py-2 border rounded-lg text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 outline-none">
               <option value="">All Categories</option>
@@ -31,7 +31,7 @@ export default function FilterPanel({
             </select>
           </div>
           <div>
-            <label className="text-xs font-bold text-gray-500 uppercase mb-1.5 block">Sort</label>
+            <label className="text-xs font-bold text-gray-800 uppercase mb-1.5 block">Sort</label>
             <select value={currentSort} onChange={e => updateParam('sort', e.target.value)}
               className="px-3 py-2 border rounded-lg text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 outline-none">
               <option value="score">Highest Score</option>
@@ -40,7 +40,7 @@ export default function FilterPanel({
             </select>
           </div>
           <div>
-            <label className="text-xs font-bold text-gray-500 uppercase mb-1.5 block">Min Score</label>
+            <label className="text-xs font-bold text-gray-800 uppercase mb-1.5 block">Min Score</label>
             <select value={String(currentMinScore)} onChange={e => updateParam('minScore', e.target.value === '0' ? '' : e.target.value)}
               className="px-3 py-2 border rounded-lg text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 outline-none">
               <option value="0">Any</option>
@@ -50,7 +50,7 @@ export default function FilterPanel({
           </div>
           {hasFilters && (
             <button onClick={() => router.push('/search')}
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-600 hover:text-orange-600 border rounded-lg transition-colors">
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 border rounded-lg transition-colors">
               <RotateCcw className="w-4 h-4" /> Clear
             </button>
           )}
@@ -60,7 +60,7 @@ export default function FilterPanel({
         <div className="flex flex-wrap gap-2 mt-4">
           {categories.slice(0, 12).map(c => (
             <Link key={c.slug} href={`/search?category=${c.slug}`}
-              className="px-3 py-1.5 bg-white border rounded-full text-xs font-medium text-gray-600 hover:border-orange-300 hover:text-orange-600 transition-all shadow-sm">
+              className="px-3 py-1.5 bg-white border rounded-full text-xs font-medium text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-all shadow-sm">
               {c.name}
             </Link>
           ))}
