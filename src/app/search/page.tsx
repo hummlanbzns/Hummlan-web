@@ -30,13 +30,13 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           <FilterPanel categories={categories} selectedCategory={category} currentSort={sort} currentMinScore={minScore} />
           <div className="mt-8">
             {hasSearched && results.length === 0 && (
-              <div className="text-center py-16 bg-white rounded-2xl border"><AlertCircle className="w-16 h-16 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold">No results</h2><p className="text-gray-700">Try adjusting filters.</p></div>
+              <div className="text-center py-16 bg-white rounded-2xl border"><AlertCircle className="w-16 h-16 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold">No results</h2><p className="text-gray-800">Try adjusting filters.</p></div>
             )}
             {hasSearched && results.length > 0 && (
               <><p className="text-sm text-gray-700 mb-4">{results.length} result{results.length > 1 ? 's' : ''}</p>
               <div className="space-y-4">
                 {results.map((r: any) => (<div key={r.id} className="bg-white border rounded-2xl p-5 hover:shadow-lg transition-all flex flex-col sm:flex-row gap-5">
-                  <div className={`w-20 h-20 rounded-2xl flex items-center justify-center font-extrabold text-xl border-2 shrink-0 ${SCORE_COLORS[scoreBand(r.overallScore)]}`}>{r.overallScore !== null ? Math.round(r.overallScore) : '—'}<span className="text-[10px] font-bold text-gray-800 uppercase ml-1">HSS</span></div>
+                  <div className={`w-20 h-20 rounded-2xl flex items-center justify-center font-extrabold text-xl border-2 shrink-0 ${SCORE_COLORS[scoreBand(r.overallScore)]}`}>{r.overallScore !== null ? Math.round(r.overallScore) : '—'}<span className="text-[10px] font-bold text-gray-600 uppercase ml-1">HSS</span></div>
                   <div className="flex-grow min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <h3 className="text-xl font-bold text-gray-900">{r.name}</h3>
@@ -55,7 +55,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                 </div>))}
               </div></>
             )}
-            {!hasSearched && <div className="text-center py-20"><Search className="w-20 h-20 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold text-gray-900 mb-2">Ready to check a brand?</h2><p className="text-gray-700 mb-6">Type a name above or browse categories.</p><div className="flex flex-wrap justify-center gap-3">{categories.slice(0,8).map(c => <Link key={c.slug} href={`/search?category=${c.slug}`} className="bg-white border rounded-xl px-4 py-2 text-sm font-medium text-gray-900 hover:border-orange-300 transition-colors shadow-sm">{c.name}</Link>)}</div></div>}
+            {!hasSearched && <div className="text-center py-20"><Search className="w-20 h-20 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold text-gray-900 mb-2">Ready to check a brand?</h2><p className="text-gray-800 mb-6">Type a name above or browse categories.</p><div className="flex flex-wrap justify-center gap-3">{categories.slice(0,8).map(c => <Link key={c.slug} href={`/search?category=${c.slug}`} className="bg-white border rounded-xl px-4 py-2 text-sm font-medium text-gray-900 hover:border-orange-300 transition-colors shadow-sm">{c.name}</Link>)}</div></div>}
           </div>
         </div>
       </main>
