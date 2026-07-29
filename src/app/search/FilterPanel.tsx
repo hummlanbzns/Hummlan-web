@@ -50,7 +50,7 @@ export default function FilterPanel({
           </div>
           {hasFilters && (
             <button onClick={() => router.push('/search')}
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-700 hover:text-orange-600 border rounded-lg transition-colors">
+              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-800 hover:text-orange-600 border rounded-lg transition-colors">
               <RotateCcw className="w-4 h-4" /> Clear
             </button>
           )}
@@ -60,7 +60,7 @@ export default function FilterPanel({
         <div className="flex flex-wrap gap-2 mt-4">
           {categories.slice(0, 12).map(c => (
             <Link key={c.slug} href={`/search?category=${c.slug}`}
-              className="px-3 py-1.5 bg-white border rounded-full text-xs font-medium text-gray-700 hover:border-orange-300 hover:text-orange-600 transition-all shadow-sm">
+              className="px-3 py-1.5 bg-white border rounded-full text-xs font-medium text-gray-800 hover:border-orange-300 hover:text-orange-600 transition-all shadow-sm">
               {c.name}
             </Link>
           ))}
