@@ -55,7 +55,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                 </div>))}
               </div></>
             )}
-            {!hasSearched && <div className="text-center py-20"><Search className="w-20 h-20 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold text-gray-900 mb-2">Ready to check a brand?</h2><p className="text-gray-800 mb-6">Type a name above or browse categories.</p><div className="flex flex-wrap justify-center gap-3">{categories.slice(0,8).map(c => <Link key={c.slug} href={`/search?category=${c.slug}`} className="bg-white border rounded-xl px-4 py-2 text-sm font-medium text-gray-900 hover:border-orange-300 transition-colors shadow-sm">{c.name}</Link>)}</div></div>}
+{!hasSearched && <div className="text-center py-20"><Search className="w-20 h-20 text-gray-200 mx-auto mb-4" /><h2 className="text-xl font-bold text-gray-900 mb-2">Ready to check a brand?</h2><p className="text-gray-800 mb-6">Type a name above or browse categories.</p><div className="flex flex-wrap justify-center gap-3">{categories.slice(0,8).map(c => <Link key={c.slug} href={`/search?category=${c.slug}`} className="bg-white border rounded-xl px-4 py-2 text-sm font-medium text-gray-900 hover:border-orange-300 transition-colors shadow-sm">{c.name}</Link>)}</div></div>}
           </div>
         </div>
       </main>
