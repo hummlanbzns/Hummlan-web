@@ -72,7 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch all categories
   let categories: any[] = [];
   try {
-    const rs = await db.execute('SELECT slug, updated_at FROM categories');
+    const rs = await db.execute('SELECT slug FROM categories');
     categories = rs.rows as any[];
   } catch (e) {
     console.error('Failed to fetch categories for sitemap:', e);
@@ -80,7 +80,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat: any) => ({
     url: `${SITE_URL}/category/${cat.slug}`,
-    lastModified: cat.updated_at ? new Date(cat.updated_at) : new Date(),
+    lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
