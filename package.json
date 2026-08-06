@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync-awin": "node scripts/sync-awin.mjs",
+    "sync-awin:dry": "node scripts/sync-awin.mjs --dry-run"
   },
   "dependencies": {
     "@libsql/client": "^0.17.3",
