@@ -5,6 +5,7 @@ import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight } from 'lucide-reac
 import NewsletterSignup from '@/components/NewsletterSignup';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 import SearchForm from '@/components/SearchFormWrapper';
+import BrandLogo from '@/components/BrandLogo';
 import {
   DEFAULT_OG_IMAGE,
   SITE_DESCRIPTION,
@@ -38,7 +39,7 @@ async function getCategories() {
 
 async function getBrands() {
   const rs = await db.execute(`
-    SELECT DISTINCT b.id, b.name, b.slug, b.overall_sustainability_score, b.description,
+    SELECT DISTINCT b.id, b.name, b.slug, b.overall_sustainability_score, b.description, b.logo_url,
            c.name as category_name, c.slug as category_slug
     FROM brands b
     LEFT JOIN products p ON p.brand_id = b.id
@@ -187,11 +188,14 @@ export default async function Home() {
                     className="group bg-white border rounded-2xl p-6 hover:shadow-lg hover:border-orange-200 transition-all duration-300 flex flex-col"
                   >
                     <div className="flex items-start justify-between mb-4">
-                      <div className="flex-grow min-w-0">
-                        <h3 className="font-bold text-gray-900 group-hover:text-orange-700 transition-colors truncate">{brand.name}</h3>
-                        {brand.category_name && (
-                          <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">{brand.category_name}</span>
-                        )}
+                      <div className="flex items-center gap-3 min-w-0">
+                        <BrandLogo name={brand.name} logoUrl={brand.logo_url} size={36} score={brand.overall_sustainability_score} className="shrink-0" />
+                        <div className="min-w-0">
+                          <h3 className="font-bold text-gray-900 group-hover:text-orange-700 transition-colors truncate">{brand.name}</h3>
+                          {brand.category_name && (
+                            <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">{brand.category_name}</span>
+                          )}
+                        </div>
                       </div>
                       <div className={`flex-shrink-0 ml-3 w-14 h-14 ${colors.bg} rounded-xl flex items-center justify-center border ${colors.border}`}>
                         <span className={`text-xl font-extrabold ${colors.text}`}>{brand.overall_sustainability_score}</span>

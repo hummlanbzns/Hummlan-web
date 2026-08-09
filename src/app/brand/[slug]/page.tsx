@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
 import { ShieldCheck, Award, ChevronRight, ShoppingBag, ExternalLink } from 'lucide-react';
 import SustainabilityBreakdown from '@/components/SustainabilityBreakdown';
+import BrandLogo from '@/components/BrandLogo';
 import { SITE_NAME, absoluteUrl } from '@/lib/seo';
 
 const getBrand = cache(async (slug: string) => {
@@ -123,7 +124,10 @@ export default async function BrandPage({
             <div className="flex flex-col md:flex-row md:items-center gap-8">
               <div className="flex-1">
                 <p className="text-brand font-bold uppercase tracking-widest mb-2 text-sm">Brand Rating</p>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">{brand.name}</h1>
+                <div className="flex items-center gap-4 mb-4">
+                  <BrandLogo name={brand.name} logoUrl={brand.logo_url} size={80} score={brand.overall_sustainability_score} />
+                  <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">{brand.name}</h1>
+                </div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">{brand.description || `Sustainability assessment for ${brand.name}.`}</p>
                 <div className="flex flex-wrap gap-4">
                   <div className={`inline-flex items-center gap-3 px-5 py-3 rounded-xl ${scoreBg} border`}>

@@ -15,6 +15,7 @@ export interface HSSSearchResult {
   hasAffiliateLinks: boolean;
   lowestPrice: number | null;
   imageUrl: string | null;
+  logoUrl: string | null;
   pillarScores?: any[];
 }
 
@@ -46,7 +47,7 @@ export async function searchHSS(options: HSSSearchOptions): Promise<HSSSearchRes
   const orderClause = sort === 'name' ? 'b.name ASC, p.name ASC' : sort === 'price' ? 'min_price ASC NULLS LAST' : 'b.overall_sustainability_score DESC, b.name ASC';
 
   const sql = `
-    SELECT 'brand' as type, b.id, b.name, b.slug, b.description,
+    SELECT 'brand' as type, b.id, b.name, b.slug, b.description, b.logo_url,
       b.overall_sustainability_score as overallScore,
       NULL as productName, NULL as productSlug, NULL as lowestPrice, NULL as imageUrl,
       c.name as categoryName, c.slug as categorySlug,

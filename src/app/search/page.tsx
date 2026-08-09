@@ -4,6 +4,7 @@ import { searchHSS, getSearchCategories } from '@/lib/hss-search';
 import { Search, ChevronRight, AlertCircle } from 'lucide-react';
 import SearchForm from './SearchForm';
 import FilterPanel from './FilterPanel';
+import BrandLogo from '@/components/BrandLogo';
 
 export const metadata: Metadata = { title: 'HSS Search Engine — Sustainability Scores', description: 'Search any brand by Hummlan Sustainability Score (HSS). Transparent ratings for brands outside our affiliate program too.' };
 
@@ -39,7 +40,10 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                   <div className={`w-20 h-20 rounded-2xl flex items-center justify-center font-extrabold text-xl border-2 shrink-0 ${SCORE_COLORS[scoreBand(r.overallScore)]}`}>{r.overallScore !== null ? Math.round(r.overallScore) : '—'}<span className="text-[10px] font-bold text-gray-600 uppercase ml-1">HSS</span></div>
                   <div className="flex-grow min-w-0">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="text-xl font-bold text-gray-900">{r.name}</h3>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <BrandLogo name={r.name} logoUrl={r.logoUrl} size={28} score={r.overallScore} className="shrink-0" />
+                        <h3 className="text-xl font-bold text-gray-900 truncate">{r.name}</h3>
+                      </div>
                       <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${r.hasAffiliateLinks ? 'bg-green-50 text-green-600 border border-green-200' : 'bg-blue-50 text-blue-600 border border-blue-200'}`}>{r.hasAffiliateLinks ? 'AFFILIATE' : 'INDEXED'}</span>
                     </div>
                     {r.categoryName && <Link href={`/category/${r.categorySlug}`} className="text-xs font-semibold text-orange-600">{r.categoryName}</Link>}
