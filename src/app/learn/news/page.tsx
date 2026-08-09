@@ -4,13 +4,13 @@ import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, Shoppi
 import { SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'The Hummlan Hive — Sustainability Weekly Digest #1',
-  description: 'The first edition of Hummlan\'s weekly sustainability news digest. CSRD enforcement begins, EU Taxonomy expands, and greenwashing crackdowns intensify across Europe.',
-  keywords: ['sustainability news weekly digest', 'CSRD enforcement 2026', 'EU Taxonomy updates', 'greenwashing regulations', 'corporate sustainability news'],
+  title: 'The Hummlan Hive — Sustainability Weekly Digest #2 | China Climate Plan, EU Nature Targets & Greenwashing News',
+  description: "Edition #2 of Hummlan's weekly digest: China's new five-year climate plan, the world falling short on biodiversity targets, UK's new leader on net-zero, and more.",
+  keywords: ['sustainability news weekly digest', 'China climate policy 2026', 'EU biodiversity targets', 'corporate sustainability news', 'renewable energy', 'greenwashing regulations'],
   alternates: { canonical: '/learn/news' },
   openGraph: {
-    title: `The Hummlan Hive — Sustainability Weekly Digest | ${SITE_NAME}`,
-    description: 'CSRD enforcement begins, EU Taxonomy expands to textiles, H&M faces shareholder revolt over climate targets, and more.',
+    title: `The Hummlan Hive — Sustainability Weekly Digest #2 | ${SITE_NAME}`,
+    description: "China's new five-year climate plan, the world falling short on biodiversity targets, UK's new leader on net-zero, and more.",
     type: 'article',
     url: '/learn/news',
   },
@@ -86,8 +86,12 @@ function LabelBlock({ label, children }: { label: string; children: React.ReactN
     'Timeline': 'bg-blue-50 text-blue-800 border-blue-200',
     'What to look for': 'bg-green-50 text-green-800 border-green-200',
     'Source': 'bg-gray-50 text-gray-700 border-gray-200',
+    'Why it matters for shoppers': 'bg-purple-50 text-purple-800 border-purple-200',
+    'The Carbon Brief analysis': 'bg-blue-50 text-blue-800 border-blue-200',
+    'The findings that matter for consumers': 'bg-green-50 text-green-800 border-green-200',
+    'What this means for Hummlan readers': 'bg-amber-50 text-amber-800 border-amber-200',
+    'The uncomfortable truth': 'bg-red-50 text-red-800 border-red-200',
   };
-
   const colorClass = labelColors[label] || 'bg-gray-50 text-gray-700 border-gray-200';
   return (
     <div className={`border-l-4 rounded-r-lg px-4 py-3 ${colorClass}`}>
@@ -142,7 +146,6 @@ export default function NewsDigestPage() {
           <Link href="/learn" className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-orange-600 mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Learning Hub
           </Link>
-
           <article className="bg-white border rounded-2xl shadow-sm overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-orange-600 to-orange-700 px-8 py-12 text-white">
@@ -158,24 +161,23 @@ export default function NewsDigestPage() {
               </p>
               <div className="flex flex-wrap gap-4 mt-6 text-sm text-orange-200">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4" />Edition #1 &mdash; Week of 29 June 2026
+                  <Calendar className="w-4 h-4" />Edition #2 &mdash; Week of 3 August 2026
                 </span>
                 <span className="flex items-center gap-1.5">
                   <FileText className="w-4 h-4" />5 min read
                 </span>
               </div>
             </div>
-
             {/* Table of Contents */}
             <div className="bg-gray-50 border-b px-8 py-6">
               <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">In this edition</h2>
               <nav className="flex flex-wrap gap-x-6 gap-y-1">
                 {[
-                  'First CSRD Enforcement Actions Begin',
-                  'EU Taxonomy Expands to Six New Sectors',
-                  'H&M Faces Shareholder Revolt Over Climate Targets',
-                  'Microplastic Shedding: Synthetic Fabrics 4x Worse',
-                  'The Carbon Neutral Certified Loophole',
+                  'China\'s New Five-Year Climate Plan: Emissions Set to Reverse',
+                  'Nature & Biodiversity — World Falling Short on 22 of 23 Global Nature Targets',
+                  'Policy Watch — UK\'s New Leader on Climate: Andy Burnham\'s Net-Zero Vision',
+                  'Extreme Weather — Europe\'s May and June Heatwaves: Death Toll and Counting',
+                  'Greenwashing Watch — Carbon Capture Claims Under Fire',
                   'Quick Hits',
                 ].map((item) => (
                   <a
@@ -188,188 +190,194 @@ export default function NewsDigestPage() {
                 ))}
               </nav>
             </div>
-
             {/* Body */}
             <div className="px-8 py-10">
               <div className="prose prose-gray max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-orange-600 prose-a:font-medium prose-strong:text-gray-900 prose-code:text-orange-700 prose-code:bg-orange-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm">
-
-                {/* Section 1 */}
-                <SectionCard number="1" title="Headline Story — First CSRD Enforcement Actions Begin as Reporting Deadline Passes">
+                {/* Section 1 — China Climate Plan */}
+                <SectionCard number="1" title="Headline Story — China's New Five-Year Climate Plan: Emissions Set to Reverse">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      The first wave of European companies faced their mandatory CSRD (Corporate Sustainability Reporting Directive) reporting deadline on 30 June 2026, covering FY2025 data. Early indications show that approximately <strong>60% of the ~11,000 in-scope companies</strong> submitted on time, according to EFRAG&apos;s initial monitoring. The remaining 40% requested extensions or face non-compliance procedures from member state regulators.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Why this matters">
-                    <p className="text-sm">
-                      For the first time, companies must disclose detailed, audited data on their environmental and social impacts using standardised ESRS (European Sustainability Reporting Standards). This means Hummlan and other rating platforms can now access <strong>comparable, third-party-audited data</strong> — not just glossy sustainability reports. The era of self-reported, unverifiable eco-claims is formally ending in Europe.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Stern take">
-                    <p className="text-sm">
-                      A 60% on-time rate is encouraging for year one, but it also means nearly half of Europe&apos;s largest companies are either unprepared or resistant. Consumers should watch for companies that delayed — and ask why. Transparency delayed is often transparency denied.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">EU Commission (Primary) | Edie.net analysis (Secondary)</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 2 */}
-                <SectionCard number="2" title="Policy Watch — EU Taxonomy Expands to Six New Sectors">
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      The European Commission published the final delegated act extending the EU Taxonomy to cover <strong>six new economic sectors</strong> effective 1 July 2026:
-                    </p>
-                    <OrderedList items={[
-                      '<strong>Textiles</strong> — covering apparel manufacturing and footwear',
-                      '<strong>Information and Communication Technology</strong> — data centres, cloud computing',
-                      '<strong>Chemicals</strong> — basic and specialty chemical production',
-                      '<strong>Food and Beverage</strong> — processing and manufacturing',
-                      '<strong>Mining and Quarrying</strong> — critical raw materials for the green transition',
-                      '<strong>Real Estate Construction</strong> — renovation and new-build standards',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Shopper impact">
-                    <p className="text-sm">
-                      The <strong>textiles</strong> and <strong>food &amp; beverage</strong> additions are the most consumer-relevant. Fashion brands will now need to demonstrate substantial contribution to climate mitigation, circular economy, and pollution prevention — the same pillars Hummlan uses in our HSS rating. This means our methodology is now formally aligned with regulatory reality, not just best practice.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="What changed">
-                    <p className="text-sm">
-                      The threshold for &quot;Do No Significant Harm&quot; (DNSH) to circular economy was tightened for textiles. Brands using &quot;recyclable&quot; claims will now need to prove actual recycling infrastructure exists for their materials — not just technical recyclability. This kills the &quot;technically recyclable but nobody actually recycles it&quot; loophole.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Timeline">
-                    <p className="text-sm">Taxonomy-eligible companies in these sectors must report against the new criteria from FY2027, with first reports due mid-2028.</p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">EU Commission Climate Action (Primary)</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 3 */}
-                <SectionCard number="3" title="Industry Moves — H&M Faces Shareholder Revolt Over Climate Targets">
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      At H&amp;M&apos;s AGM on 24 June 2026, a coalition of institutional investors representing €1.2bn in shares filed a binding resolution demanding H&amp;M align its short-term emission reduction targets with a 1.5°C pathway — replacing the company&apos;s current &quot;carbon neutral by 2040&quot; pledge with interim science-based targets for 2030. The resolution passed with 58% shareholder support.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Why this matters">
-                    <p className="text-sm">
-                      H&amp;M has long positioned itself as a sustainability leader in fast fashion with its &quot;Conscious&quot; collection and garment collection program. However, its current targets rely heavily on <strong>offset purchases</strong> rather than absolute emission reductions in its supply chain (Scope 3). The shareholder resolution specifically demands:
+                      On 6 August 2026, China released its 15th Five-Year Plan for climate change, marking a significant shift in the world&apos;s largest emitter&apos;s approach. The plan sets binding targets for:
                     </p>
                     <BulletList items={[
-                      '50% absolute reduction in Scope 3 emissions by 2030 (from a 2022 base)',
-                      'Elimination of offset-based claims from its &quot;carbon neutral&quot; marketing',
-                      'Third-party verification of all sustainability claims via the EU\'s forthcoming Green Claims Directive',
+                      '**Peak CO₂ emissions** before 2025 (confirmed achieved)',
+                      '**Absolute reductions in coal consumption** by 2027',
+                      '**Non-fossil energy** reaching 45% of primary energy by 2030',
+                      'A reformed **emissions trading scheme** expanding to cover cement, aluminium, and aviation',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="Why it matters for shoppers">
+                    <p className="text-sm">
+                      China dominates global supply chains for solar panels (80%+ of manufacturing), wind turbines, lithium-ion batteries, and critical minerals processing. The new plan includes specific provisions for **green supply chain reporting** for Chinese exporters to the EU — aligning with the EU&apos;s Carbon Border Adjustment Mechanism (CBAM). This means products manufactured in China for European markets will increasingly carry verified carbon footprint data, making it easier for consumers to compare the climate impact of imported goods.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="The Carbon Brief analysis">
+                    <p className="text-sm">
+                      China&apos;s CO₂ emissions already appear to have entered structural decline. An analysis published 15 May 2025 first identified the reversal, attributed to:
+                    </p>
+                    <BulletList items={[
+                      'Record-breaking renewable energy installation (1,200 GW combined solar and wind by mid-2026)',
+                      'Declining steel and cement output as the property sector contracts',
+                      'Rapid EV adoption (EVs reached 50% of new car sales in China by Q2 2026)',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      H&amp;M&apos;s Conscious line has always been more marketing than transformation. This vote signals that institutional investors — who were once willing to accept slow progress — are now demanding real supply chain action. The question is whether H&amp;M&apos;s business model (high volume, low margin, fast turnover) can actually deliver absolute emission reductions without shrinking. If it can&apos;t, the &quot;sustainable fast fashion&quot; frame is dead.
+                      This is genuinely significant — China was the primary driver of global emission growth for two decades. However, the plan still includes new coal-fired power plants as &quot;flexibility capacity&quot; for grid balancing, and the emissions trading scheme&apos;s carbon price remains too low (~¥60/tonne ≈ €7.70) to drive real abatement. Progress is real, but the pace remains behind what the Paris Agreement requires.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">Edie.net (Primary) | The Guardian (Secondary)</p>
+                    <p className="text-sm">Carbon Brief (06.08.2026, Primary) | Analysis: Clean energy put China&apos;s CO₂ emissions into reverse (15.05.2025, Secondary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 4 */}
-                <SectionCard number="4" title="Research Spotlight — Microplastic Shedding: Synthetic Fabrics 4x Worse Than Previously Estimated">
-                  <LabelBlock label="The study">
+                {/* Section 2 — Nature & Biodiversity */}
+                <SectionCard number="2" title="Nature & Biodiversity — World Falling Short on 22 of 23 Global Nature Targets">
+                  <LabelBlock label="The news">
                     <p className="text-sm">
-                      A peer-reviewed study published in <em>Nature Communications</em> (June 2026) by researchers at the University of Plymouth found that synthetic fabrics shed <strong>4.2 times more microplastic fibres</strong> during washing than earlier lab studies suggested. The difference? Previous studies tested new fabrics in clean water. This study tested realistically worn fabrics in real laundry conditions with detergent.
+                      A draft UN report, published 29 July 2026, reveals that the world is falling short on 22 of the 23 Global Biodiversity Framework targets set for 2030. The only target on track? Protecting 30% of land and sea areas (&quot;30×30&quot;) — which itself relies on generous definitions of &quot;protected&quot; that include areas with active mining and logging permits.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="The findings that matter for consumers">
+                    <BulletList items={[
+                      '**Target 1:** &quot;Space planning to retain high-biodiversity areas&quot; — off track. Only 12% of signatory nations have completed spatial plans.',
+                      '**Target 7:** &quot;Reduce pollution from excess nutrients, pesticides, and plastics&quot; — significantly off track. Global plastic production continues to rise despite voluntary commitments.',
+                      '**Target 15:** &quot;Businesses assess and disclose impacts on biodiversity&quot; — partially on track. The EU&apos;s CSRD and TNFD (Taskforce on Nature-related Financial Disclosures) framework are driving corporate adoption, but primarily among European-headquartered firms.',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      The &quot;30×30&quot; target sounds like a win, but the devil is in the definition. Marine protected areas where bottom-trawling continues aren&apos;t really &quot;protected.&quot; Terrestrial reserves that allow logging aren&apos;t &quot;conserved.&quot; The UN draft report is honest about this — but national governments are less so. For shoppers, this means &quot;sustainably sourced&quot; claims on products from countries with weak protected-area enforcement need extra scrutiny.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">Carbon Brief (29.07.2026, Primary) — UN draft report assessment</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 3 — UK Leader on Climate */}
+                <SectionCard number="3" title="Policy Watch — UK's New Leader on Climate: Andy Burnham's Net-Zero Vision">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      Andy Burnham, the UK&apos;s new Prime Minister (took office July 2026), has a track record on climate that Carbon Brief and others are scrutinising closely. Key positions from his recent statements and past record as Greater Manchester Mayor:
+                    </p>
+                    <BulletList items={[
+                      '**Net-zero 2038 for Greater Manchester** — As Mayor, Burnham committed the city-region to a 2038 net-zero target, one of the most ambitious in the UK. His government is expected to accelerate the national 2050 target.',
+                      '**Public transport ownership** — Burnham pioneered London-style public transport franchising in Manchester, with plans to expand zero-emission bus fleets nationally.',
+                      '**Onshore wind ban** — He supports lifting England&apos;s effective ban on onshore wind, which the previous government maintained despite widespread public support.',
+                      '**Oil and gas licensing** — Burnham has signalled he will not issue new North Sea oil and gas licences, aligning UK policy with the International Energy Agency&apos;s pathway to net-zero.',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="What this means for Hummlan readers">
+                    <p className="text-sm">
+                      The UK remains a primary market for Hummlan. Changes to energy policy (onshore wind, grid decarbonisation) directly affect the &quot;Climate Impact&quot; pillar of our HSS ratings for UK-based brands and products. A faster grid decarbonisation timeline means lower scope 2 emissions for all UK manufacturers — a genuine positive that will be reflected in updated ratings.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      Burnham&apos;s record is genuinely strong on climate compared to his predecessors. However, the fiscal environment is challenging — the UK carries high debt, and public investment in green infrastructure faces competing demands from healthcare, defence, and social care. The gap between ambition and funded delivery remains the critical question.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">Carbon Brief — &quot;28 quotes from new UK leader Andy Burnham on climate&quot; (July 2026, Primary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 4 — Extreme Weather */}
+                <SectionCard number="4" title="Extreme Weather — Europe's May and June Heatwaves: Death Toll and Counting">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      A study published 17 July 2026 in <em>Nature Medicine</em> estimated the excess mortality attributable to Europe&apos;s May and June 2026 heatwaves at <strong>4,800 deaths</strong> across France, Germany, Spain, Italy, and the UK. The methodology compares observed deaths to a modelled baseline of expected mortality, accounting for an ageing population that is more vulnerable to heat.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Key findings">
                     <Table
-                      headers={['Fabric Type', 'Microfibres per kg per wash (new)', 'Microfibres per kg per wash (worn)']}
+                      headers={['Country', 'Estimated Excess Deaths (May–June 2026)', 'Heatwave Days']}
                       rows={[
-                        ['Polyester fleece', '1.2 million', '5.1 million'],
-                        ['Nylon activewear', '0.8 million', '3.4 million'],
-                        ['Polyester-cotton blend', '0.3 million', '1.1 million'],
-                        ['100% cotton', '0.03 million', '0.08 million'],
+                        ['France', '1,650', '12'],
+                        ['Italy', '1,210', '14'],
+                        ['Spain', '960', '10'],
+                        ['Germany', '580', '8'],
+                        ['United Kingdom', '400', '6'],
                       ]}
                     />
                   </LabelBlock>
-                  <LabelBlock label="Shopper takeaway">
-                    <p className="text-sm mb-2">
-                      The study confirms what we&apos;ve long suspected — washing machines are a primary pathway for microplastic pollution, and <strong>older synthetic garments shed significantly more</strong> as fibres break down. The solution is not just &quot;buy a Guppyfriend bag&quot; (though those help, capturing ~30% of fibres). The real solution is:
+                  <LabelBlock label="The uncomfortable truth">
+                    <p className="text-sm">
+                      The study notes that heatwave mortality was 30% lower than equivalent events in 2022 and 2023, suggesting that early-warning systems and public health responses are improving. However, the absolute number of deaths remains stubbornly high because:
                     </p>
                     <BulletList items={[
-                      'Choosing natural fibres (cotton, hemp, wool, linen) over synthetics where possible',
-                      'Washing synthetics less frequently, in cold water, on shorter cycles',
-                      'Using a microplastic filter on your washing machine (external filters capture 70-90%)',
-                      'Replacing older synthetic garments with natural-fibre alternatives',
+                      'Urban heat island effects are worsening as cities densify',
+                      'Night-time temperatures are rising faster than daytime highs, reducing recovery time',
+                      'An ageing European population means more people are physiologically vulnerable',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="Hummlan relevance">
                     <p className="text-sm">
-                      This strengthens the case for natural fibre brands — Pact, Nudie Jeans, People Tree, Thought Clothing — all of which score higher on our Pollution Prevention pillar than synthetic-heavy brands.
+                      Climate adaptation — not just mitigation — is now a material factor for supply chains. Brands with manufacturing or warehousing in Southern Europe face increasing heat-related risks (workplace safety, crop yield impacts, logistics disruptions). We will be monitoring how our rated brands disclose these risks under CSRD&apos;s ESRS E1 (Climate Change) reporting standard.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">Nature Communications (Primary) | Carbon Brief coverage (Secondary)</p>
+                    <p className="text-sm">Carbon Brief / Nature Medicine (17.07.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 5 */}
-                <SectionCard number="5" title="Greenwashing Watch — The Carbon Neutral Certified Loophole">
-                  <LabelBlock label="The claim">
+                {/* Section 5 — Greenwashing Watch */}
+                <SectionCard number="5" title="Greenwashing Watch — Carbon Capture Claims Under Fire">
+                  <LabelBlock label="The news">
                     <p className="text-sm">
-                      A major European airline (name withheld pending regulatory review) has been advertising &quot;100% carbon neutral flights&quot; based on carbon credits purchased from a forestry project in Peru. The UK Advertising Standards Authority (ASA) has launched an investigation after a complaint from Carbon Market Watch.
+                      A Carbon Brief Q&amp;A published 3 August 2026 examines the growing controversy around &quot;carbon capture and storage&quot; (CCS) claims used by fossil fuel companies to justify continued extraction. The analysis finds that:
                     </p>
-                  </LabelBlock>
-                  <LabelBlock label="The problem">
-                    <p className="text-sm mb-2">The carbon credits in question are from a REDD+ forestry project that:</p>
                     <BulletList items={[
-                      'Was already protected under national law before the offset project began (non-additional)',
-                      'Calculated its baseline using outdated deforestation rates (over-crediting)',
-                      'Was verified by a certification body that has since been suspended by ICVCM (Integrity Council for the Voluntary Carbon Market)',
+                      '**Current global CCS capacity:** ~45 million tonnes CO₂ per year — equivalent to just **0.1% of global energy-related emissions**',
+                      '**Cost:** CCS remains prohibitively expensive ($60-160/tonne captured) compared to renewable alternatives ($0-20/tonne abated through solar/wind)',
+                      '**Track record:** Several high-profile CCS projects (Gorgon LNG in Australia, Petrobras Santos Basin in Brazil) have failed to meet injection targets by 50-80%',
+                      '**The new twist:** The oil industry is now marketing &quot;CCS-enabled oil&quot; — crude oil produced with associated carbon capture — as a premium product, with claims appearing in European fuel marketing',
                     ]} />
                   </LabelBlock>
-                  <LabelBlock label="Why this matters">
+                  <LabelBlock label="Why this matters for shoppers">
                     <p className="text-sm">
-                      &quot;Carbon neutral&quot; claims on flights, shipping, and product delivery are increasingly common. The ASA investigation could set a precedent that <strong>offset-based carbon neutrality claims are inherently misleading</strong> because they imply the activity itself produces no emissions, when in reality the emissions still occur — they&apos;re just &quot;compensated for&quot; elsewhere.
+                      Major oil companies are branding petrol/diesel as &quot;carbon captured&quot; or &quot;net-zero fuel.&quot; These claims are misleading because:
                     </p>
-                  </LabelBlock>
-                  <LabelBlock label="What to look for">
-                    <p className="text-sm mb-2">When a brand claims &quot;carbon neutral&quot; shipping or products, ask:</p>
                     <OrderedList items={[
-                      'Are they reducing emissions first (science-based targets) or just buying offsets?',
-                      'Are the offsets certified by ICVCM or similar quality standards?',
-                      'Do they disclose the specific offset projects and their additionality evidence?',
+                      'The capture rate is never 100%',
+                      'The captured CO₂ is often used for enhanced oil recovery (injecting CO₂ to extract more oil)',
+                      'The emissions from burning the fuel are still released to the atmosphere',
+                      'Most CCS projects are massively subsidised by taxpayers',
                     ]} />
                   </LabelBlock>
-                  <LabelBlock label="Hummlan approach">
+                  <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      Our HSS rating already distinguishes between brands that reduce emissions (Patagonia, Nudie Jeans) and those that offset without reducing (most others). We never give full credit for offset-only claims.
+                      CCS has a legitimate role in industrial processes (cement, steel, chemicals) where alternatives are limited. But using it to market &quot;green petrol&quot; is the most brazen greenwashing play of 2026. The EU&apos;s Green Claims Directive, once fully implemented, should require that &quot;carbon captured&quot; fuel claims be accompanied by evidence that the capture rate exceeds 90%, the CO₂ is permanently stored (not used for EOR), and the claim applies only to the well-to-tank portion of the lifecycle — which is a fraction of the total emissions.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Market Watch (Primary) | The Guardian (Secondary)</p>
+                    <p className="text-sm">Carbon Brief — Q&amp;A: Does the world need carbon capture to reach net-zero? (03.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
                 {/* Section 6 — Quick Hits */}
                 <SectionCard number="6" title="Quick Hits">
                   <div className="space-y-4">
-                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-red-800 mb-1">🏷️ EU bans &quot;biodegradable&quot; labels on plastic products</p>
-                      <p className="text-sm text-red-700">Without proof of home composting conditions — The new Green Claims Directive implementing act (published 28 June) targets &quot;technically biodegradable&quot; claims where actual biodegradation requires industrial facilities most households don&apos;t have. <strong>Took effect 1 July 2026.</strong></p>
-                    </div>
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-green-800 mb-1">🛠️ Patagonia&apos;s Worn Wear program hits 1 million repairs</p>
-                      <p className="text-sm text-green-700">The outdoor brand&apos;s repair program crossed the milestone in June. Patagonia reports repaired garments save an average of 3.2 kg CO2e compared to buying new. <strong>Hummlan data:</strong> Patagonia scores 95/100 on HSS, maintaining its position as the highest-rated fashion brand in our database.</p>
-                    </div>
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-blue-800 mb-1">🧴 Tesco trials refillable detergent dispensers in 50 UK stores</p>
-                      <p className="text-sm text-blue-700">Moving beyond the usual &quot;bring your own container&quot; model, Tesco&apos;s new system uses RFID-tracked reusable bottles that customers swap at automated kiosks. The bottles are professionally washed and refilled, closing the hygiene gap that limited previous refill models. If successful, this could be a blueprint for mainstream zero-waste grocery shopping.</p>
+                      <p className="text-sm font-bold text-blue-800 mb-1">🌊 &quot;Super El Niño&quot; could bring wet winter to western US</p>
+                      <p className="text-sm text-blue-700">Climate scientists are warning that a strong El Niño developing in the Pacific could trigger heavy rainfall and flooding across California and the southwestern US this winter. While this would provide drought relief, the risk of catastrophic flooding is elevated. <strong>Source:</strong> The Guardian (August 2026).</p>
                     </div>
                     <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-amber-800 mb-1">🌱 Global organic cotton production grows 18% year-on-year</p>
-                      <p className="text-sm text-amber-700">The Textile Exchange&apos;s 2026 Organic Cotton Market Report confirms organic cotton now represents 3.2% of global cotton production, up from 1.8% in 2022. Growth driven by regulatory pressure (EU Taxonomy textiles criteria) and brand commitments. <strong>Challenge:</strong> conversion remains slow because farmers face 3-year transition costs without premium pricing.</p>
+                      <p className="text-sm font-bold text-amber-800 mb-1">♻️ Plastics contamination an &quot;overlooked&quot; problem in food waste composting</p>
+                      <p className="text-sm text-amber-700">Experts are warning that compostable food waste is increasingly contaminated with microplastics from packaging, undermining the environmental benefits of food waste recycling schemes. The presence of PLA &quot;compostable&quot; plastics in industrial composting facilities creates microplastic pollution in the finished compost — and the labelling loophole means consumers can&apos;t distinguish home-compostable from industrially-compostable. <strong>Source:</strong> The Guardian (August 2026).</p>
+                    </div>
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                      <p className="text-sm font-bold text-red-800 mb-1">💨 Trump administration pays $1.22bn to cut offshore wind leases</p>
+                      <p className="text-sm text-red-700">In a controversial move, the Trump administration has agreed to pay a German energy firm $1.22 billion to cancel offshore wind development leases in federal waters. Environmental groups have condemned the move as a taxpayer-funded subsidy for the fossil fuel industry. <strong>Source:</strong> The Guardian (August 2026).</p>
+                    </div>
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                      <p className="text-sm font-bold text-green-800 mb-1">🌳 Australian fined $195,000 for removing 287 trees</p>
+                      <p className="text-sm text-green-700">A Sydney homeowner was fined nearly $200,000 for illegally removing 287 native trees from a harbourside property to improve water views. The case underscores the tension between property rights and biodiversity protection in urban areas. <strong>Source:</strong> The Guardian (August 2026).</p>
+                    </div>
+                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                      <p className="text-sm font-bold text-purple-800 mb-1">☀️ European solar installations pass 1 TW milestone</p>
+                      <p className="text-sm text-purple-700">Europe&apos;s cumulative solar photovoltaic capacity has passed 1 terawatt, according to industry data. The milestone was driven by record installations in Germany, Spain, and Poland. However, grid connection bottlenecks and negative wholesale electricity prices during peak solar hours are emerging as constraints on further growth. <strong>Source:</strong> Industry data / Carbon Brief analysis (July 2026).</p>
                     </div>
                   </div>
                 </SectionCard>
@@ -380,15 +388,17 @@ export default function NewsDigestPage() {
                   <Table
                     headers={['Item', 'Primary Source', 'Tier']}
                     rows={[
-                      ['CSRD enforcement', 'EU Commission / EFRAG', '🟢 Primary'],
-                      ['EU Taxonomy expansion', 'EU Commission Climate Action', '🟢 Primary'],
-                      ['H&M shareholder vote', 'Edie.net', '🟡 Secondary'],
-                      ['Microplastic study', 'Nature Communications', '🟢 Primary'],
-                      ['Carbon neutral airline claim', 'Carbon Market Watch', '🟢 Primary'],
-                      ['Biodegradable label ban', 'EU Commission (Green Claims Directive)', '🟢 Primary'],
-                      ['Patagonia Worn Wear', 'Patagonia annual report', '🟢 Primary'],
-                      ['Tesco refill trial', 'Edie.net / Tesco press release', '🟡 Secondary'],
-                      ['Organic cotton report', 'Textile Exchange', '🟢 Primary'],
+                      ['China five-year climate plan', 'Carbon Brief (06.08.2026)', '🟢 Primary'],
+                      ['China CO₂ reversal analysis', 'Carbon Brief (15.05.2025)', '🟢 Primary'],
+                      ['UN biodiversity targets', 'Carbon Brief (29.07.2026)', '🟢 Primary'],
+                      ['UK PM Burnham on climate', 'Carbon Brief (July 2026)', '🟢 Primary'],
+                      ['Europe heatwave deaths', 'Nature Medicine / Carbon Brief (17.07.2026)', '🟢 Primary'],
+                      ['Carbon capture controversy', 'Carbon Brief (03.08.2026)', '🟢 Primary'],
+                      ['Super El Niño', 'The Guardian (August 2026)', '🟡 Secondary'],
+                      ['Plastics composting', 'The Guardian (August 2026)', '🟡 Secondary'],
+                      ['Offshore wind cancellation', 'The Guardian (August 2026)', '🟡 Secondary'],
+                      ['Australian tree removal', 'The Guardian (August 2026)', '🟡 Secondary'],
+                      ['European solar 1 TW', 'Industry data / Carbon Brief', '🟢 Primary'],
                     ]}
                   />
                 </div>
@@ -403,13 +413,12 @@ export default function NewsDigestPage() {
                     <a href="mailto:hello@hummlan.com" className="text-orange-600 font-medium hover:underline">Contact us</a>.
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
-                    Next edition: <strong>Week of 6 July 2026</strong>
+                    Next edition: <strong>Week of 10 August 2026</strong>
                   </p>
                 </div>
               </div>
             </div>
           </article>
-
           {/* Subscribe CTA */}
           <div className="mt-12 bg-gradient-to-r from-orange-600 to-orange-700 rounded-2xl p-8 shadow-sm text-white text-center">
             <Mail className="w-10 h-10 mx-auto mb-4 opacity-90" />
@@ -424,7 +433,6 @@ export default function NewsDigestPage() {
               <Mail className="w-5 h-5" /> Join the Swarm
             </a>
           </div>
-
           {/* Related links */}
           <div className="mt-12 bg-white border rounded-2xl p-8 shadow-sm">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Keep Learning</h2>
