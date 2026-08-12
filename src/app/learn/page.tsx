@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpen, GraduationCap, Newspaper, ArrowRight, CloudSun, RefreshCw, FlaskConical, Users, Sprout, Calendar } from 'lucide-react';
+import { BookOpen, GraduationCap, Newspaper, ArrowRight, CloudSun, RefreshCw, FlaskConical, Users, Sprout, Calendar, ShoppingBag } from 'lucide-react';
 
 export const metadata: Metadata = { title: 'Sustainability Learning Hub', description: 'Learn what sustainability actually means. EU Taxonomy, CSRD, and the real pros and cons of green initiatives.' };
 
@@ -59,6 +59,22 @@ export default function LearnPage() {
             </div>
           </section>
 
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3"><ShoppingBag className="w-6 h-6 text-orange-600" />Stern-Rated Product Guides</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl">Put the theory into practice — our best-of guides apply the HSS framework to real products at real prices.</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link href="/best-of/affordable-sustainable-basics-under-50" className="bg-white border rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all group">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600">Affordable Sustainable Basics Under $50</h3>
+                <p className="text-gray-600 mb-4">Organic cotton leggings from ~$25, boxers from ~$10/pair, and Patagonia Baggies from ~$44 — all stern-rated.</p>
+                <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Read the guide <ArrowRight className="w-4 h-4" /></span>
+              </Link>
+              <Link href="/best-of/affordable-sustainable-home-essentials" className="bg-white border rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all group">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600">Affordable Sustainable Home Essentials Under $20</h3>
+                <p className="text-gray-600 mb-4">Eco-friendly dish soaps, laundry detergents and cleaners from ~$0.04/use — the cheapest verified options we track.</p>
+                <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Read the guide <ArrowRight className="w-4 h-4" /></span>
+              </Link>
+            </div>
+          </section>
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3"><Newspaper className="w-6 h-6 text-orange-600" />Sustainability News</h2>
             <Link href="/learn/news" className="block bg-white border-2 border-orange-200 rounded-2xl p-8 hover:shadow-lg hover:border-orange-400 transition-all group">

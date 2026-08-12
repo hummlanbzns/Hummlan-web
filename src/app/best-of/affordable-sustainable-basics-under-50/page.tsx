@@ -235,7 +235,7 @@ export default function AffordableSustainableBasicsPage() {
               This guide is different.
             </p>
             <p>
-              Every product here passed <strong>Hummlan&apos;s Stern but Fair Rating System</strong> — built on the backbone of the <strong>EU Taxonomy</strong> (which defines what &quot;sustainable&quot; actually means) and <strong>CSRD</strong> (which demands transparent, verifiable evidence). We don&apos;t reward storytelling. We reward third-party proof, measurable impact, and accessible pricing.
+              Every product here passed <strong>Hummlan&apos;s Stern but Fair Rating System</strong> — built on the backbone of the <Link href="/eu-taxonomy" className="text-orange-700 underline font-semibold">EU Taxonomy</Link> (which defines what &quot;sustainable&quot; actually means) and <Link href="/csrd" className="text-orange-700 underline font-semibold">CSRD</Link> (which demands transparent, verifiable evidence). We don&apos;t reward storytelling. We reward third-party proof, measurable impact, and accessible pricing.
             </p>
             <p>
               Then we applied the second filter: <strong>price reality</strong>. Every pick below can land at or under <strong>$50</strong> when bought at typical sale prices or through smart bundle deals.
@@ -251,7 +251,7 @@ export default function AffordableSustainableBasicsPage() {
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">How Our Stern but Fair Rating Works</h2>
             <p className="text-gray-700 mb-6">
-              We evaluate every brand across <strong>five core pillars</strong> aligned to the EU Taxonomy&apos;s six environmental objectives and CSRD evidence standards:
+              We evaluate every brand across <Link href="/learn" className="text-orange-700 underline font-semibold">five core pillars</Link> aligned to the EU Taxonomy&apos;s six environmental objectives and CSRD evidence standards:
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm border-collapse">
@@ -280,7 +280,7 @@ export default function AffordableSustainableBasicsPage() {
               </table>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              Each brand receives a <strong>Hummlan Sustainability Score (HSS)</strong> out of 100 based on the strength and verifiability of their evidence across these pillars.
+              Each brand receives a <Link href="/about" className="text-orange-700 underline font-semibold">Hummlan Sustainability Score (HSS)</Link> out of 100 based on the strength and verifiability of their evidence across these pillars.
             </p>
           </section>
 
@@ -429,7 +429,9 @@ export default function AffordableSustainableBasicsPage() {
           <section className="mb-16 bg-white rounded-2xl border shadow-sm p-6 md:p-8">
             <div className="flex items-center gap-3 mb-4">
               <Star className="w-6 h-6 text-orange-700 fill-orange-700" />
-              <h2 className="text-2xl font-bold text-gray-900">3. Patagonia Baggies Shorts — 5&quot;</h2>
+              <h2 className="text-2xl font-bold text-gray-900">
+                <Link href="/product/patagonia-baggies-shorts-5" className="hover:text-orange-800 transition-colors">3. Patagonia Baggies Shorts — 5&quot;</Link>
+              </h2>
             </div>
             <p className="text-orange-900 font-bold mb-6">Best for: Maximum sustainability rigor when you can time the sale</p>
 
@@ -439,6 +441,14 @@ export default function AffordableSustainableBasicsPage() {
                 <div className="flex justify-between"><span className="text-gray-600">Observed low price:</span><span className="font-semibold text-orange-900">~$44</span></div>
                 <div className="flex justify-between"><span className="text-gray-600">Material:</span><span className="font-semibold">100% recycled nylon (NetPlus®)</span></div>
                 <div className="flex justify-between"><span className="text-gray-600">Brand HSS:</span><span className="font-semibold"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-sm">95/100</span> — Excellent 🏆</span></div>
+              </div>
+              <div className="flex flex-col justify-center gap-3">
+                <Link href="/brand/patagonia" className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-800 transition-colors">
+                  See Patagonia&apos;s full HSS rating & 5-pillar breakdown →
+                </Link>
+                <Link href="/product/patagonia-baggies-shorts-5" className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-800 transition-colors">
+                  View the Baggies Shorts product page →
+                </Link>
               </div>
             </div>
 
@@ -464,7 +474,7 @@ export default function AffordableSustainableBasicsPage() {
 
             <div className="bg-gray-50 rounded-xl p-6 mb-6">
               <h3 className="font-bold text-lg text-gray-900 mb-4">🌿 Stern but Fair Sustainability Summary</h3>
-              <p className="text-sm text-gray-600 mb-4">Patagonia&apos;s <strong>95/100 HSS</strong> is the highest in Hummlan&apos;s database — but we still apply the same stern lens.</p>
+              <p className="text-sm text-gray-600 mb-4"><Link href="/brand/patagonia" className="text-orange-700 underline font-semibold">Patagonia&apos;s <strong>95/100 HSS</strong></Link> is the highest in Hummlan&apos;s database — but we still apply the same stern lens.</p>
 
               <div className="mb-4">
                 <div className="flex items-center gap-2 mb-2"><CheckCircle className="w-5 h-5 text-orange-700" /><span className="font-bold">Climate Impact (96/100)</span></div>
@@ -492,7 +502,7 @@ export default function AffordableSustainableBasicsPage() {
               </div>
 
               <div className="mt-6 p-4 bg-orange-50 border border-orange-100 rounded-lg">
-                <p className="text-orange-900 font-medium text-sm"><strong>👉 Verdict:</strong> Patagonia is the most rigorously sustainable brand in this guide. At ~$44 on sale, the Baggies Shorts are the single best value for a shopper who prioritizes maximum sustainability proof.</p>
+                <p className="text-orange-900 font-medium text-sm"><strong>👉 Verdict:</strong> <Link href="/brand/patagonia" className="underline font-semibold">Patagonia</Link> is the most rigorously sustainable brand in this guide. At ~$44 on sale, the Baggies Shorts are the single best value for a shopper who prioritizes maximum sustainability proof.</p>
               </div>
             </div>
 
@@ -538,11 +548,11 @@ export default function AffordableSustainableBasicsPage() {
                     <td className="p-3 border-b">Cheapest entry to verified organic underwear</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="p-3 border-b font-semibold">Patagonia Baggies 5&quot;</td>
+                    <td className="p-3 border-b font-semibold"><Link href="/product/patagonia-baggies-shorts-5" className="hover:text-orange-700">Patagonia Baggies 5&quot;</Link></td>
                     <td className="p-3 border-b">$65</td>
                     <td className="p-3 border-b text-orange-900 font-semibold">~$44</td>
                     <td className="p-3 border-b"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-xs">95/100</span></td>
-                    <td className="p-3 border-b">Maximum sustainability rigor (on sale)</td>
+                    <td className="p-3 border-b"><Link href="/brand/patagonia" className="hover:text-orange-700 font-semibold">Maximum sustainability rigor (on sale)</Link></td>
                   </tr>
                 </tbody>
               </table>
@@ -597,7 +607,7 @@ export default function AffordableSustainableBasicsPage() {
               <p>If you&apos;re looking for <strong className="text-white">affordable sustainable clothing</strong> that won&apos;t break the bank or your ethics:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong>Start with Pact</strong> for everyday basics. Their Go-To Legging at ~$25 and Boxer Briefs at ~$10/pair in multipacks are the strongest price-to-sustainability ratios in this guide.</li>
-                <li><strong>Watch Patagonia sale windows</strong> for the Baggies Shorts if you want the highest-rigor sustainability rating at a reachable price point.</li>
+                <li><strong>Watch <Link href="/brand/patagonia" className="text-orange-200 underline font-semibold">Patagonia</Link> sale windows</strong> for the Baggies Shorts if you want the highest-rigor sustainability rating at a reachable price point.</li>
                 <li><strong>Use our price comparison tables</strong> to decide based on your specific category need and budget.</li>
               </ul>
               <p className="text-orange-100 text-sm pt-4 italic">Hummlan will continue updating tracked prices and HSS scores as new certifications, disclosures, and deal patterns emerge. This is not a static guide — it&apos;s a living comparison.</p>
@@ -606,7 +616,7 @@ export default function AffordableSustainableBasicsPage() {
 
           {/* Publishing Meta */}
           <div className="text-sm text-gray-500 border-t pt-6">
-            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-orange-700 hover:underline">Best Of hub</Link> · <Link href="/about" className="text-orange-700 hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-orange-700 hover:underline">Shop</Link></p>
+            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-orange-700 hover:underline">Best Of hub</Link> · <Link href="/learn" className="text-orange-700 hover:underline">Learning Hub</Link> · <Link href="/about" className="text-orange-700 hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-orange-700 hover:underline">Shop</Link></p>
             <p className="mt-2">Guide published: June 2025 | Prices and ratings checked as of publication date. Sustainability scores are updated as new evidence becomes available.</p>
           </div>
         </article>
