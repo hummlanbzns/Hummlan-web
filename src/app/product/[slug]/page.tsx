@@ -19,7 +19,7 @@ import HummlanBeeMark from '@/components/HummlanBeeMark';
 const getProduct = cache(async (slug: string) => {
   const rs = await db.execute({
     sql: `
-      SELECT p.*, b.name as brand_name, b.overall_sustainability_score as brand_score, c.name as category_name, c.slug as category_slug
+      SELECT p.*, b.name as brand_name, b.slug as brand_slug, b.overall_sustainability_score as brand_score, c.name as category_name, c.slug as category_slug
       FROM products p
       JOIN brands b ON p.brand_id = b.id
       JOIN categories c ON p.category_id = c.id
@@ -195,6 +195,21 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         />
 
         <div className="container mx-auto px-4 max-w-6xl">
+          {/* Breadcrumb — category + brand internal links for SEO */}
+          <nav className="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+            <ol className="flex items-center gap-2 flex-wrap">
+              <li><Link href="/" className="hover:text-brand">Home</Link></li>
+              <li>/</li>
+              <li>
+                <Link href={`/category/${product.category_slug}`} className="hover:text-brand">
+                  {product.category_name}
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-gray-900 font-medium">{product.name}</li>
+            </ol>
+          </nav>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Image Placeholder */}
             <div className="aspect-square bg-white rounded-2xl flex items-center justify-center border shadow-sm overflow-hidden group">
@@ -204,7 +219,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {/* Product Details */}
             <div className="flex flex-col justify-center">
               <div className="mb-8">
-                <p className="text-brand font-bold uppercase tracking-widest mb-2">{product.brand_name}</p>
+                <Link
+                  href={`/brand/${product.brand_slug}`}
+                  className="text-brand font-bold uppercase tracking-widest mb-2 inline-block hover:text-brand-dark transition-colors"
+                >
+                  {product.brand_name}
+                </Link>
                 <h1 className="text-4xl font-extrabold text-gray-900 mb-4">{product.name}</h1>
 
                 <div className="flex flex-wrap gap-3 mb-6">
@@ -237,7 +257,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   Expert Verdict
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
-                  {product.sustainability_summary || `This product is manufactured by ${product.brand_name}, which achieves an overall Hummlan Sustainability Score of ${product.brand_score}/100. ${product.brand_name} is rigorously vetted across our five core sustainability pillars, including EU Taxonomy alignment and robust environmental disclosures. Check our detailed pillar breakdown below to see how this product scores across environmental and ethical standards.`}
+                  {product.sustainability_summary ? (
+                    product.sustainability_summary
+                  ) : (
+                    <>
+                      This product is manufactured by{' '}
+                      <Link href={`/brand/${product.brand_slug}`} className="text-brand font-semibold hover:underline">
+                        {product.brand_name}
+                      </Link>
+                      {`, which achieves an overall Hummlan Sustainability Score of ${product.brand_score}/100. ${product.brand_name} is rigorously vetted across our five core sustainability pillars, including EU Taxonomy alignment and robust environmental disclosures. Check our detailed pillar breakdown below to see how this product scores across environmental and ethical standards.`}
+                    </>
+                  )}
                 </p>
               </div>
 

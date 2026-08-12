@@ -445,6 +445,14 @@ export default function NewsDigestPage() {
                 <p className="font-bold text-gray-900">HSS Search Engine</p>
                 <p className="text-sm text-gray-600">Check any brand&apos;s sustainability score</p>
               </Link>
+              <Link href="/about" className="p-4 bg-orange-50 rounded-xl border border-orange-100 hover:border-orange-300 transition-colors">
+                <p className="font-bold text-gray-900">Our HSS Methodology</p>
+                <p className="text-sm text-gray-600">How the Hummlan Sustainability Score actually works</p>
+              </Link>
+              <Link href="/best-of" className="p-4 bg-orange-50 rounded-xl border border-orange-100 hover:border-orange-300 transition-colors">
+                <p className="font-bold text-gray-900">Best-Of Guides</p>
+                <p className="text-sm text-gray-600">Stern-rated sustainable products at real prices</p>
+              </Link>
             </div>
           </div>
         </div>

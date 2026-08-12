@@ -57,6 +57,16 @@ const AFFILIATE_LINKS = {
   },
 };
 
+// Quick-comparison table rows → internal links (product page, or brand page when
+// no exact product row exists in the Hummlan database).
+const QUICK_LINK_MAP: Record<string, string> = {
+  'Meliora Cleaning Bar': '/brand/meliora',
+  "Dr. Bronner's 32 oz": '/product/dr-bronners-peppermint-pure-castile-liquid-soap',
+  'Blueland Multi-Surface': '/product/multi-surface-cleaner-starter-set',
+  'Dropps Laundry Pods': '/product/laundry-detergent-pods-unscented',
+  'ECOS Laundry 100 oz': '/product/ecos-laundry-detergent-free-clear',
+};
+
 const productSchemas = [
   {
     '@type': 'Product',
@@ -167,6 +177,7 @@ export default function HomeEssentialsPage() {
           {[
             {
               num: 1, name: "Meliora All-Purpose Cleaning Bar + Stainless Steel Tin",
+              brandName: 'Meliora', brandSlug: 'meliora', productSlug: null,
               best: "Zero-waste multi-purpose cleaning with the highest HSS",
               msrp: "$6.95 per bar + tin (lasts 3–6 months)", low: "~$0.04/use", hss: "93/100", hssLabel: "Excellent",
               priceRows: [['All-Purpose Cleaning Bar','$6.95','~$0.04'],['Laundry Powder (60 loads)','$13.95','~$0.23/load'],['Dish Soap Bar','$5.95','~$0.04/wash'],['Full bundle (all 3)','~$25.00','Best value']],
@@ -182,6 +193,7 @@ export default function HomeEssentialsPage() {
             },
             {
               num: 2, name: "Dr. Bronner's Pure-Castile Liquid Soap (32 oz)",
+              brandName: "Dr. Bronner's", brandSlug: 'dr-bronners', productSlug: 'dr-bronners-peppermint-pure-castile-liquid-soap',
               best: "Multi-purpose versatility at an accessible price",
               msrp: "MSRP $16.99–$18.99", low: "~$12.50–$14.00 sale", hss: "92/100", hssLabel: "Excellent",
               priceRows: [['All-purpose cleaner','1 tbsp per 16 oz water','~$0.03'],['Dish soap','Undiluted or 1:1','~$0.05'],['Laundry','1/3 cup per load','~$0.26/load'],['Bar soap (5 oz)','N/A — $4.99','~$0.04/wash']],
@@ -197,6 +209,7 @@ export default function HomeEssentialsPage() {
             },
             {
               num: 3, name: "Blueland Multi-Surface & Dish Starter Sets",
+              brandName: 'Blueland', brandSlug: 'blueland', productSlug: 'multi-surface-cleaner-starter-set',
               best: "Refillable system with the most convenient subscription",
               msrp: "$18 (Multi-Surface), $22 (Dish)", low: "~$15–$18 sale", hss: "85/100", hssLabel: "Very Good",
               priceRows: [['Multi-Surface Cleaner','$18.00','~$15.00','~$2.00/tablet'],['Dish Soap','$22.00','~$18.00','~$3.00/tablet'],['Hand Soap','$18.00','~$15.00','~$2.00/tablet'],['Bundle all 3','~$52.00','~$42.00','~$7.00/month']],
@@ -212,6 +225,7 @@ export default function HomeEssentialsPage() {
             },
             {
               num: 4, name: "Dropps Laundry Detergent Pods + Dishwasher Pods",
+              brandName: 'Dropps', brandSlug: 'dropps', productSlug: 'laundry-detergent-pods-unscented',
               best: "Best cost-per-load in sustainable laundry",
               msrp: "$19.99 (48 ct laundry)", low: "~$15.99 subscription", hss: "84/100", hssLabel: "Very Good",
               priceRows: [['Laundry Pods 48 ct','$19.99','$15.99','~$0.33'],['Dishwasher Pods 60 ct','$22.99','$18.39','~$0.31'],['Bulk Laundry 120 ct','$44.99','$35.99','~$0.30 🏆'],['Bulk Dishwasher 120 ct','$39.99','$31.99','~$0.27 🏆']],
@@ -227,6 +241,7 @@ export default function HomeEssentialsPage() {
             },
             {
               num: 5, name: "ECOS Laundry Detergent + All-Purpose Cleaner",
+              brandName: 'ECOS', brandSlug: 'ecos', productSlug: 'ecos-laundry-detergent-free-clear',
               best: "Widely available budget-friendly option",
               msrp: "$13.99 (96 loads laundry)", low: "~$10.49 sale", hss: "84/100", hssLabel: "Very Good",
               priceRows: [['Laundry Detergent (96 loads)','$13.99','~$10.49','~$0.11/load 🏆'],['All-Purpose Cleaner','$5.99','~$4.49','~$0.12/use'],['Dish Soap','$4.99','~$3.79','~$0.06/wash']],
@@ -244,9 +259,25 @@ export default function HomeEssentialsPage() {
             <section key={prod.num} className="mb-16 bg-white rounded-2xl border shadow-sm p-6 md:p-8">
               <div className="flex items-center gap-3 mb-4">
                 <ShoppingBag className="w-6 h-6 text-orange-700" />
-                <h2 className="text-2xl font-bold text-gray-900">{prod.num}. {prod.name}</h2>
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {prod.productSlug ? (
+                    <Link href={`/product/${prod.productSlug}`} className="hover:text-orange-800 transition-colors">{prod.num}. {prod.name}</Link>
+                  ) : (
+                    <>{prod.num}. {prod.name}</>
+                  )}
+                </h2>
               </div>
-              <p className="text-orange-700 font-bold mb-6">Best for: {prod.best}</p>
+              <p className="text-orange-700 font-bold mb-3">Best for: {prod.best}</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 mb-6">
+                <Link href={`/brand/${prod.brandSlug}`} className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-700 hover:text-orange-800 transition-colors">
+                  See {prod.brandName}&apos;s full HSS rating →
+                </Link>
+                {prod.productSlug && (
+                  <Link href={`/product/${prod.productSlug}`} className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-700 hover:text-orange-800 transition-colors">
+                    View product page →
+                  </Link>
+                )}
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2 text-sm"><div className="flex justify-between"><span className="text-gray-600">Price:</span><span className="font-semibold text-right">{prod.msrp}</span></div><div className="flex justify-between"><span className="text-gray-600">Lowest:</span><span className="font-semibold text-orange-700">{prod.low}</span></div><div className="flex justify-between"><span className="text-gray-600">HSS:</span><span className="font-semibold"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-sm">{prod.hss}</span> — {prod.hssLabel}</span></div></div>
               </div>
@@ -284,7 +315,7 @@ export default function HomeEssentialsPage() {
                 <thead><tr className="bg-gray-100"><th className="text-left p-3 font-bold text-gray-900 border-b">Product</th><th className="text-left p-3 font-bold text-gray-900 border-b">Best For</th><th className="text-left p-3 font-bold text-gray-900 border-b">MSRP</th><th className="text-left p-3 font-bold text-gray-900 border-b">Low Price</th><th className="text-left p-3 font-bold text-gray-900 border-b">Per-Use</th><th className="text-left p-3 font-bold text-gray-900 border-b">HSS</th></tr></thead>
                 <tbody>
                   {[['Meliora Cleaning Bar','Zero plastic / highest HSS','$6.95','$6.95','~$0.04','93'],["Dr. Bronner's 32 oz",'Multi-purpose versatility','$16.99','~$12.50','~$0.05','92'],['Blueland Multi-Surface','Refillable system','$18.00','~$15.00','~$0.10','85'],['Dropps Laundry Pods','Cost-per-load','$19.99','~$15.99','~$0.33','84'],['ECOS Laundry 100 oz','Budget + availability','$13.99','~$10.49','~$0.11','84']].map((r,i) => (
-                    <tr key={i} className={i%2===0?'bg-white':'bg-gray-50'}><td className="p-3 border-b font-semibold">{r[0]}</td><td className="p-3 border-b">{r[1]}</td><td className="p-3 border-b">{r[2]}</td><td className="p-3 border-b text-orange-700 font-semibold">{r[3]}</td><td className="p-3 border-b">{r[4]}</td><td className="p-3 border-b"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-xs">{r[5]}</span></td></tr>
+                    <tr key={i} className={i%2===0?'bg-white':'bg-gray-50'}><td className="p-3 border-b font-semibold">{QUICK_LINK_MAP[r[0]] ? <Link href={QUICK_LINK_MAP[r[0]]} className="hover:text-orange-700">{r[0]}</Link> : r[0]}</td><td className="p-3 border-b">{r[1]}</td><td className="p-3 border-b">{r[2]}</td><td className="p-3 border-b text-orange-700 font-semibold">{r[3]}</td><td className="p-3 border-b">{r[4]}</td><td className="p-3 border-b"><span className="bg-orange-700 text-white px-2 py-0.5 rounded text-xs">{r[5]}</span></td></tr>
                   ))}
                 </tbody>
               </table>
@@ -336,7 +367,7 @@ export default function HomeEssentialsPage() {
           </section>
 
           <div className="text-sm text-gray-500 border-t pt-6">
-            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-orange-700 hover:underline">Best Of hub</Link> · <Link href="/about" className="text-orange-700 hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-orange-700 hover:underline">Shop</Link></p>
+            <p><strong>Internal links:</strong> <Link href="/best-of" className="text-orange-700 hover:underline">Best Of hub</Link> · <Link href="/learn" className="text-orange-700 hover:underline">Learning Hub</Link> · <Link href="/about" className="text-orange-700 hover:underline">Our Methodology</Link> · <Link href="/shop" className="text-orange-700 hover:underline">Shop</Link></p>
             <p className="mt-2">Guide published: June 2025 | Prices and ratings checked as of publication date.</p>
           </div>
         </article>

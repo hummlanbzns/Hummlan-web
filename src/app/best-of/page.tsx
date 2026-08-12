@@ -150,7 +150,7 @@ export default function BestOfHub() {
                   <div className="text-3xl mb-3">🔬</div>
                   <h3 className="font-bold text-gray-900 mb-2">Rigorous Rating</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Every product is scored across 5 EU Taxonomy-aligned pillars: Climate, Circular Economy,
+                    Every product is scored across <Link href="/learn" className="text-orange-700 underline font-semibold">5 EU Taxonomy-aligned pillars</Link>: Climate, Circular Economy,
                     Pollution, Supply Chain, and Biodiversity.
                   </p>
                 </div>
@@ -176,12 +176,20 @@ export default function BestOfHub() {
             {/* CTA to methodology */}
             <section className="mt-8 text-center">
               <p className="text-gray-500 mb-4">Want to understand how we rate products?</p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-900 transition-colors"
-              >
-                Read our full methodology →
-              </Link>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-900 transition-colors"
+                >
+                  Read our full methodology →
+                </Link>
+                <Link
+                  href="/learn"
+                  className="inline-flex items-center gap-2 text-orange-700 font-bold hover:text-orange-900 transition-colors"
+                >
+                  Explore the Learning Hub →
+                </Link>
+              </div>
             </section>
           </div>
         </section>
