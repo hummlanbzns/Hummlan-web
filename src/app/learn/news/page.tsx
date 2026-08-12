@@ -4,13 +4,13 @@ import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, Shoppi
 import { SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'The Hummlan Hive — Sustainability Weekly Digest #2 | China Climate Plan, EU Nature Targets & Greenwashing News',
-  description: "Edition #2 of Hummlan's weekly digest: China's new five-year climate plan, the world falling short on biodiversity targets, UK's new leader on net-zero, and more.",
-  keywords: ['sustainability news weekly digest', 'China climate policy 2026', 'EU biodiversity targets', 'corporate sustainability news', 'renewable energy', 'greenwashing regulations'],
+  title: 'Sustainability Weekly Digest #3 | Hottest July, Europe Heatwave Energy Crisis, UK Plastic Waste & More',
+  description: "Edition #3 of Hummlan's weekly digest: Hottest July on record in the US, Europe's grid under heatwave strain, the truth about UK plastic recycling, a rewilding success story, and quick hits.",
+  keywords: ['sustainability news weekly digest', 'hottest July 2026', 'Europe heatwave energy grid', 'nuclear power heatwave', 'waste colonialism UK plastic exports', 'Caspian tiger rewilding', 'UK COBRA extreme heat'],
   alternates: { canonical: '/learn/news' },
   openGraph: {
-    title: `The Hummlan Hive — Sustainability Weekly Digest #2 | ${SITE_NAME}`,
-    description: "China's new five-year climate plan, the world falling short on biodiversity targets, UK's new leader on net-zero, and more.",
+    title: `Sustainability Weekly Digest #3 | ${SITE_NAME}`,
+    description: "Hottest July on record in the US, Europe's grid under heatwave strain, the truth about UK plastic recycling, a rewilding success story, and quick hits.",
     type: 'article',
     url: '/learn/news',
   },
@@ -91,6 +91,7 @@ function LabelBlock({ label, children }: { label: string; children: React.ReactN
     'The findings that matter for consumers': 'bg-green-50 text-green-800 border-green-200',
     'What this means for Hummlan readers': 'bg-amber-50 text-amber-800 border-amber-200',
     'The uncomfortable truth': 'bg-red-50 text-red-800 border-red-200',
+    'The details': 'bg-blue-50 text-blue-800 border-blue-200',
   };
   const colorClass = labelColors[label] || 'bg-gray-50 text-gray-700 border-gray-200';
   return (
@@ -161,10 +162,10 @@ export default function NewsDigestPage() {
               </p>
               <div className="flex flex-wrap gap-4 mt-6 text-sm text-orange-200">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4" />Edition #2 &mdash; Week of 3 August 2026
+                  <Calendar className="w-4 h-4" />Edition #3 &mdash; Week of 10 August 2026
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <FileText className="w-4 h-4" />5 min read
+                  <FileText className="w-4 h-4" />6 min read
                 </span>
               </div>
             </div>
@@ -173,12 +174,11 @@ export default function NewsDigestPage() {
               <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">In this edition</h2>
               <nav className="flex flex-wrap gap-x-6 gap-y-1">
                 {[
-                  'China\'s New Five-Year Climate Plan: Emissions Set to Reverse',
-                  'Nature & Biodiversity — World Falling Short on 22 of 23 Global Nature Targets',
-                  'Policy Watch — UK\'s New Leader on Climate: Andy Burnham\'s Net-Zero Vision',
-                  'Extreme Weather — Europe\'s May and June Heatwaves: Death Toll and Counting',
-                  'Greenwashing Watch — Carbon Capture Claims Under Fire',
-                  'Quick Hits',
+                  'Headline Story — Hottest July on Record: US and Europe in the Grip of Extreme Heat',
+                  'Energy & the Grid — Heatwaves Don\'t Discriminate: Nuclear, Gas, and Renewables All Feel the Strain',
+                  'Waste & Circular Economy — "Waste Colonialism": The Truth About UK Plastic Recycling',
+                  'Nature & Biodiversity — Caspian Tiger Returns to Kazakhstan After 70 Years',
+                  'Quick Hits — What Else Happened This Week',
                 ].map((item) => (
                   <a
                     key={item}
@@ -193,191 +193,167 @@ export default function NewsDigestPage() {
             {/* Body */}
             <div className="px-8 py-10">
               <div className="prose prose-gray max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-orange-600 prose-a:font-medium prose-strong:text-gray-900 prose-code:text-orange-700 prose-code:bg-orange-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm">
-                {/* Section 1 — China Climate Plan */}
-                <SectionCard number="1" title="Headline Story — China's New Five-Year Climate Plan: Emissions Set to Reverse">
+                {/* Section 1 — Hottest July on Record */}
+                <SectionCard number="1" title="Headline Story — Hottest July on Record: US and Europe in the Grip of Extreme Heat">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      On 6 August 2026, China released its 15th Five-Year Plan for climate change, marking a significant shift in the world&apos;s largest emitter&apos;s approach. The plan sets binding targets for:
+                      July 2026 was the hottest month ever recorded in the United States, according to new data from the National Oceanic and Atmospheric Administration (NOAA). The average temperature across the contiguous US was 3.3&deg;F (1.8&deg;C) above the 20th-century average, surpassing previous records set during the Dust Bowl (July 1936) and July 2012. The dataset goes back to 1895.
                     </p>
+                    <p className="text-sm mt-2">
+                      The US blistered under three separate heat dome events, with Wyoming recording its hottest July ever &mdash; a staggering 5.1&deg;F above average. Wildfire smoke from blazes in Canada and the US Pacific Northwest blanketed parts of the country for much of the month.
+                    </p>
+                    <p className="text-sm mt-2 font-bold">Across the Atlantic, Europe is enduring its hottest summer on record. In the UK:</p>
                     <BulletList items={[
-                      '**Peak CO₂ emissions** before 2025 (confirmed achieved)',
-                      '**Absolute reductions in coal consumption** by 2027',
-                      '**Non-fossil energy** reaching 45% of primary energy by 2030',
-                      'A reformed **emissions trading scheme** expanding to cover cement, aluminium, and aviation',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Why it matters for shoppers">
-                    <p className="text-sm">
-                      China dominates global supply chains for solar panels (80%+ of manufacturing), wind turbines, lithium-ion batteries, and critical minerals processing. The new plan includes specific provisions for **green supply chain reporting** for Chinese exporters to the EU — aligning with the EU&apos;s Carbon Border Adjustment Mechanism (CBAM). This means products manufactured in China for European markets will increasingly carry verified carbon footprint data, making it easier for consumers to compare the climate impact of imported goods.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="The Carbon Brief analysis">
-                    <p className="text-sm">
-                      China&apos;s CO₂ emissions already appear to have entered structural decline. An analysis published 15 May 2025 first identified the reversal, attributed to:
-                    </p>
-                    <BulletList items={[
-                      'Record-breaking renewable energy installation (1,200 GW combined solar and wind by mid-2026)',
-                      'Declining steel and cement output as the property sector contracts',
-                      'Rapid EV adoption (EVs reached 50% of new car sales in China by Q2 2026)',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Stern take">
-                    <p className="text-sm">
-                      This is genuinely significant — China was the primary driver of global emission growth for two decades. However, the plan still includes new coal-fired power plants as &quot;flexibility capacity&quot; for grid balancing, and the emissions trading scheme&apos;s carbon price remains too low (~¥60/tonne ≈ €7.70) to drive real abatement. Progress is real, but the pace remains behind what the Paris Agreement requires.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief (06.08.2026, Primary) | Analysis: Clean energy put China&apos;s CO₂ emissions into reverse (15.05.2025, Secondary)</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 2 — Nature & Biodiversity */}
-                <SectionCard number="2" title="Nature & Biodiversity — World Falling Short on 22 of 23 Global Nature Targets">
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      A draft UN report, published 29 July 2026, reveals that the world is falling short on 22 of the 23 Global Biodiversity Framework targets set for 2030. The only target on track? Protecting 30% of land and sea areas (&quot;30×30&quot;) — which itself relies on generous definitions of &quot;protected&quot; that include areas with active mining and logging permits.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="The findings that matter for consumers">
-                    <BulletList items={[
-                      '**Target 1:** &quot;Space planning to retain high-biodiversity areas&quot; — off track. Only 12% of signatory nations have completed spatial plans.',
-                      '**Target 7:** &quot;Reduce pollution from excess nutrients, pesticides, and plastics&quot; — significantly off track. Global plastic production continues to rise despite voluntary commitments.',
-                      '**Target 15:** &quot;Businesses assess and disclose impacts on biodiversity&quot; — partially on track. The EU&apos;s CSRD and TNFD (Taskforce on Nature-related Financial Disclosures) framework are driving corporate adoption, but primarily among European-headquartered firms.',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Stern take">
-                    <p className="text-sm">
-                      The &quot;30×30&quot; target sounds like a win, but the devil is in the definition. Marine protected areas where bottom-trawling continues aren&apos;t really &quot;protected.&quot; Terrestrial reserves that allow logging aren&apos;t &quot;conserved.&quot; The UN draft report is honest about this — but national governments are less so. For shoppers, this means &quot;sustainably sourced&quot; claims on products from countries with weak protected-area enforcement need extra scrutiny.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief (29.07.2026, Primary) — UN draft report assessment</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 3 — UK Leader on Climate */}
-                <SectionCard number="3" title="Policy Watch — UK's New Leader on Climate: Andy Burnham's Net-Zero Vision">
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      Andy Burnham, the UK&apos;s new Prime Minister (took office July 2026), has a track record on climate that Carbon Brief and others are scrutinising closely. Key positions from his recent statements and past record as Greater Manchester Mayor:
-                    </p>
-                    <BulletList items={[
-                      '**Net-zero 2038 for Greater Manchester** — As Mayor, Burnham committed the city-region to a 2038 net-zero target, one of the most ambitious in the UK. His government is expected to accelerate the national 2050 target.',
-                      '**Public transport ownership** — Burnham pioneered London-style public transport franchising in Manchester, with plans to expand zero-emission bus fleets nationally.',
-                      '**Onshore wind ban** — He supports lifting England&apos;s effective ban on onshore wind, which the previous government maintained despite widespread public support.',
-                      '**Oil and gas licensing** — Burnham has signalled he will not issue new North Sea oil and gas licences, aligning UK policy with the International Energy Agency&apos;s pathway to net-zero.',
+                      'The country is facing its **fifth heatwave of the summer**.',
+                      'The number of days reaching 30&deg;C in a single year has hit a **new record of 35 days** (beating the 34-day record set in 1995), according to the Met Office.',
+                      'Prime Minister Andy Burnham chaired an emergency COBRA meeting on 12 August as temperatures are forecast to reach 38&deg;C. Wildfires are stretching emergency services, with the &quot;fire wave&quot; described as the most widespread the UK has ever experienced.',
+                      'An exclusive Guardian investigation reveals that England is &quot;desperately unprepared&quot; for climate adaptation: **just 20 of 6,600 staff at the Department for Environment, Food and Rural Affairs (Defra) are working on climate adaptation** amid drought and wildfires.',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="What this means for Hummlan readers">
                     <p className="text-sm">
-                      The UK remains a primary market for Hummlan. Changes to energy policy (onshore wind, grid decarbonisation) directly affect the &quot;Climate Impact&quot; pillar of our HSS ratings for UK-based brands and products. A faster grid decarbonisation timeline means lower scope 2 emissions for all UK manufacturers — a genuine positive that will be reflected in updated ratings.
+                      The lived reality of a warming world directly affects the supply chains behind the products we rate. Extreme heat disrupts transport, reduces agricultural yields, strains energy grids, and increases the carbon footprint of cooling systems. When we assess a brand&apos;s &quot;Climate Impact&quot; under HSS, we consider the resilience of its supply chain to climate disruption &mdash; not just its emissions. Brands that invest in climate adaptation (sustainable water management, heat-resilient logistics, renewable cooling) score higher for a reason.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      Burnham&apos;s record is genuinely strong on climate compared to his predecessors. However, the fiscal environment is challenging — the UK carries high debt, and public investment in green infrastructure faces competing demands from healthcare, defence, and social care. The gap between ambition and funded delivery remains the critical question.
+                      Every &quot;hottest month on record&quot; headline is both a news story and a warning that was issued decades ago. The UK&apos;s COBRA meeting is reactive, not proactive. The finding that 20 out of 6,600 Defra staff work on adaptation speaks volumes about the gap between political rhetoric and institutional capacity. The climate is changing faster than governments are adapting. For shoppers, this means the products you buy today are coming through supply chains that are increasingly stressed &mdash; and that stress will only grow.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief — &quot;28 quotes from new UK leader Andy Burnham on climate&quot; (July 2026, Primary)</p>
+                    <p className="text-sm">The Guardian &mdash; &quot;July was hottest month ever recorded in US&quot; (10.08.2026, NOAA data, Primary) | The Guardian &mdash; &quot;Andy Burnham to chair emergency Cobra meeting amid extreme heat&quot; (12.08.2026, Primary) | The Guardian &mdash; &quot;Just 20 of 6,600 Defra staff working on climate adaptation&quot; (12.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 4 — Extreme Weather */}
-                <SectionCard number="4" title="Extreme Weather — Europe's May and June Heatwaves: Death Toll and Counting">
+                {/* Section 2 — Energy & the Grid */}
+                <SectionCard number="2" title="Energy & the Grid — Heatwaves Don't Discriminate: Nuclear, Gas, and Renewables All Feel the Strain">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      A study published 17 July 2026 in <em>Nature Medicine</em> estimated the excess mortality attributable to Europe&apos;s May and June 2026 heatwaves at <strong>4,800 deaths</strong> across France, Germany, Spain, Italy, and the UK. The methodology compares observed deaths to a modelled baseline of expected mortality, accounting for an ageing population that is more vulnerable to heat.
+                      When temperatures soared past 40&deg;C in parts of Europe in June and July 2026, every type of electricity generation was affected &mdash; yet some commentators were quick to blame &quot;intermittent&quot; wind and solar while downplaying the impact on gas and nuclear. A detailed Carbon Brief factcheck (published 4 August 2026) sets the record straight.
+                    </p>
+                    <p className="text-sm mt-2 font-bold">Nuclear:</p>
+                    <BulletList items={[
+                      'During the July 2026 heatwave, **3 of France&apos;s 57 reactors shut down**; generation was reduced at another 7, causing an almost 9% dip in nuclear power production.',
+                      'Low river levels on the Danube hit reactors in Romania and Hungary. A Swiss reactor also shuttered due to high river temperatures.',
+                      'On Monday 3 August, **2.44 GW &mdash; or 40% &mdash; of south-east Europe&apos;s nuclear capacity was offline** due to drought in the Danube, according to data company Montel. The Associated Press reported the Danube was not expected to return to normal levels for &quot;days or even weeks,&quot; pushing some countries &quot;to the brink of energy emergency.&quot;',
+                      '12% of the French nuclear fleet was offline due to heat-related reasons on the same Monday.',
+                      '**However:** heatwaves cut annual nuclear generation by only 0.6% on average (2003–2022). France&apos;s losses fell from 5.5 TWh in 2003 to 0.5 TWh in 2022 &mdash; a 90% reduction through cooling upgrades and better operating practices.',
+                    ]} />
+                    <p className="text-sm mt-2 font-bold">Gas:</p>
+                    <BulletList items={[
+                      'At 40&deg;C, a gas-fired power station&apos;s capacity drops by 13% and efficiency by 7% compared to 20&deg;C, according to Electric Insights.',
+                      'Simple gas turbines lose about 10% output per 10&deg;C rise, says Dr Iain Staffell of Imperial College London.',
+                      'Power line capacity falls by up to 16% for a 10&deg;C rise.',
+                      'Gas plants made up 79% of the capacity that dropped off California&apos;s grid during the August 2020 rolling blackouts.',
+                    ]} />
+                    <p className="text-sm mt-2 font-bold">Wind:</p>
+                    <BulletList items={[
+                      'Wind speeds drop during heatwaves (high-pressure &quot;heat domes&quot;). A 2024 study found **wind power decreased by 30–50% during heatwaves** across Australia, northern Asia, and Europe.',
+                      'In the UK in June 2026, wind generation fell to ~15% of the mix (from a ~30% average). The National Electricity System Operator (Neso) paid &pound;1,400/MWh to secure 1.7 GW of imported power &mdash; nearly 20 times the average June 2025 price.',
+                    ]} />
+                    <p className="text-sm mt-2 font-bold">Solar:</p>
+                    <BulletList items={[
+                      'Despite the myth that solar &quot;struggles&quot; in heat, each 1&deg;C rise only reduces output by 0.4–0.5%, which is easily outweighed by long, cloudless days.',
+                      'Across a 4-day UK heatwave in June 2026, solar generated 484 GWh &mdash; a **46% increase** over the same period a week earlier.',
+                      '**EU solar generated a record 52 TWh in June 2026**, beating the previous month&apos;s record of 47 TWh.',
+                      'The Guardian (12 August 2026) reports that heat pumps &mdash; often seen as a heating technology &mdash; are increasingly being used for cooling, with owners reporting 21&deg;C indoor temperatures when it&apos;s 35&deg;C outside.',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      The anti-renewables playbook is predictable &mdash; blame wind and solar when the grid strains, while ignoring that gas and nuclear are also compromised by extreme heat. The reality is more nuanced: **all generation types are affected by heatwaves, but solar + battery storage is uniquely complementary to the problem (air conditioning demand peaks when the sun shines).** The Daily Mail&apos;s claim that wind was to blame for UK grid strain on 24 June 2026 is simply false &mdash; its own article acknowledged that gas plants had also cut output by 2.5 GW that day. For consumers, the lesson is: don&apos;t let selective narratives shape your view of energy. The grid needs flexibility, storage, and resilience &mdash; not a blame game.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">Carbon Brief &mdash; &quot;Factcheck: How nuclear, gas, wind and solar power are affected during heatwaves&quot; (04.08.2026, Primary) | Associated Press via Carbon Brief (03.08.2026, Secondary) | The Guardian &mdash; &quot;Heat pumps can cool your home&quot; (12.08.2026, Secondary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 3 — Waste & Circular Economy */}
+                <SectionCard number="3" title='Waste & Circular Economy — "Waste Colonialism": The Truth About UK Plastic Recycling'>
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      A Guardian investigation (published 4 August 2026) has revealed that **high levels of microplastics and plastic contamination** have been found in a waterway in Adana, Turkey, close to a major recycling hub supplied with plastic waste by British companies.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Key findings">
-                    <Table
-                      headers={['Country', 'Estimated Excess Deaths (May–June 2026)', 'Heatwave Days']}
-                      rows={[
-                        ['France', '1,650', '12'],
-                        ['Italy', '1,210', '14'],
-                        ['Spain', '960', '10'],
-                        ['Germany', '580', '8'],
-                        ['United Kingdom', '400', '6'],
-                      ]}
-                    />
-                  </LabelBlock>
-                  <LabelBlock label="The uncomfortable truth">
-                    <p className="text-sm">
-                      The study notes that heatwave mortality was 30% lower than equivalent events in 2022 and 2023, suggesting that early-warning systems and public health responses are improving. However, the absolute number of deaths remains stubbornly high because:
-                    </p>
                     <BulletList items={[
-                      'Urban heat island effects are worsening as cities densify',
-                      'Night-time temperatures are rising faster than daytime highs, reducing recovery time',
-                      'An ageing European population means more people are physiologically vulnerable',
+                      'The UK exported **139,000 tonnes of rubbish** to poor districts in Adana, Turkey.',
+                      'The Environmental Investigation Agency (EIA) identified **13 British companies** that sent plastic to the Kemal Deniz recycling site between 2021 and 2024.',
+                      'The polluted waterway floods into agricultural fields after heavy rain and feeds into a canal used for irrigating crops on the &Ccedil;ukurova plain &mdash; **one of the largest and most fertile agricultural basins in Turkey.**',
+                      'A follow-up article (6 August 2026, also by the Guardian) went deeper: &quot;The Turkish city carrying the weight of Britain&apos;s pollution problem&quot; &mdash; farmers report microplastics, toxic smoke from burning waste, and debris in their fields.',
+                      'Residents protest with banners reading: &quot;Plastic waste imports should be banned.&quot;',
+                      'This comes after global talks to end the plastic crisis collapsed in 2025.',
                     ]} />
                   </LabelBlock>
-                  <LabelBlock label="Hummlan relevance">
+                  <LabelBlock label="What this means for Hummlan readers">
                     <p className="text-sm">
-                      Climate adaptation — not just mitigation — is now a material factor for supply chains. Brands with manufacturing or warehousing in Southern Europe face increasing heat-related risks (workplace safety, crop yield impacts, logistics disruptions). We will be monitoring how our rated brands disclose these risks under CSRD&apos;s ESRS E1 (Climate Change) reporting standard.
+                      The UK is one of the world&apos;s largest exporters of plastic waste. The term &quot;recycling&quot; often masks a system where waste is shipped to countries with weaker environmental regulations. When we assess a brand&apos;s &quot;Circular Economy &amp; Waste&quot; pillar under HSS, we look at whether its recycling claims are backed by verifiable, domestic processing &mdash; not just export to facilities that may or may not handle waste responsibly. Brands that use recycled content in their products and can trace it to certified processors score higher.
                     </p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief / Nature Medicine (17.07.2026, Primary)</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 5 — Greenwashing Watch */}
-                <SectionCard number="5" title="Greenwashing Watch — Carbon Capture Claims Under Fire">
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      A Carbon Brief Q&amp;A published 3 August 2026 examines the growing controversy around &quot;carbon capture and storage&quot; (CCS) claims used by fossil fuel companies to justify continued extraction. The analysis finds that:
-                    </p>
-                    <BulletList items={[
-                      '**Current global CCS capacity:** ~45 million tonnes CO₂ per year — equivalent to just **0.1% of global energy-related emissions**',
-                      '**Cost:** CCS remains prohibitively expensive ($60-160/tonne captured) compared to renewable alternatives ($0-20/tonne abated through solar/wind)',
-                      '**Track record:** Several high-profile CCS projects (Gorgon LNG in Australia, Petrobras Santos Basin in Brazil) have failed to meet injection targets by 50-80%',
-                      '**The new twist:** The oil industry is now marketing &quot;CCS-enabled oil&quot; — crude oil produced with associated carbon capture — as a premium product, with claims appearing in European fuel marketing',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Why this matters for shoppers">
-                    <p className="text-sm">
-                      Major oil companies are branding petrol/diesel as &quot;carbon captured&quot; or &quot;net-zero fuel.&quot; These claims are misleading because:
-                    </p>
-                    <OrderedList items={[
-                      'The capture rate is never 100%',
-                      'The captured CO₂ is often used for enhanced oil recovery (injecting CO₂ to extract more oil)',
-                      'The emissions from burning the fuel are still released to the atmosphere',
-                      'Most CCS projects are massively subsidised by taxpayers',
-                    ]} />
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      CCS has a legitimate role in industrial processes (cement, steel, chemicals) where alternatives are limited. But using it to market &quot;green petrol&quot; is the most brazen greenwashing play of 2026. The EU&apos;s Green Claims Directive, once fully implemented, should require that &quot;carbon captured&quot; fuel claims be accompanied by evidence that the capture rate exceeds 90%, the CO₂ is permanently stored (not used for EOR), and the claim applies only to the well-to-tank portion of the lifecycle — which is a fraction of the total emissions.
+                      This is the uncomfortable truth the recycling industry doesn&apos;t advertise. &quot;Recycled in the UK&quot; often means &quot;shipped to Turkey where it pollutes someone else&apos;s water and soil.&quot; The UK government pledged to reduce plastic waste exports, but the data shows 139,000 tonnes still flowing. Until there is domestic infrastructure to actually process what we throw away, &quot;recycling&quot; remains a euphemism for waste displacement. For conscious shoppers, the most reliable choice remains reducing plastic consumption at the source &mdash; not trusting that your recycling bin&apos;s contents will be dealt with responsibly.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief — Q&amp;A: Does the world need carbon capture to reach net-zero? (03.08.2026, Primary)</p>
+                    <p className="text-sm">The Guardian &mdash; &quot;UK plastic &apos;waste colonialism&apos; found to be polluting Turkey&apos;s farming heartland&quot; (04.08.2026, Primary) | The Guardian &mdash; &quot;&apos;Waste colonialism&apos; &ndash; the Turkish city carrying the weight of Britain&apos;s pollution problem&quot; (06.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 6 — Quick Hits */}
-                <SectionCard number="6" title="Quick Hits">
+                {/* Section 4 — Nature & Biodiversity */}
+                <SectionCard number="4" title="Nature & Biodiversity — Caspian Tiger Returns to Kazakhstan After 70 Years">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      On 31 July 2026, a female tiger named <strong>&quot;Umit&quot;</strong> (meaning &quot;hope&quot; in Kazakh) was released into a nature reserve on the edge of Lake Balkhash in Kazakhstan &mdash; the first time a Caspian tiger has roamed the country&apos;s wilds in over 70 years. The Guardian reported the story on 11 August 2026.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="The details">
+                    <BulletList items={[
+                      'Umit was wild-caught in the Russian Far East and transported to Kazakhstan as part of a decade-long rewilding project.',
+                      'Kazakhstan has become the **first country in the world to restore its tiger range** after the species was thought extinct there.',
+                      'A wild-caught male flown from Russia is still being monitored and will be released when ready.',
+                      'Two wild tiger cubs are being reared in special enclosures with minimal human contact, expected to be released next year.',
+                      'The goal is to establish a **self-sustaining population of about 50 tigers**, feasting on boar, deer, and kulans (a type of wild donkey).',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="What this means for Hummlan readers">
+                    <p className="text-sm">
+                      Biodiversity restoration is a key pillar of the HSS rating system. While most corporate sustainability efforts focus on emissions reduction, the Kunming-Montreal Global Biodiversity Framework requires businesses to assess and disclose their impacts on nature. Rewilding success stories like this one demonstrate that ecosystem restoration is possible &mdash; but they require long-term commitment, political will, and significant funding. For shoppers, the question to ask is: does the brand you&apos;re buying from have a biodiversity policy that goes beyond &quot;we plant trees&quot;?
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      This is genuinely good news &mdash; a rare bright spot in an otherwise bleak biodiversity picture. The Caspian tiger&apos;s return is a testament to what conservation can achieve with sustained effort. However, rewilding one apex predator in one country, while meaningful, is a drop in the ocean compared to the scale of biodiversity loss globally. The UN&apos;s draft report from late July (covered in Edition #2) found the world is falling short on 22 of 23 biodiversity targets. Celebrating wins like this is important &mdash; but it must not distract from the systemic failures elsewhere.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">The Guardian &mdash; &quot;The return of the Caspian tiger: how a species feared extinct has come back to Kazakhstan&quot; (11.08.2026, Primary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 5 — Quick Hits */}
+                <SectionCard number="5" title="Quick Hits — What Else Happened This Week">
                   <div className="space-y-4">
                     <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-blue-800 mb-1">🌊 &quot;Super El Niño&quot; could bring wet winter to western US</p>
-                      <p className="text-sm text-blue-700">Climate scientists are warning that a strong El Niño developing in the Pacific could trigger heavy rainfall and flooding across California and the southwestern US this winter. While this would provide drought relief, the risk of catastrophic flooding is elevated. <strong>Source:</strong> The Guardian (August 2026).</p>
+                      <p className="text-sm font-bold text-blue-800 mb-1">🐚 Falkland Islands salmon farm referendum</p>
+                      <p className="text-sm text-blue-700">The 3,500-strong population of the Falkland Islands is calling for a referendum on a proposed massive salmon farm. Unity Marine (a joint venture between a local fishing company and a Danish firm) wants to farm 50,000 tonnes of salmon annually in 16 locations &mdash; the largest industrial inshore development in the archipelago&apos;s history. Supporters say it could add &pound;35 million/year (11% of GDP) and 133 jobs. Critics fear salmon waste will damage the kelp forests that are spawning grounds for squid &mdash; a commercially critical species. Consultation runs through 30 October. <strong>Source:</strong> The Guardian (09.08.2026).</p>
                     </div>
                     <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-amber-800 mb-1">♻️ Plastics contamination an &quot;overlooked&quot; problem in food waste composting</p>
-                      <p className="text-sm text-amber-700">Experts are warning that compostable food waste is increasingly contaminated with microplastics from packaging, undermining the environmental benefits of food waste recycling schemes. The presence of PLA &quot;compostable&quot; plastics in industrial composting facilities creates microplastic pollution in the finished compost — and the labelling loophole means consumers can&apos;t distinguish home-compostable from industrially-compostable. <strong>Source:</strong> The Guardian (August 2026).</p>
+                      <p className="text-sm font-bold text-amber-800 mb-1">🐔 Farm animals in heatwaves</p>
+                      <p className="text-sm text-amber-700">Claire Bass of Humane World for Animals UK warns that the government&apos;s climate adaptation plans have a &quot;troubling blind spot&quot; for animal welfare. French media reported that 1–3 million birds died in a single week during June&apos;s 44&deg;C heatwave. Pigs and poultry begin suffering above 27&deg;C, and UK temperatures could reach 45&deg;C by 2056 per the Met Office. The Animal Welfare (Sentience) Act 2022 requires ministers to consider animals as sentient beings &mdash; yet current discourse treats deaths as &quot;reduced productivity.&quot; <strong>Source:</strong> The Guardian Letters (11.08.2026).</p>
                     </div>
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-red-800 mb-1">💨 Trump administration pays $1.22bn to cut offshore wind leases</p>
-                      <p className="text-sm text-red-700">In a controversial move, the Trump administration has agreed to pay a German energy firm $1.22 billion to cancel offshore wind development leases in federal waters. Environmental groups have condemned the move as a taxpayer-funded subsidy for the fossil fuel industry. <strong>Source:</strong> The Guardian (August 2026).</p>
+                      <p className="text-sm font-bold text-red-800 mb-1">🇨🇳 China&apos;s 15th Five-Year Climate Plan</p>
+                      <p className="text-sm text-red-700">Carbon Brief&apos;s Q&amp;A (published 6 August 2026) examines China&apos;s new five-year plan for climate change. The plan does not include any major new targets, instead consolidating existing policies: carbon intensity -17% over five years, carbon market per-product intensity -3%, and a target of 30 MtCO₂e reduction capacity from non-CO₂ greenhouse gases by 2030. The Ministry of Ecology and Environment describes it as &quot;the main policy instrument&quot; for 2026–2030. <em>Stern take:</em> Reaffirmation is not acceleration. China&apos;s emissions may have peaked, but the pace of reduction remains behind what the Paris Agreement requires. <strong>Source:</strong> Carbon Brief (06.08.2026).</p>
                     </div>
                     <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-green-800 mb-1">🌳 Australian fined $195,000 for removing 287 trees</p>
-                      <p className="text-sm text-green-700">A Sydney homeowner was fined nearly $200,000 for illegally removing 287 native trees from a harbourside property to improve water views. The case underscores the tension between property rights and biodiversity protection in urban areas. <strong>Source:</strong> The Guardian (August 2026).</p>
+                      <p className="text-sm font-bold text-green-800 mb-1">🔥 Defra&apos;s climate adaptation staffing gap</p>
+                      <p className="text-sm text-green-700">Just 20 of 6,600 staff at the UK&apos;s Department for Environment, Food and Rural Affairs work on climate adaptation. England is &quot;desperately unprepared&quot; for water shortages, heatwaves, and wildfires. <strong>Source:</strong> The Guardian (12.08.2026).</p>
                     </div>
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-purple-800 mb-1">☀️ European solar installations pass 1 TW milestone</p>
-                      <p className="text-sm text-purple-700">Europe&apos;s cumulative solar photovoltaic capacity has passed 1 terawatt, according to industry data. The milestone was driven by record installations in Germany, Spain, and Poland. However, grid connection bottlenecks and negative wholesale electricity prices during peak solar hours are emerging as constraints on further growth. <strong>Source:</strong> Industry data / Carbon Brief analysis (July 2026).</p>
+                      <p className="text-sm font-bold text-purple-800 mb-1">❄️ Heat pumps can cool your home</p>
+                      <p className="text-sm text-purple-700">A Guardian feature (12 August 2026) highlights how heat pumps, often seen as a heating technology, are being used for cooling during heatwaves. One owner in Maidenhead, Berkshire, reports keeping his living room at 21&deg;C when it&apos;s 35&deg;C outside. A recent study found that using a heat pump for cooling can &quot;significantly reduce overheating&quot; in modern homes. <strong>Source:</strong> The Guardian (12.08.2026).</p>
                     </div>
                   </div>
                 </SectionCard>
@@ -388,17 +364,18 @@ export default function NewsDigestPage() {
                   <Table
                     headers={['Item', 'Primary Source', 'Tier']}
                     rows={[
-                      ['China five-year climate plan', 'Carbon Brief (06.08.2026)', '🟢 Primary'],
-                      ['China CO₂ reversal analysis', 'Carbon Brief (15.05.2025)', '🟢 Primary'],
-                      ['UN biodiversity targets', 'Carbon Brief (29.07.2026)', '🟢 Primary'],
-                      ['UK PM Burnham on climate', 'Carbon Brief (July 2026)', '🟢 Primary'],
-                      ['Europe heatwave deaths', 'Nature Medicine / Carbon Brief (17.07.2026)', '🟢 Primary'],
-                      ['Carbon capture controversy', 'Carbon Brief (03.08.2026)', '🟢 Primary'],
-                      ['Super El Niño', 'The Guardian (August 2026)', '🟡 Secondary'],
-                      ['Plastics composting', 'The Guardian (August 2026)', '🟡 Secondary'],
-                      ['Offshore wind cancellation', 'The Guardian (August 2026)', '🟡 Secondary'],
-                      ['Australian tree removal', 'The Guardian (August 2026)', '🟡 Secondary'],
-                      ['European solar 1 TW', 'Industry data / Carbon Brief', '🟢 Primary'],
+                      ['Hottest July on record in the US', 'The Guardian (10.08.2026) / NOAA', '🟢 Primary'],
+                      ['UK COBRA emergency meeting on extreme heat', 'The Guardian (12.08.2026)', '🟢 Primary'],
+                      ['Defra climate adaptation staffing gap', 'The Guardian (12.08.2026)', '🟢 Primary'],
+                      ['Heatwave impact on nuclear, gas, wind, solar', 'Carbon Brief (04.08.2026)', '🟢 Primary'],
+                      ['Danube drought – SE Europe nuclear capacity offline', 'Associated Press (03.08.2026, via Carbon Brief)', '🟡 Secondary'],
+                      ['Heat pumps used for cooling', 'The Guardian (12.08.2026)', '🟡 Secondary'],
+                      ['UK plastic waste exports to Turkey ("waste colonialism")', 'The Guardian (04.08.2026)', '🟢 Primary'],
+                      ['Waste colonialism deep-dive: Adana, Turkey', 'The Guardian (06.08.2026)', '🟢 Primary'],
+                      ['Caspian tiger reintroduction, Kazakhstan', 'The Guardian (11.08.2026)', '🟢 Primary'],
+                      ['Falkland Islands salmon farm referendum', 'The Guardian (09.08.2026)', '🟡 Secondary'],
+                      ['Farm animals & heatwaves', 'The Guardian Letters (11.08.2026)', '🟡 Secondary'],
+                      ['China\'s 15th Five-Year Plan for climate change', 'Carbon Brief (06.08.2026)', '🟢 Primary'],
                     ]}
                   />
                 </div>
@@ -406,14 +383,14 @@ export default function NewsDigestPage() {
                 {/* Footer */}
                 <div className="mt-12 pt-8 border-t border-gray-200 text-center">
                   <p className="text-sm text-gray-500 italic">
-                    <em>The Hummlan Hive is a weekly sustainability news digest published by Hummlan. We curate stories that matter for conscious shoppers — no fluff, no greenwashing, just the signal through the noise.</em>
+                    <em>The Hummlan Hive is a weekly sustainability news digest produced by the Hummlan.com team. Our mission is to make sustainability transparent, accessible, and affordable &mdash; no fluff, no greenwashing, just the facts that matter for conscious shoppers.</em>
                   </p>
                   <p className="text-sm text-gray-500 mt-2">
-                    Have a story tip?{' '}
-                    <a href="mailto:hello@hummlan.com" className="text-orange-600 font-medium hover:underline">Contact us</a>.
+                    Have a tip or story suggestion?{' '}
+                    <a href="mailto:hive@hummlan.com" className="text-orange-600 font-medium hover:underline">Email us</a>.
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
-                    Next edition: <strong>Week of 10 August 2026</strong>
+                    Next edition: <strong>Week of 17 August 2026</strong>
                   </p>
                 </div>
               </div>
