@@ -1,7 +1,15 @@
 
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { ShieldCheck, Scale, CheckCircle, Info, Award, AlertTriangle } from 'lucide-react';
 import HssMethodologySection from '@/components/HssMethodology';
+
+export const metadata: Metadata = {
+  title: 'About Us — Stern & Fair Sustainability Ratings',
+  description:
+    'How Hummlan works: our stern but fair HSS rating methodology, EU Taxonomy and CSRD alignment, and why we fight greenwashing.',
+  alternates: { canonical: '/about' },
+};
 
 export default function AboutPage() {
   return (

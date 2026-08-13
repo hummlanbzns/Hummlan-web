@@ -14,7 +14,7 @@ import {
 } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Cheapest Sustainable Products Ranked',
+  title: 'Cheapest Sustainable Products Ranked | Hummlan',
   description:
     'Compare sustainable products by strict EU Taxonomy + CSRD-aligned ratings and find the cheapest live offers in one place.',
   alternates: { canonical: '/' },
