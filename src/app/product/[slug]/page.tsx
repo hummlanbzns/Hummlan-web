@@ -270,9 +270,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Image Placeholder */}
+            {/* Product image — real photo/logo when available, placeholder icon otherwise */}
             <div className="aspect-square bg-white rounded-2xl flex items-center justify-center border shadow-sm overflow-hidden group">
-              <ShoppingBag className="w-32 h-32 text-gray-200 group-hover:scale-110 transition-transform duration-500" />
+              {product.image_url ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={toOgImageUrl(product.image_url)}
+                  alt={product.name}
+                  className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <ShoppingBag className="w-32 h-32 text-gray-200 group-hover:scale-110 transition-transform duration-500" />
+              )}
             </div>
 
             {/* Product Details */}

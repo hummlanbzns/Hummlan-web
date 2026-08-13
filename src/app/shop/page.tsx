@@ -111,7 +111,18 @@ export default async function ShopPage({
             {products.map((product: any) => (
               <Link key={product.id} href={`/product/${product.slug}`} className="group bg-white border rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full">
                 <div className="aspect-square bg-gray-50 flex items-center justify-center relative">
-                  <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
+                  {product.image_url ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={product.image_url}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-all duration-500"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <ShoppingBag className="w-16 h-16 text-gray-200 group-hover:scale-110 group-hover:text-brand-light transition-all duration-500" />
+                  )}
                   <div className="absolute top-4 right-4 bg-brand text-white text-xs font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1">
                     HSS: {product.brand_score}/100
                     <span className="group/tip relative inline-flex">
