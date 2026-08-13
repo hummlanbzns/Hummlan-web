@@ -1,6 +1,14 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import { db } from '@/lib/db';
 import { ShoppingBag, Filter, Info, ChevronRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Shop Sustainable Products',
+  description:
+    'Browse all Hummlan-rated sustainable products, sorted by our stern HSS score. Compare prices and find the cheapest live offers.',
+  alternates: { canonical: '/shop' },
+};
 
 async function getAllProducts(sortBy: string = 'sustainability') {
   const orderClause = sortBy === 'price' 
@@ -12,7 +20,7 @@ async function getAllProducts(sortBy: string = 'sustainability') {
       SELECT p.*, b.name as brand_name, b.overall_sustainability_score as brand_score, MIN(al.price) as min_price
       FROM products p
       JOIN brands b ON p.brand_id = b.id
-      LEFT JOIN affiliate_links al ON p.id = al.product_id
+      LEFT JOIN affiliate_links al ON p.id = al.product_id AND al.is_active = 1 AND al.affiliate_url NOT LIKE '%search%'
       GROUP BY p.id
       ORDER BY ${orderClause}
     `

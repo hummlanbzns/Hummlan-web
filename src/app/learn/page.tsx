@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, GraduationCap, Newspaper, ArrowRight, CloudSun, RefreshCw, FlaskConical, Users, Sprout, Calendar, ShoppingBag } from 'lucide-react';
 
-export const metadata: Metadata = { title: 'Sustainability Learning Hub', description: 'Learn what sustainability actually means. EU Taxonomy, CSRD, and the real pros and cons of green initiatives.' };
+export const metadata: Metadata = { title: 'Sustainability Learning Hub', description: 'Learn what sustainability actually means. EU Taxonomy, CSRD, and the real pros and cons of green initiatives.', alternates: { canonical: '/learn' } };
 
 const pillars = [
   { slug: 'climate-impact', name: 'Climate Impact', icon: CloudSun, desc: 'Carbon footprint, SBTi, renewable energy transition', weight: '20%' },

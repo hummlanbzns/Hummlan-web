@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  alternates: {
-    canonical: '/',
-  },
+  // No global canonical here: each page sets its own alternates.canonical so
+  // every route canonicalizes to itself instead of the homepage. (Fixed after
+  // audit: /about, /learn, /search, /shop all emitted <link rel=canonical
+  // href=https://hummlan.com/> because of the old canonical: '/' in this layout.)
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: '/',
     siteName: SITE_NAME,
     title: defaultTitle,
     description: SITE_DESCRIPTION,
