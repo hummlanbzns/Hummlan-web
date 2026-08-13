@@ -16,6 +16,43 @@ import SustainabilityBreakdown from '@/components/SustainabilityBreakdown';
 import { SITE_NAME, absoluteUrl, toOgImageUrl } from '@/lib/seo';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 
+// ── Affiliate link helpers ──────────────────────────────────────────────────
+// True only for links that actually carry commission tracking (Awin, etc.).
+function isAffiliateLink(url: string): boolean {
+  return /awin1\.com|awinmid=|impact\.com|shareasale|linksynergy|t\.cfjump|awin2\.com/i.test(
+    url,
+  );
+}
+
+// Resolve the real destination URL (Awin cread links encode it in ?ued=).
+function getDestinationUrl(url: string): string {
+  try {
+    const u = new URL(url);
+    const ued = u.searchParams.get('ued');
+    return ued ? decodeURIComponent(ued) : url;
+  } catch {
+    return url;
+  }
+}
+
+// Search-result URLs (e.g. ethicalsuperstore.com/search/<brand>) land on a
+// results page, not the product — a specific price claim can't be trusted
+// there, so we hide the price and label the link as "Browse <brand> at …".
+function isSearchLink(url: string): boolean {
+  const dest = getDestinationUrl(url);
+  try {
+    const u = new URL(dest);
+    return /\/search\b|catalogsearch\/result/i.test(u.pathname + u.search);
+  } catch {
+    return /\/search\b/i.test(dest);
+  }
+}
+
+// Vendor display name without network suffixes, e.g. "Ethical Superstore (Awin)" → "Ethical Superstore".
+function displayVendorName(name: string): string {
+  return name.replace(/\s*\(Awin\)\s*$/i, '').trim();
+}
+
 const getProduct = cache(async (slug: string) => {
   const rs = await db.execute({
     sql: `
@@ -119,7 +156,26 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const links = await getAffiliateLinks(product.id);
   const ratings: any[] = await getSustainabilityRatings(product.brand_id);
 
-  const cheapestPrice = links.length > 0 ? links[0].price : null;
+  // Enrich links: mark true affiliate tracking vs plain store links, and hide
+  // price claims on store-search URLs (they land on a results page, not the
+  // product — the price shown would not match what the user sees).
+  const linkViews = links.map((link: any) => {
+    const isSearch = isSearchLink(link.affiliate_url);
+    const price = Number(link.price);
+    return {
+      ...link,
+      isAffiliate: isAffiliateLink(link.affiliate_url),
+      isSearch,
+      displayPrice: isSearch || !(price > 0) ? null : price,
+    };
+  });
+  const priceLinks = linkViews.filter((l: any) => l.displayPrice != null);
+  const cheapestPrice =
+    priceLinks.length > 0
+      ? Math.min(...priceLinks.map((l: any) => l.displayPrice))
+      : null;
+  const allSearch =
+    linkViews.length > 0 && linkViews.every((l: any) => l.isSearch);
   const description = getProductDescription(product);
   const ogImage = toOgImageUrl(product.image_url);
 
@@ -171,18 +227,21 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         }
       : undefined,
     review: reviewSchema.length > 0 ? reviewSchema : undefined,
-    offers: links.map((link: any) => ({
-      '@type': 'Offer',
-      priceCurrency: link.currency || 'USD',
-      price: Number(link.price),
-      url: link.affiliate_url,
-      seller: {
-        '@type': 'Organization',
-        name: link.vendor_name,
-      },
-      availability: 'https://schema.org/InStock',
-      itemCondition: 'https://schema.org/NewCondition',
-    })),
+    offers:
+      priceLinks.length > 0
+        ? priceLinks.map((link: any) => ({
+            '@type': 'Offer',
+            priceCurrency: link.currency || 'USD',
+            price: link.displayPrice,
+            url: link.affiliate_url,
+            seller: {
+              '@type': 'Organization',
+              name: displayVendorName(link.vendor_name),
+            },
+            availability: 'https://schema.org/InStock',
+            itemCondition: 'https://schema.org/NewCondition',
+          }))
+        : undefined,
   };
 
   return (
@@ -275,14 +334,18 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {links.length > 0 ? (
                 <div className="bg-brand-light border border-brand-light rounded-xl p-6">
                   <h2 className="text-xl font-bold text-brand-dark mb-4">
-                    {links.length === 1 ? 'Lowest Web Price Found' : 'Compare Prices & Buy'}
+                    {allSearch
+                      ? `Find It at ${displayVendorName(linkViews[0].vendor_name)}`
+                      : linkViews.length === 1
+                        ? 'Lowest Web Price Found'
+                        : 'Compare Prices & Buy'}
                   </h2>
                   <div className="space-y-3">
-                    {links.map((link, index) => (
+                    {linkViews.map((link, index) => (
                       <div
                         key={link.id}
                         className={`flex items-center justify-between p-3 bg-white border rounded-lg transition-colors shadow-sm ${
-                          links.length === 1
+                          linkViews.length === 1
                             ? 'border-brand/20'
                             : index === 0
                               ? 'border-brand ring-1 ring-brand ring-opacity-50'
@@ -291,24 +354,32 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                       >
                         <div className="flex flex-col">
                           <div className="flex items-center gap-2">
-                            <span className="font-bold text-gray-900">{link.vendor_name}</span>
-                            {index === 0 && links.length > 1 && (
-                              <span className="bg-brand-light text-brand-dark text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-tighter uppercase">
-                                Cheapest
-                              </span>
-                            )}
+                            <span className="font-bold text-gray-900">{displayVendorName(link.vendor_name)}</span>
+                            {link.displayPrice != null &&
+                              priceLinks.length > 1 &&
+                              link.id === priceLinks[0].id && (
+                                <span className="bg-brand-light text-brand-dark text-[10px] font-extrabold px-1.5 py-0.5 rounded tracking-tighter uppercase">
+                                  Cheapest
+                                </span>
+                              )}
                           </div>
-                          <span className="text-xs text-gray-400 font-medium">AFFILIATE PARTNER</span>
+                          {link.isAffiliate && (
+                            <span className="text-xs text-gray-400 font-medium">AFFILIATE PARTNER</span>
+                          )}
                         </div>
                         <div className="flex items-center gap-4">
-                          <span className="text-xl font-bold text-brand-dark">${link.price}</span>
+                          {link.displayPrice != null && (
+                            <span className="text-xl font-bold text-brand-dark">${link.displayPrice}</span>
+                          )}
                           <a
                             href={link.affiliate_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-brand text-white px-4 py-2 rounded-lg font-bold hover:bg-brand-dark flex items-center gap-2 transition-colors"
+                            className="bg-brand text-white px-4 py-2 rounded-lg font-bold hover:bg-brand-dark flex items-center gap-2 transition-colors whitespace-nowrap"
                           >
-                            Visit Store
+                            {link.isSearch
+                              ? `Browse ${product.brand_name} at ${displayVendorName(link.vendor_name)}`
+                              : 'Visit Store'}
                             <ExternalLink className="w-4 h-4" />
                           </a>
                         </div>
