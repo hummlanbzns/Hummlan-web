@@ -80,7 +80,7 @@ async function getBrandProducts(brandId: string) {
     sql: `
       SELECT p.slug, p.name, p.description, MIN(al.price) as min_price
       FROM products p
-      LEFT JOIN affiliate_links al ON p.id = al.product_id
+      LEFT JOIN affiliate_links al ON p.id = al.product_id AND al.is_active = 1 AND al.affiliate_url NOT LIKE '%search%'
       WHERE p.brand_id = ?
       GROUP BY p.id
       ORDER BY p.name ASC
