@@ -23,13 +23,21 @@ async function getProductsInCategory(categoryId: string, sortBy: string = 'susta
       FROM products p
       JOIN brands b ON p.brand_id = b.id
       LEFT JOIN affiliate_links al ON p.id = al.product_id AND al.is_active = 1 AND al.affiliate_url NOT LIKE '%search%'
-      WHERE p.category_id = ?
+      WHERE p.category_id = ? OR p.category_id IN (SELECT id FROM categories WHERE parent_id = ?)
       GROUP BY p.id
       ORDER BY ${orderClause}
     `,
-    args: [categoryId],
+    args: [categoryId, categoryId],
   });
   return rs.rows;
+}
+
+async function getCategoryProductCount(categoryId: string) {
+  const rs = await db.execute({
+    sql: `SELECT COUNT(*) as cnt FROM products WHERE category_id = ? OR category_id IN (SELECT id FROM categories WHERE parent_id = ?)`,
+    args: [categoryId, categoryId],
+  });
+  return Number((rs.rows[0] as any)?.cnt ?? 0);
 }
 
 export async function generateMetadata({
@@ -54,12 +62,16 @@ export async function generateMetadata({
     category.description ||
     `Browse ${category.name} products ranked by strict sustainability evidence and cheapest available prices.`;
 
+  const productCount = await getCategoryProductCount(category.id);
+  const isEmpty = productCount === 0;
+
   return {
-    title: `${category.name} Deals`,
+    title: isEmpty ? `${category.name} (Coming Soon)` : `${category.name} Deals`,
     description,
     alternates: {
       canonical: `/category/${slug}`,
     },
+    robots: isEmpty ? { index: false, follow: false } : undefined,
     openGraph: {
       title: `${category.name} | ${SITE_NAME}`,
       description,
@@ -100,7 +112,7 @@ export default async function CategoryPage({
 
   const products = await getProductsInCategory(category.id, sort);
 
-  const categorySchema = {
+  const categorySchema = products.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: `${category.name} | ${SITE_NAME}`,
@@ -115,16 +127,18 @@ export default async function CategoryPage({
         name: product.name,
       })),
     },
-  };
+  } : null;
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
 
       <main className="flex-grow py-12">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(categorySchema) }}
-        />
+        {categorySchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(categorySchema) }}
+          />
+        )}
 
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="mb-12 bg-white p-8 rounded-2xl border shadow-sm">
@@ -226,7 +240,8 @@ export default async function CategoryPage({
           {products.length === 0 && (
             <div className="text-center py-24 bg-white rounded-2xl border shadow-inner">
               <ShoppingBag className="w-16 h-16 text-gray-200 mx-auto mb-4" />
-              <p className="text-xl text-gray-500 font-medium">No products found in this category yet.</p>
+              <p className="text-xl text-gray-500 font-medium">We're stocking this category — check back soon.</p>
+              <p className="text-gray-400 mt-2 max-w-md mx-auto">Hummlan only lists products we can rate with real sustainability evidence. New ratings are added every week.</p>
               <Link
                 href="/"
                 className="mt-6 inline-block bg-brand text-white px-8 py-3 rounded-xl font-bold hover:bg-brand-dark transition-colors"
