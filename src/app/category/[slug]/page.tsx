@@ -227,10 +227,17 @@ export default async function CategoryPage({
                     {product.name}
                   </h3>
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50">
-                    <p className="text-lg font-extrabold text-gray-900">
-                      {product.min_price ? `$${product.min_price}` : 'Check Price'}
-                    </p>
-                    <span className="text-sm font-bold text-brand">Compare Deals →</span>
+                    {product.min_price ? (
+                      <>
+                        <p className="text-lg font-extrabold text-gray-900">${product.min_price}</p>
+                        <span className="text-sm font-bold text-brand">Compare Deals →</span>
+                      </>
+                    ) : (
+                      <>
+                        <p className="text-sm font-semibold text-gray-500">Not yet available</p>
+                        <span className="text-sm font-bold text-brand">View Product →</span>
+                      </>
+                    )}
                   </div>
                 </div>
               </Link>
