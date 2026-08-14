@@ -75,10 +75,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Fetch all categories
+  // Fetch all categories (only those with at least one product, direct or child)
   let categories: any[] = [];
   try {
-    const rs = await db.execute('SELECT slug FROM categories');
+    const rs = await db.execute(`
+      SELECT c.slug FROM categories c
+      WHERE EXISTS (
+        SELECT 1 FROM products p
+        WHERE p.category_id = c.id OR p.category_id IN (SELECT id FROM categories WHERE parent_id = c.id)
+      )
+    `);
     categories = rs.rows as any[];
   } catch (e) {
     console.error('Failed to fetch categories for sitemap:', e);
