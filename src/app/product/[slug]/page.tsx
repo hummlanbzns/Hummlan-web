@@ -56,7 +56,7 @@ function displayVendorName(name: string): string {
 const getProduct = cache(async (slug: string) => {
   const rs = await db.execute({
     sql: `
-      SELECT p.*, b.name as brand_name, b.slug as brand_slug, b.overall_sustainability_score as brand_score, c.name as category_name, c.slug as category_slug
+      SELECT p.*, b.name as brand_name, b.slug as brand_slug, b.overall_sustainability_score as brand_score, b.website_url as brand_website_url, c.name as category_name, c.slug as category_slug
       FROM products p
       JOIN brands b ON p.brand_id = b.id
       JOIN categories c ON p.category_id = c.id
@@ -345,9 +345,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {links.length > 0 ? (
                 <div className="bg-brand-light border border-brand-light rounded-xl p-6">
                   <h2 className="text-xl font-bold text-brand-dark mb-4">
-                    {allSearch
+                    {allSearch || priceLinks.length === 0
                       ? `Find It at ${displayVendorName(linkViews[0].vendor_name)}`
-                      : linkViews.length === 1
+                      : priceLinks.length === 1
                         ? 'Lowest Web Price Found'
                         : 'Compare Prices & Buy'}
                   </h2>
@@ -399,9 +399,28 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   </div>
                 </div>
               ) : (
-                <div className="bg-brand-light border border-brand-light rounded-xl p-6">
-                  <h2 className="text-xl font-bold text-brand-dark mb-4">Compare Prices & Buy</h2>
-                  <p className="text-gray-500 italic">No pricing information available yet.</p>
+                <div className="bg-white border border-gray-200 rounded-xl p-5">
+                  <h2 className="text-base font-bold text-gray-700 mb-2">Not yet available to buy via our partners</h2>
+                  <p className="text-sm text-gray-500 leading-relaxed mb-3">
+                    We don&apos;t currently have a tracked store link for this product, so we can&apos;t offer a
+                    price comparison yet.
+                    {product.brand_website_url ? (
+                      <> You can check the brand&apos;s website directly.</>
+                    ) : (
+                      <> Check the brand&apos;s website for availability.</>
+                    )}
+                  </p>
+                  {product.brand_website_url && (
+                    <a
+                      href={product.brand_website_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-600 hover:text-brand transition-colors"
+                    >
+                      Check the brand&apos;s site
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               )}
             </div>
