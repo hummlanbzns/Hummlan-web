@@ -4,13 +4,13 @@ import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, Shoppi
 import { SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Sustainability Weekly Digest #3 | Hottest July, Europe Heatwave Energy Crisis, UK Plastic Waste & More',
-  description: "Edition #3 of Hummlan's weekly digest: Hottest July on record in the US, Europe's grid under heatwave strain, the truth about UK plastic recycling, a rewilding success story, and quick hits.",
-  keywords: ['sustainability news weekly digest', 'hottest July 2026', 'Europe heatwave energy grid', 'nuclear power heatwave', 'waste colonialism UK plastic exports', 'Caspian tiger rewilding', 'UK COBRA extreme heat'],
+  title: 'Sustainability Weekly Digest #4 | UK EV Targets Watered Down, California Bans Paraquat, Amazon El Niño & More',
+  description: "Edition #4 of Hummlan's weekly digest: the UK's climate contradiction (EV targets cut as wildfires rage), record-low reservoirs and Thames Water's £500m white elephant, California's paraquat ban, the Amazon's El Niño threat, beavers on UK farms and humpbacks back in Rio.",
+  keywords: ['sustainability news weekly digest', 'UK EV targets ZEV mandate 2030', 'California paraquat ban', 'El Niño Amazon rainforest', 'Thames Water desalination plant', 'England reservoirs drought', 'beaver dams UK farming', 'humpback whales Rio', 'Europe wildfires arson arrests', 'disposable barbecue ban'],
   alternates: { canonical: '/learn/news' },
   openGraph: {
-    title: `Sustainability Weekly Digest #3 | ${SITE_NAME}`,
-    description: "Hottest July on record in the US, Europe's grid under heatwave strain, the truth about UK plastic recycling, a rewilding success story, and quick hits.",
+    title: `Sustainability Weekly Digest #4 | ${SITE_NAME}`,
+    description: "Edition #4 of Hummlan's weekly digest: the UK's climate contradiction (EV targets cut as wildfires rage), record-low reservoirs and Thames Water's £500m white elephant, California's paraquat ban, the Amazon's El Niño threat, beavers on UK farms and humpbacks back in Rio.",
     type: 'article',
     url: '/learn/news',
   },
@@ -92,6 +92,9 @@ function LabelBlock({ label, children }: { label: string; children: React.ReactN
     'What this means for Hummlan readers': 'bg-amber-50 text-amber-800 border-amber-200',
     'The uncomfortable truth': 'bg-red-50 text-red-800 border-red-200',
     'The details': 'bg-blue-50 text-blue-800 border-blue-200',
+    'The cost of watering down': 'bg-red-50 text-red-800 border-red-200',
+    'The facts are stark': 'bg-red-50 text-red-800 border-red-200',
+    'The broader picture this month': 'bg-blue-50 text-blue-800 border-blue-200',
   };
   const colorClass = labelColors[label] || 'bg-gray-50 text-gray-700 border-gray-200';
   return (
@@ -162,7 +165,7 @@ export default function NewsDigestPage() {
               </p>
               <div className="flex flex-wrap gap-4 mt-6 text-sm text-orange-200">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4" />Edition #3 &mdash; Week of 10 August 2026
+                  <Calendar className="w-4 h-4" />Edition #4 &mdash; Week of 17 August 2026
                 </span>
                 <span className="flex items-center gap-1.5">
                   <FileText className="w-4 h-4" />6 min read
@@ -174,10 +177,12 @@ export default function NewsDigestPage() {
               <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">In this edition</h2>
               <nav className="flex flex-wrap gap-x-6 gap-y-1">
                 {[
-                  'Headline Story — Hottest July on Record: US and Europe in the Grip of Extreme Heat',
-                  'Energy & the Grid — Heatwaves Don\'t Discriminate: Nuclear, Gas, and Renewables All Feel the Strain',
-                  'Waste & Circular Economy — "Waste Colonialism": The Truth About UK Plastic Recycling',
-                  'Nature & Biodiversity — Caspian Tiger Returns to Kazakhstan After 70 Years',
+                  'Headline Story — The Climate Contradiction: UK Waters Down EV Targets While Wildfires Rage',
+                  "Water & Infrastructure — Record-Low Reservoirs and Thames Water's £500m 'White Elephant'",
+                  "Food & Health — California Finally Bans Paraquat: A Pesticide the EU Outlawed Long Ago",
+                  'Climate & Forests — El Niño Is About to Peak at the Worst Possible Moment for the Amazon',
+                  "Farming & Nature — Beavers, Hedges and Tougher Crops: How UK Farmers Are Fighting Drought",
+                  "Biodiversity — Humpbacks Return to Rio: A Recovery Story With a New Question",
                   'Quick Hits — What Else Happened This Week',
                 ].map((item) => (
                   <a
@@ -193,167 +198,225 @@ export default function NewsDigestPage() {
             {/* Body */}
             <div className="px-8 py-10">
               <div className="prose prose-gray max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-a:text-orange-600 prose-a:font-medium prose-strong:text-gray-900 prose-code:text-orange-700 prose-code:bg-orange-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm">
-                {/* Section 1 — Hottest July on Record */}
-                <SectionCard number="1" title="Headline Story — Hottest July on Record: US and Europe in the Grip of Extreme Heat">
+                {/* Section 1 — Headline Story */}
+                <SectionCard number="1" title="Headline Story — The Climate Contradiction: UK Waters Down EV Targets While Wildfires Rage">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      July 2026 was the hottest month ever recorded in the United States, according to new data from the National Oceanic and Atmospheric Administration (NOAA). The average temperature across the contiguous US was 3.3&deg;F (1.8&deg;C) above the 20th-century average, surpassing previous records set during the Dust Bowl (July 1936) and July 2012. The dataset goes back to 1895.
+                      On Friday 14 August &mdash; the same day Prime Minister Andy Burnham publicly acknowledged that the climate crisis is behind the hundreds of wildfires ripping across the UK &mdash; his government launched a consultation that could cut the country&apos;s electric vehicle (EV) sales targets by nearly half. Under the current &quot;zero-emission vehicles&quot; (ZEV) mandate, battery EVs must make up a rising share of new car sales: 33% in 2026, rising to 80% in 2030. The new consultation offers options to leave the 2030 target unchanged, or cut it to 70%, 60% &mdash; or as low as <strong>50% of all new cars</strong>.
+                    </p>
+                    <p className="text-sm mt-2 font-bold">The timing is striking. The same week saw:</p>
+                    <BulletList items={[
+                      'The **military deployed** to help fight wildfires, with dozens of homes destroyed and people injured, including in Stourbridge in the West Midlands.',
+                      'A **ban on the sale of disposable barbecues** and the activation of the national alert system to warn people in England and Wales of fire risk.',
+                      'Burnham&apos;s own words: &quot;We cannot accept this as the new normal. This isn&apos;t happening in isolation. Much of England and Wales is in drought and we are in another period of extreme heat. Farmers are watching crops fail and firefighters have faced hundreds of wildfires in a matter of weeks. This is what climate change looks like, here and now.&quot;',
+                    ]} />
+                    <p className="text-sm mt-2">
+                      Meanwhile, more than 50 green organisations &mdash; including Greenpeace, WWF, Friends of the Earth, the Women&apos;s Institute, Uplift and Green New Deal Rising &mdash; wrote to Burnham urging him to &quot;show leadership&quot; and name the cause of the crisis. Their letter points out that after chairing a COBRA meeting on the heatwave and drought, his statement focused on disposable barbecues and did not mention the climate crisis once.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="The cost of watering down">
+                    <p className="text-sm">
+                      Carbon Brief analysis (published 12 August) finds that weakening the mandate to 50% by 2030 could:
+                    </p>
+                    <BulletList items={[
+                      'Leave up to **3 million fewer battery EVs** on UK roads by 2030 (estimate by NGO T&amp;E).',
+                      'Require the UK to import an **extra 17 million barrels of oil** in 2030 &mdash; an 8% rise in expected net imports &mdash; and add **2.5% to national emissions** that year.',
+                      'Cost UK consumers an estimated **£3 billion a year by 2030** &mdash; because EVs are already cheaper to own: about **£1,100 a year cheaper to run** than a petrol car, and more than £1,000 a year cheaper overall, according to the Energy and Climate Intelligence Unit (ECIU).',
+                    ]} />
+                  </LabelBlock>
+                  <LabelBlock label="What this means for Hummlan readers">
+                    <p className="text-sm">
+                      Transport is one of the biggest chunks of a household&apos;s carbon footprint, and the UK&apos;s EV policy sends a signal to every car buyer &mdash; and every manufacturer &mdash; about what the future looks like. Under HSS, we rate the &quot;Climate Impact&quot; of brands, but the policy environment matters too: a weakened mandate means fewer affordable EVs, more petrol and diesel cars on second-hand markets for longer, and higher running costs for households that stay on fossil fuels. The claim that weakening targets &quot;protects consumers&quot; is hard to square with the numbers above.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      This is a textbook case of words and action diverging. It is possible &mdash; and fair &mdash; to debate the pace of the EV transition, the grid&apos;s readiness, and the cost of new cars. But launching a consultation to weaken the single biggest consumer transport policy in the same week you call the climate emergency &quot;the new normal&quot; is not a policy debate; it&apos;s a contradiction. If EVs are already cheaper to own, then watering down targets serves the lobbying interests of parts of the car industry, not household budgets. The UK is also reported to be accepting new North Sea drilling &mdash; the opposite direction to the Paris Agreement. Consumers deserve consistency: if the government names the crisis, its policies should follow.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">The Guardian &mdash; &quot;Andy Burnham criticised for moving to cut electric vehicle (EV) sales targets... at a time of devastating wildfires&quot; (14.08.2026, Primary) | Carbon Brief &mdash; &quot;Analysis: Weaker EV targets could cost UK consumers £3bn a year by 2030&quot; (12.08.2026, Primary) | The Guardian &mdash; &quot;Green groups urge Andy Burnham to break silence on climate crisis&quot; (14.08.2026, Primary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 2 — Water & Infrastructure */}
+                <SectionCard number="2" title="Water & Infrastructure — Record-Low Reservoirs and Thames Water's £500m 'White Elephant'">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      Almost three-quarters of England &mdash; and the whole of Wales &mdash; is now in drought, and the water that millions of households rely on is running low. Environment Agency data from 11 August shows <strong>five key reservoirs at &quot;exceptionally low&quot; levels</strong>:
+                    </p>
+                    <BulletList items={[
+                      '**Wimbleball** (South West Water, Somerset): **46%** full',
+                      '**Clatworthy** (Somerset): **48%**',
+                      '**Hanningfield** (Essex): **56%**',
+                      '**Clywedog** (Powys): **56%**',
+                      '**Dove group** (Derbyshire): **69%**',
+                    ]} />
+                    <p className="text-sm mt-2">
+                      Across England, total reservoir levels have fallen to <strong>66%</strong> &mdash; down from 69% the week before and nearly 14 percentage points below what is expected for this time of year. Of the 32 reservoirs the Environment Agency classifies as strategically important or geographically representative, just four are at normal levels (Draycote, Bewl, Roadford and Vyrnwy). The National Hydrological Monitoring Programme calls July&apos;s aridity &quot;unprecedented&quot; and warns that &quot;widespread below-normal to exceptionally low&quot; water flows are likely to persist well into the autumn, with &quot;further deterioration&quot; possible.
                     </p>
                     <p className="text-sm mt-2">
-                      The US blistered under three separate heat dome events, with Wyoming recording its hottest July ever &mdash; a staggering 5.1&deg;F above average. Wildfire smoke from blazes in Canada and the US Pacific Northwest blanketed parts of the country for much of the month.
+                      Meanwhile, Thames Water &mdash; which supplies 16 million customers in London and the Thames valley &mdash; is preparing to restart the UK&apos;s only desalination plant at Beckton, east London, &quot;by the end of the year&quot;. The plant:
                     </p>
-                    <p className="text-sm mt-2 font-bold">Across the Atlantic, Europe is enduring its hottest summer on record. In the UK:</p>
                     <BulletList items={[
-                      'The country is facing its **fifth heatwave of the summer**.',
-                      'The number of days reaching 30&deg;C in a single year has hit a **new record of 35 days** (beating the 34-day record set in 1995), according to the Met Office.',
-                      'Prime Minister Andy Burnham chaired an emergency COBRA meeting on 12 August as temperatures are forecast to reach 38&deg;C. Wildfires are stretching emergency services, with the &quot;fire wave&quot; described as the most widespread the UK has ever experienced.',
-                      'An exclusive Guardian investigation reveals that England is &quot;desperately unprepared&quot; for climate adaptation: **just 20 of 6,600 staff at the Department for Environment, Food and Rural Affairs (Defra) are working on climate adaptation** amid drought and wildfires.',
+                      'Cost **£270 million** to install when it fully opened in 2011; its total cost is now estimated at **£500 million**.',
+                      'Has run **only five times in 15 years**, providing 7.2 billion litres of drinking water &mdash; about **seven days&apos; worth of London&apos;s demand** &mdash; in that entire period.',
+                      'Won&apos;t be ready until winter, **long after the current drought is likely to have passed** &mdash; to &quot;support reservoir recovery over the winter&quot;, the company says.',
+                    ]} />
+                    <p className="text-sm mt-2">
+                      Hosepipe bans are now in force across much of the UK, and the prime minister is due to decide Thames Water&apos;s future in the coming weeks.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="What this means for Hummlan readers">
+                    <p className="text-sm">
+                      Water is the silent input to almost everything we buy &mdash; food, clothing, electronics, cleaning products. When reservoirs fall this low, supply chains tighten and prices follow. Under HSS we assess brands&apos; resource efficiency and their exposure to water risk; companies that waste water in drought-prone regions will feel it in both ratings and bills. For households, the desalination story is a reminder that &quot;building our way out&quot; is often more expensive and more carbon-intensive than using less in the first place.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      A £500 million plant that has run five times in 15 years is not water security &mdash; it&apos;s infrastructure theatre. Restarting it after the drought has ended, to &quot;build up reservoirs over winter&quot;, is a confession that planning has failed: the asset exists, the drought is happening, and it still can&apos;t help in time. Desalination is also energy-hungry and carbon-heavy &mdash; the opposite of the resource efficiency HSS rewards. The honest fix is fixing leakage and reducing demand, not polishing white elephants. The UK&apos;s privatised water system has a lot of explaining to do &mdash; and the drought is the moment to do it.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">The Guardian &mdash; &quot;Five reservoirs in England and Wales &apos;exceptionally low&apos; as drought persists&quot; (14.08.2026, Primary) | The Guardian &mdash; &quot;Thames Water plans to restart desalination plant &ndash; after drought has ended&quot; (14.08.2026, Primary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 3 — Food & Health */}
+                <SectionCard number="3" title="Food & Health — California Finally Bans Paraquat: A Pesticide the EU Outlawed Long Ago">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      California &mdash; the largest agricultural producer and the largest user of paraquat in the United States &mdash; has banned the highly toxic herbicide. It is the second US state to do so, after Vermont, and the decision follows a 2024 state law requiring regulators to act.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="The facts are stark">
+                    <BulletList items={[
+                      'Paraquat is **already outlawed in more than 70 countries**, including the UK, the EU and China. The US Environmental Protection Agency (EPA) reapproved it for use in both 2021 and 2024.',
+                      'About **14 million pounds are sprayed every year** on US wine grapes, pistachios, almonds, walnuts, pears, citrus, soya beans, cotton and other crops &mdash; most heavily in California&apos;s Central Valley and the Mississippi River valley.',
+                      'Public health advocates describe it as a substance &quot;virtually proven&quot; to cause **Parkinson&apos;s disease**: research shows paraquat interferes with dopamine production, and agricultural workers and communities are most at risk.',
+                      'There is **no antidote** for paraquat poisoning. Exposure is linked to death, cancer, heart failure, kidney failure, liver failure and scarring of the lungs.',
+                      '&quot;Paraquat is the most acutely lethal pesticide ever made,&quot; said Nathan Donley of the Center for Biological Diversity.',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="What this means for Hummlan readers">
                     <p className="text-sm">
-                      The lived reality of a warming world directly affects the supply chains behind the products we rate. Extreme heat disrupts transport, reduces agricultural yields, strains energy grids, and increases the carbon footprint of cooling systems. When we assess a brand&apos;s &quot;Climate Impact&quot; under HSS, we consider the resilience of its supply chain to climate disruption &mdash; not just its emissions. Brands that invest in climate adaptation (sustainable water management, heat-resilient logistics, renewable cooling) score higher for a reason.
+                      This is a consumer story as much as a farming one. Much of the food on European shelves is imported, and residues of pesticides banned in the EU can still reach us through global supply chains. Under HSS&apos;s &quot;Pollution Prevention&quot; pillar, we look at how brands manage toxic inputs and whether their certifications (organic and similar standards prohibit paraquat) are backed by traceable supply chains. The lesson: &quot;legal where it was grown&quot; is not the same as &quot;safe&quot;.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      Every &quot;hottest month on record&quot; headline is both a news story and a warning that was issued decades ago. The UK&apos;s COBRA meeting is reactive, not proactive. The finding that 20 out of 6,600 Defra staff work on adaptation speaks volumes about the gap between political rhetoric and institutional capacity. The climate is changing faster than governments are adapting. For shoppers, this means the products you buy today are coming through supply chains that are increasingly stressed &mdash; and that stress will only grow.
+                      The EU banned paraquat in 2007. California &mdash; the world&apos;s fifth-largest economy &mdash; took until 2026. This is a case study in how regulation lags behind evidence when industry pushback is strong, and a reminder that &quot;approved by regulators&quot; is a floor, not a guarantee. California&apos;s move is genuinely good news for farmworkers and communities; it is also a rebuke to the EPA, which has reapproved the chemical twice in the 2020s. Consumers can&apos;t inspect every field &mdash; that&apos;s exactly why strong regulation and honest certification matter.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">The Guardian &mdash; &quot;July was hottest month ever recorded in US&quot; (10.08.2026, NOAA data, Primary) | The Guardian &mdash; &quot;Andy Burnham to chair emergency Cobra meeting amid extreme heat&quot; (12.08.2026, Primary) | The Guardian &mdash; &quot;Just 20 of 6,600 Defra staff working on climate adaptation&quot; (12.08.2026, Primary)</p>
+                    <p className="text-sm">The Guardian &mdash; &quot;California bans paraquat, highly toxic herbicide outlawed in more than 70 countries&quot; (13.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 2 — Energy & the Grid */}
-                <SectionCard number="2" title="Energy & the Grid — Heatwaves Don't Discriminate: Nuclear, Gas, and Renewables All Feel the Strain">
+                {/* Section 4 — Climate & Forests */}
+                <SectionCard number="4" title="Climate & Forests — El Niño Is About to Peak at the Worst Possible Moment for the Amazon">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      When temperatures soared past 40&deg;C in parts of Europe in June and July 2026, every type of electricity generation was affected &mdash; yet some commentators were quick to blame &quot;intermittent&quot; wind and solar while downplaying the impact on gas and nuclear. A detailed Carbon Brief factcheck (published 4 August 2026) sets the record straight.
+                      Scientists are predicting that the current El Niño &mdash; on course to be the <strong>strongest in 150 years &quot;by a mind-blowing margin&quot;</strong> &mdash; will peak at the worst possible time for the world&apos;s largest tropical rainforest: the end of the dry season, between October and December, when rivers are at their lowest and the undergrowth is most likely to be tinder dry.
                     </p>
-                    <p className="text-sm mt-2 font-bold">Nuclear:</p>
-                    <BulletList items={[
-                      'During the July 2026 heatwave, **3 of France&apos;s 57 reactors shut down**; generation was reduced at another 7, causing an almost 9% dip in nuclear power production.',
-                      'Low river levels on the Danube hit reactors in Romania and Hungary. A Swiss reactor also shuttered due to high river temperatures.',
-                      'On Monday 3 August, **2.44 GW &mdash; or 40% &mdash; of south-east Europe&apos;s nuclear capacity was offline** due to drought in the Danube, according to data company Montel. The Associated Press reported the Danube was not expected to return to normal levels for &quot;days or even weeks,&quot; pushing some countries &quot;to the brink of energy emergency.&quot;',
-                      '12% of the French nuclear fleet was offline due to heat-related reasons on the same Monday.',
-                      '**However:** heatwaves cut annual nuclear generation by only 0.6% on average (2003–2022). France&apos;s losses fell from 5.5 TWh in 2003 to 0.5 TWh in 2022 &mdash; a 90% reduction through cooling upgrades and better operating practices.',
-                    ]} />
-                    <p className="text-sm mt-2 font-bold">Gas:</p>
-                    <BulletList items={[
-                      'At 40&deg;C, a gas-fired power station&apos;s capacity drops by 13% and efficiency by 7% compared to 20&deg;C, according to Electric Insights.',
-                      'Simple gas turbines lose about 10% output per 10&deg;C rise, says Dr Iain Staffell of Imperial College London.',
-                      'Power line capacity falls by up to 16% for a 10&deg;C rise.',
-                      'Gas plants made up 79% of the capacity that dropped off California&apos;s grid during the August 2020 rolling blackouts.',
-                    ]} />
-                    <p className="text-sm mt-2 font-bold">Wind:</p>
-                    <BulletList items={[
-                      'Wind speeds drop during heatwaves (high-pressure &quot;heat domes&quot;). A 2024 study found **wind power decreased by 30–50% during heatwaves** across Australia, northern Asia, and Europe.',
-                      'In the UK in June 2026, wind generation fell to ~15% of the mix (from a ~30% average). The National Electricity System Operator (Neso) paid &pound;1,400/MWh to secure 1.7 GW of imported power &mdash; nearly 20 times the average June 2025 price.',
-                    ]} />
-                    <p className="text-sm mt-2 font-bold">Solar:</p>
-                    <BulletList items={[
-                      'Despite the myth that solar &quot;struggles&quot; in heat, each 1&deg;C rise only reduces output by 0.4–0.5%, which is easily outweighed by long, cloudless days.',
-                      'Across a 4-day UK heatwave in June 2026, solar generated 484 GWh &mdash; a **46% increase** over the same period a week earlier.',
-                      '**EU solar generated a record 52 TWh in June 2026**, beating the previous month&apos;s record of 47 TWh.',
-                      'The Guardian (12 August 2026) reports that heat pumps &mdash; often seen as a heating technology &mdash; are increasingly being used for cooling, with owners reporting 21&deg;C indoor temperatures when it&apos;s 35&deg;C outside.',
-                    ]} />
-                  </LabelBlock>
-                  <LabelBlock label="Stern take">
-                    <p className="text-sm">
-                      The anti-renewables playbook is predictable &mdash; blame wind and solar when the grid strains, while ignoring that gas and nuclear are also compromised by extreme heat. The reality is more nuanced: **all generation types are affected by heatwaves, but solar + battery storage is uniquely complementary to the problem (air conditioning demand peaks when the sun shines).** The Daily Mail&apos;s claim that wind was to blame for UK grid strain on 24 June 2026 is simply false &mdash; its own article acknowledged that gas plants had also cut output by 2.5 GW that day. For consumers, the lesson is: don&apos;t let selective narratives shape your view of energy. The grid needs flexibility, storage, and resilience &mdash; not a blame game.
+                    <p className="text-sm mt-2">
+                      The Amazon is already reeling. Human-driven climate disruption is relentlessly heating the planet and amplifying extreme weather; now the El Niño drought threatens to land on top of that, with a delayed rainy season raising the risk of widespread fire in a forest already damaged by heat and deforestation. As one Guardian analysis puts it, the combination &quot;should worry us all&quot; &mdash; not just those who live there.
                     </p>
-                  </LabelBlock>
-                  <LabelBlock label="Source">
-                    <p className="text-sm">Carbon Brief &mdash; &quot;Factcheck: How nuclear, gas, wind and solar power are affected during heatwaves&quot; (04.08.2026, Primary) | Associated Press via Carbon Brief (03.08.2026, Secondary) | The Guardian &mdash; &quot;Heat pumps can cool your home&quot; (12.08.2026, Secondary)</p>
-                  </LabelBlock>
-                </SectionCard>
-
-                {/* Section 3 — Waste & Circular Economy */}
-                <SectionCard number="3" title='Waste & Circular Economy — "Waste Colonialism": The Truth About UK Plastic Recycling'>
-                  <LabelBlock label="The news">
-                    <p className="text-sm">
-                      A Guardian investigation (published 4 August 2026) has revealed that **high levels of microplastics and plastic contamination** have been found in a waterway in Adana, Turkey, close to a major recycling hub supplied with plastic waste by British companies.
-                    </p>
-                  </LabelBlock>
-                  <LabelBlock label="Key findings">
+                    <p className="text-sm mt-2 font-bold">The broader picture this month:</p>
                     <BulletList items={[
-                      'The UK exported **139,000 tonnes of rubbish** to poor districts in Adana, Turkey.',
-                      'The Environmental Investigation Agency (EIA) identified **13 British companies** that sent plastic to the Kemal Deniz recycling site between 2021 and 2024.',
-                      'The polluted waterway floods into agricultural fields after heavy rain and feeds into a canal used for irrigating crops on the &Ccedil;ukurova plain &mdash; **one of the largest and most fertile agricultural basins in Turkey.**',
-                      'A follow-up article (6 August 2026, also by the Guardian) went deeper: &quot;The Turkish city carrying the weight of Britain&apos;s pollution problem&quot; &mdash; farmers report microplastics, toxic smoke from burning waste, and debris in their fields.',
-                      'Residents protest with banners reading: &quot;Plastic waste imports should be banned.&quot;',
-                      'This comes after global talks to end the plastic crisis collapsed in 2025.',
+                      '**Europe:** hottest June and July in history, with wildfires in France and Greece and water shortages in the Seine, Rhine and Danube basins; three-quarters of England in drought.',
+                      '**Asia:** record heat in South Korea and Japan; Typhoon Dolphin turned Shanghai&apos;s streets into rivers, forced more than 1 million people to evacuate; floods killed more than 100 people in India.',
+                      '**North America:** &quot;out of control&quot; wildfires forced tens of thousands to flee British Columbia.',
+                      '**Middle East &amp; Africa:** the UAE registered 51.2&deg;C in Al Dhafra; the UN predicts a severe hit to food production in Africa.',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="What this means for Hummlan readers">
                     <p className="text-sm">
-                      The UK is one of the world&apos;s largest exporters of plastic waste. The term &quot;recycling&quot; often masks a system where waste is shipped to countries with weaker environmental regulations. When we assess a brand&apos;s &quot;Circular Economy &amp; Waste&quot; pillar under HSS, we look at whether its recycling claims are backed by verifiable, domestic processing &mdash; not just export to facilities that may or may not handle waste responsibly. Brands that use recycled content in their products and can trace it to certified processors score higher.
+                      The Amazon is the planet&apos;s rainmaker and one of its largest carbon stores. When it burns, the carbon released accelerates the very heating that dried it &mdash; a feedback loop with global consequences, including for food prices. Coffee, cocoa, soya and beef are among the commodities whose supply chains reach into Amazon-adjacent regions; brands that buy these ingredients without traceability are exposed to both climate and reputational risk. Under HSS, biodiversity and deforestation risk are part of how we rate a brand&apos;s real-world impact.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      This is the uncomfortable truth the recycling industry doesn&apos;t advertise. &quot;Recycled in the UK&quot; often means &quot;shipped to Turkey where it pollutes someone else&apos;s water and soil.&quot; The UK government pledged to reduce plastic waste exports, but the data shows 139,000 tonnes still flowing. Until there is domestic infrastructure to actually process what we throw away, &quot;recycling&quot; remains a euphemism for waste displacement. For conscious shoppers, the most reliable choice remains reducing plastic consumption at the source &mdash; not trusting that your recycling bin&apos;s contents will be dealt with responsibly.
+                      This story deserves more attention than it is getting. A &quot;Godzilla&quot; El Niño peaking over a stressed rainforest is not a distant weather event &mdash; it is a potential accelerator of the entire climate crisis, with knock-on effects on food production, migration and prices. The honest framing: we are now in the phase where climate disruption and natural variability compound each other. Preparation, forest protection and rapid emissions cuts are the only levers left, and none of them can be switched on after the fires start.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">The Guardian &mdash; &quot;UK plastic &apos;waste colonialism&apos; found to be polluting Turkey&apos;s farming heartland&quot; (04.08.2026, Primary) | The Guardian &mdash; &quot;&apos;Waste colonialism&apos; &ndash; the Turkish city carrying the weight of Britain&apos;s pollution problem&quot; (06.08.2026, Primary)</p>
+                    <p className="text-sm">The Guardian &mdash; &quot;El Niño may peak at the worst time for the Amazon &ndash; and it should worry us all&quot; (14.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 4 — Nature & Biodiversity */}
-                <SectionCard number="4" title="Nature & Biodiversity — Caspian Tiger Returns to Kazakhstan After 70 Years">
+                {/* Section 5 — Farming & Nature */}
+                <SectionCard number="5" title="Farming & Nature — Beavers, Hedges and Tougher Crops: How UK Farmers Are Fighting Drought">
                   <LabelBlock label="The news">
                     <p className="text-sm">
-                      On 31 July 2026, a female tiger named <strong>&quot;Umit&quot;</strong> (meaning &quot;hope&quot; in Kazakh) was released into a nature reserve on the edge of Lake Balkhash in Kazakhstan &mdash; the first time a Caspian tiger has roamed the country&apos;s wilds in over 70 years. The Guardian reported the story on 11 August 2026.
+                      Britain&apos;s farmers are adapting &mdash; fast &mdash; to a climate their crops weren&apos;t designed for. This summer&apos;s heat and drought brought the <strong>earliest UK cereals harvest in at least 20 years</strong>, according to the Agriculture and Horticulture Development Board, and the second hot, dry and windy summer in a row for many growers. The Guardian spoke to farmers across the country about how they&apos;re coping:
                     </p>
-                  </LabelBlock>
-                  <LabelBlock label="The details">
                     <BulletList items={[
-                      'Umit was wild-caught in the Russian Far East and transported to Kazakhstan as part of a decade-long rewilding project.',
-                      'Kazakhstan has become the **first country in the world to restore its tiger range** after the species was thought extinct there.',
-                      'A wild-caught male flown from Russia is still being monitored and will be released when ready.',
-                      'Two wild tiger cubs are being reared in special enclosures with minimal human contact, expected to be released next year.',
-                      'The goal is to establish a **self-sustaining population of about 50 tigers**, feasting on boar, deer, and kulans (a type of wild donkey).',
+                      '**Soil health first:** farmers in the Nature Friendly Farming Network are improving soil so it holds more water, and planting bigger, bushier hedges and more trees to &quot;slow the flow of air down&quot; &mdash; as Cambridgeshire farmer Martin Lines puts it, this summer has been &quot;like a hot hairdryer on everything... it just saps the moisture out&quot;.',
+                      '**Water storage:** ponds, collection tanks and farm reservoirs are being installed &mdash; though they are costly, need planning permission and aren&apos;t always enough for long dry spells.',
+                      '**Drought-resistant crops:** growers are trialling varieties that can cope with less water.',
+                      '**Beavers:** nature&apos;s own water engineers are increasingly part of the picture &mdash; beaver dams slow water flow, raise water tables and keep streams running through dry periods, helping both crops and wildlife.',
+                      '**The other side of the coin:** the same techniques (healthy soil, dams, ponds) also slow floodwater &mdash; adaptation for drought doubles as protection against the floods that increasingly follow.',
                     ]} />
                   </LabelBlock>
                   <LabelBlock label="What this means for Hummlan readers">
                     <p className="text-sm">
-                      Biodiversity restoration is a key pillar of the HSS rating system. While most corporate sustainability efforts focus on emissions reduction, the Kunming-Montreal Global Biodiversity Framework requires businesses to assess and disclose their impacts on nature. Rewilding success stories like this one demonstrate that ecosystem restoration is possible &mdash; but they require long-term commitment, political will, and significant funding. For shoppers, the question to ask is: does the brand you&apos;re buying from have a biodiversity policy that goes beyond &quot;we plant trees&quot;?
+                      What happens on farms shows up in your shopping basket &mdash; in prices, in availability, and in the environmental claims on packaging. &quot;Regenerative&quot; and &quot;nature-friendly&quot; labels are spreading fast, and some of them are now backed by real practices (soil building, hedgerows, water retention). Under HSS, we treat those claims with scepticism until we can see the practice &mdash; but nature-based solutions like beaver reintroduction and soil restoration are exactly the kind of measures that genuinely score well on both the Biodiversity and Circular Economy pillars.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Stern take">
                     <p className="text-sm">
-                      This is genuinely good news &mdash; a rare bright spot in an otherwise bleak biodiversity picture. The Caspian tiger&apos;s return is a testament to what conservation can achieve with sustained effort. However, rewilding one apex predator in one country, while meaningful, is a drop in the ocean compared to the scale of biodiversity loss globally. The UN&apos;s draft report from late July (covered in Edition #2) found the world is falling short on 22 of 23 biodiversity targets. Celebrating wins like this is important &mdash; but it must not distract from the systemic failures elsewhere.
+                      This is a good-news story that doesn&apos;t let anyone off the hook. Farmers are innovating because the system failed them &mdash; decades of emissions have locked in the heat and drought they are now adapting to, and public policy has been slow to support the transition. Beavers and hedges buy time and build resilience; they do not replace cutting emissions at source. And adaptation has limits: not every farm can afford a reservoir, which is why the burden must not fall on farmers alone. Celebrate the ingenuity &mdash; but name the system that made it necessary.
                     </p>
                   </LabelBlock>
                   <LabelBlock label="Source">
-                    <p className="text-sm">The Guardian &mdash; &quot;The return of the Caspian tiger: how a species feared extinct has come back to Kazakhstan&quot; (11.08.2026, Primary)</p>
+                    <p className="text-sm">The Guardian &mdash; &quot;Tougher crops and beaver dams: how UK farmers are tackling drought&quot; (14.08.2026, Primary)</p>
                   </LabelBlock>
                 </SectionCard>
 
-                {/* Section 5 — Quick Hits */}
-                <SectionCard number="5" title="Quick Hits — What Else Happened This Week">
+                {/* Section 6 — Biodiversity */}
+                <SectionCard number="6" title="Biodiversity — Humpbacks Return to Rio: A Recovery Story With a New Question">
+                  <LabelBlock label="The news">
+                    <p className="text-sm">
+                      Humpback whales are back in Rio de Janeiro &mdash; and for the first time in living memory, they&apos;re being spotted inside Guanabara Bay, with at least 18 sightings this year alone. The whales have been returning to Brazil&apos;s coast in growing numbers as populations recover from centuries of whaling, and tourists are flocking to see them: whale-watching operators have started running outings from Rio itself, with boats regularly encountering pairs of the 50-tonne animals breaching against the backdrop of the city&apos;s jungle-cloaked mountains.
+                    </p>
+                    <p className="text-sm mt-2">
+                      But the recovery brings a new tension. While the return of the humpbacks is celebrated as a conservation success, some marine biologists are asking whether the booming tourism that now surrounds them helps or hinders. Whales migrate along the Brazilian coast between June and November, from feeding grounds around South Georgia and the South Sandwich Islands to the warmer breeding waters of the Abrolhos Bank &mdash; and unregulated boats, noise and crowding can stress the very animals people come to admire.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="What this means for Hummlan readers">
+                    <p className="text-sm">
+                      The humpback comeback is proof that biodiversity recovery is possible when exploitation stops and protection works. But it also shows how quickly a conservation win can become a new pressure: &quot;ecotourism&quot; that isn&apos;t managed responsibly can harm the species it depends on. Under HSS&apos;s Biodiversity pillar, we look at whether a company&apos;s nature-positive claims cover its whole footprint &mdash; including the wildlife experiences it sells. For consumers, the question is whether the whale-watching operator you book with follows codes of conduct, limits boat numbers, and gives the animals space.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Stern take">
+                    <p className="text-sm">
+                      Enjoy the good news &mdash; whales breaching in Rio&apos;s bay is genuinely remarkable. But note the speed with which the recovery has been commodified: &quot;You can&apos;t put a price on this show&quot; is exactly the sentiment that turns conservation wins into overcrowded encounters. Recovery plus unregulated attention can become a new kind of harm. The test of whether tourism helps is rules, not enthusiasm: Brazil&apos;s regulators need to set limits before the boats multiply, not after the whales start avoiding the bay.
+                    </p>
+                  </LabelBlock>
+                  <LabelBlock label="Source">
+                    <p className="text-sm">The Guardian &mdash; &quot;Humpbacks return to Rio: the whales are back from the brink of extinction &ndash; but will tourism help or hinder?&quot; (12.08.2026, Primary)</p>
+                  </LabelBlock>
+                </SectionCard>
+
+                {/* Section 7 — Quick Hits */}
+                <SectionCard number="7" title="Quick Hits — What Else Happened This Week">
                   <div className="space-y-4">
-                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-blue-800 mb-1">🐚 Falkland Islands salmon farm referendum</p>
-                      <p className="text-sm text-blue-700">The 3,500-strong population of the Falkland Islands is calling for a referendum on a proposed massive salmon farm. Unity Marine (a joint venture between a local fishing company and a Danish firm) wants to farm 50,000 tonnes of salmon annually in 16 locations &mdash; the largest industrial inshore development in the archipelago&apos;s history. Supporters say it could add &pound;35 million/year (11% of GDP) and 133 jobs. Critics fear salmon waste will damage the kelp forests that are spawning grounds for squid &mdash; a commercially critical species. Consultation runs through 30 October. <strong>Source:</strong> The Guardian (09.08.2026).</p>
-                    </div>
-                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-amber-800 mb-1">🐔 Farm animals in heatwaves</p>
-                      <p className="text-sm text-amber-700">Claire Bass of Humane World for Animals UK warns that the government&apos;s climate adaptation plans have a &quot;troubling blind spot&quot; for animal welfare. French media reported that 1–3 million birds died in a single week during June&apos;s 44&deg;C heatwave. Pigs and poultry begin suffering above 27&deg;C, and UK temperatures could reach 45&deg;C by 2056 per the Met Office. The Animal Welfare (Sentience) Act 2022 requires ministers to consider animals as sentient beings &mdash; yet current discourse treats deaths as &quot;reduced productivity.&quot; <strong>Source:</strong> The Guardian Letters (11.08.2026).</p>
-                    </div>
                     <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-red-800 mb-1">🇨🇳 China&apos;s 15th Five-Year Climate Plan</p>
-                      <p className="text-sm text-red-700">Carbon Brief&apos;s Q&amp;A (published 6 August 2026) examines China&apos;s new five-year plan for climate change. The plan does not include any major new targets, instead consolidating existing policies: carbon intensity -17% over five years, carbon market per-product intensity -3%, and a target of 30 MtCO₂e reduction capacity from non-CO₂ greenhouse gases by 2030. The Ministry of Ecology and Environment describes it as &quot;the main policy instrument&quot; for 2026–2030. <em>Stern take:</em> Reaffirmation is not acceleration. China&apos;s emissions may have peaked, but the pace of reduction remains behind what the Paris Agreement requires. <strong>Source:</strong> Carbon Brief (06.08.2026).</p>
-                    </div>
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-green-800 mb-1">🔥 Defra&apos;s climate adaptation staffing gap</p>
-                      <p className="text-sm text-green-700">Just 20 of 6,600 staff at the UK&apos;s Department for Environment, Food and Rural Affairs work on climate adaptation. England is &quot;desperately unprepared&quot; for water shortages, heatwaves, and wildfires. <strong>Source:</strong> The Guardian (12.08.2026).</p>
+                      <p className="text-sm font-bold text-red-800 mb-1">🚒 Hundreds arrested as wildfires rage across Europe</p>
+                      <p className="text-sm text-red-700">French authorities say 474 people, including 183 minors, have been detained on suspicion of starting wildfires since 1 July. In Croatia, a fire engulfed homes in a holiday resort, killing one person, injuring 40 and forcing 1,200 to evacuate; blazes also hit Germany, Greece and Spain as the EU warned of &quot;very extreme&quot; wildfire conditions and about 150 million Europeans faced 35&deg;C or more. <strong>Source:</strong> The Guardian (14.08.2026).</p>
                     </div>
                     <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                      <p className="text-sm font-bold text-purple-800 mb-1">❄️ Heat pumps can cool your home</p>
-                      <p className="text-sm text-purple-700">A Guardian feature (12 August 2026) highlights how heat pumps, often seen as a heating technology, are being used for cooling during heatwaves. One owner in Maidenhead, Berkshire, reports keeping his living room at 21&deg;C when it&apos;s 35&deg;C outside. A recent study found that using a heat pump for cooling can &quot;significantly reduce overheating&quot; in modern homes. <strong>Source:</strong> The Guardian (12.08.2026).</p>
+                      <p className="text-sm font-bold text-purple-800 mb-1">🐙 World&apos;s first industrial octopus farm shelved</p>
+                      <p className="text-sm text-purple-700">Spanish seafood giant Nueva Pescanova has dropped its controversial plan to farm octopus on Gran Canaria (it had predicted 3,000 tonnes a year by 2025), citing &quot;business and regulatory&quot; reasons. Activists and scientists, who argued the intelligent animals should not be farmed industrially, called it a victory. <strong>Source:</strong> The Guardian (13.08.2026).</p>
+                    </div>
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                      <p className="text-sm font-bold text-green-800 mb-1">🕊️ White storks released in Cornwall</p>
+                      <p className="text-sm text-green-700">Twenty-one white storks, most hatched this year, were released on Bodmin Moor in the project&apos;s first release; organisers hope they will return to breed in a few years after wintering in southern Spain or Morocco. <strong>Source:</strong> The Guardian (14.08.2026).</p>
+                    </div>
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                      <p className="text-sm font-bold text-amber-800 mb-1">🦆 H5N1 bird flu arrives in Australia</p>
+                      <p className="text-sm text-amber-700">A descendant of the virus that emerged in Chinese poultry in 1996 has, after 30 years of evolution and migration, begun killing wild birds in Australia. Risk to humans is currently low, but scientists fear decimation of seal populations after tens of thousands of deaths in South America and Antarctica. <strong>Source:</strong> The Guardian (14.08.2026).</p>
                     </div>
                   </div>
                 </SectionCard>
@@ -364,18 +427,19 @@ export default function NewsDigestPage() {
                   <Table
                     headers={['Item', 'Primary Source', 'Tier']}
                     rows={[
-                      ['Hottest July on record in the US', 'The Guardian (10.08.2026) / NOAA', '🟢 Primary'],
-                      ['UK COBRA emergency meeting on extreme heat', 'The Guardian (12.08.2026)', '🟢 Primary'],
-                      ['Defra climate adaptation staffing gap', 'The Guardian (12.08.2026)', '🟢 Primary'],
-                      ['Heatwave impact on nuclear, gas, wind, solar', 'Carbon Brief (04.08.2026)', '🟢 Primary'],
-                      ['Danube drought – SE Europe nuclear capacity offline', 'Associated Press (03.08.2026, via Carbon Brief)', '🟡 Secondary'],
-                      ['Heat pumps used for cooling', 'The Guardian (12.08.2026)', '🟡 Secondary'],
-                      ['UK plastic waste exports to Turkey ("waste colonialism")', 'The Guardian (04.08.2026)', '🟢 Primary'],
-                      ['Waste colonialism deep-dive: Adana, Turkey', 'The Guardian (06.08.2026)', '🟢 Primary'],
-                      ['Caspian tiger reintroduction, Kazakhstan', 'The Guardian (11.08.2026)', '🟢 Primary'],
-                      ['Falkland Islands salmon farm referendum', 'The Guardian (09.08.2026)', '🟡 Secondary'],
-                      ['Farm animals & heatwaves', 'The Guardian Letters (11.08.2026)', '🟡 Secondary'],
-                      ['China\'s 15th Five-Year Plan for climate change', 'Carbon Brief (06.08.2026)', '🟢 Primary'],
+                      ['UK waters down EV sales targets (ZEV mandate consultation)', 'The Guardian (14.08.2026)', '🟢 Primary'],
+                      ['Cost of weaker EV targets (£3bn, oil imports, emissions)', 'Carbon Brief (12.08.2026)', '🟢 Primary'],
+                      ['Green groups\' letter to the PM on climate silence', 'The Guardian (14.08.2026)', '🟢 Primary'],
+                      ['Five reservoirs \'exceptionally low\' in England and Wales', 'The Guardian (14.08.2026) / Environment Agency', '🟢 Primary'],
+                      ['Thames Water desalination plant restart (\'white elephant\')', 'The Guardian (14.08.2026)', '🟢 Primary'],
+                      ['California bans paraquat', 'The Guardian (13.08.2026)', '🟢 Primary'],
+                      ['El Niño peak threat to the Amazon', 'The Guardian (14.08.2026)', '🟢 Primary'],
+                      ['UK farmers adapting to drought (beavers, soil, crops)', 'The Guardian (14.08.2026)', '🟢 Primary'],
+                      ['Humpbacks return to Rio – tourism tension', 'The Guardian (12.08.2026)', '🟢 Primary'],
+                      ['Europe wildfires: arson arrests, Croatia fire', 'The Guardian (14.08.2026)', '🟡 Secondary'],
+                      ['Nueva Pescanova octopus farm shelved', 'The Guardian (13.08.2026)', '🟡 Secondary'],
+                      ['White storks released in Cornwall', 'The Guardian (14.08.2026)', '🟡 Secondary'],
+                      ['H5N1 bird flu reaches Australia', 'The Guardian (14.08.2026)', '🟡 Secondary'],
                     ]}
                   />
                 </div>
@@ -390,7 +454,7 @@ export default function NewsDigestPage() {
                     <a href="mailto:hive@hummlan.com" className="text-orange-600 font-medium hover:underline">Email us</a>.
                   </p>
                   <p className="text-sm text-gray-500 mt-1">
-                    Next edition: <strong>Week of 17 August 2026</strong>
+                    Next edition: <strong>Week of 24 August 2026</strong>
                   </p>
                 </div>
               </div>
