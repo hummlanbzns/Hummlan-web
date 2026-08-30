@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# pinterest posting state (never commit)
+scripts/pinterest/.posted.json
