@@ -42,3 +42,4 @@ next-env.d.ts
 
 # pinterest posting state (never commit)
 scripts/pinterest/.posted.json
+scripts/pinterest/.posted.sandbox.json
