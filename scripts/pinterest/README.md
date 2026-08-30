@@ -27,14 +27,19 @@ PUBLIC_URL_PREFIX=...        (optional; default https://hummlan.com)
 # list what WOULD be posted (no API calls)
 node scripts/pinterest/post-pins.mjs --dry
 
-# post one specific pin (by id in pin-pack-1.json)
+# run against the SANDBOX API (api-sandbox.pinterest.com) instead of production
+node scripts/pinterest/post-pins.mjs --dry --sandbox     # dry-run against sandbox
+node scripts/pinterest/post-pins.mjs --sandbox --pin patagonia   # post one pin to sandbox
+
+# post one specific pin (by id in pin-pack-1.json) — production
 node scripts/pinterest/post-pins.mjs --pin dr-bronners
 
-# post everything not yet posted
+# post everything not yet posted — production
 node scripts/pinterest/post-pins.mjs
 ```
-Re-runs are safe: each successfully-created pin is recorded in `.posted.json` and skipped.
-Posting is at the user's discretion (lead decides the full 5–10/week schedule).
+Re-runs are safe: each successfully-created pin is recorded in `.posted.json` (production) or
+`.posted.sandbox.json` (sandbox, kept separate so sandbox posts never collide with production
+dedup) and skipped. Posting is at the user's discretion (lead decides the full 5–10/week schedule).
 
 ## Regenerating the pin images
 `sharp` is intentionally NOT a repo dependency (generation-time tool only). The committed
@@ -59,3 +64,9 @@ So the capability is built and validated for reading, but **live pin creation ca
 until the owner re-authorizes the app token with `pins:write`** (and `boards:write` if a
 dedicated "Hummlan — Sustainable Ratings" board is desired). No pin was posted. Once the token
 has write scopes, `--dry` then `--pin <id>` proves E2E, and the lead/owner schedules the full pack.
+
+**Sandbox note (verified 2026-08-30):** `--sandbox` switches the base URL to
+`api-sandbox.pinterest.com`, but the production OAuth token does NOT authenticate on the
+sandbox (GET boards, GET user_account, and POST pins all return `Authentication failed`, HTTP 401).
+A sandbox-scoped test-user token is required to create a real pin in sandbox. See
+`/home/team/shared/pinterest-review-video-checklist.md` for the production-access review flow.

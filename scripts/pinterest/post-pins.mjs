@@ -9,10 +9,15 @@
  * Env (never commit these):
  *   PINTEREST_ACCESS_TOKEN   required (pins:read/write scope)
  *   PINTEREST_BOARD_ID       optional override for every pin
+ *   PINTEREST_SANDBOX=1      route to the sandbox API (api-sandbox.pinterest.com)
+ *                            instead of production. NOTE: sandbox requires a
+ *                            sandbox-scoped token; the production user OAuth token
+ *                            does NOT authenticate there (verified: code 2).
  *
  * Usage:
  *   node scripts/pinterest/post-pins.mjs --dry            # list what WOULD be posted
  *   node scripts/pinterest/post-pins.mjs --pin patagonia  # post one pin (by id)
+ *   node scripts/pinterest/post-pins.mjs --sandbox        # run against the sandbox API
  *   node scripts/pinterest/post-pins.mjs                  # post all un-posted pins
  *
  * Notes:
@@ -31,7 +36,9 @@ import { dirname, join } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PACK_PATH = join(__dirname, 'pin-pack-1.json');
-const STATE_PATH = join(__dirname, '.posted.json');
+const args0 = process.argv.slice(2);
+const SANDBOX0 = args0.includes('--sandbox') || process.env.PINTEREST_SANDBOX === '1';
+const STATE_PATH = join(__dirname, SANDBOX0 ? '.posted.sandbox.json' : '.posted.json');
 const PUBLIC_URL_PREFIX = process.env.PUBLIC_URL_PREFIX || 'https://hummlan.com';
 
 const TOKEN = process.env.PINTEREST_ACCESS_TOKEN;
@@ -39,7 +46,11 @@ const BOARD_OVERRIDE = process.env.PINTEREST_BOARD_ID;
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
+const SANDBOX = args.includes('--sandbox') || process.env.PINTEREST_SANDBOX === '1';
 const onlyPin = args.includes('--pin') ? args[args.indexOf('--pin') + 1] : null;
+const API_BASE = SANDBOX
+  ? 'https://api-sandbox.pinterest.com/v5'
+  : 'https://api.pinterest.com/v5';
 
 const pack = JSON.parse(readFileSync(PACK_PATH, 'utf8'));
 const state = existsSync(STATE_PATH) ? JSON.parse(readFileSync(STATE_PATH, 'utf8')) : { posted: [] };
@@ -65,7 +76,7 @@ async function createPin(pin) {
     link: pin.link, // business account
     media_source: { source_type: 'image_url', url: resolveImage(pin) },
   };
-  const res = await fetch('https://api.pinterest.com/v5/pins', {
+  const res = await fetch(`${API_BASE}/pins`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${TOKEN}`,
@@ -96,11 +107,12 @@ async function main() {
 
   const pending = pins.filter((p) => !posted.has(p.id));
 
-  console.log(`Pack: ${pack.pins.length} pins | ${posted.size} already posted | ${pending.length} pending | ${DRY ? 'DRY-RUN' : 'LIVE'}\n`);
+  console.log(`Pack: ${pack.pins.length} pins | ${posted.size} already posted | ${pending.length} pending | ${DRY ? 'DRY-RUN' : 'LIVE'} | ${SANDBOX ? 'SANDBOX' : 'PRODUCTION'}\n`);
 
   for (const pin of pending) {
     const action = DRY ? 'WOULD POST' : 'POSTING';
     console.log(`[${action}] ${pin.id}`);
+    console.log(`  api   : ${API_BASE}`);
     console.log(`  title : ${pin.title}`);
     console.log(`  board : ${BOARD_OVERRIDE || pin.board}`);
     console.log(`  link  : ${pin.link}`);
