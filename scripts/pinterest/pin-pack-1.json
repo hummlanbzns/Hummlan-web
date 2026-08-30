@@ -1,0 +1,96 @@
+{
+  "source": "pinterest-pin-pack-1.md",
+  "target_board_note": "Token lacks boards:write, so a dedicated 'Hummlan — Sustainable Ratings' board could NOT be created (verified API error). Pins target the owner's existing board 'Products' (id 947093065328074979) unless overridden per-pin via --board. Change 'board' per pin to route by category.",
+  "pins": [
+    {
+      "id": "patagonia",
+      "title": "Patagonia Sustainability Score: 95/100 — The Brand We Rate Highest",
+      "description": "Patagonia scores 95/100 — the highest in our HSS database, rated sternly not cheerfully. See why it earns top marks for climate, circular economy and supply chain — and where it still falls short. No greenwashing, just the breakdown. #Patagonia #SustainableFashion #EthicalBrands #EcoFriendly",
+      "link": "https://hummlan.com/brand/patagonia",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/patagonia.png"
+    },
+    {
+      "id": "nudie-jeans",
+      "title": "Nudie Jeans HSS Rating: 93/100 — Sustainable Denim, Sternly Rated",
+      "description": "Want jeans that last? Nudie Jeans scores 93/100 in our HSS rating for organic cotton, free lifetime repairs and a circular take-back scheme. We also flag what it doesn't do — read the full 5-pillar breakdown before you buy. #SustainableDenim #EthicalFashion #SlowFashion #OrganicCotton #Denim",
+      "link": "https://hummlan.com/brand/nudie-jeans",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/nudie-jeans.png"
+    },
+    {
+      "id": "dr-bronners",
+      "title": "Dr. Bronner's Castile Soap — HSS 92/100: One Bottle, 18 Uses",
+      "description": "Dr. Bronner's Peppermint Pure-Castile Soap scores 92/100 in our HSS rating: fair-trade certified ingredients, reusable bottles, serious supply-chain transparency. Stern note? It's a concentrate — dilution matters. Full breakdown inside. #CastileSoap #EcoCleaning #ZeroWaste #FairTrade",
+      "link": "https://hummlan.com/product/dr-bronners-peppermint-pure-castile-liquid-soap",
+      "board": "947093065328074979",
+      "image_generated": false,
+      "image_url": "https://cdn.shopify.com/s/files/1/0424/3475/6772/files/dr-bronners-pure-castile-liquid-soap-32oz-peppermint-1-us_3.png?v=1786053142"
+    },
+    {
+      "id": "ethique",
+      "title": "Ethique Solid Shampoo Bars — HSS 88/100: Plastic-Free Haircare",
+      "description": "Ethique's solid shampoo bars score 88/100 in our HSS rating — plastic-free, palm-oil-free and concentrated to last. We rate the ingredients, packaging and social record so you know exactly what you're buying. Stern but fair. #ShampooBar #PlasticFree #ZeroWasteBeauty #EcoBeauty #SustainableHaircare",
+      "link": "https://hummlan.com/product/ethique-sample-pack",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/ethique.png"
+    },
+    {
+      "id": "blueland",
+      "title": "Blueland Cleaning Tablets — HSS 85/100: Clean Without the Plastic",
+      "description": "Blueland's cleaning starter set scores 85/100: refillable bottles, tiny shipping footprint, concentrated tablets that skip single-use plastic. Our stern note? The convenience markup. Read the full HSS breakdown. #PlasticFreeCleaning #EcoCleaning #ZeroWasteHome #GreenCleaning",
+      "link": "https://hummlan.com/product/blueland-multi-surface-cleaner-starter-set",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/blueland.png"
+    },
+    {
+      "id": "wgac",
+      "title": "Who Gives A Crap Toilet Paper — HSS 84/100: 50% of Profits to Sanitation",
+      "description": "100% recycled toilet paper with 50% of profits funding sanitation projects — Who Gives A Crap scores 84/100. We verify the claims, check the packaging, tell you where it falls short. Honest, no fluff. #EcoToiletPaper #RecycledPaper #SustainableLiving #ZeroWaste",
+      "link": "https://hummlan.com/product/wgac-toilet-paper-48",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/wgac.png"
+    },
+    {
+      "id": "abeego",
+      "title": "Abeego Beeswax Wraps — HSS 81/100: Reusable Food Wrap That Works",
+      "description": "Swap cling film for Abeego's beeswax wraps — HSS 81/100. Made with organic cotton, beeswax and tree resin, and compostable at end of life. The stern bit: they need care and don't last forever. Full 5-pillar rating inside. #BeeswaxWraps #ZeroWasteKitchen #SustainableLiving #PlasticFree #FoodStorage",
+      "link": "https://hummlan.com/product/abeego-beeswax-food-wraps-3pack",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/abeego.png"
+    },
+    {
+      "id": "bestof-basics",
+      "title": "Cheapest Sustainable Basics Under $50 — Stern-Rated by Hummlan",
+      "description": "The cheapest sustainable basics that pass our stern EU Taxonomy & CSRD-aligned ratings — Pact leggings from $25, Patagonia shorts from $44. Honest pros and cons for each pick. No greenwashing, just value. #SustainableFashion #EthicalFashion #BudgetFriendly #CapsuleWardrobe",
+      "link": "https://hummlan.com/best-of/affordable-sustainable-basics-under-50",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/bestof-basics.png"
+    },
+    {
+      "id": "bestof-home",
+      "title": "Sustainable Home Essentials Under $20 — Eco Cleaning That Works",
+      "description": "The cheapest eco-friendly dish soaps, laundry detergents and cleaners that pass our stern ratings — with honest per-use costs. We rate the ingredients, packaging and green claims so you don't have to trust the label. #EcoCleaning #SustainableHome #ZeroWaste #GreenCleaning #AffordableEco",
+      "link": "https://hummlan.com/best-of/affordable-sustainable-home-essentials",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/bestof-home.png"
+    },
+    {
+      "id": "eu-taxonomy",
+      "title": "EU Taxonomy Explained for Shoppers (Plain Language, No Jargon)",
+      "description": "What is the EU Taxonomy, and why should shoppers care? Hummlan's plain-language explainer shows how the EU's green rulebook maps onto real product ratings — and how we use it to fight greenwashing. Free to read. #EUTaxonomy #SustainableFinance #Greenwashing #EcoEducation #LearnSustainability",
+      "link": "https://hummlan.com/eu-taxonomy",
+      "board": "947093065328074979",
+      "image_generated": true,
+      "image_file": "pins/eu-taxonomy.png"
+    }
+  ]
+}
