@@ -5,7 +5,6 @@ import {
   ArrowRight,
   Briefcase,
   Building2,
-  CalendarDays,
   CheckCircle,
   FileCheck2,
   FileCode2,
@@ -16,6 +15,7 @@ import {
   Users,
 } from 'lucide-react';
 import EvolvingPanel from '@/components/EvolvingPanel';
+import Timeline from '@/components/Timeline';
 
 export const metadata: Metadata = {
   title: 'CSRD Explained for Shoppers',
@@ -318,23 +318,7 @@ export default function CsrdPage() {
 
           <section className="bg-white border rounded-2xl p-8 md:p-10 shadow-sm mb-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">When does this actually happen?</h2>
-            <div className="relative">
-              <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-blue-200" aria-hidden="true" />
-              <div className="space-y-8">
-                {timelineStops.map((stop) => (
-                  <div key={stop.year} className="relative pl-14">
-                    <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white ring-4 ring-blue-100">
-                      <CalendarDays className="h-4 w-4" />
-                    </div>
-                    <div className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-800">
-                      {stop.year}
-                    </div>
-                    <h3 className="mt-2 font-bold text-gray-900">{stop.title}</h3>
-                    <p className="mt-1 text-sm md:text-base text-gray-600 leading-relaxed">{stop.body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <Timeline stops={timelineStops} />
             <p className="text-sm italic text-gray-500 mt-6">
               <em>Why the 2025 delay? The EU paused the second and third waves for two years to give
               companies breathing room — and it is now debating narrowing the scope entirely. That means

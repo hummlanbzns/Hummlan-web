@@ -19,6 +19,8 @@ import {
   Waves,
 } from 'lucide-react';
 import EvolvingPanel from '@/components/EvolvingPanel';
+import MisconceptionCards from '@/components/MisconceptionCards';
+import NumberedConditions from '@/components/NumberedConditions';
 
 export const metadata: Metadata = {
   title: 'EU Taxonomy Explained for Shoppers',
@@ -268,24 +270,7 @@ export default function EuTaxonomyPage() {
               These are the four conditions in Article 3 of the Regulation — every activity must pass
               all of them to count as sustainable.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {numberedConditions.map((condition) => (
-                <div key={condition.number} className="border rounded-xl p-5 bg-gray-50/70">
-                  <div className="flex items-start gap-3 mb-2">
-                    <span className="text-3xl font-extrabold text-brand/30 leading-none select-none">
-                      {condition.number}
-                    </span>
-                    <div>
-                      <h3 className="font-bold text-gray-900 leading-snug">{condition.title}</h3>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mt-0.5">
-                        {condition.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600">{condition.text}</p>
-                </div>
-              ))}
-            </div>
+            <NumberedConditions conditions={numberedConditions} />
           </section>
 
           <section className="bg-white border rounded-2xl p-8 md:p-10 shadow-sm mb-10">
@@ -355,24 +340,7 @@ export default function EuTaxonomyPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               What the Taxonomy does NOT do
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {misconceptions.map((misconception) => {
-                const Icon = misconception.icon;
-                return (
-                  <div key={misconception.title} className="border rounded-xl p-5 bg-gray-50/70">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 bg-white rounded-lg border">
-                        <Icon className="w-5 h-5 text-brand" />
-                      </div>
-                      <h3 className="font-bold text-gray-900 text-sm leading-snug">
-                        {misconception.title}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-gray-600">{misconception.text}</p>
-                  </div>
-                );
-              })}
-            </div>
+            <MisconceptionCards items={misconceptions} />
             <p className="text-sm text-gray-500 italic mt-4">
               This matters: most misunderstandings about the Taxonomy come from expecting it to be
               something it isn&apos;t.
