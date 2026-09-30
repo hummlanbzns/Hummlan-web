@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'The plain-language terms for using Hummlan: what we do, how our ratings work, and our affiliate disclosure.',
+    'The plain-language terms for using Hummlan: what we do, how our ratings work, and our independence from the brands we rate.',
   alternates: { canonical: '/terms' },
 };
 
@@ -13,15 +13,15 @@ export default function TermsPage() {
       <main className="flex-grow py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-3">Terms of Service</h1>
-          <p className="text-sm text-gray-500 mb-10">Last updated: August 2026</p>
+          <p className="text-sm text-gray-500 mb-10">Last updated: September 2026</p>
 
           <section className="space-y-8">
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">1. What Hummlan is</h2>
               <p className="text-gray-600 leading-relaxed">
-                Hummlan (hummlan.com) is an independent comparison and review site. We rate brands
-                and products with our Hummlan Sustainability Score (HSS), publish buying guides,
-                and explain sustainability topics such as the EU Taxonomy and CSRD. Using the site
+                Hummlan (hummlan.com) is an independent sustainability ratings hub. We rate brands
+                and companies with our Hummlan Sustainability Score (HSS) and explain sustainability
+                topics such as the EU Taxonomy and CSRD. We do not sell products. Using the site
                 means you accept these terms.
               </p>
             </div>
@@ -37,21 +37,20 @@ export default function TermsPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">3. Affiliate disclosure</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">3. Independence</h2>
               <p className="text-gray-600 leading-relaxed">
-                Hummlan earns money through affiliate links. If you click a link to a store on our
-                site and make a purchase, we may receive a commission at no extra cost to you.
-                This helps fund our research. Being an affiliate never changes our rating — we rate
-                brands the same way whether or not they are in our affiliate programme.
+                Hummlan does not sell products and does not use affiliate links. We earn nothing
+                from the brands we rate, and a brand cannot pay for a better score. Our ratings are
+                independent and apply to any brand or company we assess — whether or not it has any
+                relationship with Hummlan.
               </p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">4. Prices and availability</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">4. No prices or products</h2>
               <p className="text-gray-600 leading-relaxed">
-                Prices shown on Hummlan come from the stores we link to and may change at any time.
-                We try to keep them accurate but we cannot guarantee that a price, offer, or
-                product is still available when you click through.
+                Hummlan rates brands and companies — not products. We do not display product prices
+                or store offers, and we do not sell or promote products.
               </p>
             </div>
 
@@ -77,8 +76,7 @@ export default function TermsPage() {
               <p className="text-gray-600 leading-relaxed">
                 Hummlan is provided &quot;as is&quot;. To the extent permitted by law, we are not
                 liable for any loss arising from your use of the site or from relying on the
-                information it contains. Purchases are made with the store, not with us, so store
-                disputes are handled by the store.
+                information it contains.
               </p>
             </div>
 

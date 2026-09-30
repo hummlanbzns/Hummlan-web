@@ -20,30 +20,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${SITE_URL}/shop`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/best-of`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/best-of/affordable-sustainable-basics-under-50`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/best-of/affordable-sustainable-home-essentials`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${SITE_URL}/search`,
       lastModified: new Date(),
       changeFrequency: 'daily',
@@ -75,14 +51,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Fetch all categories (only those with at least one product, direct or child)
+  // Categories that contain at least one rated brand (category pages are
+  // now brands-by-category indexes).
   let categories: any[] = [];
   try {
     const rs = await db.execute(`
-      SELECT c.slug FROM categories c
+      SELECT DISTINCT c.slug FROM categories c
       WHERE EXISTS (
         SELECT 1 FROM products p
-        WHERE p.category_id = c.id OR p.category_id IN (SELECT id FROM categories WHERE parent_id = c.id)
+        JOIN brands b ON b.id = p.brand_id
+        WHERE (p.category_id = c.id OR p.category_id IN (SELECT id FROM categories WHERE parent_id = c.id))
+          AND b.overall_sustainability_score IS NOT NULL
       )
     `);
     categories = rs.rows as any[];
@@ -97,26 +76,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Fetch all products
-  let products: any[] = [];
-  try {
-    const rs = await db.execute('SELECT slug, updated_at FROM products');
-    products = rs.rows as any[];
-  } catch (e) {
-    console.error('Failed to fetch products for sitemap:', e);
-  }
-
-  const productPages: MetadataRoute.Sitemap = products.map((prod: any) => ({
-    url: `${SITE_URL}/product/${prod.slug}`,
-    lastModified: prod.updated_at ? new Date(prod.updated_at) : new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }));
-
-  // Fetch all brands
+  // All rated brands
   let brands: any[] = [];
   try {
-    const rs = await db.execute('SELECT slug, updated_at FROM brands');
+    const rs = await db.execute("SELECT slug, updated_at FROM brands WHERE overall_sustainability_score IS NOT NULL");
     brands = rs.rows as any[];
   } catch (e) {
     console.error('Failed to fetch brands for sitemap:', e);
@@ -129,5 +92,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages, ...brandPages];
+  return [...staticPages, ...categoryPages, ...brandPages];
 }

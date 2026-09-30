@@ -1047,7 +1047,7 @@ export default function HssMethodologySection() {
               </li>
               <li className="flex gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                <span><strong>Price update:</strong> Quarterly tracking of market prices</span>
+                <span><strong>Reassessment:</strong> When new certifications, disclosures, or controversies emerge</span>
               </li>
             </ul>
           </div>
@@ -1120,7 +1120,7 @@ export default function HssMethodologySection() {
             <ul className="space-y-2 text-sm text-gray-600">
               <li className="flex gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
-                <span><strong>Quarterly updates:</strong> Scores are reviewed and updated every quarter. Prices are updated more frequently.</span>
+                <span><strong>Quarterly updates:</strong> Scores are reviewed and updated every quarter.</span>
               </li>
               <li className="flex gap-2">
                 <CheckCircle className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
@@ -1141,9 +1141,9 @@ export default function HssMethodologySection() {
           <div className="flex gap-3">
             <Info className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <p className="text-sm text-amber-800">
-              <strong>Our commitment:</strong> We will never accept payment from a brand to change a score. Our rating team
-              and our commercial team are strictly separated. Affiliate commissions do not influence ratings —
-              we link to the cheapest store regardless of commission rate. If you see something wrong, email us at
+              <strong>Our commitment:</strong> We will never accept payment from a brand to change a score. Hummlan does not sell
+              products and earns nothing from the brands we rate — ratings are independent. If you see
+              something wrong, email us at
               <a href="mailto:hello@hummlan.com" className="underline font-medium ml-1">hello@hummlan.com</a>.
             </p>
           </div>

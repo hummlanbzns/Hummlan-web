@@ -6,7 +6,7 @@ import SearchForm from './SearchForm';
 import FilterPanel from './FilterPanel';
 import BrandLogo from '@/components/BrandLogo';
 
-export const metadata: Metadata = { title: 'HSS Search Engine — Sustainability Scores', description: 'Search any brand by Hummlan Sustainability Score (HSS). Transparent ratings for brands outside our affiliate program too.', alternates: { canonical: '/search' } };
+export const metadata: Metadata = { title: 'HSS Search Engine — Sustainability Scores', description: 'Search any brand or company by Hummlan Sustainability Score (HSS). Transparent, independent ratings — even for brands Hummlan earns nothing from.', alternates: { canonical: '/search' } };
 
 const scoreBand = (s: number | null) => s === null ? 'low' : s >= 70 ? 'high' : s >= 40 ? 'mid' : 'low';
 const SCORE_COLORS: Record<string, string> = { high: 'bg-green-100 text-green-800 border-green-200', mid: 'bg-yellow-100 text-yellow-800 border-yellow-200', low: 'bg-red-100 text-red-800 border-red-200' };
@@ -25,7 +25,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           <div className="text-center mb-10">
             <div className="inline-flex p-3 bg-orange-100 rounded-2xl mb-4"><Search className="w-8 h-8 text-orange-600" /></div>
             <h1 className="text-4xl font-extrabold text-gray-900 mb-3">HSS Search Engine</h1>
-            <p className="text-gray-800 max-w-2xl mx-auto">Search any brand or product &mdash; even those outside our affiliate program &mdash; by their Hummlan Sustainability Score.</p>
+            <p className="text-gray-800 max-w-2xl mx-auto">Search any brand or company &mdash; even ones Hummlan earns nothing from &mdash; by their Hummlan Sustainability Score (HSS).</p>
           </div>
           <SearchForm initialQuery={query} />
           <FilterPanel categories={categories} selectedCategory={category} currentSort={sort} currentMinScore={minScore} />
@@ -44,7 +44,6 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                         <BrandLogo name={r.name} logoUrl={r.logoUrl} size={28} score={r.overallScore} className="shrink-0" />
                         <h3 className="text-xl font-bold text-gray-900 truncate">{r.name}</h3>
                       </div>
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${r.hasAffiliateLinks ? 'bg-green-50 text-green-600 border border-green-200' : 'bg-blue-50 text-blue-600 border border-blue-200'}`}>{r.hasAffiliateLinks ? 'AFFILIATE' : 'INDEXED'}</span>
                     </div>
                     {r.categoryName && <Link href={`/category/${r.categorySlug}`} className="text-xs font-semibold text-orange-600">{r.categoryName}</Link>}
                     {r.pillarScores?.length > 0 && <div className="grid grid-cols-5 gap-2 mt-3">{r.pillarScores.map((p: any) => {
@@ -53,7 +52,6 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                     })}</div>}
                     <div className="flex items-center gap-4 mt-3 pt-3 border-t border-gray-100">
                       <Link href={`/brand/${r.slug}`} className="text-sm font-bold text-orange-600 flex items-center gap-1">View Full Rating <ChevronRight className="w-4 h-4" /></Link>
-                      {r.lowestPrice && <span className="text-sm text-gray-700">From <strong>${r.lowestPrice}</strong></span>}
                     </div>
                   </div>
                 </div>))}

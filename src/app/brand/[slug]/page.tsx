@@ -3,57 +3,10 @@ import { cache } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
-import { ShieldCheck, Award, ChevronRight, ShoppingBag, ExternalLink, BookOpen } from 'lucide-react';
+import { ShieldCheck, Award } from 'lucide-react';
 import SustainabilityBreakdown from '@/components/SustainabilityBreakdown';
 import BrandLogo from '@/components/BrandLogo';
 import { SITE_NAME, absoluteUrl } from '@/lib/seo';
-
-// Best-of guides that feature each brand (guides are static pages, so this
-// mapping is maintained here — keep it in sync when new guides are published).
-const BRAND_GUIDES: Record<string, { title: string; href: string; excerpt: string }[]> = {
-  patagonia: [
-    {
-      title: 'Affordable Sustainable Basics Under $50',
-      href: '/best-of/affordable-sustainable-basics-under-50',
-      excerpt: 'Patagonia Baggies Shorts pick at ~$44 on sale — the highest HSS in the guide.',
-    },
-  ],
-  meliora: [
-    {
-      title: 'Affordable Sustainable Home Essentials Under $20',
-      href: '/best-of/affordable-sustainable-home-essentials',
-      excerpt: 'Meliora cleaning bar named the strongest zero-waste, highest-HSS household pick.',
-    },
-  ],
-  'dr-bronners': [
-    {
-      title: 'Affordable Sustainable Home Essentials Under $20',
-      href: '/best-of/affordable-sustainable-home-essentials',
-      excerpt: "Dr. Bronner's Pure-Castile Liquid Soap — the most versatile multi-purpose pick.",
-    },
-  ],
-  blueland: [
-    {
-      title: 'Affordable Sustainable Home Essentials Under $20',
-      href: '/best-of/affordable-sustainable-home-essentials',
-      excerpt: 'Blueland refill starter sets — the most convenient zero-waste cleaning path.',
-    },
-  ],
-  dropps: [
-    {
-      title: 'Affordable Sustainable Home Essentials Under $20',
-      href: '/best-of/affordable-sustainable-home-essentials',
-      excerpt: 'Dropps laundry pods — the strongest cost-per-load at ~$0.30 on subscription.',
-    },
-  ],
-  ecos: [
-    {
-      title: 'Affordable Sustainable Home Essentials Under $20',
-      href: '/best-of/affordable-sustainable-home-essentials',
-      excerpt: 'ECOS laundry detergent — the budget-friendly, widely available pick at ~$0.11/load.',
-    },
-  ],
-};
 
 const getBrand = cache(async (slug: string) => {
   const rs = await db.execute({
@@ -73,22 +26,6 @@ async function getSustainabilityRatings(brandId: string) {
     args: [brandId],
   });
   return rs.rows;
-}
-
-async function getBrandProducts(brandId: string) {
-  const rs = await db.execute({
-    sql: `
-      SELECT p.slug, p.name, p.description, MIN(al.price) as min_price
-      FROM products p
-      LEFT JOIN affiliate_links al ON p.id = al.product_id AND al.is_active = 1 AND al.affiliate_url NOT LIKE '%search%'
-      WHERE p.brand_id = ?
-      GROUP BY p.id
-      ORDER BY p.name ASC
-      LIMIT 12
-    `,
-    args: [brandId],
-  });
-  return rs.rows as any[];
 }
 
 export async function generateMetadata({
@@ -137,7 +74,6 @@ export default async function BrandPage({
   }
 
   const ratings: any[] = await getSustainabilityRatings(brand.id);
-  const products = await getBrandProducts(brand.id);
 
   const scoreColor =
     brand.overall_sustainability_score >= 70 ? 'text-green-600' :
@@ -203,69 +139,18 @@ export default async function BrandPage({
             </div>
           </div>
 
-          {/* Sustainability Breakdown */}
+          {/* Sustainability Breakdown (5 pillars + drill-downs) */}
           <div className="mb-8">
             <SustainabilityBreakdown ratings={ratings} />
           </div>
-
-          {/* Products Section */}
-          {products.length > 0 && (
-            <div className="bg-white rounded-2xl border shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <ShoppingBag className="w-6 h-6 text-brand" />
-                {brand.name} Products We Track
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {products.map((product: any) => (
-                  <Link
-                    key={product.slug}
-                    href={`/product/${product.slug}`}
-                    className="flex items-center justify-between p-4 border rounded-xl hover:border-brand hover:shadow-sm transition-all group"
-                  >
-                    <div>
-                      <p className="font-semibold text-gray-900 group-hover:text-brand-dark transition-colors">{product.name}</p>
-                      {product.min_price && (
-                        <p className="text-sm text-gray-500 mt-1">From ${product.min_price}</p>
-                      )}
-                    </div>
-                    <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-brand transition-colors" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Featured in Best-Of Guides */}
-          {BRAND_GUIDES[brand.slug] && (
-            <div className="bg-white rounded-2xl border shadow-sm p-8 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <BookOpen className="w-6 h-6 text-brand" />
-                {brand.name} in Our Best-Of Guides
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {BRAND_GUIDES[brand.slug].map((guide) => (
-                  <Link
-                    key={guide.href}
-                    href={guide.href}
-                    className="p-5 border rounded-xl hover:border-brand hover:shadow-sm transition-all group"
-                  >
-                    <p className="font-bold text-gray-900 group-hover:text-brand-dark transition-colors">{guide.title}</p>
-                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">{guide.excerpt}</p>
-                    <p className="text-sm font-bold text-brand mt-3 flex items-center gap-1">
-                      Read the guide <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                    </p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Learn More */}
           <div className="rounded-2xl bg-blue-50 border border-blue-100 p-5 flex items-start gap-3">
             <Award className="w-5 h-5 text-blue-700 shrink-0 mt-0.5" />
             <p className="text-sm text-blue-900 leading-relaxed">
               Our ratings are <strong>"stern but fair"</strong>, based on third-party certifications and
-              EU Taxonomy + CSRD alignment. Learn more about{' '}
+              EU Taxonomy + CSRD alignment. Hummlan does not sell products and earns nothing from
+              recommending brands — ratings are independent. Learn more about{' '}
               <Link href="/eu-taxonomy" className="underline font-semibold hover:text-blue-950">EU Taxonomy</Link>{' '}
               and{' '}
               <Link href="/csrd" className="underline font-semibold hover:text-blue-950">CSRD</Link>.

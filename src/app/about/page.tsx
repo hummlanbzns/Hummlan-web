@@ -113,7 +113,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-gray-900">Keystone Pollinators</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  As a keystone species, bumblebees support entire ecosystems. We follow the EU Taxonomy to look at systemic, holistic impact—ensuring the products we recommend protect the very foundation of our planet's biodiversity.
+                  As a keystone species, bumblebees support entire ecosystems. We follow the EU Taxonomy to look at systemic, holistic impact—ensuring the brands we rate protect the very foundation of our planet's biodiversity.
                 </p>
               </div>
 
@@ -137,7 +137,7 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold text-gray-900">Hyper-Efficient Foragers</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  Highly selective and efficient, bumblebees visit up to 30 flowers per minute. Hummlan mirrors this by filtering out greenwashed products, doing the rigorous foraging so you get only high-integrity, cost-effective options.
+                  Highly selective and efficient, bumblebees visit up to 30 flowers per minute. Hummlan mirrors this by filtering out greenwashed claims, doing the rigorous foraging so you get only high-integrity, evidence-backed ratings.
                 </p>
               </div>
             </div>
@@ -148,9 +148,11 @@ export default function AboutPage() {
           <div className="bg-brand-light border border-brand-light rounded-2xl p-8 flex gap-6 items-start">
             <AlertTriangle className="w-8 h-8 text-brand shrink-0" />
             <div>
-              <h3 className="text-lg font-bold text-brand-dark mb-2">A Note on Affiliate Links</h3>
+              <h3 className="text-lg font-bold text-brand-dark mb-2">No Products. No Affiliate Pressure. No Greenwashing.</h3>
               <p className="text-brand-dark leading-relaxed">
-                Hummlan earns commissions through affiliate marketing. However, our rating team and our marketing team are strictly separated. A brand cannot pay for a better score. We link to the cheapest store regardless of the commission rate to ensure you get the best deal on the best products.
+                Hummlan does not sell products and earns nothing from recommending brands — our ratings are
+                independent. A brand cannot pay for a better score, and we never earn a commission from a
+                rating. That is what &ldquo;stern but fair&rdquo; means to us.
               </p>
             </div>
           </div>

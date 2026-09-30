@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, ShoppingBag, Mail } from 'lucide-react';
+import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, Mail } from 'lucide-react';
 import { SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {

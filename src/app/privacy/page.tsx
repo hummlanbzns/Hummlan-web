@@ -13,14 +13,15 @@ export default function PrivacyPage() {
       <main className="flex-grow py-16">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-3">Privacy Policy</h1>
-          <p className="text-sm text-gray-500 mb-10">Last updated: August 2026</p>
+          <p className="text-sm text-gray-500 mb-10">Last updated: September 2026</p>
 
           <section className="space-y-8">
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">1. Who we are</h2>
               <p className="text-gray-600 leading-relaxed">
-                Hummlan (hummlan.com) is an independent comparison and review site that rates the
-                sustainability of brands and products. This policy explains what information we
+                Hummlan (hummlan.com) is an independent sustainability ratings hub. We rate the
+                sustainability of brands and companies with our Hummlan Sustainability Score (HSS).
+                We do not sell products. This policy explains what information we
                 collect and how we use it.
               </p>
             </div>
@@ -40,8 +41,10 @@ export default function PrivacyPage() {
                 </li>
               </ul>
               <p className="text-gray-600 leading-relaxed mt-3">
-                We do not set our own tracking or advertising cookies, and we do not use analytics
-                scripts on this site.
+                We use Google Analytics (with IP anonymization) to count visits and understand which
+                pages are read, so we can improve the site. Google Analytics sets a small first-party
+                cookie to distinguish unique visitors; it does not identify you personally. We do not
+                use advertising or cross-site tracking cookies.
               </p>
             </div>
 
@@ -58,13 +61,11 @@ export default function PrivacyPage() {
             </div>
 
             <div>
-              <h2 className="text-xl font-bold text-gray-900 mb-2">4. Affiliate links and third parties</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">4. No affiliate links</h2>
               <p className="text-gray-600 leading-relaxed">
-                Some of the store links on Hummlan are affiliate links. When you click one, the
-                store or its affiliate network (for example, Awin) may set cookies in your browser
-                so the referral can be credited. We do not control those cookies — please see the
-                store&apos;s own privacy policy for details. Clicking an affiliate link never costs
-                you anything extra.
+                Hummlan does not use affiliate links and does not sell products. We earn nothing from
+                the brands we rate, so no third-party store or affiliate network sets cookies on this
+                site for referral tracking.
               </p>
             </div>
 

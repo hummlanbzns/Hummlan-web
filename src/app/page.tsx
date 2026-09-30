@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { db } from '@/lib/db';
-import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight, BookOpen, GraduationCap } from 'lucide-react';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 import SearchForm from '@/components/SearchFormWrapper';
@@ -14,20 +14,20 @@ import {
 } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Cheapest Sustainable Products Ranked | Hummlan',
+  title: 'Sustainability Ratings for Brands & Companies | Hummlan',
   description:
-    'Compare sustainable products by strict EU Taxonomy + CSRD-aligned ratings and find the cheapest live offers in one place.',
+    'Check any brand\'s sustainability record before you buy. Stern but fair HSS ratings from Hummlan — 5 pillars, EU Taxonomy + CSRD aligned, no product pushing, no greenwashing.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Hummlan.com | Cheapest Sustainable Products Ranked',
-    description: 'Compare sustainable products by strict EU Taxonomy + CSRD-aligned ratings and find the cheapest live offers in one place.',
+    title: 'Hummlan.com | Stern but Fair Sustainability Ratings',
+    description: 'Check any brand\'s sustainability record before you buy. No product pushing, no affiliate pressure, no greenwashing.',
     url: '/', type: 'website',
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630, alt: 'Hummlan.com homepage social preview' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hummlan.com | Cheapest Sustainable Products Ranked',
-    description: 'Compare sustainable products by strict EU Taxonomy + CSRD-aligned ratings and find the cheapest live offers in one place.',
+    title: 'Hummlan.com | Stern but Fair Sustainability Ratings',
+    description: 'Check any brand\'s sustainability record before you buy. No product pushing, no affiliate pressure, no greenwashing.',
     images: [DEFAULT_OG_IMAGE],
   },
 };
@@ -79,7 +79,7 @@ export default async function Home() {
   const homeSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `${SITE_NAME} | Cheapest Sustainable Products Ranked`,
+    name: `${SITE_NAME} | Stern but Fair Sustainability Ratings`,
     description: SITE_DESCRIPTION,
     url: absoluteUrl('/'),
     mainEntity: {
@@ -107,18 +107,19 @@ export default async function Home() {
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-              Sustainable shopping, <br className="hidden md:block" /> without the greenwash.
+              Check any brand&rsquo;s sustainability record, <br className="hidden md:block" /> before you buy.
             </h1>
             <p className="text-xl text-orange-50 mb-10 max-w-2xl mx-auto font-medium">
-              We find the cheapest prices for products that actually meet our stern &ldquo;Hummlan
-              Sustainability Score&rdquo; &mdash; grounded in EU Taxonomy and CSRD-aligned evidence.
+              Our stern &ldquo;Hummlan Sustainability Score&rdquo; (HSS) rates brands and companies across
+              five pillars, grounded in EU Taxonomy and CSRD-aligned evidence. No product pushing,
+              no affiliate pressure, no greenwashing — the upsides and the downsides.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a href="#brands" className="bg-white text-orange-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition-colors shadow-lg">
-                Browse All Brands
+                Browse Rated Brands
               </a>
               <Link href="/about" className="bg-orange-800/50 backdrop-blur-sm border border-orange-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-800/70 transition-colors">
-                Our Methodology
+                How the HSS Works
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm font-medium text-orange-100">
@@ -137,14 +138,14 @@ export default async function Home() {
                 <div className="p-3 bg-orange-100 rounded-xl"><ShieldCheck className="w-6 h-6 text-orange-700" /></div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-1">Stern Ratings</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">No marketing fluff. We use hard data from third-party certifications and corporate reports.</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">No marketing fluff. We use hard data from third-party certifications and corporate reports — and we show the downsides too.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
                 <div className="p-3 bg-blue-100 rounded-xl"><Scale className="w-6 h-6 text-blue-600" /></div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Fair Comparisons</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">We show you the cheapest prices available across multiple eco-conscious retailers.</p>
+                  <h3 className="font-bold text-gray-900 mb-1">Fully Independent</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">Hummlan does not sell products and earns nothing from recommending brands. Our ratings are free of affiliate pressure.</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-6 rounded-2xl bg-gray-50 border">
@@ -163,8 +164,11 @@ export default async function Home() {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <div className="inline-flex p-3 bg-orange-100 rounded-2xl mb-4"><Search className="w-8 h-8 text-orange-600" /></div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Search Any Brand</h2>
-            <p className="text-gray-600 mb-6">Look up any brand&rsquo;s HSS rating &mdash; even if we don&rsquo;t sell their products.</p>
+            <p className="text-gray-600 mb-6">Look up any brand&rsquo;s HSS rating — even if Hummlan earns nothing from it. We rate the brand, not our relationship with it.</p>
             <SearchForm initialQuery="" />
+            <p className="text-xs text-gray-400 mt-6 max-w-lg mx-auto leading-relaxed">
+              Stern but fair: Hummlan does not sell products and earns nothing from recommending brands — ratings are independent.
+            </p>
           </div>
         </section>
 
@@ -215,19 +219,19 @@ export default async function Home() {
 
             <div className="text-center mt-10">
               <Link href="/search" className="inline-flex items-center gap-2 bg-white border-2 border-orange-200 text-orange-700 px-8 py-3 rounded-xl font-bold hover:bg-orange-50 hover:border-orange-400 transition-all">
-                <Search className="w-5 h-5" /> Search All Brands &amp; Products
+                <Search className="w-5 h-5" /> Search All Brands
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Categories Section */}
+        {/* Browse by Category (brands) */}
         <section className="bg-gray-900 py-24 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Shop by Category</h2>
+              <h2 className="text-4xl font-bold mb-4">Browse Brands by Category</h2>
               <p className="text-gray-400 max-w-xl mx-auto">
-                Focused research across multiple categories to find the most sustainable options for your daily life.
+                Rated brands across personal care, food, fashion, household and more — each with a full 5-pillar HSS breakdown.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -235,9 +239,42 @@ export default async function Home() {
                 <Link key={category.id} href={`/category/${category.slug}`} className="group bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-orange-600 hover:bg-gray-800/50 transition-all">
                   <h3 className="font-bold text-xl mb-3 group-hover:text-orange-400 transition-colors">{category.name}</h3>
                   <p className="text-sm text-gray-400 leading-relaxed mb-6">{categoryHighlights[category.slug] || category.description}</p>
-                  <span className="text-orange-600 font-bold text-sm">Explore {category.name} →</span>
+                  <span className="text-orange-600 font-bold text-sm">View rated brands →</span>
                 </Link>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Hub */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="text-center mb-12">
+              <div className="inline-flex p-3 bg-orange-100 rounded-2xl mb-4"><GraduationCap className="w-8 h-8 text-orange-600" /></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Learn What Sustainability Actually Means</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Cut through the greenwash. Plain-language explainers on the frameworks behind our ratings — and the honest upsides and downsides.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/learn" className="group bg-gray-50 border rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all">
+                <BookOpen className="w-8 h-8 text-orange-600 mb-4" />
+                <h3 className="text-xl font-bold mb-3 group-hover:text-orange-700 transition-colors">The Learning Hub</h3>
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">HSS pillar guides and plain-language explainers on what sustainability really means.</p>
+                <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Start learning <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
+              <Link href="/csrd" className="group bg-gray-50 border rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all">
+                <BookOpen className="w-8 h-8 text-orange-600 mb-4" />
+                <h3 className="text-xl font-bold mb-3 group-hover:text-orange-700 transition-colors">What is the CSRD?</h3>
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">The EU law making ~50,000 companies report their sustainability honestly.</p>
+                <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Read the deep dive <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
+              <Link href="/eu-taxonomy" className="group bg-gray-50 border rounded-2xl p-8 hover:shadow-lg hover:border-orange-200 transition-all">
+                <BookOpen className="w-8 h-8 text-orange-600 mb-4" />
+                <h3 className="text-xl font-bold mb-3 group-hover:text-orange-700 transition-colors">What is the EU Taxonomy?</h3>
+                <p className="text-sm text-gray-600 leading-relaxed mb-4">The EU&apos;s green dictionary — the classification system that backs our HSS.</p>
+                <span className="text-sm font-bold text-orange-600 flex items-center gap-1">Read the deep dive <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+              </Link>
             </div>
           </div>
         </section>

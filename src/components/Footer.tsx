@@ -17,9 +17,6 @@ export default function Footer() {
             <Link href="/learn" className="hover:text-orange-700 transition-colors">
               Learn
             </Link>
-            <Link href="/best-of" className="hover:text-orange-700 transition-colors">
-              Best Of
-            </Link>
             <Link href="/about" className="hover:text-orange-700 transition-colors">
               Our Standards
             </Link>
@@ -54,9 +51,9 @@ export default function Footer() {
         <div className="text-center pt-8 border-t border-gray-100">
           <p className="text-gray-400 text-sm mb-2">© {new Date().getFullYear()} Hummlan. All rights reserved.</p>
           <p className="text-gray-400 text-xs max-w-2xl mx-auto leading-relaxed">
-            Hummlan is an independent comparison site. We earn affiliate commissions from some of
-            the stores we link to, which helps fund our in-depth sustainability research and stern
-            rating framework.
+            Hummlan is an independent sustainability ratings hub. We do not sell products and we
+            earn nothing from the brands we rate — our ratings are free of affiliate pressure and
+            greenwashing.
           </p>
         </div>
       </div>

@@ -44,7 +44,7 @@ export async function searchHSS(options: HSSSearchOptions): Promise<HSSSearchRes
   params.push(minScore, maxScore);
 
   const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
-  const orderClause = sort === 'name' ? 'b.name ASC, p.name ASC' : sort === 'price' ? 'min_price ASC NULLS LAST' : 'b.overall_sustainability_score DESC, b.name ASC';
+  const orderClause = sort === 'name' ? 'b.name ASC, p.name ASC' : sort === 'price' ? 'b.overall_sustainability_score DESC, b.name ASC' : 'b.overall_sustainability_score DESC, b.name ASC';
 
   const sql = `
     SELECT 'brand' as type, b.id, b.name, b.slug, b.description, b.logo_url,
