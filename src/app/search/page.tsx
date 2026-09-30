@@ -25,7 +25,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           <div className="text-center mb-10">
             <div className="inline-flex p-3 bg-orange-100 rounded-2xl mb-4"><Search className="w-8 h-8 text-orange-600" /></div>
             <h1 className="text-4xl font-extrabold text-gray-900 mb-3">HSS Search Engine</h1>
-            <p className="text-gray-800 max-w-2xl mx-auto">Search any brand or company &mdash; even ones Hummlan earns nothing from &mdash; by their Hummlan Sustainability Score (HSS).</p>
+            <p className="text-gray-800 max-w-2xl mx-auto">Search any brand or company by their Hummlan Sustainability Score (HSS).</p>
           </div>
           <SearchForm initialQuery={query} />
           <FilterPanel categories={categories} selectedCategory={category} currentSort={sort} currentMinScore={minScore} />
