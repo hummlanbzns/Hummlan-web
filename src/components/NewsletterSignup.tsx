@@ -28,7 +28,7 @@ export default function NewsletterSignup() {
         </div>
         <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Join the Hive</h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Get the week's sharpest price drops on products that actually score 90+ on our strict sustainability scale.
+          Get the week's sustainability news and new HSS ratings — in plain language, with no product pushing.
         </p>
 
         {state.status === 'success' ? (

@@ -36,7 +36,6 @@ export default function FilterPanel({
               className="px-3 py-2 border rounded-lg text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 outline-none">
               <option value="score">Highest Score</option>
               <option value="name">Name (A-Z)</option>
-              <option value="price">Price (Low)</option>
             </select>
           </div>
           <div>

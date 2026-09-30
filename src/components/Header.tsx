@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/search', label: 'Search' },
-  { href: '/about', label: 'HSS' },
+  { href: '/about', label: 'About' },
   { href: '/eu-taxonomy', label: 'EU Taxonomy' },
   { href: '/csrd', label: 'CSRD' },
 ];
