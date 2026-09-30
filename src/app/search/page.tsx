@@ -6,7 +6,7 @@ import SearchForm from './SearchForm';
 import FilterPanel from './FilterPanel';
 import BrandLogo from '@/components/BrandLogo';
 
-export const metadata: Metadata = { title: 'HSS Search Engine — Sustainability Scores', description: 'Search any brand or company by Hummlan Sustainability Score (HSS). Transparent, independent ratings — even for brands Hummlan earns nothing from.', alternates: { canonical: '/search' } };
+export const metadata: Metadata = { title: 'HSS Search Engine — Sustainability Scores', description: 'Search any brand or company by Hummlan Sustainability Score (HSS). Transparent, independent ratings.', alternates: { canonical: '/search' } };
 
 const scoreBand = (s: number | null) => s === null ? 'low' : s >= 70 ? 'high' : s >= 40 ? 'mid' : 'low';
 const SCORE_COLORS: Record<string, string> = { high: 'bg-green-100 text-green-800 border-green-200', mid: 'bg-yellow-100 text-yellow-800 border-yellow-200', low: 'bg-red-100 text-red-800 border-red-200' };
