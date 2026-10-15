@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { db } from '@/lib/db';
 import { ShieldCheck, Scale, CheckCircle, Search, ArrowRight, BookOpen, GraduationCap } from 'lucide-react';
-import NewsletterSignup from '@/components/NewsletterSignup';
 import HummlanBeeMark from '@/components/HummlanBeeMark';
 import SearchForm from '@/components/SearchFormWrapper';
 import BrandLogo from '@/components/BrandLogo';
@@ -278,9 +277,6 @@ export default async function Home() {
             </div>
           </div>
         </section>
-
-        {/* Newsletter */}
-        <NewsletterSignup />
       </main>
     </div>
   );
