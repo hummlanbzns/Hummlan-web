@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search, Mail } from 'lucide-react';
+import { ArrowLeft, Calendar, Newspaper, AlertTriangle, FileText, Search } from 'lucide-react';
 import { SITE_NAME } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -460,20 +460,6 @@ export default function NewsDigestPage() {
               </div>
             </div>
           </article>
-          {/* Subscribe CTA */}
-          <div className="mt-12 bg-gradient-to-r from-orange-600 to-orange-700 rounded-2xl p-8 shadow-sm text-white text-center">
-            <Mail className="w-10 h-10 mx-auto mb-4 opacity-90" />
-            <h2 className="text-2xl font-bold mb-2">Get the Hive in Your Inbox</h2>
-            <p className="text-orange-100 max-w-lg mx-auto mb-6">
-              Get weekly sustainability news delivered straight to your inbox. No fluff, no greenwashing &mdash; just the signal through the noise.
-            </p>
-            <a
-              href="/"
-              className="inline-flex items-center gap-2 bg-white text-orange-700 font-bold px-8 py-3 rounded-xl hover:bg-orange-50 transition-colors"
-            >
-              <Mail className="w-5 h-5" /> Join the Swarm
-            </a>
-          </div>
           {/* Related links */}
           <div className="mt-12 bg-white border rounded-2xl p-8 shadow-sm">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Keep Learning</h2>

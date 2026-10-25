@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Hummlan handles your data: what we collect (newsletter email, standard server logs), how we use it, and your rights.',
+    'How Hummlan handles your data: what we collect (standard server logs), how we use it, and your rights.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -30,10 +30,6 @@ export default function PrivacyPage() {
               <h2 className="text-xl font-bold text-gray-900 mb-2">2. What we collect</h2>
               <ul className="list-disc pl-6 text-gray-600 leading-relaxed space-y-2">
                 <li>
-                  <strong>Email address</strong> — only when you voluntarily subscribe to our
-                  newsletter (The Hive). We ask for your consent before adding you.
-                </li>
-                <li>
                   <strong>Standard server logs</strong> — our hosting provider automatically
                   records basic technical information such as IP address, browser type, and which
                   pages are requested. This is normal for any website and is used to keep the site
@@ -51,7 +47,6 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">3. How we use your data</h2>
               <ul className="list-disc pl-6 text-gray-600 leading-relaxed space-y-2">
-                <li>To send you our newsletter, if you subscribed.</li>
                 <li>To keep the website functioning and secure.</li>
                 <li>To respond to enquiries you send us.</li>
               </ul>
@@ -72,17 +67,17 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">5. How long we keep data</h2>
               <p className="text-gray-600 leading-relaxed">
-                We keep your email address only while you remain subscribed. You can unsubscribe at
-                any time using the link at the bottom of every newsletter, and we will remove you
-                from our list.
+                We keep personal data only for as long as we need it for the purposes described
+                in this policy, and we delete it when it is no longer needed. You can ask us to
+                delete your data at any time.
               </p>
             </div>
 
             <div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">6. Your rights</h2>
               <p className="text-gray-600 leading-relaxed">
-                You may ask us at any time what data we hold about you, ask us to correct or delete
-                it, or withdraw your consent to receive the newsletter. To do any of these, email{' '}
+                You may ask us at any time what data we hold about you, or ask us to correct or
+                delete it. To do any of these, email{' '}
                 <a href="mailto:hello@hummlan.com" className="text-brand font-semibold hover:underline">
                   hello@hummlan.com
                 </a>
