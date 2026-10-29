@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { db } from '@/lib/db';
 import { ShieldCheck, Award } from 'lucide-react';
 import SustainabilityBreakdown from '@/components/SustainabilityBreakdown';
+import BrandSources, { SourcesPending, type BrandSource } from '@/components/BrandSources';
 import BrandLogo from '@/components/BrandLogo';
 import { SITE_NAME, absoluteUrl } from '@/lib/seo';
 
@@ -26,6 +27,33 @@ async function getSustainabilityRatings(brandId: string) {
     args: [brandId],
   });
   return rs.rows;
+}
+
+async function getBrandSources(brandId: string): Promise<BrandSource[]> {
+  try {
+    const rs = await db.execute({
+      sql: `
+        SELECT id, pillar, title, publisher, url, source_type, published_date,
+               accessed_date, supports, is_primary
+        FROM brand_sources
+        WHERE brand_id = ?
+        ORDER BY CASE pillar
+                   WHEN 'climate' THEN 1
+                   WHEN 'circular' THEN 2
+                   WHEN 'pollution' THEN 3
+                   WHEN 'supply_chain' THEN 4
+                   WHEN 'biodiversity' THEN 5
+                   ELSE 0
+                 END, title ASC
+      `,
+      args: [brandId],
+    });
+    return rs.rows as unknown as BrandSource[];
+  } catch (err) {
+    // brand_sources may not exist yet in a fresh environment — never break the page.
+    console.error('Failed to load brand sources:', err);
+    return [];
+  }
 }
 
 export async function generateMetadata({
@@ -74,6 +102,7 @@ export default async function BrandPage({
   }
 
   const ratings: any[] = await getSustainabilityRatings(brand.id);
+  const sources: BrandSource[] = await getBrandSources(brand.id);
 
   const scoreColor =
     brand.overall_sustainability_score >= 70 ? 'text-green-600' :
@@ -141,8 +170,11 @@ export default async function BrandPage({
 
           {/* Sustainability Breakdown (5 pillars + drill-downs) */}
           <div className="mb-8">
-            <SustainabilityBreakdown ratings={ratings} />
+            <SustainabilityBreakdown ratings={ratings} sources={sources} />
           </div>
+
+          {/* Sources behind the score */}
+          {sources.length > 0 ? <BrandSources sources={sources} /> : <SourcesPending />}
 
           {/* Learn More */}
           <div className="rounded-2xl bg-blue-50 border border-blue-100 p-5 flex items-start gap-3">

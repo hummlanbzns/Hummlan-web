@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { CloudSun, RefreshCw, FlaskConical, Users, Sprout, Info, ChevronDown } from 'lucide-react';
+import { PillarSources, type BrandSource } from '@/components/BrandSources';
 
 const pillarIcons: Record<string, any> = {
   'Climate Impact': CloudSun,
@@ -10,6 +11,16 @@ const pillarIcons: Record<string, any> = {
   'Pollution Prevention': FlaskConical,
   'Supply Chain & Social': Users,
   'Biodiversity': Sprout,
+};
+
+// Maps the pillar display name (from sustainability_ratings.source_name) to the
+// brand_sources.pillar key.
+const pillarKeys: Record<string, string> = {
+  'Climate Impact': 'climate',
+  'Circular Economy': 'circular',
+  'Pollution Prevention': 'pollution',
+  'Supply Chain & Social': 'supply_chain',
+  'Biodiversity': 'biodiversity',
 };
 
 // Inline formatting: **bold** segments become <strong>.
@@ -73,10 +84,21 @@ function DetailBody({ detail }: { detail: string }) {
   );
 }
 
-export default function SustainabilityBreakdown({ ratings }: { ratings: any[] }) {
+export default function SustainabilityBreakdown({
+  ratings,
+  sources = [],
+}: {
+  ratings: any[];
+  sources?: BrandSource[];
+}) {
   const [openIds, setOpenIds] = useState<Record<string, boolean>>({});
 
   const toggle = (id: string) => setOpenIds((prev) => ({ ...prev, [id]: !prev[id] }));
+
+  const sourcesFor = (pillarName: string): BrandSource[] => {
+    const key = pillarKeys[pillarName];
+    return key ? sources.filter((s) => s.pillar === key) : [];
+  };
 
   return (
     <div className="bg-white border rounded-2xl p-8 shadow-sm">
@@ -92,7 +114,8 @@ export default function SustainabilityBreakdown({ ratings }: { ratings: any[] })
           const maxScore = rating.max_score || 5;
           const percentage = (score / maxScore) * 100;
           const detail = typeof rating.detail === 'string' ? rating.detail.trim() : '';
-          const hasDetail = detail.length > 0;
+          const pillarSources = sourcesFor(pillarName);
+          const hasDetail = detail.length > 0 || pillarSources.length > 0;
           const isOpen = !!openIds[rating.id];
           const detailId = `pillar-detail-${rating.id}`;
 
@@ -154,7 +177,8 @@ export default function SustainabilityBreakdown({ ratings }: { ratings: any[] })
 
               {hasDetail && isOpen && (
                 <div id={detailId} className="mt-1">
-                  <DetailBody detail={detail} />
+                  {detail.length > 0 ? <DetailBody detail={detail} /> : null}
+                  <PillarSources sources={pillarSources} />
                 </div>
               )}
             </div>
