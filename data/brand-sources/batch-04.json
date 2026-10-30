@@ -1,0 +1,324 @@
+{
+ "_meta": {
+  "batch": "04",
+  "accessed_date": "2026-10-30",
+  "note": "Breadth batch 4, working down HSS score order. Every URL in this file was fetched by curl -sL with a normal desktop browser user-agent, redirects followed; each returned HTTP 200 at the final URL and the fetched page text was grepped for the claim recorded in `supports`. The post-redirect URL is what is stored. Brand-published sustainability, impact-report and certification pages are labelled company_report with is_primary=1. No URL was built from a pattern and left unopened, and no blocked or JS-only site was worked around with a plausible substitute: brands without 2+ verified sources were left short rather than padded.",
+  "notes_on_gaps": "goodonyou.eco's brand pages (/brands/<slug>/) return HTTP 500 to automated fetches for every brand tested, including ones it definitely rates, so that route was abandoned. fjallraven.com returns 403 to curl. smol.co.uk, peopletree.co.uk, generousfoods.com, groceriesapparel.com and organyc.net exposed no fetchable sustainability page; wearpact.com and plantaform.com served JavaScript shells with no readable text. These are left for a later session."
+ },
+ "tentree": [
+  {
+   "pillar": "climate",
+   "title": "tentree — Sustainability",
+   "publisher": "tentree",
+   "url": "https://www.tentree.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "tentree states it has been carbon neutral since 2020, reducing emissions where possible and offsetting the remainder, and says it publishes its Climate Action plan openly.",
+   "is_primary": 1
+  }
+ ],
+ "allbirds": [
+  {
+   "pillar": "circular",
+   "title": "Allbirds — Our Sustainability",
+   "publisher": "Allbirds",
+   "url": "https://www.allbirds.com/pages/materials-making",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Allbirds states it has built its shoes around natural materials from the start — wool, tree fibre and sugarcane — choosing grown rather than made materials for how they wear.",
+   "is_primary": 1
+  }
+ ],
+ "boody": [
+  {
+   "pillar": "circular",
+   "title": "ECOCERT Certified Organic Bamboo: What It Means and Why It Matters",
+   "publisher": "Boody",
+   "url": "https://boody.com/blogs/eco/ecocert-certified-organic-bamboo",
+   "source_type": "company_report",
+   "published_date": "2026-09-29",
+   "supports": "Boody states that ECOCERT certification of its organic bamboo is one of the ways it substantiates its material and sourcing claims, and explains that certifications separate verified standards from marketing claims.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "B Corp Certification",
+   "publisher": "Boody",
+   "url": "https://boody.com/pages/b-corp-certification",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Boody reports a 2025 B Corp recertification score of 134.4, up from 101.6 when it became the first underwear brand in Australia and New Zealand to certify in 2021.",
+   "is_primary": 1
+  }
+ ],
+ "armedangels": [
+  {
+   "pillar": "supply_chain",
+   "title": "ARMEDANGELS — About us",
+   "publisher": "Armedangels",
+   "url": "https://www.armedangels.com/en/pages/our-mission",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Armedangels describes its Fair Wear Leader status and says it backs its material ambitions with certified materials, supplier partnerships, Digital Product Passports and published impact reports.",
+   "is_primary": 1
+  }
+ ],
+ "finisterre": [
+  {
+   "pillar": "circular",
+   "title": "Impact Report 2024: Our Materials",
+   "publisher": "Finisterre",
+   "url": "https://finisterre.com/blogs/broadcast/impact-report-2024-our-materials",
+   "source_type": "company_report",
+   "published_date": "2025-04-10",
+   "supports": "Finisterre reports that 93% of its 2024 collection was crafted from organic, recycled or natural fibres, and that it will publish an updated list of preferred fibres in 2025.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Impact Report 2024: Tracking Our Carbon",
+   "publisher": "Finisterre",
+   "url": "https://finisterre.com/blogs/broadcast/impact-report-2024-tracking-our-carbon",
+   "source_type": "company_report",
+   "published_date": "2025-04-10",
+   "supports": "Finisterre states it mapped carbon emissions across the whole business with fellow B Corp Green Element, from offices and stores to factories and material producers.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Impact Report 2024: Fair Working Conditions",
+   "publisher": "Finisterre",
+   "url": "https://finisterre.com/blogs/broadcast/impact-report-2024-fair-working-conditions",
+   "source_type": "company_report",
+   "published_date": "2025-04-10",
+   "supports": "Finisterre reports that in 2024 it deepened its partnership with Fair Working Conditions, expanding social welfare audits across its Tier 1 suppliers and identifying key risk areas.",
+   "is_primary": 1
+  }
+ ],
+ "mud-jeans": [
+  {
+   "pillar": "supply_chain",
+   "title": "The Journey To Become B Corp",
+   "publisher": "MUD Jeans",
+   "url": "https://mudjeans.com/blogs/blog/behind-the-b-our-journey-to-becoming-a-b-corp",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "MUD Jeans says it certified as a B Corp in January 2015 with a score of 91.2 and has since recertified with a score of 124.7, and was named Best for the World in the Environment category in 2022.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "MUD Jeans: First Denim Brand to Earn the TESTEX Circularity Label",
+   "publisher": "MUD Jeans",
+   "url": "https://mudjeans.com/blogs/blog/mud-jeans-first-denim-brand-to-earn-the-testex-circularity-label",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "MUD Jeans states it became the first denim brand worldwide to earn the TESTEX Circularity Label, an independent certification measuring durability, repairability and recyclability in textiles.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "From Old Jeans to New: The Power of Post-Consumer Recycled Cotton",
+   "publisher": "MUD Jeans",
+   "url": "https://mudjeans.com/blogs/blog/from-old-jeans-to-new-the-power-of-post-consumer-recycled-cotton",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "MUD Jeans states it has pioneered circular denim since 2012, turning old jeans into new ones and replacing remaining organic cotton with recycled cotton.",
+   "is_primary": 1
+  }
+ ],
+ "coyuchi": [
+  {
+   "pillar": "pollution",
+   "title": "Waste Not: A Factory's Commitment to Water Recycling",
+   "publisher": "Coyuchi",
+   "url": "https://www.coyuchi.com/blogs/journal/commitment-to-water-recycling",
+   "source_type": "company_report",
+   "published_date": "2021-04-04",
+   "supports": "Coyuchi describes working with water-recycling factories for its organic cotton textiles as part of its commitment to organic farming and sustainable manufacturing.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Fair Trade Certified",
+   "publisher": "Coyuchi",
+   "url": "https://www.coyuchi.com/blogs/journal/fair-trade",
+   "source_type": "company_report",
+   "published_date": "2022-09-26",
+   "supports": "Coyuchi states it pays a premium for Fair Trade USA certified products so that farms and factories can improve wages, benefits and working conditions, and marks those products with the Fair Trade symbol.",
+   "is_primary": 1
+  }
+ ],
+ "klean-kanteen": [
+  {
+   "pillar": "climate",
+   "title": "Climate Neutral Certified",
+   "publisher": "Klean Kanteen",
+   "url": "https://www.kleankanteen.com/blogs/blog/climate-neutral-certified",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Klean Kanteen explains its Climate Neutral certification and states that it buys high-quality carbon credits in line with WWF guidance as part of a broader emissions-reduction strategy.",
+   "is_primary": 1
+  }
+ ],
+ "fairphone": [
+  {
+   "pillar": "circular",
+   "title": "Impact Report 2025",
+   "publisher": "Fairphone",
+   "url": "https://www.fairphone.com/impact-report",
+   "source_type": "company_report",
+   "published_date": "2025-01-01",
+   "supports": "Fairphone's impact report states that the Fairphone (Gen. 6) contains more than 50% fair and recycled materials by total weight.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "B Corp Certification Notice",
+   "publisher": "Fairphone",
+   "url": "https://www.fairphone.com/bcorp-certification-notice",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Fairphone states on its certification notice that it is B Corp certified, having completed the B Impact Assessment set by B Lab.",
+   "is_primary": 1
+  }
+ ],
+ "weleda": [
+  {
+   "pillar": "climate",
+   "title": "Acting sustainably is part of the Weleda identity",
+   "publisher": "Weleda",
+   "url": "https://www.weleda.com/weleda/our-responsibility/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Weleda states it has been a certified B Corp since 2021 and was recertified in October 2024 with a score of 120.66, and reports that 97% of its waste is recycled and 95% of electricity at its Swiss, German and French production sites is renewable.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "We are working on improving the sustainability of our packaging",
+   "publisher": "Weleda",
+   "url": "https://www.weleda.com/weleda/our-responsibility/packaging",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Weleda reports that roughly 60% of its packaging is glass and 15% aluminium with the remainder plastics, and that it works through the Forum Rezyklat initiative on recycling household plastics into packaging.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Certifications",
+   "publisher": "Weleda",
+   "url": "https://www.weleda.com/content/our-story/our-standards/certifications",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "Weleda states its personal care products are certified natural and organic by NATRUE, and that it chooses wildcrafted, biodynamic or organically grown ingredients wherever possible.",
+   "is_primary": 1
+  }
+ ],
+ "nutiva": [
+  {
+   "pillar": "supply_chain",
+   "title": "Nutiva Partners with Fair Trade USA to Support Coconut Farming Communities",
+   "publisher": "Nutiva",
+   "url": "https://nutiva.com/blogs/news/nutiva-partners-with-fair-trade-usa-to-support-coconut-farming-communities",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Nutiva states it began partnering with its organic coconut farmers in 2014 to source fair trade coconut products, and that its Virgin Coconut Oil and O'Coconut snacks are Fair Trade certified.",
+   "is_primary": 1
+  }
+ ],
+ "babo-botanicals": [
+  {
+   "pillar": "circular",
+   "title": "Our Commitment to Sustainable Packaging and Responsible Sourcing",
+   "publisher": "Babo Botanicals",
+   "url": "https://www.babobotanicals.com/blogs/news/our-commitment-to-sustainable-packaging-and-responsible-sourcing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Babo Botanicals states it has saved 9.1 tons of virgin plastic using post-consumer recycled plastic and FSC-certified paper, a 26% cut in virgin plastic use since 2022, with 14 products moved into 100% recycled plastic bottles.",
+   "is_primary": 1
+  }
+ ],
+ "thrive-market": [
+  {
+   "pillar": "supply_chain",
+   "title": "Thrive Market 2025 Mission Impact Report",
+   "publisher": "Thrive Market",
+   "url": "https://thrivemarket.com/blog/2025-mission-impact-report",
+   "source_type": "company_report",
+   "published_date": "2025-01-01",
+   "supports": "Thrive Market reports five years as a Certified B Corp, a B Impact Score improvement of almost 33% at its 2024 recertification, and that it surpassed its $20 million Food Equality donation goal.",
+   "is_primary": 1
+  }
+ ],
+ "dame": [
+  {
+   "pillar": "climate",
+   "title": "Going climate positive",
+   "publisher": "DAME",
+   "url": "https://wearedame.co/blogs/the-pioneer/going-climate-positive",
+   "source_type": "company_report",
+   "published_date": "2019-11-08",
+   "supports": "DAME states it became the world's first climate positive period brand and commits to offsetting all of its current emissions while it works to reduce them at source.",
+   "is_primary": 1
+  }
+ ],
+ "dopper": [
+  {
+   "pillar": "circular",
+   "title": "Dopper becomes world's first reusable bottle brand to attain best in class sustainability certification across bottle range",
+   "publisher": "Dopper",
+   "url": "https://www.dopper.com/blog/worlds-first-reusable-bottle-brand-sustainability-certification",
+   "source_type": "company_report",
+   "published_date": "2020-09-13",
+   "supports": "Dopper states that its entire bottle portfolio is Cradle to Cradle Certified at Bronze or Silver level, making it the first reusable bottle brand to certify its whole range.",
+   "is_primary": 1
+  }
+ ],
+ "endangered-species-chocolate": [
+  {
+   "pillar": "supply_chain",
+   "title": "2022 Impact Report",
+   "publisher": "Endangered Species Chocolate",
+   "url": "https://chocolatebar.com/pages/brand-resources/impact-report-2022",
+   "source_type": "company_report",
+   "published_date": "2022-01-01",
+   "supports": "Endangered Species Chocolate states it donates 10% of net profits to organisations and initiatives working on conservation and social impact.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "The Difference That Fairtrade Makes",
+   "publisher": "Endangered Species Chocolate",
+   "url": "https://chocolatebar.com/blogs/news/the-difference-that-fairtrade-makes",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Endangered Species Chocolate describes visiting the West African farmers who grow its cacao and states that choosing Fairtrade sourcing delivers Fairtrade Premiums to those communities.",
+   "is_primary": 1
+  }
+ ],
+ "georganics": [
+  {
+   "pillar": "circular",
+   "title": "Georganics | Our packaging",
+   "publisher": "Georganics",
+   "url": "https://georganics.com/pages/our-packaging",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Georganics states its product packaging is biodegradable and compostable kraft paper printed with vegetable-based ink, that it never uses bubble wrap or polystyrene, and that most products come in refillable glass jars.",
+   "is_primary": 1
+  }
+ ],
+ "cleancult": [
+  {
+   "pillar": "circular",
+   "title": "Our Story",
+   "publisher": "Cleancult",
+   "url": "https://www.cleancult.com/our-story",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Cleancult states its refills are paper-based and its bottles are reusable aluminium, under the line 'Refill, not landfill', and that its formulas are free from phthalates, phosphates, SLES, SLS, dyes and parabens.",
+   "is_primary": 1
+  }
+ ]
+}
