@@ -1,0 +1,311 @@
+{
+  "_meta": {
+    "batch": "01",
+    "accessed_date": "2026-10-29",
+    "note": "Pilot set of 12 brands. Every URL below was fetched with curl -sL (normal browser user-agent, redirects followed), returned HTTP 200, and the page text was grepped for the claim recorded in `supports`. Final URL after redirects is what is stored. Company self-reporting is labelled source_type=company_report and is_primary=1."
+  },
+  "patagonia": [
+    {
+      "pillar": "supply_chain",
+      "title": "Patagonia — Fair Labor Association member page",
+      "publisher": "Fair Labor Association",
+      "url": "https://www.fairlabor.org/member/patagonia/",
+      "source_type": "ngo",
+      "published_date": null,
+      "supports": "Patagonia is listed as a member of the Fair Labor Association, the independent multi-stakeholder body that audits factories against its Workplace Code of Conduct.",
+      "is_primary": 0
+    }
+  ],
+  "nudie-jeans": [
+    {
+      "pillar": "climate",
+      "title": "Nudie Jeans Sustainability Report 2025",
+      "publisher": "Nudie Jeans",
+      "url": "https://www.nudiejeans.com/en-US/blog/nudie-jeans-sustainability-report-2025",
+      "source_type": "company_report",
+      "published_date": "2025",
+      "supports": "Nudie Jeans publishes an annual sustainability report; the 2025 edition sets out its regenerative organic cotton work and other climate measures.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "This is Nudie Jeans — About",
+      "publisher": "Nudie Jeans",
+      "url": "https://www.nudiejeans.com/en-US/info/about",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nudie Jeans states that jeans are designed to be repaired rather than replaced and that it has been repairing jeans since 2007.",
+      "is_primary": 1
+    }
+  ],
+  "dr-bronners": [
+    {
+      "pillar": "supply_chain",
+      "title": "Dr. Bronner's — Who We Are",
+      "publisher": "Dr. Bronner's",
+      "url": "https://www.drbronner.com/pages/about",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Dr. Bronner's states its soaps are made with organic and Fair Trade ingredients and are third-party certified to industry standards.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Dr. Bronner's — Product certifications",
+      "publisher": "Dr. Bronner's",
+      "url": "https://www.drbronner.com/blogs/our-customers/product-certifications",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lists its third-party certifications, including Fair for Life fair-trade certification for its main ingredients and Regenerative Organic Certified oils.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Dr. Bronner's — Reducing waste generation",
+      "publisher": "Dr. Bronner's",
+      "url": "https://www.drbronner.com/blogs/our-earth/reducing-our-footprint",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Describes its waste programme: a target of one dumpster a month to landfill, on-site waste-sorting stations, and 100% post-consumer recycled shipping cartons.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Dr. Bronner's — Regenerative organic agriculture & environment",
+      "publisher": "Dr. Bronner's",
+      "url": "https://www.drbronner.com/blogs/our-community/regenerative-organic-agriculture-environment",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Explains its work with the Regenerative Organic Alliance on soil health, animal welfare and farmworker fairness, and its view of agriculture's climate impact.",
+      "is_primary": 1
+    }
+  ],
+  "ethique": [
+    {
+      "pillar": "climate",
+      "title": "Ethique — Better for the planet",
+      "publisher": "Ethique",
+      "url": "https://ethique.com/pages/better-for-the-planet",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Ethique reports 100% carbon-neutral production, offsets of 120% of production emissions, and that only 0.07% of 2024 shipments went by air.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Ethique — Impact",
+      "publisher": "Ethique",
+      "url": "https://ethique.com/pages/impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Ethique publishes its running count of plastic bottles saved and describes its plastic-free, waterless solid-bar model.",
+      "is_primary": 1
+    }
+  ],
+  "blueland": [
+    {
+      "pillar": "pollution",
+      "title": "Blueland — Our certifications",
+      "publisher": "Blueland",
+      "url": "https://www.blueland.com/pages/certifications",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Blueland lists the third-party certifications it holds, including Cradle to Cradle, EPA Safer Choice, Leaping Bunny and a B Corp score of 110.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Blueland — Our mission & impact",
+      "publisher": "Blueland",
+      "url": "https://www.blueland.com/pages/mission",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Blueland reports more than 1 billion single-use plastic bottles diverted and 7.5 million+ pounds of CO2 saved, and links its annual impact reports.",
+      "is_primary": 1
+    }
+  ],
+  "who-gives-a-crap": [
+    {
+      "pillar": "circular",
+      "title": "Who Gives A Crap — Our global impact",
+      "publisher": "Who Gives A Crap",
+      "url": "https://us.whogivesacrap.org/pages/our-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Who Gives A Crap states its products are made from recycled fibres or FSC-certified bamboo — never virgin trees — and publishes a No Deforestation Commitment.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Who Gives A Crap — Our global impact (carbon footprint)",
+      "publisher": "Who Gives A Crap",
+      "url": "https://us.whogivesacrap.org/pages/our-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The same impact page reports a full life-cycle analysis of its carbon footprint, carbon-neutral shipping via Pachama offsets, and warehouse solar panels.",
+      "is_primary": 1
+    }
+  ],
+  "vaude": [
+    {
+      "pillar": "supply_chain",
+      "title": "VAUDE — Global supply chain",
+      "publisher": "VAUDE",
+      "url": "https://www.vaude.com/int/en/blog/post/global-supply-chain.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VAUDE states it has been a Fair Wear member since 2010 and has been rated 'Leader' in Fair Wear's Brand Performance Check every year since 2015.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "VAUDE — Green Shape products",
+      "publisher": "VAUDE",
+      "url": "https://www.vaude.com/int/en/blog/post/green-shape-products.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VAUDE describes Green Shape® as its environmental standard for outdoor textiles, assessed across the whole product life cycle from design to end of life.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "VAUDE — Commitment to protecting biodiversity",
+      "publisher": "VAUDE",
+      "url": "https://www.vaude.com/int/en/blog/post/vaude-is-committed-to-protecting-the-diversity-of-species.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VAUDE sets out its biodiversity commitments and the species-loss evidence behind them.",
+      "is_primary": 1
+    }
+  ],
+  "back-market": [
+    {
+      "pillar": "circular",
+      "title": "Back Market — About us",
+      "publisher": "Back Market",
+      "url": "https://www.backmarket.com/en-us/about-us",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Back Market describes its model as extending the life of devices and fighting electronic waste, with commitments to e-waste management partnerships.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Back Market — About us (impact metrics)",
+      "publisher": "Back Market",
+      "url": "https://www.backmarket.com/en-us/about-us",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The same page reports metric tons of CO2e prevented and publishes its B Corp score as its headline impact measures.",
+      "is_primary": 1
+    }
+  ],
+  "beautycounter": [
+    {
+      "pillar": "pollution",
+      "title": "Counter (BeautyCounter) — The Standard",
+      "publisher": "Counter",
+      "url": "https://www.counter.com/pages/thestandard",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Counter sets out its 'Blueprint for Clean' ingredient-screening standard and explains why it treats regulatory baselines as a floor rather than a standard.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "Counter (BeautyCounter) — Ingredient list / The Never List",
+      "publisher": "Counter",
+      "url": "https://www.counter.com/pages/ingredients",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lists the 'Never List' of ingredients Counter excludes from all products, with the stated reason for each (e.g. parabens, certain UV filters).",
+      "is_primary": 1
+    }
+  ],
+  "meliora": [
+    {
+      "pillar": null,
+      "title": "Meliora — Sustainability",
+      "publisher": "Meliora Cleaning Products",
+      "url": "https://meliorameansbetter.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Meliora lists the certifications its products and company hold, including Certified B Corporation and WBENC woman-owned certification.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Meliora — 2025 Sustainability Report",
+      "publisher": "Meliora Cleaning Products",
+      "url": "https://meliorameansbetter.com/blogs/news/2025-sustainability-report",
+      "source_type": "company_report",
+      "published_date": "2025",
+      "supports": "Meliora's 2025 sustainability report publishes its impact numbers, including plastic avoided, local sourcing, GHG emissions and water waste avoided.",
+      "is_primary": 1
+    },
+    {
+      "pillar": null,
+      "title": "Meliora — Certified B Corporation",
+      "publisher": "Meliora Cleaning Products",
+      "url": "https://meliorameansbetter.com/pages/certified-b-corporation",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Meliora's own page explaining its B Corp certification and what the assessment covers.",
+      "is_primary": 1
+    }
+  ],
+  "apple": [
+    {
+      "pillar": "climate",
+      "title": "Apple — Environment",
+      "publisher": "Apple",
+      "url": "https://www.apple.com/environment/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Apple states that Apple 2030 aims to cut greenhouse gas emissions 75% against 2015 and become carbon neutral across its global footprint.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Apple — Supply chain innovation",
+      "publisher": "Apple",
+      "url": "https://www.apple.com/supply-chain/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Apple reports that 33M+ supplier employees have been trained on workplace rights since 2008 and describes its supplier-code monitoring.",
+      "is_primary": 1
+    }
+  ],
+  "samsung": [
+    {
+      "pillar": "climate",
+      "title": "Samsung Electronics — Climate action",
+      "publisher": "Samsung Electronics",
+      "url": "https://www.samsung.com/global/sustainability/planet/climate-action/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Samsung sets out plans to cut direct greenhouse gas emissions, shift to renewable energy and decarbonise its value chain.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Samsung Electronics — Circular economy",
+      "publisher": "Samsung Electronics",
+      "url": "https://www.samsung.com/global/sustainability/planet/circular-economy/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Samsung commits to using recycled plastic in all plastic parts of DX products by 2050 and to an e-waste collection system in all global sales regions by 2030.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Samsung Electronics — Clean tech innovation & people",
+      "publisher": "Samsung Electronics",
+      "url": "https://www.samsung.com/global/sustainability/planet/clean-tech-Innovation/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Samsung's sustainability hub covers its human rights commitment, health and safety and supply-chain management approach.",
+      "is_primary": 1
+    }
+  ]
+}
