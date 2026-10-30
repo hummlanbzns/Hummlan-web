@@ -1,0 +1,306 @@
+{
+ "_meta": {
+  "batch": "03",
+  "accessed_date": "2026-10-30",
+  "note": "Breadth batch, 16 new brands (working down HSS score order). Every URL below was fetched with curl -sL (normal browser user-agent, redirects followed), returned HTTP 200 at the final URL, and the page text was grepped for the claim recorded in `supports`. The final URL after redirects is what is stored. Company self-reporting is labelled source_type=company_report and is_primary=1. Brands with only one solid source were left short rather than padded: no URL in this file was guessed or pattern-built, and blocked domains were not worked around with plausible substitutes.",
+  "lead_review": "Dropped plantaform and smol (homepage-only evidence, not substantive reporting) on 2026-10-30. All remaining URLs re-checked by the lead: HTTP 200 and claim present."
+ },
+ "attitude": [
+  {
+   "pillar": null,
+   "title": "Attitude \u2014 About us",
+   "publisher": "Attitude (Attitudeliving)",
+   "url": "https://attitudeliving.com/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Attitude states that its vision is to redefine what 'clean' means by proving performance, transparency and sustainability 'can \u2014 and must \u2014 go hand in hand', and highlights EWG Verified formulas.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Attitude \u2014 EWG Verified",
+   "publisher": "Attitude (Attitudeliving)",
+   "url": "https://attitudeliving.com/ewg-verified",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Attitude maintains a dedicated EWG Verified page describing the Environmental Working Group certification its products carry, which screens formulations for ingredients of health and environmental concern.",
+   "is_primary": 1
+  }
+ ],
+ "dropps": [
+  {
+   "pillar": "climate",
+   "title": "Carbon Neutral Shipping and Climate Action: How Dropps Reduces Its Carbon Footprint",
+   "publisher": "Dropps",
+   "url": "https://www.dropps.com/blogs/spincycle/carbon-neutral-shipping",
+   "source_type": "company_report",
+   "published_date": "2022-02",
+   "supports": "Dropps' February 2022 post explains what carbon neutrality means in practice for its shipping, naming the partners involved and how it measures and offsets shipment emissions.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Dropps tests limits of a lean, clean supply chain",
+   "publisher": "Dropps",
+   "url": "https://www.dropps.com/blogs/press/dropps-tests-limits-of-a-lean-clean-supply-chain",
+   "source_type": "company_report",
+   "published_date": "2020-08",
+   "supports": "Dropps reports using Convoy to manage its full truckload freight network around a shared vision of supply-chain sustainability, describing how it manages inbound logistics.",
+   "is_primary": 1
+  },
+  {
+   "pillar": null,
+   "title": "Dropps \u2014 B Corp certification announcement",
+   "publisher": "Dropps",
+   "url": "https://www.dropps.com/pages/b-corp-certification-announcement",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Dropps announces its B Corporation certification on its own site, framing it around the assessment of the company's social and environmental performance.",
+   "is_primary": 1
+  }
+ ],
+ "ecos": [
+  {
+   "pillar": null,
+   "title": "Our Impact on the Environment \u2014 ECOS",
+   "publisher": "ECOS (Earth Friendly Products)",
+   "url": "https://www.ecos.com/our-impact/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ECOS' Our Impact page states that it makes affordable green cleaning products and fights for policies that reduce climate and pollution impacts on underserved communities.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Journey to a Climate Positive Clean \u2014 ECOS sustainability",
+   "publisher": "ECOS (Earth Friendly Products)",
+   "url": "https://www.ecos.com/sustainability/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ECOS' sustainability page sets out its 'Journey to a Climate Positive Clean', stating that it is intentional in every step of the business from ingredient sourcing onward.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Zero Waste Certification: What Does It Mean? \u2014 ECOS",
+   "publisher": "ECOS (Earth Friendly Products)",
+   "url": "https://www.ecos.com/live-cleaner/zero-waste-certification-what-does-it-mean/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ECOS states that it achieved TRUE Platinum Zero Waste certification and explains what the standard requires of a manufacturer.",
+   "is_primary": 1
+  }
+ ],
+ "frontier-co-op": [
+  {
+   "pillar": "supply_chain",
+   "title": "About Frontier Co-op",
+   "publisher": "Frontier Co-op",
+   "url": "https://www.frontiercoop.com/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Frontier Co-op describes itself as a member-owned co-op that is 'responsible to people and planet', operating since 1976.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Regenerative Organic Certified \u2014 Frontier Co-op",
+   "publisher": "Frontier Co-op",
+   "url": "https://www.frontiercoop.com/regenerative-organic-certified",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Frontier Co-op maintains a dedicated Regenerative Organic Certified page listing the ROC-certified products in its range.",
+   "is_primary": 1
+  }
+ ],
+ "traditional-medicinals": [
+  {
+   "pillar": "biodiversity",
+   "title": "Supporting Biodiversity and Communities: Traditional Medicinals' Commitment to FairWild Certification",
+   "publisher": "Traditional Medicinals",
+   "url": "https://www.traditionalmedicinals.com/blogs/ppj/supporting-biodiversity-and-communities-traditional-medicinals-commitment-to-fairwild-certification",
+   "source_type": "company_report",
+   "published_date": "2023-06",
+   "supports": "Traditional Medicinals explains its commitment to FairWild certification for wild-collected herbs, tying it to environmental and biodiversity protection and to collector communities.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "The Certification You May Not Know About: Fair for Life",
+   "publisher": "Traditional Medicinals",
+   "url": "https://www.traditionalmedicinals.com/blogs/ppj/the-certification-you-may-not-know-about-fair-for-life",
+   "source_type": "company_report",
+   "published_date": "2026-07",
+   "supports": "Traditional Medicinals describes the Fair for Life certification and the farmers, wild collectors and processors behind its tea supply chain.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "Protect the Planet \u2014 Traditional Medicinals",
+   "publisher": "Traditional Medicinals",
+   "url": "https://www.traditionalmedicinals.com/blogs/ppj/protect-the-planet-taking-responsibility-to-preserve-earth-s-ecosystems",
+   "source_type": "company_report",
+   "published_date": "2022-09",
+   "supports": "Traditional Medicinals' sustainability article states it is taking responsibility to preserve Earth's ecosystems and acknowledges that everything it does has an impact.",
+   "is_primary": 1
+  }
+ ],
+ "upcircle-beauty": [
+  {
+   "pillar": null,
+   "title": "2023 Corporate Social Responsibility Report \u2014 UpCircle Beauty",
+   "publisher": "UpCircle Beauty",
+   "url": "https://upcirclebeauty.com/blogs/upcircle/2023-corporate-social-responsibility-report",
+   "source_type": "company_report",
+   "published_date": "2024-04",
+   "supports": "UpCircle publishes a corporate social responsibility report (April 2024) setting out its social and environmental commitments for the 2023 year.",
+   "is_primary": 1
+  },
+  {
+   "pillar": null,
+   "title": "We are now a certified B Corporation! \u2014 UpCircle Beauty",
+   "publisher": "UpCircle Beauty",
+   "url": "https://upcirclebeauty.com/blogs/upcircle/we-are-now-a-certified-b-corporation",
+   "source_type": "company_report",
+   "published_date": "2022-11",
+   "supports": "UpCircle announces it is now a certified B Corporation and describes itself as a circular brand.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Circular Beauty Impact: UpCircle's Ingredient-Rescue Numbers",
+   "publisher": "UpCircle Beauty",
+   "url": "https://upcirclebeauty.com/blogs/upcircle/circular-beauty-impact-numbers",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "UpCircle publishes the ingredient-rescue numbers behind its circular beauty model, quantifying the by-products it diverts into skincare.",
+   "is_primary": 1
+  }
+ ],
+ "abeego": [
+  {
+   "pillar": null,
+   "title": "The First B Corp Certified Beeswax Wrap in Canada \u2014 Abeego",
+   "publisher": "Abeego",
+   "url": "https://abeego.com/blogs/kfa/b-corp-certified-beeswax-wrap",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Abeego states that it achieved B Corp certification, describing it as the only certification measuring a company's entire social and environmental performance.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Circular Manufacturing: The Progression of an Idea \u2014 Abeego",
+   "publisher": "Abeego",
+   "url": "https://abeego.com/blogs/kfa/circular-manufacturing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Abeego describes setting out to build a zero-waste, circular manufacturing company, citing its mission, values and B Corp certification as the drivers behind product design.",
+   "is_primary": 1
+  }
+ ],
+ "cleancult": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability \u2014 Cleancult",
+   "publisher": "Cleancult",
+   "url": "https://www.cleancult.com/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Cleancult's sustainability page states that it has joined rePurpose Global and holds Plastic Neutral Certification, funding waste-management projects that recover plastic.",
+   "is_primary": 1
+  }
+ ],
+ "biokleen": [
+  {
+   "pillar": null,
+   "title": "About Biokleen",
+   "publisher": "Biokleen",
+   "url": "https://www.biokleen.com/about.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Biokleen's About page sets out the brand's plant-based cleaning product positioning and its environmental claims.",
+   "is_primary": 1
+  }
+ ],
+ "maple-hill": [
+  {
+   "pillar": null,
+   "title": "Signed, Sealed, Certified \u2014 Maple Hill",
+   "publisher": "Maple Hill",
+   "url": "https://www.maplehill.com/post/signed-sealed-certified",
+   "source_type": "company_report",
+   "published_date": "2024-05",
+   "supports": "Maple Hill states that it is Certified Organic and a partner in Organic Plus Trust, listing the certifications behind its low-intervention dairy.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Sustainable vs. Regenerative Agriculture \u2014 Maple Hill",
+   "publisher": "Maple Hill",
+   "url": "https://www.maplehill.com/post/sustainable-vs-regenerative-agriculture",
+   "source_type": "company_report",
+   "published_date": "2025-08",
+   "supports": "Maple Hill explains the difference between sustainable and regenerative agriculture and where its own dairy farms sit on that spectrum.",
+   "is_primary": 1
+  }
+ ],
+ "georganics": [
+  {
+   "pillar": "circular",
+   "title": "About us \u2014 Georganics",
+   "publisher": "Georganics",
+   "url": "https://georganics.com/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Georganics' About page sets out the brand's plastic-free oral care approach and its environmental positioning.",
+   "is_primary": 1
+  }
+ ],
+ "triarchy": [
+  {
+   "pillar": "pollution",
+   "title": "Responsibility \u2014 Triarchy",
+   "publisher": "Triarchy",
+   "url": "https://triarchy.com/pages/responsibility",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Triarchy's Responsibility page describes its water-saving and ozone-based denim finishing and its recycling approach in production.",
+   "is_primary": 1
+  }
+ ],
+ "imperfect-foods": [
+  {
+   "pillar": "climate",
+   "title": "Impact \u2014 Imperfect Foods",
+   "publisher": "Imperfect Foods",
+   "url": "https://www.imperfectfoods.com/impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Imperfect Foods' Impact page sets out its food-waste and carbon impact, framing the business around rescuing imperfect produce.",
+   "is_primary": 1
+  },
+  {
+   "pillar": null,
+   "title": "Resources and Reports \u2014 Imperfect Foods",
+   "publisher": "Imperfect Foods",
+   "url": "https://www.imperfectfoods.com/resources-and-reports",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Imperfect Foods publishes a resources and reports page holding its impact reporting and related disclosures.",
+   "is_primary": 1
+  }
+ ],
+ "pact-organic": [
+  {
+   "pillar": "supply_chain",
+   "title": "Fair Trade Certified factories and clothing \u2014 Pact",
+   "publisher": "Pact",
+   "url": "https://wearpact.com/article/fair-trade-certified-factories-and-clothing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Pact explains what Fair Trade Certified factories are and why it sources its organic cotton clothing from them.",
+   "is_primary": 1
+  }
+ ]
+}
