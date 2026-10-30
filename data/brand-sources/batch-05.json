@@ -1,0 +1,236 @@
+{
+ "_meta": {
+  "batch": "05",
+  "accessed_date": "2026-10-30",
+  "note": "Breadth batch 5, working down HSS score order, plus a browser rescue pass on brands that had defeated curl. Every URL in this file was fetched (curl -sL with a normal desktop Chrome user-agent, or a real Chromium session via agent-browser where curl was refused) and returned HTTP 200 at the final URL recorded here; the fetched page text was then searched for the claim written in `supports`. No URL was constructed from a pattern and left unopened. Brands without 2+ verified brand-specific sources were left out of this file rather than padded with a homepage or a generic explainer.",
+  "notes_on_gaps": "Several catalog brands had a wrong website_url, which is why they looked unsourceable: stasher resolves to stasher.com (a luggage-storage network, not the reusable-bag maker - the real site is stasherbag.com), and kind.com resolves to a German hearing-aid retailer. culturelife.com is parked on a GoDaddy for-sale page, peopletree.co.uk no longer resolves in DNS, and generousfoods.com refuses connections. fjallraven.com sits behind a Cloudflare challenge even in a real browser. goodonyou.eco /brands/<slug> pages return HTTP 500 to automated fetches."
+ },
+ "stasher": [
+  {
+   "pillar": "circular",
+   "title": "Stasher - Repurpose Program",
+   "publisher": "Stasher",
+   "url": "https://www.stasherbag.com/pages/repurpose-program",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Stasher states that its repurpose programme, run with TerraCycle, lets customers return punctured or worn-out bags for responsible recycling, with the stated goal of keeping every Stasher bag out of landfill because silicone does not biodegrade.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Stasher - Environmental Impact",
+   "publisher": "Stasher",
+   "url": "https://www.stasherbag.com/pages/environmental-impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Stasher's environmental impact page says no product is truly sustainable, states that its platinum food-grade silicone is not curbside recyclable, and directs customers to a TerraCycle shipping label instead of bin disposal.",
+   "is_primary": 0
+  }
+ ],
+ "wild": [
+  {
+   "pillar": "supply_chain",
+   "title": "Wild - Modern Slavery Statement",
+   "publisher": "Wild Cosmetics",
+   "url": "https://wearewild.com/row/pages/modern-slavery-statement",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Wild publishes a Modern Slavery Statement made in accordance with the UK Modern Slavery Act 2015, setting out the steps it takes to prevent modern slavery and human trafficking in its business and supply chain.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Wild - B Corp Certification",
+   "publisher": "Wild Cosmetics",
+   "url": "https://wearewild.com/row/pages/bcorp",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Wild states it is a certified B Corporation, scoring 110.8 points against the five B Corp impact areas, and credits its refillable deodorant in an aluminium case with refills of compostable bamboo pulp with keeping up to 150 tonnes of plastic out of landfill.",
+   "is_primary": 0
+  }
+ ],
+ "organic-basics": [
+  {
+   "pillar": "climate",
+   "title": "Organic Basics - Impact Report 2025",
+   "publisher": "Organic Basics",
+   "url": "https://organicbasics.com/pages/impact-report-2025",
+   "source_type": "company_report",
+   "published_date": "2025",
+   "supports": "Organic Basics publishes an annual Impact Report; the 2025 edition credits Made2Flow with calculating life-cycle assessments on each product it makes and One Carbon World with helping collect its impact data, and defines what its office and business operations emissions figure includes.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Organic Basics - What Does GOTS Certification Actually Cover?",
+   "publisher": "Organic Basics",
+   "url": "https://organicbasics.com/pages/what-does-gots-certification-cover",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Organic Basics publishes a customer-facing explainer titled 'What Does GOTS Certification Actually Cover?', setting out the scope of the Global Organic Textile Standard behind its certified organic cotton.",
+   "is_primary": 0
+  }
+ ],
+ "freitag": [
+  {
+   "pillar": "circular",
+   "title": "FREITAG - Our Material Cycles",
+   "publisher": "FREITAG",
+   "url": "https://freitag.ch/en_US/mission/about-freitag/material-cycle",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "FREITAG states it tries to use materials that are not merely recycled but above all recyclable and therefore circular, and describes discarded truck tarps as the robust source material its bags are made from.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "FREITAG - Circular Services",
+   "publisher": "FREITAG",
+   "url": "https://freitag.ch/en_US/mission/circular-services",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "FREITAG lists repair, take-back, bag customisation and rental (travel bags, cargo bikes) as its circular services, described as the routes by which its products return to the materials cycle at the end of their lives.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "climate",
+   "title": "FREITAG - Impact Statements 2025",
+   "publisher": "FREITAG",
+   "url": "https://freitag.ch/en_US/mission/impact-statements",
+   "source_type": "company_report",
+   "published_date": "2025",
+   "supports": "FREITAG publishes Impact Statements 2025, describing bags and accessories made from used and increasingly circular materials and citing resource-efficient production and distribution processes.",
+   "is_primary": 0
+  }
+ ],
+ "houdini-sportswear": [
+  {
+   "pillar": "pollution",
+   "title": "Houdini - Sustainable fabrics: 100%",
+   "publisher": "Houdini Sportswear",
+   "url": "https://houdinisportswear.com/en-na/blogs/environmental-work/sustainable-fabrics-100",
+   "source_type": "company_report",
+   "published_date": "2026-02-19",
+   "supports": "Houdini states that 100% of all fabrics it uses this season are recycled, recyclable, renewable, biodegradable or Bluesign-certified.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Houdini - That's how we want to change the world",
+   "publisher": "Houdini Sportswear",
+   "url": "https://houdinisportswear.com/en-na/blogs/environmental-work/thats-how-we-want-to-change-the-world",
+   "source_type": "company_report",
+   "published_date": "2026-02-19",
+   "supports": "Houdini's own sustainability statement says the company must move beyond zero and become a positive and regenerative force for society and the planet, or there is no reason for it to be in business at all.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Houdini - Environmental work",
+   "publisher": "Houdini Sportswear",
+   "url": "https://houdinisportswear.com/en-na/blogs/environmental-work",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Houdini's environmental work hub states that purchasing of fabrics and technology for its products is based on a selective partner strategy with long-term supplier relationships.",
+   "is_primary": 0
+  }
+ ],
+ "keepcup": [
+  {
+   "pillar": "circular",
+   "title": "KeepCup - Minimising our impact",
+   "publisher": "KeepCup",
+   "url": "https://au.keepcup.com/pages/minimising-our-impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "KeepCup's impact page describes an impact calculator that lets individuals and companies forecast and track the energy, carbon and waste savings from switching to reuse, and states that waste from its warehouse assembly and customer returns is collected for commercial recycling.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "KeepCup - Materials",
+   "publisher": "KeepCup",
+   "url": "https://au.keepcup.com/pages/materials",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "KeepCup's materials page states its clear parts are made from Tritan Renew containing 50% certified recycled content, are free from phthalates including BPA, BPS and BPF, and explains that it does not use post-consumer recycled plastic because of a lack of material volume availability.",
+   "is_primary": 0
+  }
+ ],
+ "veja": [
+  {
+   "pillar": "supply_chain",
+   "title": "VEJA - Transparency",
+   "publisher": "VEJA",
+   "url": "https://project.veja-store.com/en/single/transparency",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VEJA states it has used fair trade practices since 2004, dealing directly with producers, paying up front for harvests often up to 50%, and setting prices through two-year contracts with producer families so they know their earnings before planting.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "VEJA - Restricted Substances Policy and chemical testing",
+   "publisher": "VEJA",
+   "url": "https://project.veja-store.com/en/single/transparency",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VEJA states that since October 2021 its material suppliers must submit a test report confirming their products do not contain the most commonly used hazardous chemicals in the fashion industry, under a Restricted Substances Policy that applies to all its sneakers.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "climate",
+   "title": "VEJA - The blindness around CO2 emissions",
+   "publisher": "VEJA",
+   "url": "https://project.veja-store.com/en/single/emissions",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VEJA's emissions chapter explains what CO2 emissions are and states the brand's approach is to calculate its carbon footprint and publish it rather than leave it opaque.",
+   "is_primary": 0
+  }
+ ],
+ "ecover": [
+  {
+   "pillar": "circular",
+   "title": "Ecover - Our Plastic Beliefs",
+   "publisher": "Ecover",
+   "url": "https://uk.ecover.com/mission/plastic/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Ecover's plastics page sets out its position on single-use plastic and states that in 2016 less than half of all plastic bottles were collected for recycling and only 7% of those were turned into new bottles.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Ecover - Our Ingredient Beliefs",
+   "publisher": "Ecover",
+   "url": "https://uk.ecover.com/mission/ingredients/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Ecover's ingredients page states the company sees no future in crude oil-derived products and builds its formulations on plant-based and waste-derived raw materials instead.",
+   "is_primary": 0
+  }
+ ],
+ "smol": [
+  {
+   "pillar": "pollution",
+   "title": "smol - Our mission",
+   "publisher": "smol",
+   "url": "https://smol.com/uk/mission",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "smol's mission page frames the business around cleaning with less chemicals, less plastic and less carbon, and presents each capsule, tablet and refill as evidence that the switch is already happening.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "smol - We're a certified B Corp!",
+   "publisher": "smol",
+   "url": "https://smol.com/uk/stories/we-are-a-certified-b-corp",
+   "source_type": "company_report",
+   "published_date": "2023-12-25",
+   "supports": "smol states in a company story dated 25 December 2023 that it has been certified as a B Corporation.",
+   "is_primary": 0
+  }
+ ]
+}
