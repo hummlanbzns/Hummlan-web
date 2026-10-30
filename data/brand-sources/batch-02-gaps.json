@@ -1,0 +1,110 @@
+{
+ "_meta": {
+  "batch": "02-gaps-merged",
+  "accessed_date": "2026-10-30",
+  "note": "Existing pilot rows preserved and merged with new verified gaps. Every URL fetched, HTTP 200, claim term grepped."
+ },
+ "patagonia": [
+  {
+   "pillar": "supply_chain",
+   "title": "Patagonia \u2014 Fair Labor Association member page",
+   "publisher": "Fair Labor Association",
+   "url": "https://www.fairlabor.org/member/patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "supports": "Patagonia is listed as a member of the Fair Labor Association, the independent multi-stakeholder body that audits factories against its Workplace Code of Conduct.",
+   "is_primary": 0,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "climate",
+   "title": "Patagonia x 1% for the Planet Story",
+   "publisher": "1% for the Planet",
+   "url": "https://www.onepercentfortheplanet.org/patagonia-x-1-for-the-planet-story",
+   "source_type": "ngo",
+   "published_date": null,
+   "supports": "1% for the Planet records that Yvon Chouinard of Patagonia co-founded the 1% for the Planet movement in 2002, pledging a share of sales to environmental causes.",
+   "is_primary": 0,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "pollution",
+   "title": "Find bluesign System Partner Brands & Products",
+   "publisher": "bluesign technologies ag",
+   "url": "https://www.bluesign.com/find-sustainable-brands",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "bluesign lists Patagonia among its System Partner brands, meaning its textiles are vetted against bluesign's input-stream chemical and resource standards.",
+   "is_primary": 0,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "How Ethical Is Patagonia? \u2014 Good On You brand rating",
+   "publisher": "Good On You",
+   "url": "https://goodonyou.eco/how-ethical-is-patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "supports": "Good On You reports that part of Patagonia's supply chain is certified to the FLA Workplace Code of Conduct and Fair Trade USA in the final stage of production, and that the brand publishes a detailed supplier list.",
+   "is_primary": 0,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "circular",
+   "title": "How Ethical Is Patagonia? \u2014 Good On You brand rating",
+   "publisher": "Good On You",
+   "url": "https://goodonyou.eco/how-ethical-is-patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "supports": "Good On You notes that a high proportion of Patagonia's materials are made from recycled fabrics including polyester, nylon and wool, and that its business model rejects fast fashion.",
+   "is_primary": 0,
+   "accessed_date": "2026-10-30"
+  }
+ ],
+ "vaude": [
+  {
+   "pillar": "supply_chain",
+   "title": "VAUDE \u2014 Global supply chain",
+   "publisher": "VAUDE",
+   "url": "https://www.vaude.com/int/en/blog/post/global-supply-chain.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VAUDE states it has been a Fair Wear member since 2010 and has been rated 'Leader' in Fair Wear's Brand Performance Check every year since 2015.",
+   "is_primary": 1,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "circular",
+   "title": "VAUDE \u2014 Green Shape products",
+   "publisher": "VAUDE",
+   "url": "https://www.vaude.com/int/en/blog/post/green-shape-products.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VAUDE describes Green Shape\u00ae as its environmental standard for outdoor textiles, assessed across the whole product life cycle from design to end of life.",
+   "is_primary": 1,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "VAUDE \u2014 Commitment to protecting biodiversity",
+   "publisher": "VAUDE",
+   "url": "https://www.vaude.com/int/en/blog/post/vaude-is-committed-to-protecting-the-diversity-of-species.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VAUDE sets out its biodiversity commitments and the species-loss evidence behind them.",
+   "is_primary": 1,
+   "accessed_date": "2026-10-30"
+  },
+  {
+   "pillar": "climate",
+   "title": "VAUDE climate strategy \u2014 Net Zero by 2040",
+   "publisher": "VAUDE",
+   "url": "https://www.vaude.com/int/en/blog/post/vaude-climate-strategy.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "VAUDE states it joined the Science Based Targets initiative in 2019, has set short- and long-term greenhouse-gas reduction targets, and reports a 51% cut in emissions against its 2019 base year alongside a 19% rise in sales.",
+   "is_primary": 1,
+   "accessed_date": "2026-10-30"
+  }
+ ]
+}
