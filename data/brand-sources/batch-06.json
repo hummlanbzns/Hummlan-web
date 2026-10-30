@@ -1,0 +1,490 @@
+{
+ "_meta": {
+  "batch": "06",
+  "accessed_date": "2026-10-30",
+  "note": "Breadth batch 6, working down HSS score order from 72 to 68. Every URL in this file was fetched with curl -sL using a normal desktop Chrome user-agent and returned HTTP 200 at the final URL recorded here; the fetched page text was then searched for the claim written in `supports`. No URL was constructed from a pattern and left unopened. Every brand domain was first checked against the brand identity (page title / product match) before any sourcing, because several catalog rows pointed at the wrong company.",
+  "notes_on_gaps": "by-humankind.com now returns HTTP 402 'Store unavailable' (Shopify store closed). lush.com returns 403 behind a Cloudflare interstitial to curl. burtsbees.com is a Magento store whose sitemap (429 URLs) contains no sustainability, impact or CSR page at all. amourvert.com redirects to amourvert.co, which is a hijacked content farm (SEO/electrician/jewellery articles) and not the Amour Vert clothing brand. guayaki.com now redirects to yerbamadre.com - the brand confirms on its Our Story page that it renamed from Guayakí to Yerba Madre in 2025, so those sources are correct for the guayaki row."
+ },
+ "justines": [
+  {
+   "pillar": "supply_chain",
+   "title": "Justin's 2022 CSR Report",
+   "publisher": "Justin's",
+   "url": "https://www.justins.com/2022-csr-report/",
+   "source_type": "company_report",
+   "published_date": "2022",
+   "supports": "Justin's publishes a corporate social responsibility report covering its work on sustainable sourcing, pollinator protection, packaging waste and hunger relief.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Justin's Sustainability Initiatives",
+   "publisher": "Justin's",
+   "url": "https://www.justins.com/sustainability-initiatives/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Justin's maintains a dedicated sustainability initiatives page setting out its environmental and sourcing commitments.",
+   "is_primary": 0
+  }
+ ],
+ "lucy-and-yak": [
+  {
+   "pillar": "supply_chain",
+   "title": "Transparent Pricing",
+   "publisher": "Lucy & Yak",
+   "url": "https://lucyandyak.com/pages/transparent-pricing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Lucy & Yak publishes a per-garment cost breakdown showing production costs (materials, factory costs, audits, certifications and labour) alongside tax, shipping and UK business costs.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Our Fabrics (2026)",
+   "publisher": "Lucy & Yak",
+   "url": "https://lucyandyak.com/pages/our-fabrics",
+   "source_type": "company_report",
+   "published_date": "2026",
+   "supports": "Lucy & Yak states it uses recycled, organic and dead-stock fabrics, and that its organic cotton is GOTS and OCS certified with the certification shown on product pages.",
+   "is_primary": 0
+  }
+ ],
+ "totm": [
+  {
+   "pillar": "circular",
+   "title": "Impact - TOTM",
+   "publisher": "TOTM",
+   "url": "https://www.totm.com/impact/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "TOTM's impact page sets out its goals on plastic waste in period care, citing an estimated 28,114 tonnes of menstrual product waste generated in the UK each year.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "We're now B Corp Certified",
+   "publisher": "TOTM",
+   "url": "https://www.totm.com/we-are-now-b-corp-certified/",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "TOTM announced in its own blog that it had become a certified B Corp.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "pollution",
+   "title": "What's in your tampon? Why It's Time for Transparency in Period Products",
+   "publisher": "TOTM",
+   "url": "https://www.totm.com/whats-in-your-tampon-why-its-time-for-transparency-in-period-products/",
+   "source_type": "company_report",
+   "published_date": "2025-06-04",
+   "supports": "TOTM states that its tampons, pads and liners are made with 100% GOTS-certified organic cotton, in an article responding to WEN and PAN UK testing that found pesticide residues in non-organic period products.",
+   "is_primary": 0
+  }
+ ],
+ "alter-eco": [
+  {
+   "pillar": "supply_chain",
+   "title": "Certifications & Policies",
+   "publisher": "Alter Eco",
+   "url": "https://www.alterecofoods.com/pages/certifications",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "Alter Eco's certifications page states it holds Fair for Life fair trade certification, has maintained B Corp certification since 2009, and that all its products are USDA Organic certified.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Sustainability & Regeneration Report",
+   "publisher": "Alter Eco",
+   "url": "https://www.alterecofoods.com/pages/sustainability-report",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Alter Eco publishes a Sustainability & Regeneration Report and commits to using only compostable, recyclable or post-consumer recyclable packaging for its food products.",
+   "is_primary": 0
+  }
+ ],
+ "etee": [
+  {
+   "pillar": "circular",
+   "title": "About etee",
+   "publisher": "etee",
+   "url": "https://www.shopetee.com/pages/about",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "etee states that every product it makes is designed to reduce waste and that orders ship plastic-free in biodegradable packaging.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Imagine the Impact",
+   "publisher": "etee",
+   "url": "https://www.shopetee.com/pages/imagine-the-impact-we-could-make",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "etee describes its concentrated facial cleanser as reducing emissions and plastic compared with a conventional wash.",
+   "is_primary": 0
+  }
+ ],
+ "theo-chocolate": [
+  {
+   "pillar": "supply_chain",
+   "title": "Impact Report",
+   "publisher": "Theo Chocolate",
+   "url": "https://theochocolate.com/pages/impact-report",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Theo Chocolate publishes annual impact reports (2020-2023) plus farmer interviews from the Democratic Republic of Congo, and states it sources organic and fair trade cocoa whenever possible.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Certifications",
+   "publisher": "Theo Chocolate",
+   "url": "https://theochocolate.com/pages/certifications",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "Theo Chocolate states that all its ingredients are third-party verified and that it uses only foods grown without synthetic pesticides or chemical fertilizers, and not irradiated or treated with industrial solvents.",
+   "is_primary": 0
+  }
+ ],
+ "leaf-shave": [
+  {
+   "pillar": "circular",
+   "title": "About Recycling with Leaf Shave Razors",
+   "publisher": "Leaf Shave",
+   "url": "https://leafshave.com/pages/recycling-with-leaf",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Leaf Shave states its razor was designed to perform without disposable plastic and runs a closing-the-loop blade recycling programme for used blades.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Best Plastic Free Razor on Earth",
+   "publisher": "Leaf Shave",
+   "url": "https://leafshave.com/pages/best-plastic-free-razor-on-earth",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Leaf Shave markets an always plastic-free metal razor with a lifetime warranty, positioned as the last razor a customer needs to buy.",
+   "is_primary": 0
+  }
+ ],
+ "ocean-bottle": [
+  {
+   "pillar": "circular",
+   "title": "Impact of the World's Most Eco Friendly Water Bottle",
+   "publisher": "Ocean Bottle",
+   "url": "https://oceanbottle.co/pages/ocean-impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Ocean Bottle states its mission is to stop 10 billion plastic bottles from entering the ocean by 2030.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "2024 Impact Report",
+   "publisher": "Ocean Bottle",
+   "url": "https://oceanbottle.co/pages/2024-impact-report",
+   "source_type": "company_report",
+   "published_date": "2024",
+   "supports": "Ocean Bottle publishes an annual impact report, with the 2024 edition hosted on its site.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "circular",
+   "title": "Our Repair and Recycle Scheme",
+   "publisher": "Ocean Bottle",
+   "url": "https://oceanbottle.co/pages/the-ocean-bottle-repair-and-recycle-scheme",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Ocean Bottle runs a repair and recycle scheme for its bottles rather than treating them as single-use.",
+   "is_primary": 0
+  }
+ ],
+ "schmidts": [
+  {
+   "pillar": "pollution",
+   "title": "Schmidt's natural deodorant certified by Ecocert",
+   "publisher": "Schmidt's Naturals",
+   "url": "https://schmidts.com/ecocert",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "Schmidt's states its natural deodorant is made with 100% natural-origin ingredients certified by Ecocert.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Schmidt's Certifications and Awards",
+   "publisher": "Schmidt's Naturals",
+   "url": "https://schmidts.com/certifications-and-awards",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "Schmidt's keeps a certifications and awards page for its products; the same page notes the brand stopped selling direct from its own website as of 26 March.",
+   "is_primary": 0
+  }
+ ],
+ "guayaki": [
+  {
+   "pillar": "supply_chain",
+   "title": "Our Story",
+   "publisher": "Yerba Madre (formerly Guayakí)",
+   "url": "https://yerbamadre.com/pages/our-story",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Yerba Madre states it officially changed its name from Guayakí in 2025 and that it became a B Corp in 2007, among the first 82 companies certified.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "Regeneration",
+   "publisher": "Yerba Madre (formerly Guayakí)",
+   "url": "https://yerbamadre.com/pages/regeneration",
+   "source_type": "company_report",
+   "published_date": "2026",
+   "supports": "Yerba Madre states it has committed to planting 300,000 native trees across South and North America, starting in the Atlantic Forest where its yerba mate grows.",
+   "is_primary": 0
+  }
+ ],
+ "bulldog": [
+  {
+   "pillar": "pollution",
+   "title": "Sustainability",
+   "publisher": "Bulldog Skincare",
+   "url": "https://bulldogskincare.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Bulldog Skincare states it is reducing its reliance on traditional fossil-fuel plastics and has moved its product tubes to plant-based plastic.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "First Mile Recycling",
+   "publisher": "Bulldog Skincare",
+   "url": "https://bulldogskincare.com/pages/first-mile-recycling",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Bulldog's First Mile scheme takes back empty tubes and processes the plastic by microwave pyrolysis into oil, which is refined into pellets for new tubes.",
+   "is_primary": 0
+  }
+ ],
+ "seventh-generation": [
+  {
+   "pillar": "climate",
+   "title": "2024 Impact Report",
+   "publisher": "Seventh Generation",
+   "url": "https://www.seventhgeneration.com/impact-report",
+   "source_type": "company_report",
+   "published_date": "2024",
+   "supports": "Seventh Generation's 2024 Impact Report sets goals on reducing carbon emissions, promoting circularity and cutting plastic packaging, and states it will seek its seventh B Corp recertification in 2025.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Our Impact - 2020 Goals: Where We Landed",
+   "publisher": "Seventh Generation",
+   "url": "https://www.seventhgeneration.com/company/goals-impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Seventh Generation reports its 2020 climate goals as only partially achieved, including 100% non-fossil-fuel energy for its facilities, travel, commuting, third-party manufacturing and distribution.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "climate",
+   "title": "Climate Justice + Equity",
+   "publisher": "Seventh Generation",
+   "url": "https://www.seventhgeneration.com/climate-justice",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Seventh Generation runs a climate justice and equity advocacy programme, including a 'Take Action and Make Polluters Pay' campaign.",
+   "is_primary": 0
+  }
+ ],
+ "goodbelly": [
+  {
+   "pillar": "supply_chain",
+   "title": "CA Supply Chain Act Statement",
+   "publisher": "NextFoods (GoodBelly)",
+   "url": "https://goodbelly.com/pages/ca-supply-chain-act",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "GoodBelly's parent NextFoods publishes a California Transparency in Supply Chains Act statement covering verification and auditing to address slavery and human trafficking risk in its ingredient supply chain.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "NextFoods Transparency in Supply Chains Statement",
+   "publisher": "NextFoods (GoodBelly)",
+   "url": "https://goodbelly.com/pages/nextfoods-transparency",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "NextFoods states it is committed to ethical business practices and responsible sourcing of ingredients in its published supply-chain transparency statement.",
+   "is_primary": 0
+  }
+ ],
+ "jungle-culture": [
+  {
+   "pillar": "supply_chain",
+   "title": "How We Source Coconut Bowls",
+   "publisher": "Jungle Culture",
+   "url": "https://jungleculture.eco/pages/sourcing-coconut-bowls",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Jungle Culture states it sources products in person from small farms and craft workshops and describes building an ethical supply chain with transparent factories.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Zero Waste Products",
+   "publisher": "Jungle Culture",
+   "url": "https://jungleculture.eco/pages/zerowaste-products",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Jungle Culture describes its range as plastic alternatives that the company sources responsibly and in person.",
+   "is_primary": 0
+  }
+ ],
+ "modibodi": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability",
+   "publisher": "Modibodi",
+   "url": "https://www.modibodi.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Modibodi states its garment packaging is made from recycled paper (PAP 21) and that online orders ship in 100% post-consumer recycled LDPE polybags and mailer bags.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Responsible Sourcing",
+   "publisher": "Modibodi",
+   "url": "https://www.modibodi.com/pages/responsible-sourcing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Modibodi states it works only with suppliers meeting BSCI for social compliance, OEKO-TEX for chemical safety, RWS for wool, GOTS for organic cotton and GRS for recycled materials, with programmes on working hours and living wages.",
+   "is_primary": 0
+  }
+ ],
+ "acure": [
+  {
+   "pillar": "climate",
+   "title": "Climate Neutral Certified",
+   "publisher": "Acure",
+   "url": "https://acure.com/pages/climate-neutral-certified",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Acure states it is Climate Neutral Certified, having measured its footprint, reduced it and offset the remainder.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "About Acure",
+   "publisher": "Acure",
+   "url": "https://acure.com/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Acure states its products are 100% vegan and cruelty-free and formulated without parabens, sulfates, mineral oil, petrolatum and formaldehyde.",
+   "is_primary": 0
+  }
+ ],
+ "girlfriend-collective": [
+  {
+   "pillar": "circular",
+   "title": "Our Promise to the Planet",
+   "publisher": "Girlfriend Collective",
+   "url": "https://girlfriend.com/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Girlfriend Collective states it was among the first to make performance activewear from recycled materials in 2016 and now makes its range from post-consumer plastic waste.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Fabric Guide",
+   "publisher": "Girlfriend Collective",
+   "url": "https://girlfriend.com/pages/fabric-guide",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Girlfriend Collective's fabric guide describes a recycled fabric certified to OEKO-TEX Standard 100.",
+   "is_primary": 0
+  }
+ ],
+ "native-deodorant": [
+  {
+   "pillar": "pollution",
+   "title": "Ingredients You Can Trust",
+   "publisher": "Native",
+   "url": "https://www.nativecos.com/pages/ingredients",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Native lists its formulas as aluminium-free in deodorants, sulfate-free in cleansers, and free of parabens, phthalates, dyes and chemical propellants.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "About Us",
+   "publisher": "Native",
+   "url": "https://www.nativecos.com/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Native states it makes products with no aluminium, dyes, sulfates, silicones, phthalates or petrolatum.",
+   "is_primary": 0
+  }
+ ],
+ "method": [
+  {
+   "pillar": "circular",
+   "title": "Refill Reuse",
+   "publisher": "Method",
+   "url": "https://methodproducts.com/pages/refill-reuse",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Method states that refilling its aluminium bottles with concentrated refills saves over 96% plastic compared with its single-use plastic bottles.",
+   "is_primary": 1
+  }
+ ],
+ "frank-green": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability",
+   "publisher": "frank green",
+   "url": "https://frankgreen.com.au/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "frank green states its products use recycled materials with mindful packaging, and that the business exists to stop single-use plastic waste by reimagining reusable cups and bottles.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "About frank green",
+   "publisher": "frank green",
+   "url": "https://frankgreen.com.au/pages/about",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "frank green states its mission is to stop single-use plastic completely and that it only makes premium reusable products designed to be used over and over again.",
+   "is_primary": 0
+  }
+ ],
+ "ecoalf": [
+  {
+   "pillar": "circular",
+   "title": "Planeta",
+   "publisher": "ECOALF",
+   "url": "https://ecoalf.com/pages/planeta",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ECOALF states it has developed more than 400 recycled fabrics with the same characteristics and quality as non-recycled materials but a much lower environmental impact, and that these recycled fibres need less energy and water to produce.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "pollution",
+   "title": "Upcycling the Oceans",
+   "publisher": "ECOALF",
+   "url": "https://ecoalf.com/pages/upcycling-the-oceans",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ECOALF's Upcycling the Oceans project states it has recovered more than 2,100 tonnes of seabed waste since 2015, with fishermen landing the rubbish and the recovered plastic turned back into raw material.",
+   "is_primary": 0
+  }
+ ]
+}
