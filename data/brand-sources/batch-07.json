@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "batch": "07",
+    "accessed_date": "2026-10-31",
+    "status": "PARTIAL — session budget exhausted after the domain-resolution pass and the site-probe pass. Only sources that were individually fetched, confirmed HTTP 200 at the final URL and term-matched are included here.",
+    "note": "Every URL below was fetched with curl -sL -4 --compressed using a desktop Chrome user-agent and returned HTTP 200 at the final URL recorded. No URL was constructed from a pattern and left unopened.",
+    "next_session_resume": "Score order, next unstarted brand after this batch's probe pass: celestial-seasonings(68) onward. Probe output for 22 brands already collected in /tmp/probe1.txt and /tmp/probe2.txt (see lead report for the discovered candidate URLs per brand).",
+    "domain_findings": {
+      "curie": "getcurie.com returns HTTP 200 with a bare 'Coming Soon — getcurie.com — We're under construction' placeholder (95 chars of text, no products). curiebody.com fails TLS (handshake_failure, curl 000); curie.co serves a Shopify SEO agency site ('Curie — Your Shopify Store Is Invisible to ChatGPT'); curiebrand.com returns Cloudflare 1016 origin DNS error; curiebeauty.com does not resolve. Recommendation: keep the row, treat the brand as not currently trading, do not cite any of these domains.",
+      "aday": "aday.com redirects to a VC application form; the brand's own store was thisisaday.com, which now answers HTTP 301 to https but fails the TLS handshake (OpenSSL alert 40) — a closed Shopify storefront. Wayback has a snapshot of www.thisisaday.com from 2026-04-27, so the storefront was live until roughly mid-2026. Recommendation: brand appears wound down; no authentic live domain.",
+      "amour-vert": "amourvert.com 301s to amourvert.co, which carries the title 'Amour Vert | The Original Sustainable Fashion Brand In USA' but whose body is a celebrity/gossip SEO farm (Amber Heard, Sydney Sweeney, 'How to Create Stickers as a Printable PDF By Amour Vert'). Wikipedia has no article on the brand (404). Recommendation: classify the brand as defunct and do not cite amourvert.co."
+    },
+    "wrong_domain_findings": {
+      "a-good-company": "agoodcompany.com is a gift-certificate storefront ('Good Company Certificates'), NOT the Swedish sustainable-products brand. The real brand site is agood.com (HTTP 200, 'Eco-Friendly Phone Cases, Stone Paper Notebooks, Reusable Bottles – agood company'). DB row needs fixing before sourcing.",
+      "thought-clothing": "thoughtclothing.com fails (curl 000). wearethought.com redirects to thoughtsocks.com, which carries the title 'Sustainability Should be a Joy | Thought Clothing' — that is the brand's live store."
+    },
+    "blocked": {
+      "music-magpie": "musicmagpie.co.uk returns HTTP 403 'Just a moment...' (Cloudflare) to curl for both the homepage and the sitemap.",
+      "hain": "hain.com (Celestial Seasonings' parent) homepage is fetchable (200) but the fetched text contains no sustainability content; celestialseasonings.com's Shopify sitemap exposes only product/collection/policy pages, no sustainability or CSR page."
+    }
+  },
+  "everlane": [
+    {
+      "pillar": "climate",
+      "title": "Everlane Annual Impact Report",
+      "publisher": "Everlane",
+      "url": "https://www.everlane.com/pages/impact-report",
+      "source_type": "company_report",
+      "published_date": "",
+      "supports": "Everlane publishes an annual impact report setting out its commitments and progress across people, products and planet, presented as the evidence behind its sustainability claims.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Everlane Sustainability — Do Right By People",
+      "publisher": "Everlane",
+      "url": "https://www.everlane.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": "",
+      "supports": "Everlane's sustainability hub links each product's journey through its supply chain to the factories that make it, under a 'Do Right By People' section of its annual impact report.",
+      "is_primary": 0
+    }
+  ],
+  "numi": [
+    {
+      "pillar": "supply_chain",
+      "title": "Fair Trade — Numi Tea",
+      "publisher": "Numi Organic Tea",
+      "url": "https://numitea.com/pages/fair-trade",
+      "source_type": "company_report",
+      "published_date": "",
+      "supports": "Numi maintains a dedicated Fair Trade page describing its fair-trade sourcing commitments for the tea it sells.",
+      "is_primary": 1
+    }
+  ]
+}
