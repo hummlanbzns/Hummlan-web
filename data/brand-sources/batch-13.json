@@ -1,0 +1,342 @@
+{
+  "_meta": {
+    "batch": "13",
+    "accessed_date": "2026-11-01",
+    "next_session_resume": "Batch 13 done: 12 brands sourced (29 sources) - kind, miyokos, nokia, oatly, panasonic, eileen-fisher, organyc, celestial-seasonings, honest-company, burts-bees, fjllrven, aesop. DB after import: 173 of 192 brands / 381 sources. 19 brands remain unsourced and all of them are blocked or genuinely empty - see blocked_or_skipped: cariuma, frank-and-oak, groceries-apparel, hello-bello, hydro-flask, johnson-johnson, lush, music-magpie, nestle, nomo, on-running, pela, plantaform, polarn-o-pyret, prana, reformation, salt-and-stone, united-by-blue, vivobarefoot. Every one of those needs either a Cloudflare challenge solver (the whole hydro-flask/reformation/vivobarefoot/prana/music-magpie/lush/united-by-blue/nestle/jnj cluster), a JS-rendered sitemap (on-running, polarn-o-pyret), or does not publish sustainability content at all (cariuma password wall, groceries-apparel, hello-bello, nomo, salt-and-stone, plantaform, pela). The catalog is effectively at the honest ceiling for curl-only work.",
+    "blocked_or_skipped": [
+      "cariuma: cariuma.com redirects every path to /password (Shopify storefront password wall, 66 KB page) and /sitemap.xml is 404. No public page exists to cite. Empty.",
+      "groceries-apparel: full sitemap sweep - 38 URLs, every one a size chart, legal page or collection; /pages/explore and /pages/blueprint are marketing tiles with no sustainability text. No sustainability page exists. Empty.",
+      "hello-bello: re-confirmed. Sitemap has 350 URLs; the only sustainability-adjacent hits are blog posts in /blogs/natural-sustainable-living/ (consumer lifestyle tips), no brand impact or sourcing page. Empty.",
+      "nomo: re-confirmed. 92 sitemap URLs, zero sustainability, impact or sourcing pages. Empty.",
+      "salt-and-stone: re-confirmed. 164 sitemap URLs dumped and read - about, stockists, quizzes, landing pages; no sustainability page. Empty.",
+      "plantaform: 36 sitemap URLs; /pages/discover-plantaform is product marketing (no soil, no sunlight, automated watering) with no environmental claim or target. Empty.",
+      "pela: pela.earth 301s to lomi.com; lomi.com/pages/sustainability is Lomi-branded (food recyclers) with no Pela-specific claim, so it cannot back a Pela rating. Empty.",
+      "polarn-o-pyret: polarnopyret.com is a market chooser (/en/markets), /sitemap.xml 404 on both .com and .se; polarnopyret.se returns 200 but renders zero nav hrefs to curl and has no sitemap. No discovered path - would need a real browser. Empty.",
+      "united-by-blue: unitedbyblue.com and bare domain both 403 Cloudflare 'Just a moment...' on home and sitemap with the full Chrome/141 header set. Empty.",
+      "on-running: on.com is 200 but /sitemap.xml is a 460-byte document with zero <loc> entries and /en-us/sitemap.xml the same; the only sustainability links on the homepage are PDFs (modern slavery statements), which cannot be read on this box. Empty.",
+      "lush: lush.com 403 Cloudflare. Empty.",
+      "hydro-flask: hydroflask.com and parent helenoftroy.com both 403 Cloudflare; hydroflask.co.uk is a parked 'FOR SALE' domain. Empty.",
+      "reformation: thereformation.com 403 Cloudflare on home and sitemap. Empty.",
+      "vivobarefoot: vivobarefoot.com 403 Cloudflare across locales (final /us/). Empty.",
+      "prana: prana.com 403 Cloudflare 'Attention Required!'. Empty.",
+      "music-magpie: musicmagpie.co.uk 403 Cloudflare on home, /about-us and sitemap. Empty.",
+      "nestle: unchanged - nestle.com 403 'Verifying your browser' on every path. Empty.",
+      "johnson-johnson: unchanged - jnj.com returns a 556-byte 'Site Maintenance' shell with zero hrefs. Empty.",
+      "frank-and-oak: not re-attempted this session; previously empty after a full sitemap sweep."
+    ]
+  },
+  "kind": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability Hub",
+      "publisher": "KIND Snacks",
+      "url": "https://www.kindsnacks.com/sustainability-hub",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "KIND's sustainability hub states that global warming is one of the world's biggest challenges and is affecting its food and the communities that grow it, and that the brand runs projects and pilots contributing to Mars' Net Zero by 2050 roadmap. It notes that 30% of global greenhouse gas emissions come from growing and producing food, and is explicit that these are pilots it intends to scale rather than completed reductions.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "KIND Snacks Announces Major Sustainability Milestones in the Journey to Scale Regenerative Agriculture Across its Almond Supply Chain",
+      "publisher": "KIND Snacks",
+      "url": "https://www.kindsnacks.com/media-center/press-releases/kind-snacks-announces-major-sustainability-milestones-journey-scale-regenerative-agriculture-across-its-almond-supply-chain",
+      "source_type": "news",
+      "published_date": "2024-10-22",
+      "supports": "This KIND release (22 October 2024) commits the brand to sourcing 100% of its almonds from farms using regenerative agriculture on a mass-balance basis by 2030, and reports progress: a partnership with Wolfe's Neck Center worth more than $300,000 in regenerative-practice funding, and the KIND Almond Acres Initiative with supplier ofi nearly doubling from 500+ acres to close to 1,000 acres in California. Mass balance means the volume of programme almonds bought matches the volume used, not that every almond in a bar is regenerative.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "circular",
+      "title": "KIND Launches Fully Recyclable Paper Wrapper, Pioneering a New Era in Snack Packaging",
+      "publisher": "KIND Snacks",
+      "url": "https://www.kindsnacks.com/articles/kind-launches-fully-recyclable-paper-wrapper-pioneering-new-era-snack-packaging",
+      "source_type": "news",
+      "published_date": "2025-05-01",
+      "supports": "KIND's May 2025 release describes a curbside-recyclable paper wrapper pilot for its Dark Chocolate Nuts & Sea Salt bars at selected Whole Foods Market stores, developed with packaging partner Printpack and pre-qualified under How2Recycle. It is a limited pilot running May to October 2025, not a portfolio-wide switch; the brand's stated goal is that all packaging be designed for recyclability by 2030.",
+      "is_primary": 0
+    }
+  ],
+  "miyokos": [
+    {
+      "pillar": null,
+      "title": "Making an Impact",
+      "publisher": "Miyoko's Creamery",
+      "url": "https://www.miyokos.com/pages/making-an-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Miyoko's impact page commits the creamery to reducing its carbon footprint and to measuring and improving its carbon impact, and describes sourcing: cashews bought from a single partner in the rainforests of Vietnam, organically farmed and meeting SMETA ethical-trade standards, plus a preference for farmers using regenerative practices to protect biodiversity and soil health. It also cites B Corp certification. No quantified emissions, waste or packaging targets are published here, so the commitments cannot be checked against a baseline.",
+      "is_primary": 1
+    }
+  ],
+  "nokia": [
+    {
+      "pillar": "climate",
+      "title": "Climate and sustainability strategy",
+      "publisher": "Nokia",
+      "url": "https://www.nokia.com/about-us/sustainability/decarbonization-circular-transition/climate-sustainability-strategy/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nokia commits to net-zero greenhouse gas emissions across scopes 1, 2 and 3 by 2040 and to cutting absolute scope 1, 2 and 3 emissions 90% by 2040 from a 2019 baseline, with an accelerated interim 2030 target for its own operations. It states its science-based target is aligned with 1.5C and that Nokia was the first telecoms equipment vendor to have an SBTi-accepted target, in 2017; the plan also covers 100% renewable electricity and a 95% circularity target.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Circularity and geodiversity",
+      "publisher": "Nokia",
+      "url": "https://www.nokia.com/about-us/sustainability/decarbonization-circular-transition/circularity-and-geodiversity/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nokia's circularity page reports an annual waste circularity outcome of 90% for 2025 and explains its product takeback approach, which aims to keep obsolete equipment out of landfill by reusing, recycling or recovering it. It also sets out sustainable product design, restricted substances and a materials breakdown for its products.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Human rights",
+      "publisher": "Nokia",
+      "url": "https://www.nokia.com/about-us/sustainability/responsible-technology/human-rights/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nokia states that its human rights due diligence and remediation follow the UN Guiding Principles, alongside the ILO core labour standards and the OECD Guidelines for Multinational Enterprises. The page sets out how it assesses and addresses rights risks across its own operations and its supplier base.",
+      "is_primary": 0
+    }
+  ],
+  "oatly": [
+    {
+      "pillar": "climate",
+      "title": "Oatly Sustainability Update 2024",
+      "publisher": "Oatly",
+      "url": "https://www.oatly.com/oatly-who/sustainability-plan/sustainability-report-2024",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Oatly's 2024 sustainability update reports both progress and backsliding: it met its goal of eliminating production waste to landfill five years early, cut water withdrawal 35% from a 2019 baseline, and sourced 100% renewable electricity for Oatly-operated factories and production partners, while its corporate climate footprint rose about 15% from 2023, packaging emissions rose 30% and ingredient emissions rose 24% (blamed on buying more Finnish oats). It also states 89% of packaging was made from renewable or recycled sources and that Oatly drinks have 44-80% lower climate impact than comparable cow's milk according to Blonk Consultants LCAs.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Climate footprint",
+      "publisher": "Oatly",
+      "url": "https://www.oatly.com/oatly-who/sustainability-plan/climate-footprint-product-label",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Oatly's climate footprint page explains why the company declares each product's climate impact in kg CO2e per kg on the packaging and on its website, and walks through what CO2e covers in a product footprint. It is a transparency commitment rather than a reduction target.",
+      "is_primary": 0
+    },
+    {
+      "pillar": null,
+      "title": "The Oatly Sustainability Plan",
+      "publisher": "Oatly",
+      "url": "https://www.oatly.com/oatly-who/sustainability-plan",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Oatly's sustainability plan sets out its framing that animal-based products account for about half of global food-related emissions while livestock yields under 20% of global calories and about 40% of protein, and that the company positions itself as a climate solutions company pushing a shift to plant-rich diets. It links through to the detailed targets rather than restating them on the page.",
+      "is_primary": 0
+    }
+  ],
+  "panasonic": [
+    {
+      "pillar": "climate",
+      "title": "Panasonic GREEN IMPACT",
+      "publisher": "Panasonic North America",
+      "url": "https://na.panasonic.com/sustainability/green-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Panasonic's GREEN IMPACT page commits to cutting 110 million tons of CO2 from its value chain by 2050, transforming its manufacturing sites into zero-CO2 factories, and separating its own footprint from the emissions its products help customers avoid or reduce. It sets out the three-part structure of own impact, contribution impact and future impact.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Sustainability Initiatives",
+      "publisher": "Panasonic North America",
+      "url": "https://na.panasonic.com/sustainability/initiatives",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Panasonic's initiatives page describes its partnership with battery-materials company Redwood Materials to build the first steps of a closed-loop battery recycling and remanufacturing process in North America, intended to cut both cost and CO2 by avoiding shipping components around the world for processing.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "circular",
+      "title": "Panasonic Launches Takeback Program to Save Consumer Electronics from Landfills, Advance Circularity",
+      "publisher": "Panasonic North America",
+      "url": "https://na.panasonic.com/news/panasonic-launches-takeback-program-to-save-consumer-electronics-from-landfills-advance-circularity",
+      "source_type": "news",
+      "published_date": null,
+      "supports": "Panasonic announced a takeback programme for consumer electronics aimed at keeping end-of-life devices out of landfill and feeding materials back into recycling. The announcement frames it as part of the company's circularity work rather than a product-level recycled-content claim.",
+      "is_primary": 0
+    }
+  ],
+  "eileen-fisher": [
+    {
+      "pillar": "climate",
+      "title": "Wool That Fights Climate Change: Regenerative Farming",
+      "publisher": "EILEEN FISHER",
+      "url": "https://www.eileenfisher.com/a-sustainable-life/journal/sustainability/climate-change-regenerative-wool.html",
+      "source_type": "company_report",
+      "published_date": "2022-03-22",
+      "supports": "EILEEN FISHER's journal post (22 March 2022) explains that after launching Responsible Wool the brand moved to Regenerative Wool, a fibre it says is helping restore grasslands in Patagonia and fight climate change. It is a fibre-level sourcing claim, not a company-wide emissions reduction target.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Growing Better All the Time: Our Regenerative Organic Certified Cotton",
+      "publisher": "EILEEN FISHER",
+      "url": "https://www.eileenfisher.com/a-sustainable-life/journal/sustainability/regenerative-organic-certified-cotton.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "EILEEN FISHER states that 100% of the cotton on its line is organically grown and that it is moving to Regenerative Organic Certified cotton, which it describes as traceable from field to factory, grown without hazardous pesticides or herbicides, and farmed in ways that rebuild soil and support biodiversity. The post is candid that the transition is in progress and details a Peruvian programme run with Algodon Organico Peru, including the premium paid directly to farmers.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "circular",
+      "title": "EILEEN FISHER Renew Program Reaches 2 Million Garments",
+      "publisher": "EILEEN FISHER",
+      "url": "https://www.eileenfisher.com/a-sustainable-life/journal/sustainability/renew-program-reaches-2-million-garments.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Renew take-back programme, running since 2009, has collected two million garments, of which one million were resold, donated or remade. The brand is explicit that this is only about 5.4% of everything it has made in 39 years, and its director of circularity states plainly that 'we are not circular by any means' - unusually direct for a fashion sustainability page.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Love, Peru: How Fair Trade Products Benefit Everyone",
+      "publisher": "EILEEN FISHER",
+      "url": "https://www.eileenfisher.com/a-sustainable-life/journal/community/our-fair-trade-project.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "EILEEN FISHER's Love, Peru project supports more than 450 families in and around Arequipa through higher fair-trade wages and community investment, in a supply chain it has been part of since 2006. Workers run community workshops with neighbours and family, receive a free knitting machine plus zero-interest loans for more, and the brand describes long-term orders as the basis of the relationship.",
+      "is_primary": 0
+    }
+  ],
+  "organyc": [
+    {
+      "pillar": "pollution",
+      "title": "Verified Care",
+      "publisher": "Organyc",
+      "url": "https://organyc.net/pages/verified-care",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Organyc lists the certifications behind its pads and liners, including GOTS certified organic cotton, MADE SAFE screening for toxins, VeganOK for animal-free ingredients, and Plastics for Change for fair wages in its plastic recovery sourcing. It also cites independent clinical studies on skin irritation. The claims are certification-level; no ingredient list or test reports are published on the page.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Our Process",
+      "publisher": "Organyc",
+      "url": "https://organyc.net/pages/our-process",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Organyc states that every pad, liner and tampon starts with 100% certified organic cotton, made in Italy at parent company Corman's facility near Milan, and that its facilities use sustainable building materials and are powered by renewable energy - solar, natural lighting and geothermal - as part of a stated aim of zero environmental impact. No quantified energy or emissions figures are given.",
+      "is_primary": 0
+    }
+  ],
+  "celestial-seasonings": [
+    {
+      "pillar": "circular",
+      "title": "Blended With Care: From Seed to Sip",
+      "publisher": "Celestial Seasonings",
+      "url": "https://celestialseasonings.com/pages/blended-with-care-from-seed-to-sip",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Celestial Seasonings' eight-step sourcing and packaging story states that its pillow-style tea bags need no string, tag, staple or individual wrapper, saving more than 3.5 million pounds of waste from landfill each year, and that its outer boxes use 100% recycled paperboard including 35% consumer waste. It also says it has reduced the thickness of its plastic outer freshness wrapper.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Impact Pillar - Planet",
+      "publisher": "Hain Celestial",
+      "url": "https://www.hain.com/impact/impact-pillar-planet/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "This is the parent group's page - Hain Celestial owns Celestial Seasonings - and sets out group-wide environmental commitments covering the brand: switching to renewable electricity and cutting energy at Hain-operated facilities, reducing supply-chain food waste and diverting landfill waste, and maximising truck capacity to cut transport emissions. The commitments are not broken down to Celestial Seasonings' own operations.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Impact Pillar - People",
+      "publisher": "Hain Celestial",
+      "url": "https://www.hain.com/impact/impact-pillar-people/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Hain Celestial's parent-group people page (Hain owns Celestial Seasonings) commits the group to meeting international human rights and labour standards and describes a US supply-chain programme that cut landfill waste by tracking inventory expiry dates and donating product to hunger-relief organisations. It states three million pounds of food and personal care products were donated.",
+      "is_primary": 0
+    }
+  ],
+  "honest-company": [
+    {
+      "pillar": "pollution",
+      "title": "The Honest Standard",
+      "publisher": "The Honest Company",
+      "url": "https://honest.com/pages/the-honest-standard",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Honest Standard page describes the company's ingredient review: a NO List of over 3,500 chemicals and materials it chooses not to use, screening against regulatory and expert restriction lists for carcinogenicity, endocrine disruption, bioaccumulation and persistence, and toxicologist-audited, dermatologist-tested formulas. It is honest that cross-contamination cannot always be eliminated and that the list keeps evolving.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "CA Transparency Act",
+      "publisher": "The Honest Company",
+      "url": "https://honest.com/pages/ca-transparency-act",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Honest's California Transparency in Supply Chains Act disclosure states that it audits and makes inquiries of vendors about labour practices, requires vendors to sign the Honest Vendor Manual covering forced, involuntary and child labour, and trains staff responsible for supply-chain management on trafficking and slavery risk. The disclosure is policy-level; no audit results or factory list are published.",
+      "is_primary": 0
+    }
+  ],
+  "burts-bees": [
+    {
+      "pillar": "climate",
+      "title": "Burt's Bees Brand Releases Update on Sustainability Progress",
+      "publisher": "The Clorox Company",
+      "url": "https://www.thecloroxcompany.com/blog/burts-bees-brand-releases-update-on-sustainability-progress/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "This post on parent company Clorox's site, written by Burt's Bees' sustainable business manager, reports on the brand's 11 sustainability goal areas and rates its own performance red to green. It names areas where the brand is green - raw-material supply chain transparency, wildflower seeds and technical support for North Carolina farmers, waste reduction, fully offsetting its carbon emissions, more post-consumer recycled packaging - and areas where it is red, specifically containing its internal energy and water footprint.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Burt's Bees Adds Recycled Content to Lip Balm Tubes",
+      "publisher": "The Clorox Company",
+      "url": "https://www.thecloroxcompany.com/blog/burts-bees-adds-recycled-content-to-lip-balm-tubes/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "On parent company Clorox's site, Burt's Bees reports that virtually all of its lip balm tubes moved to 50% post-consumer recycled plastic, eliminating about 200,000 lbs of virgin plastic a year, with mail-back packaging at 35% recycled paperboard through its 'Recycle on Us' programme. The brand frames the move as closing the loop on its own packaging rather than cutting total plastic use.",
+      "is_primary": 0
+    }
+  ],
+  "fjllrven": [
+    {
+      "pillar": null,
+      "title": "Sustainability",
+      "publisher": "Fenix Outdoor",
+      "url": "https://fenixoutdoor.com/sustainability/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Fenix Outdoor is the parent group of Fjallraven, and this group sustainability page is the company's own statement of its approach: protecting nature and biological diversity, ethical corporate citizenship, employee well-being and human rights, and publishing its brands' Tier 1 suppliers on the Open Supply Hub. It also references the group's CSR reports, its supplier Code of Conduct and its commitment to the Fashion Charter. It sets principles rather than brand-level targets, and gives no figures for Fjallraven itself.",
+      "is_primary": 1
+    }
+  ],
+  "aesop": [
+    {
+      "pillar": "climate",
+      "title": "Steward the Climate Transition",
+      "publisher": "L'Oréal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-planet/steward-the-climate-transition/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Aesop's own site blocks automated access, so this is the parent group's page: L'Oreal Groupe has owned Aesop since 2023 and this sets the group-wide climate commitments that cover its brands - a 90% cut in scopes 1, 2 and 3 emissions by 2050 against 2019 on an SBTi-validated net-zero pathway, 57% cuts to scope 1 and 2 and 28% to scope 3 by 2030, and 100% renewable energy at operated sites and stores. Nothing here is Aesop-specific.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Drive Circularity",
+      "publisher": "L'Oréal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-planet/driving-circularity/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Again the parent group rather than Aesop itself: L'Oreal Groupe's circularity page (which covers its brands including Aesop) commits to cutting virgin plastic for product packaging by 50% in absolute terms against 2019, sourcing 50% of packaging materials from recycled or biobased sources, and reducing packaging intensity by 20%, through lightweighting, refills and recycled content.",
+      "is_primary": 0
+    }
+  ]
+}
