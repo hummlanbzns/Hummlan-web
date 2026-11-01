@@ -125,6 +125,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="+")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--replace", action="store_true",
+                    help="Delete each brand's existing rows before inserting. "
+                         "Only use when the file holds the complete set for those brands.")
     ap.add_argument("--accessed-date", default=None,
                     help="override accessed date (YYYY-MM-DD); defaults to _meta or today")
     args = ap.parse_args()
@@ -159,12 +162,16 @@ def main():
     statements, total = [], 0
     for slug, sources in data.items():
         brand_id = brand_ids[slug]
-        # Idempotent: clear this brand's rows, then insert the batch rows.
-        statements.append(("DELETE FROM brand_sources WHERE brand_id = ?", [arg(brand_id)]))
+        # Default is NON-DESTRUCTIVE: rows are upserted by their stable id, so a
+        # later batch can top up a brand without wiping sources verified earlier.
+        # Pass --replace only when the batch file is the complete, authoritative
+        # set for that brand.
+        if args.replace:
+            statements.append(("DELETE FROM brand_sources WHERE brand_id = ?", [arg(brand_id)]))
         for src in sources:
             sid = source_id(brand_id, src.get("pillar"), src["url"])
             statements.append((
-                """INSERT INTO brand_sources
+                """INSERT OR REPLACE INTO brand_sources
                    (id, brand_id, pillar, title, publisher, url, source_type,
                     published_date, accessed_date, supports, is_primary, created_at)
                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",

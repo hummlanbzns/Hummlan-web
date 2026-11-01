@@ -1,0 +1,292 @@
+{
+ "_meta": {
+  "batch": "10-merged",
+  "accessed_date": "2026-11-01",
+  "note": "Union of batch-10 findings with any rows already in earlier batches, so no previously verified source is lost.",
+  "lead_review": "Dropped eileen-fisher: its page returns Cloudflare 403 to us on re-check (not verifiable). All other URLs re-verified 200 on 2026-11-01."
+ },
+ "patagonia": [
+  {
+   "pillar": "climate",
+   "title": "Patagonia 2025 Impact Report",
+   "publisher": "Patagonia",
+   "url": "https://www.patagonia.com/progress-report/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Patagonia's 2025 Impact Report states that realising carbon neutrality failed to meet the company's standards of environmental responsibility, and documents its work to eliminate foreign migrant worker fees for the people who make its products and nearly 20 years of research into removing PFAS from its products.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Climate Goals - Patagonia",
+   "publisher": "Patagonia",
+   "url": "https://www.patagonia.com/climate-goals/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Patagonia states that the climate crisis is an existential threat and that every part of its business is implicated, and commits to radically reducing carbon emissions by transforming how its products are made.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "1% for the Planet - Patagonia",
+   "publisher": "Patagonia",
+   "url": "https://www.patagonia.com/one-percent-for-the-planet.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Patagonia states that since 1985 it has pledged 1% of sales to the preservation and restoration of the natural environment and has awarded over $140 million in cash and in-kind donations to grassroots environmental groups.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "pollution",
+   "title": "Find bluesign System Partner Brands & Products",
+   "publisher": "bluesign technologies ag",
+   "url": "https://www.bluesign.com/en/find-sustainable-brands",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "bluesign's public list of System Partner brands names Patagonia among the brands that participate in the bluesign System, the third-party standard for chemical input management in textile production.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Patagonia \u2014 Fair Labor Association member page",
+   "publisher": "Fair Labor Association",
+   "url": "https://www.fairlabor.org/member/patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "supports": "Patagonia is listed as a member of the Fair Labor Association, the independent multi-stakeholder body that audits factories against its Workplace Code of Conduct.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "climate",
+   "title": "Patagonia x 1% for the Planet Story",
+   "publisher": "1% for the Planet",
+   "url": "https://www.onepercentfortheplanet.org/patagonia-x-1-for-the-planet-story",
+   "source_type": "ngo",
+   "published_date": null,
+   "accessed_date": "2026-10-30",
+   "supports": "1% for the Planet records that Yvon Chouinard of Patagonia co-founded the 1% for the Planet movement in 2002, pledging a share of sales to environmental causes.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "pollution",
+   "title": "Find bluesign System Partner Brands & Products",
+   "publisher": "bluesign technologies ag",
+   "url": "https://www.bluesign.com/find-sustainable-brands",
+   "source_type": "certifier",
+   "published_date": null,
+   "accessed_date": "2026-10-30",
+   "supports": "bluesign lists Patagonia among its System Partner brands, meaning its textiles are vetted against bluesign's input-stream chemical and resource standards.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "How Ethical Is Patagonia? \u2014 Good On You brand rating",
+   "publisher": "Good On You",
+   "url": "https://goodonyou.eco/how-ethical-is-patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "accessed_date": "2026-10-30",
+   "supports": "Good On You reports that part of Patagonia's supply chain is certified to the FLA Workplace Code of Conduct and Fair Trade USA in the final stage of production, and that the brand publishes a detailed supplier list.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "circular",
+   "title": "How Ethical Is Patagonia? \u2014 Good On You brand rating",
+   "publisher": "Good On You",
+   "url": "https://goodonyou.eco/how-ethical-is-patagonia/",
+   "source_type": "ngo",
+   "published_date": null,
+   "accessed_date": "2026-10-30",
+   "supports": "Good On You notes that a high proportion of Patagonia's materials are made from recycled fabrics including polyester, nylon and wool, and that its business model rejects fast fashion.",
+   "is_primary": 0
+  }
+ ],
+ "act-acre": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability - Act+Acre",
+   "publisher": "Act+Acre",
+   "url": "https://actandacre.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Act+Acre states that all of its external packaging is 100% post-consumer material and 100% recyclable, and that its bottles are produced with rPET, the most recyclable form of plastic, designed to last up to two years and to be refilled.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Our Story - Act+Acre",
+   "publisher": "Act+Acre",
+   "url": "https://actandacre.com/pages/about-actandacre",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Act+Acre states that sustainability is key to the brand through the packaging it uses and its cold-processed production, which it says uses 90% less energy to create its products than traditional heat-based production.",
+   "is_primary": 0
+  }
+ ],
+ "darn-tough": [
+  {
+   "pillar": "pollution",
+   "title": "Sustainability - Darn Tough",
+   "publisher": "Darn Tough Vermont",
+   "url": "https://darntough.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Darn Tough states that it has had a ban on PFAS since the publication of its original Restricted Substances List in 2021, that its suppliers must meet the ZDHC list of restricted chemicals, and that it is phasing out polybags in favour of recyclable post-consumer paper bands.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "FAQ: Sustainability & Sourcing - Darn Tough",
+   "publisher": "Darn Tough Vermont",
+   "url": "https://darntough.com/pages/faqs-sustainability-sourcing",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Darn Tough states that as part of the Responsible Wool Standard its wool partners do not harm their sheep in the shearing process and do not practise mulesing, and that it buys premium wool from North America, Europe and Oceania.",
+   "is_primary": 0
+  }
+ ],
+ "ilia": [
+  {
+   "pillar": "circular",
+   "title": "Recycling - ILIA Beauty",
+   "publisher": "ILIA Beauty",
+   "url": "https://iliabeauty.com/pages/recycling",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ILIA states that it partners with Pact Collective to keep empty beauty packaging out of landfill and offers customers a prepaid shipping label to mail back up to ten empties for recycling.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "1 Percent for the Planet - ILIA Beauty",
+   "publisher": "ILIA Beauty",
+   "url": "https://iliabeauty.com/pages/1-percent-for-the-planet",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "ILIA states that it donates 1% of Super Serum Skin Tint sales to reforestation and that its goal is to plant one million trees in partnership with One Tree Planted.",
+   "is_primary": 0
+  }
+ ],
+ "indie-lee": [
+  {
+   "pillar": "pollution",
+   "title": "Skincare With Standards - Indie Lee",
+   "publisher": "Indie Lee",
+   "url": "https://indielee.com/pages/skincare-with-standards",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Indie Lee states that all of its products have been certified by Leaping Bunny since 2012, the internationally recognised cruelty-free standard, and that it also holds COSMOS certification, a globally recognised third-party certification focused on sustainability.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Recycling / Empties Cleaning Guide - Indie Lee",
+   "publisher": "Indie Lee",
+   "url": "https://indielee.com/pages/recycling",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Indie Lee publishes an empties cleaning guide that tells customers how to clean its glass bottles, pumps and other packaging so that the beauty packaging can be properly recycled.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Cruelty Free, Always - Indie Lee",
+   "publisher": "Indie Lee",
+   "url": "https://indielee.com/pages/cruelty-free-always",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Indie Lee states that it is certified by Leaping Bunny and argues that because 'cruelty-free' is not a regulated term in the beauty industry, third-party certification is what provides clarity and accountability.",
+   "is_primary": 0
+  }
+ ],
+ "kicking-horse": [
+  {
+   "pillar": "supply_chain",
+   "title": "Supply Chain Report - Kicking Horse Coffee",
+   "publisher": "Kicking Horse Coffee",
+   "url": "https://kickinghorsecoffee.com/pages/supply-chain-report",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Kicking Horse's supply chain report states that where child labour or related non-compliance with Fairtrade Standards is found through an audit, the independent Fairtrade auditor FLOCERT agrees corrective actions with the producer organisation and checks that they are implemented.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "Sustainability - Kicking Horse Coffee",
+   "publisher": "Kicking Horse Coffee",
+   "url": "https://kickinghorsecoffee.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Kicking Horse states that it only uses certified Fairtrade and Organic coffee, explaining that it is only interested in using coffee that is good and fair for everyone.",
+   "is_primary": 0
+  }
+ ],
+ "rothys": [
+  {
+   "pillar": "circular",
+   "title": "How We Calculate And Quantify Our Numbers - Rothy's",
+   "publisher": "Rothy's",
+   "url": "https://rothys.com/pages/sustainability-calculations",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Rothy's states that as of 27 October 2025 it had purchased 2,088,603 kilograms of yarn made from 100% post-consumer recycled plastic bottles certified by the SCS Recycled Content certification, equivalent to 225,794,969 single-use plastic bottles transformed into its thread.",
+   "is_primary": 1
+  }
+ ],
+ "smartwool": [
+  {
+   "pillar": "supply_chain",
+   "title": "Ethically Sourced Wool - Smartwool",
+   "publisher": "Smartwool",
+   "url": "https://www.smartwool.com/en-us/pages/ethically-sourced-wool",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Smartwool states that it uses ZQ-Certified Merino wool, describing merino as a regenerative natural fibre that breaks down in water and soil.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Wildly Important Planet - Smartwool",
+   "publisher": "Smartwool",
+   "url": "https://www.smartwool.com/en-us/pages/wildly-important-planet",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Smartwool's sustainability hub lists Second Cut resale of used socks and apparel and a 'Recycle Your Socks' programme among its circularity initiatives, alongside its recycled-material Second Cut Recycled collection.",
+   "is_primary": 0
+  }
+ ],
+ "stonyfield": [
+  {
+   "pillar": "climate",
+   "title": "Our Fight Against Climate Change - Stonyfield",
+   "publisher": "Stonyfield Organic",
+   "url": "https://www.stonyfield.com/about/our-fight-against-climate-change/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Stonyfield states that it targets 100% renewable electricity across its dairy supply chain by 2025 and a carbon-positive dairy supply chain by 2030, and that in 1997 it was the first US manufacturer to offset all of its greenhouse gas emissions.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "B Corporation - Stonyfield",
+   "publisher": "Stonyfield Organic",
+   "url": "https://www.stonyfield.com/about/b-corporation/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Stonyfield states that it is a Certified B Corporation, verified by B Lab to meet high standards of social and environmental performance, transparency and accountability.",
+   "is_primary": 0
+  }
+ ],
+ "vinted": [
+  {
+   "pillar": "climate",
+   "title": "Vinted Company - Sustainability",
+   "publisher": "Vinted",
+   "url": "https://company.vinted.com/en/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Vinted states that since 2023 it has reduced its emissions per delivery and expanded its use of renewable energy and electric and low-carbon vehicles, and that it is committed to cutting emissions in line with Science-Based Targets, alongside a published Climate Action Plan and Impact Report.",
+   "is_primary": 1
+  }
+ ]
+}
