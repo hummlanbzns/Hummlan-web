@@ -1,0 +1,605 @@
+{
+  "_meta": {
+    "batch": "12",
+    "accessed_date": "2026-11-01",
+    "next_session_resume": "Batch 12 done: 20 of the 22 big corporates sourced (55 sources), 2 blocked (nestle, johnson-johnson). DB after import: 161 brands / 352 sources. 38 brands remain, of which 7 are the dead ones awaiting the owner's call, so 31 real targets - the 31, minus the 2 blocked: aesop, burts-bees, cariuma, celestial-seasonings, eileen-fisher, fjllrven, frank-and-oak, groceries-apparel, hello-bello, honest-company, hydro-flask, kind, lush, miyokos, music-magpie, nokia, nomo, oatly, on-running, organyc, panasonic, pela, plantaform, polarn-o-pyret, prana, reformation, salt-and-stone, united-by-blue, vivobarefoot. Batch 13 should take these 29 remaining targets, roughly in that order, plus a real-browser retry on nestle/johnson-johnson if anyone gets agent-browser working through Cloudflare.",
+    "blocked_or_skipped": [
+      "nestle: www.nestle.com returns HTTP 403 'Verifying your browser…' (Cloudflare) on the homepage, /sustainability and /sustainability/climate-change with the full Chrome/141 header set. Whole domain is walled - no verifiable page. Left empty.",
+      "johnson-johnson: www.jnj.com returns a 557-byte 'Site Maintenance' shell with zero hrefs on the homepage and on /sustainability. fairlabor.org/member/johnson-johnson/ is a 404 (J&J is not an FLA member). No verifiable source found - left empty rather than padded.",
+      "zara: only one Inditex page is verifiable. inditex.com/itxcomweb/es/en/sustainability carries the group's figures, but /itxcomweb/es/en/sustainability/climate redirects to the Inditex home shell, the site has no working sitemap (sitemap.xml and robots.txt both redirect to the JS home page), annualreport.inditex.com is a client-rendered shell (219 chars) and zara.com itself is a 2 KB JS shell. Capped at 1 source (Osprey precedent).",
+      "pginvestor.com/esg/environmental/climate/default.aspx returns Cloudflare 403 'Attention Required!' - do not use P&G's investor ESG pages; us.pg.com HTML pages work fine.",
+      "dell.com/en-us/lp/dt/human-rights returns 403 'Access Denied' while /en-us/dt/lp/dt/climate-action and /en-us/lp/dt/circular-economy both 200 and redirect to /learn/corporate-impact/lp/... - Dell's human-rights page is the odd one out.",
+      "sustainability.google/reports/google-2026-environmental-report/ and .../water-stewardship-project-portfolio/ are near-empty shells (1.1-1.2 KB); the environmental report itself is a PDF and is not citable here. Google is sourced from sustainability.google/ plus the blog.google sustainability post instead."
+    ]
+  },
+  "unilever": [
+    {
+      "pillar": "climate",
+      "title": "Addressing climate change with action",
+      "publisher": "Unilever",
+      "url": "https://www.unilever.com/sustainability/climate/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Unilever's climate page sets out its net zero ambition and the Supplier Climate Programme, which works with key suppliers to cut emissions from raw materials, ingredients and packaging by 2030. The same page states that the UN has warned global temperature rise will now inevitably pass 1.5C, and argues for policy that creates a level playing field so the transition can be de-risked.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "How Unilever is tackling plastic waste",
+      "publisher": "Unilever",
+      "url": "https://www.unilever.com/sustainability/plastics/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Unilever states it is reducing plastic waste by using less virgin plastic, improving recyclability and developing alternative packaging. The page also says it has given training, PPE and other support to more than 3,000 waste collectors since 2021 and works through the Fair Circularity Initiative to support a socially just circular economy for plastics.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Protecting and regenerating nature",
+      "publisher": "Unilever",
+      "url": "https://www.unilever.com/sustainability/nature/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Unilever's nature targets include maintaining at least 95% deforestation-free sourcing across its primary deforestation-linked commodities, verifying 95% of key crop volumes as sustainably sourced by 2030, rolling out regenerative agriculture on 1 million hectares, protecting and restoring 1 million hectares of natural ecosystems, and water stewardship at 100% of production sites in water-stressed areas by 2030. By the end of 2025, 34 regenerative agriculture programmes had covered roughly 254,000 hectares cumulatively since 2021.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Improving livelihoods in our global value chain",
+      "publisher": "Unilever",
+      "url": "https://www.unilever.com/sustainability/livelihoods/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Unilever says it supports livelihoods across its value chain through smallholder farmer, small retailer and living wage programmes, with a Living Wage Supplier Programme that champions fair pay for all employees and works with suppliers to extend that commitment through the supply chain.",
+      "is_primary": 0
+    }
+  ],
+  "pepsico": [
+    {
+      "pillar": "climate",
+      "title": "Climate change (ESG topic)",
+      "publisher": "PepsiCo",
+      "url": "https://www.pepsico.com/esg-topics/climate-change",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "PepsiCo aims for net-zero emissions by 2050 or sooner and states its targets have been validated by the Science Based Targets initiative under its Corporate Net Zero Standard v1, aligned to a 1.5C trajectory by 2050 and reflecting SBTi guidance on FLAG and energy-and-industry emissions. The page also reports scenario analysis covering climate-related physical and transition risks from 2030 to 2050.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Agriculture & sourcing (ESG topic)",
+      "publisher": "PepsiCo",
+      "url": "https://www.pepsico.com/esg-topics/agriculture",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "PepsiCo states its business begins with the soil and the more than 50 crops and ingredients grown across 61 countries that go into its products, and frames its Positive Agriculture ambition around regenerative farming practices, sustainable sourcing, restoration and protection of nature, and improved farmer and farm worker security.",
+      "is_primary": 1
+    },
+    {
+      "pillar": null,
+      "title": "ESG Progress",
+      "publisher": "PepsiCo",
+      "url": "https://www.pepsico.com/sustainability/esg-progress",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "PepsiCo's ESG progress page explains that it reports emission reductions against a baseline calculated from its physical footprint and separately reports target progress that includes system contributions from activity-pool and sector-level actions, calculated in line with SBTi's Corporate Net Zero Standard V2.0 innovations applied to targets set under V1.0, and notes the reporting approach may change as GHGP and SBTi guidance develops.",
+      "is_primary": 0
+    }
+  ],
+  "procter-gamble": [
+    {
+      "pillar": "climate",
+      "title": "Environmental Sustainability",
+      "publisher": "Procter & Gamble",
+      "url": "https://us.pg.com/environmental-sustainability/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "P&G frames its environmental work around four science-based pillars - Climate, Waste, Water and Nature - and says it is reducing absolute emissions across its operations, including manufacturing plants, while intending to balance any remaining emissions from its operations and supply chain with natural or technical removal solutions. On packaging it says it is reducing material use, cutting virgin petroleum-based plastic resin and designing packaging to be recyclable or reusable.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Responsible Sourcing at P&G",
+      "publisher": "Procter & Gamble",
+      "url": "https://us.pg.com/ethics-and-corporate-responsibility/responsible-sourcing/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "P&G names SEDEX-SMETA as its preferred audit methodology, saying audits are used to identify and address actual or potential social and environmental sustainability impacts at external business partner sites, and sets out a priority-materials and services approach for the extended supply chain alongside its human rights commitments.",
+      "is_primary": 0
+    }
+  ],
+  "colgate-palmolive": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability",
+      "publisher": "Colgate-Palmolive",
+      "url": "https://www.colgatepalmolive.com/en-us/impact/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Colgate-Palmolive says it is accelerating climate action, reducing its environmental footprint and working to eliminate waste, decrease plastic use, save water and conserve resources, organised under three ambitions including Preserving Our Environment. The page links its 2025 Scope 1 and 2 GHG emissions verification statement and its 2025 Scope 3 verification statement, plus NOx emissions assurance and environmental indicators.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Sustainability Policies",
+      "publisher": "Colgate-Palmolive",
+      "url": "https://www.colgatepalmolive.com/en-us/impact/sustainability/our-sustainability-policies",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Colgate-Palmolive publishes a No Deforestation Policy committing to sourcing from responsibly managed forests, a Palm Oil Policy described as sourcing that respects human rights and preserves forests, a Responsible Soy Procurement Policy, and a Conflict Minerals Policy on sourcing from conflict-free suppliers.",
+      "is_primary": 1
+    },
+    {
+      "pillar": null,
+      "title": "Sustainability Reports & Downloads Archive",
+      "publisher": "Colgate-Palmolive",
+      "url": "https://www.colgatepalmolive.com/en-us/impact/sustainability/reports-and-downloads-archive",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Colgate-Palmolive publishes an Annual Sustainability & Social Impact Report each year, with the 2025 edition described as showing how the company brought its sustainability and social impact strategy to life in 2025, and keeps an archive of editions back to 2012.",
+      "is_primary": 0
+    }
+  ],
+  "loreal": [
+    {
+      "pillar": "climate",
+      "title": "Steward the Climate Transition",
+      "publisher": "L'Oreal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-planet/steward-the-climate-transition/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "L'Oreal aims to reduce Scopes 1, 2 and 3 greenhouse gas emissions by 90% by 2050 compared with 2019, in line with a decarbonisation trajectory validated by the Science Based Targets initiative in April 2024 under its Net Zero standard and aligned to 1.5C, with targets set for both 2030 and 2050.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Drive Circularity",
+      "publisher": "L'Oreal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-planet/driving-circularity/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "L'Oreal describes a circular approach to packaging built on the 3Rs - Reduce, Replace, Recycle - covering lightweighting to lower packaging intensity, recycled and biobased materials, cutting plastic use and introducing refillable products. The page states that a system-wide transformation and multi-stakeholder collaboration are needed to overcome supply chain and infrastructure barriers.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Safeguard Nature",
+      "publisher": "L'Oreal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-planet/safeguard-nature/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "L'Oreal says it is investing in partnerships and solutions that safeguard biodiversity and regenerate landscapes, and treats water as a critical focus of its nature pillar, aiming for sustainable water stewardship throughout its value chain and in the communities where it operates by optimising industrial processes.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Respecting Human Rights",
+      "publisher": "L'Oreal Groupe",
+      "url": "https://www.loreal.com/en/commitments-and-responsibilities/for-the-people/respecting-human-rights/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "L'Oreal states it conducted a comprehensive analysis of its salient human rights risks across all its markets based on the UN Guiding Principles Reporting Framework, reflects those risks in its commitments and addresses them through specific action plans. It also describes Human Rights Correspondents covering the group's main functions, zones and markets, and work across strategic supply chains on fair compensation, safe working conditions and ethical management systems.",
+      "is_primary": 1
+    }
+  ],
+  "estee-lauder": [
+    {
+      "pillar": "climate",
+      "title": "Climate and Environment",
+      "publisher": "The Estee Lauder Companies Inc.",
+      "url": "https://www.elcompanies.com/en/our-impact/sustainability/climate-and-environment",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Estee Lauder Companies commits to reduce absolute Scope 1 and 2 greenhouse gas emissions 50% by 2030 from a 2018 base year and to reduce Scope 3 emissions from purchased goods and services, upstream transportation and distribution and business travel by 60% per unit revenue over the same timeframe. The leading component of its climate strategy is energy efficiency plus on-site and off-site renewable energy.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Responsible Sourcing",
+      "publisher": "The Estee Lauder Companies Inc.",
+      "url": "https://www.elcompanies.com/en/our-impact/sustainability/responsible-sourcing",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Estee Lauder Companies says it prioritises respect for human rights, minimising environmental impacts, inclusion and diversity and protecting biodiversity, and requires that long-held and new suppliers share those commitments. The page details specific supply chains including mica, described as complex, worked on closely with suppliers and local sourcing communities, and a partnership with Dutjahn Sandalwood Oils.",
+      "is_primary": 1
+    }
+  ],
+  "walmart": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/purpose/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Walmart states its sustainability priorities are reducing greenhouse gas emissions, regenerating natural resources, reducing product and packaging waste, and supporting people who work in supply chains through responsible sourcing and inclusive economic opportunity. On waste it aims to move from a take-make-dispose approach to one that values reuse, recycling and regeneration of materials.",
+      "is_primary": 1
+    },
+    {
+      "pillar": null,
+      "title": "ESG & Shared Value Reporting",
+      "publisher": "Walmart",
+      "url": "https://corporate.walmart.com/purpose/esgreport",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Walmart publishes an annual ESG report - the FY2026 edition is described as covering sustainability, community and opportunity - structured around climate resilience, energy and emissions, regeneration of natural resources, waste and circularity, people in supply chains and animal welfare.",
+      "is_primary": 0
+    }
+  ],
+  "amazon": [
+    {
+      "pillar": "climate",
+      "title": "Carbon-free energy",
+      "publisher": "Amazon",
+      "url": "https://sustainability.aboutamazon.com/climate-solutions/carbon-free-energy",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Amazon states it is working toward its Climate Pledge commitment to reach net-zero carbon emissions by 2040 and says it has invested in hundreds of carbon-free energy projects, including multiple nuclear energy projects and technologies as well as renewable energy projects across the globe.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Packaging innovation",
+      "publisher": "Amazon",
+      "url": "https://sustainability.aboutamazon.com/waste/packaging",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Amazon reports 5.4 million metric tons of packaging materials avoided in North America and Europe since 2015 and 288 million single-use plastic bags avoided from automated packaging machines across North America fulfilment centres, alongside its Ships in Product Packaging programme.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Biodiversity",
+      "publisher": "Amazon",
+      "url": "https://sustainability.aboutamazon.com/natural-resources/biodiversity",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Amazon says it aims to reduce deforestation and responsibly source agricultural and mineral commodities for its own products and delivery packaging, and describes using an AI tool in 2025 to rapidly evaluate the biodiversity value of potential development sites in the UK, plus nature conservation and restoration investments beyond its value chain.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Supply chain (human rights)",
+      "publisher": "Amazon",
+      "url": "https://sustainability.aboutamazon.com/human-rights/supply-chain",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Amazon reports 3,000-plus supplier audits conducted in 2025 covering Amazon-branded product suppliers and third-party labour, service and not-for-resale goods providers across its logistics, warehousing and construction supply chain. It also reports that 60% of suppliers attending regional human rights workshops with procurement teams and industry experts have reduced high-risk audit findings between 2023 and 2025, and that 125,000 workers at supplier sites across Asia took part in safe and healthy workplace programmes.",
+      "is_primary": 1
+    }
+  ],
+  "hm": [
+    {
+      "pillar": "climate",
+      "title": "Climate",
+      "publisher": "H&M Group",
+      "url": "https://hmgroup.com/sustainability/climate/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "H&M Group reports that it cut Scope 1 and 2 greenhouse gas emissions against a 2019 baseline, mainly through increased purchasing of renewable electricity, and that absolute Scope 3 emissions fell by nearly 35% compared with 2019, driven by material efficiency, energy efficiency and greener transport. The page frames the work around limiting global warming to 1.5C. This is the parent group's report covering the H&M brand.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Materials",
+      "publisher": "H&M Group",
+      "url": "https://hmgroup.com/sustainability/product-lifecycle/materials/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "H&M Group states that how fibres such as cotton, polyester and man-made cellulosic fibres like viscose are grown, obtained, made or recycled shapes the environmental and social footprint they leave across supply chains and communities, and that material choices are therefore assessed against material criteria, industry tools and risk information. This is the parent group's report covering the H&M brand.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Due diligence",
+      "publisher": "H&M Group",
+      "url": "https://hmgroup.com/sustainability/human-rights/due-diligence/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "H&M Group describes how grievance mechanisms and worker voice are part of how it identifies and follows up on risks in its supply chain, and that depending on supplier risk level or case history it may require or recommend that a factory invest in a digital grievance mechanism to support workers, before working to cease, prevent or mitigate adverse impacts. This is the parent group's report covering the H&M brand.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Biodiversity",
+      "publisher": "H&M Group",
+      "url": "https://hmgroup.com/sustainability/biodiversity/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "H&M Group's stated aim is to help reduce pressure on biodiversity and ecosystems in areas connected to its value chain, guided by a Biodiversity & Ecosystem Transition Plan that sets out a science-based approach to addressing biodiversity impacts linked to land use across the value chain. This is the parent group's report covering the H&M brand.",
+      "is_primary": 1
+    }
+  ],
+  "zara": [
+    {
+      "pillar": "circular",
+      "title": "Sustainability",
+      "publisher": "Inditex",
+      "url": "https://www.inditex.com/itxcomweb/es/en/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Inditex, Zara's parent group, reports that 88% of the fibres it currently uses in its clothing have a lower impact on the environment and 47% are recycled, and that it reduced unit water consumption in the productive processes of its supply chain between 2020 and 2025. It also describes regenerative and organic farming and recycling techniques as key to cutting emissions and building a circular model, with training run through a Sustainable Fashion School developed with Leeds University and a Regenerative Fund for Nature with Conservation International. This is the parent group's report covering the Zara brand.",
+      "is_primary": 1
+    }
+  ],
+  "north-face": [
+    {
+      "pillar": "climate",
+      "title": "Climate",
+      "publisher": "VF Corporation",
+      "url": "https://www.vfc.com/responsibility/planet/climate",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VF Corporation, The North Face's parent company, states that its climate targets approved by the Science Based Targets initiative include reducing absolute Scope 1 and 2 greenhouse gas emissions 55% by FY2030 from a FY2017 base year and absolute Scope 3 emissions from purchased goods and services and upstream transportation and distribution 33% by FY2030 from the same base year. This is the parent group's report covering The North Face brand.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Circularity",
+      "publisher": "VF Corporation",
+      "url": "https://www.vfc.com/responsibility/product/circularity",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VF Corporation says embedding circularity in product design and consumer engagement is increasingly important to how it approaches its business, aiming to create products that use resources conscientiously, can be used for an extended period and can be disassembled into component parts for reuse. It also advocates for improved and more consistent recycling and upcycling infrastructure, which it describes as essential for consumers to participate in the circular economy. This is the parent group's report covering The North Face brand.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Human Rights",
+      "publisher": "VF Corporation",
+      "url": "https://www.vfc.com/responsibility/people/human-rights",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "VF Corporation states that understanding where its business may impact rights holders, including VF associates, suppliers and supply chain workers, informs its human rights strategy, which in turn guides its assessment of VF's ability to mitigate salient risks and creates a road map for preventing and remediating potential impacts. This is the parent group's report covering The North Face brand.",
+      "is_primary": 1
+    }
+  ],
+  "shein": [
+    {
+      "pillar": "climate",
+      "title": "Planet",
+      "publisher": "SHEIN Group",
+      "url": "https://www.sheingroup.com/planet",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "SHEIN sets targets to reduce absolute Scope 1 and 2 greenhouse gas emissions by 42% by 2030 and absolute Scope 3 emissions by 25% by 2030, reach net-zero across the value chain by 2050 and use electricity only from renewable sources for operations it directly manages by 2030, and states the Science Based Targets initiative has validated its net-zero target and approved its near-term targets. It also targets 31% of the polyester used for SHEIN-branded products converted to recycled polyester and 50% of SHEIN-branded products sourced through evoluSHEIN by Design, both by 2030.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "People",
+      "publisher": "SHEIN Group",
+      "url": "https://www.sheingroup.com/people",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "SHEIN describes supplier audits with remediation and corrective action plans, suppliers and subcontractors receiving a copy of their audit report, and access to grievance mechanisms so workers can raise concerns and seek redress. It states that as a signatory to the UN Global Compact it supports the Ten Principles including human rights and labour rights, and that its Human Rights Policy and Code of Business Conduct prohibit forced labour and child labour.",
+      "is_primary": 1
+    }
+  ],
+  "google": [
+    {
+      "pillar": "climate",
+      "title": "Google Sustainability",
+      "publisher": "Google",
+      "url": "https://sustainability.google/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Google describes advancing sustainability across its operations by improving AI efficiency, procuring carbon-free energy and replenishing water, and says it is strengthening the circular economy by designing out waste and implementing 100% plastic-free packaging for its products. It reports that in 2025 nine of its solutions helped individuals, cities and partners collectively reduce an estimated 41 million tonnes of CO2e.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "New ways Google is helping reduce transportation and energy emissions",
+      "publisher": "Google",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/sustainability/google-transportation-energy-emissions-reduction/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Google's own blog post describes product-level emissions work, including research with American Airlines and Breakthrough Energy on contrails, which it says account for roughly 35% of aviation's global warming impact, and features rolled out in the US and Europe to help users cut transport and home energy emissions.",
+      "is_primary": 0
+    }
+  ],
+  "microsoft": [
+    {
+      "pillar": "climate",
+      "title": "Getting to Carbon Negative",
+      "publisher": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability/carbon",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Microsoft states it will become carbon negative by 2030 by reducing emissions across its operations and value chain and removing more carbon than it emits, and describes focusing first on reducing emissions and then removing the rest through carbon reduction, carbon removal and its Climate Innovation Fund.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Getting to Zero Waste",
+      "publisher": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/sustainability/waste",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Microsoft aims to become zero waste by 2030 by reducing waste at the source, keeping products and materials in use longer and recovering materials, applying circular economy principles across product lifecycles through datacentres and campuses, Circular Centers and circular products. It cites transforming 50,000 pounds of end-of-life hard disk drives into high-value materials with Western Digital, Critical Materials Recycling and PedalPoint Recycling, recovering rare earth elements.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Supply Chain Integrity",
+      "publisher": "Microsoft",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/supply-chain-integrity",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Microsoft states its global supply chain leans into responsible sourcing centred on the environment, people's fundamental rights, ethics due diligence standards and supplier risk management, and that it sets standards holding its global supply chain accountable to responsible sourcing, publishing a Human Rights Transparency Report.",
+      "is_primary": 1
+    }
+  ],
+  "sony": [
+    {
+      "pillar": "climate",
+      "title": "Environment",
+      "publisher": "Sony Group Corporation",
+      "url": "https://www.sony.com/en/SonyInfo/csr/SonyEnvironment/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Sony's environmental section is organised around climate change, resources conservation, biodiversity conservation and management of chemical substances, under its Road to Zero and Green Management 2030 frameworks. On climate it states it reduces greenhouse gas emissions not just in its own operations but throughout projects and services, and engages supply chain partners to share its commitment to curbing emissions.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Green Management 2030",
+      "publisher": "Sony Group Corporation",
+      "url": "https://www.sony.com/en/SonyInfo/csr/SonyEnvironment/ourvision/GM2030/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Sony's Green Management 2030 plan sets three focus points: significantly reducing the absolute amount of greenhouse gas emissions, accelerating activities that bring about resource circulation, and strengthening initiatives to address plastic packaging materials as a countermeasure to plastic pollution.",
+      "is_primary": 1
+    }
+  ],
+  "hp": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability Progress",
+      "publisher": "HP Inc.",
+      "url": "https://www.hp.com/us-en/sustainability-progress.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "HP's sustainability progress page records that it became the first electronics company to publish a comprehensive list of its suppliers in 2008 and the first global IT company to publish a Complete Carbon Footprint in 2013. When HP Inc. launched as an independent company in 2015 it set commitments including 100% renewable electricity in global operations, zero deforestation and a 25% reduction in product portfolio GHG emissions by 2020, and in 2017 it became the first to incorporate ocean-bound plastics into ink cartridges.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Product return and recycling",
+      "publisher": "HP Inc.",
+      "url": "https://www.hp.com/us-en/sustainability-progress/planet-product-recycling.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "HP states that it supports a circular economy, with commercial customers able to refurbish end-of-use hardware through HP Sustainability Services or extend device life through HP Support Services, and that electronic products contain metals, plastics and glass that can be recovered through recycling and reintroduced into manufacturing streams.",
+      "is_primary": 1
+    },
+    {
+      "pillar": null,
+      "title": "Sustainability progress - Documents and Reports",
+      "publisher": "HP Inc.",
+      "url": "https://www.hp.com/us-en/sustainability-progress/document-reports.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "HP publishes an annual Sustainability Progress Report - the 2025 edition is listed - alongside environmental data, product certifications, supply chain policies and regulatory disclosures, all downloadable from its documents and reports page.",
+      "is_primary": 0
+    }
+  ],
+  "dell": [
+    {
+      "pillar": "climate",
+      "title": "Climate Action",
+      "publisher": "Dell Technologies",
+      "url": "https://www.dell.com/en-us/learn/corporate-impact/lp/climate-action",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Dell Technologies commits to reaching net zero greenhouse gas emissions across Scopes 1, 2 and 3 by 2050, with interim 2030 ambitions to cut Scope 1 and 2 emissions by 50%, source 75% of electricity from renewable sources (100% by 2040), reduce absolute Scope 3 emissions from purchased goods and services by 45%, and reduce Scope 3 emissions associated with the use of sold products by 30%.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Accelerating the Circular Economy",
+      "publisher": "Dell Technologies",
+      "url": "https://www.dell.com/en-us/learn/corporate-impact/lp/circular-economy",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Dell Technologies says it designs with circularity in mind to keep products and materials in the circular economy for as long as possible, through durability built into products, repair and refurbishment to extend life, and recovery and recycling services.",
+      "is_primary": 1
+    }
+  ],
+  "philips": [
+    {
+      "pillar": "climate",
+      "title": "Climate action",
+      "publisher": "Royal Philips",
+      "url": "https://www.philips.com/a-w/about/sustainability/environmental-impact/climate-action.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Philips says it is focused on delivering innovations and teaming up with partners to improve and expand healthcare delivery with lower carbon emissions, working toward a net-zero future by reducing energy use across its portfolio and embedding sustainable practices across its operations and sites.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Material use",
+      "publisher": "Royal Philips",
+      "url": "https://www.philips.com/a-w/about/sustainability/environmental-impact/materials.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Philips states that rising demand for healthcare, overconsumption of resources, waste and climate change are putting unsustainable pressure on ecosystems, and that it designs solutions using fewer virgin non-renewable materials that stay in use longer and can be recovered through refurbishment or recycling, through circular offerings and EcoDesign applied from the beginning of product development.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Nature",
+      "publisher": "Royal Philips",
+      "url": "https://www.philips.com/a-w/about/sustainability/environmental-impact/nature.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Philips aims to reduce its impact on nature by managing and restoring biodiversity on manufacturing sites and reducing water withdrawal, and says biodiversity loss threatens the resources and ecosystem services it relies on. It also invests in local land-use restoration projects.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Human rights",
+      "publisher": "Royal Philips",
+      "url": "https://www.philips.com/a-w/about/sustainability/social-impact/human-rights.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Philips integrates human rights due diligence into its daily operations, using regular Human Rights Impact Assessments to monitor working conditions, ensure fair treatment and track progress, under its Human Rights Policy, General Business Principles and Supplier Sustainability Declaration. It also works with suppliers to improve working conditions across the supply chain.",
+      "is_primary": 1
+    }
+  ],
+  "bosch": [
+    {
+      "pillar": "climate",
+      "title": "Environment",
+      "publisher": "Robert Bosch GmbH",
+      "url": "https://www.bosch.com/sustainability/environment/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Bosch states the Bosch Group has been carbon neutral overall for scope 1 and 2 emissions since 2020 across more than 470 locations, achieved through four levers: energy efficiency, generating its own renewable energy, purchasing green electricity and, as a last resort, offsetting residual emissions with carbon credits - around 554,900 metric tons of CO2 were offset this way in 2025. It also says it wants to reduce scope 3 emissions produced outside its direct sphere of influence, for example at suppliers.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Supply chain management",
+      "publisher": "Robert Bosch GmbH",
+      "url": "https://www.bosch.com/sustainability/sustainable-supply-chains/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Bosch says it implements human rights and environmental due diligence obligations in its operational processes and actively demands respect for human rights from suppliers. Compliance is assessed through supplier self-declarations and third-party audits complementing its own quick scans and drill-deep assessments, and its Group Policy for Conflict Raw Materials covers tin, tantalum, tungsten and gold.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Product responsibility",
+      "publisher": "Robert Bosch GmbH",
+      "url": "https://www.bosch.com/sustainability/sustainable-products/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Bosch states that developers and product owners apply specific design and manufacturing rules covering the entire product life cycle, from the materials used and efficiency in product development to recycling or environmentally compatible disposal at end of life, systematically integrating environmental aspects into the product development process.",
+      "is_primary": 1
+    }
+  ],
+  "lenovo": [
+    {
+      "pillar": "climate",
+      "title": "Our Impact",
+      "publisher": "Lenovo",
+      "url": "https://www.lenovo.com/us/en/about/our-impact/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lenovo states it is committed to achieving net-zero greenhouse gas emissions by 2050 and describes itself as the first PC and smartphone maker to have net-zero targets validated by the Science Based Targets initiative.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Sustainability - Our Path to Net Zero",
+      "publisher": "Lenovo",
+      "url": "https://www.lenovo.com/us/en/about/our-impact/sustainability/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lenovo says it committed in January 2023 to reach net-zero greenhouse gas emissions by 2050 with a scientific, collaborative and accountable approach, and that it uses bio-based materials such as bamboo and sugar cane to reduce packaging consumption, waste and carbon emissions.",
+      "is_primary": 1
+    }
+  ]
+}
