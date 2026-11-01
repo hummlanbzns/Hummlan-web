@@ -1,0 +1,548 @@
+{
+  "_meta": {
+    "batch": "08",
+    "accessed_date": "2026-11-01",
+    "status": "COMPLETE — all 20 brands in scope sourced, 49 sources, every URL individually fetched.",
+    "note": "Every URL below was fetched with curl -sL -4 --compressed using a desktop Chrome user-agent and returned HTTP 200 at the final URL recorded; the page text was then grepped for the phrase recorded in `supports`. The two rapanui-clothing URLs are the exception: rapanuiclothing.com is a JavaScript single-page app that returns 200 with a 30-character shell to curl, so the two URLs were opened in a real Chromium session (agent-browser) and the claim text read from the rendered DOM. Both URLs return HTTP 200.",
+    "domain_findings": {
+      "tru-earth": "truearth.com no longer belongs to the brand — it redirects (HTTP 200) to terrametrics.com, a 3D terrain-data company. The live Tru Earth domain is tru.earth (final URLs recorded as tru.earth). Recommend correcting brands.website_url for tru-earth to https://tru.earth.",
+      "birch-living": "www.birchliving.com fails the TLS/connection handshake (curl exit 0 with no body); the live host is birchliving.com without the www. Recorded URLs use the non-www host.",
+      "a-good-company": "the brand's sustainability page is published at /pages/sustainability-2026 (the nav link is misspelled 'sustainabiliy'); the misspelled URL redirects there, and the final URL is stored.",
+      "thought-clothing": "thoughtsocks.com confirmed as the live domain (Thought Clothing). All sources are on thoughtsocks.com.",
+      "grove-collaborative": "grove.co confirmed live; grovecollaborative.com redirects into grove.co. Stored URLs are grove.co.",
+      "tonys-chocolonely": "tonyschocolonely.com/us/en redirects to us.tonyschocolonely.com; the US storefront is where the FAIR report and impact pages live, and that is what is stored.",
+      "rapanui-clothing": "rapanuiclothing.com is a client-rendered SPA — /our-story/ and / are 200 but contain 16-32 characters of text to curl. The /recycle/ page (the Remill programme) carries the substantive claims and was verified in-browser."
+    },
+    "next_session_resume": "Batch 8 covered score-order positions 1-20 of the remaining 187 (naturepedic 68 through everlane 65). Next unstarted brand in score order is the one immediately after everlane(65) — the catalog list from the batch-08 brief continues below 65. 167 brands still need sources."
+  },
+  "naturepedic": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability at Naturepedic — Organic Materials & More",
+      "publisher": "Naturepedic",
+      "url": "https://www.naturepedic.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Naturepedic states that its finished mattresses are certified organic to the Global Organic Textile Standard (GOTS) and that it uses GOTS-certified organic cotton and wool plus GOLS-certified organic latex in the models that contain latex.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "Organic & Nontoxic Certifications",
+      "publisher": "Naturepedic",
+      "url": "https://www.naturepedic.com/pages/certifications",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Naturepedic lists firsts including one of the first GOTS-certified mattress brands (2009), the first FSC-certified mattress brand (2019), the first EWG Verified mattress brand (2024) and the first and only mattress brand UL-validated for non-detectable PFAS (2025), and says its entire manufacturing facility is GOTS certified.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "FSC Certification — Responsible Forestry & Sustainable Wood",
+      "publisher": "Naturepedic",
+      "url": "https://www.naturepedic.com/pages/certifications/fsc",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Naturepedic's FSC page explains that Forest Stewardship Council certification supports responsible forestry, ethical sourcing and sustainable supply chains, and publishes the brand's own FSC certificate for viewing.",
+      "is_primary": 1
+    }
+  ],
+  "lotus-foods": [
+    {
+      "pillar": "climate",
+      "title": "2025 Annual Impact Report",
+      "publisher": "Lotus Foods",
+      "url": "https://www.lotusfoods.com/blogs/blog/2025-annual-impact-report",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lotus Foods' 2025 Impact Report announcement reports progress across climate, water, soil health and farmer livelihoods, alongside a change in sourcing strategy intended to build a more resilient and transparent supply chain.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "2024 Annual Impact Report",
+      "publisher": "Lotus Foods",
+      "url": "https://www.lotusfoods.com/blogs/blog/lotus-foods-2024-impact-report",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lotus Foods reports that more than 5,000 farming families have benefited from Organic and Fair Trade premiums, with community investments from those premiums funding healthcare, education and infrastructure.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Our Story",
+      "publisher": "Lotus Foods",
+      "url": "https://www.lotusfoods.com/pages/our-story",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Lotus Foods' own story page says the company set out to help preserve rice biodiversity and now promotes organic and regenerative 'More Crop Per Drop' practices intended to restore natural resources and slow climate change.",
+      "is_primary": 1
+    }
+  ],
+  "thought-clothing": [
+    {
+      "pillar": "circular",
+      "title": "Our sustainability message",
+      "publisher": "Thought Clothing",
+      "url": "https://thoughtsocks.com/blogs/journal/our-sustainability-message",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Thought Clothing says it works with rPET, a material it states generates 79% fewer carbon emissions than virgin polyester, and that its fabric mills are certified to the Global Recycled Standard so the recycled content can be verified.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Lenzing ECOVERO",
+      "publisher": "Thought Clothing",
+      "url": "https://thoughtsocks.com/pages/lenzing",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Thought Clothing describes Lenzing ECOVERO as a soft and silky sustainable alternative to viscose created from renewable wood, which it says is much cleaner for the environment.",
+      "is_primary": 1
+    }
+  ],
+  "chosen-foods": [
+    {
+      "pillar": "climate",
+      "title": "Our ESG Mission & Vision",
+      "publisher": "Chosen Foods",
+      "url": "https://chosenfoods.com/pages/esg-mission-vision",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Chosen Foods' ESG page states that it seeks supplier partners meeting high standards of environmental practice, aims to improve the sustainability of its product packaging, and runs reduce, reuse and recycle strategies including a donations agreement with Feeding San Diego and internal composting.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Chosen Foods is now Certified B Corp",
+      "publisher": "Chosen Foods",
+      "url": "https://chosenfoods.com/blogs/central/celebrating-a-major-milestone-chosen-foods-is-now-certified-b-corp",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Chosen Foods states it is now B Corp certified, explains that certification requires a B Impact score of at least 80, and says Chosen Foods exceeded those standards.",
+      "is_primary": 1
+    }
+  ],
+  "outerknown": [
+    {
+      "pillar": "climate",
+      "title": "Regenerative Organic Certified Cotton",
+      "publisher": "Outerknown",
+      "url": "https://www.outerknown.com/pages/regenerative-organic-certified-cotton",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Outerknown describes regenerative organic agriculture as practices that restore soil health through cover crops, crop rotation, low- to no-tillage and composting with zero persistent chemical pesticides or fertilisers, and says it carries one of the largest selections of Regenerative Organic Certified clothing on the market.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Materials and Factories",
+      "publisher": "Outerknown",
+      "url": "https://www.outerknown.com/pages/materials-and-factories",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Outerknown's materials page lists Regenerative Organic Certified cotton as building healthy soil and fair farming systems, alongside recycled wool, NetPlus recycled fishing nets and organic cotton.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Our Endless Commitment To Circularity",
+      "publisher": "Outerknown",
+      "url": "https://www.outerknown.com/blogs/journey/our-endless-commitment-to-circularity",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Outerknown states that everything it makes should live on through repair, resale and recycling, with the goal of keeping products in use and out of landfill.",
+      "is_primary": 1
+    }
+  ],
+  "birch-living": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability at Birch Living",
+      "publisher": "Birch Living",
+      "url": "https://birchliving.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Birch states that it sources natural and organic materials and produces its mattress without polyurethane foams, and that its natural and organic mattresses, Plush Topper and Organic Pillow hold Global Organic Latex Standard (GOLS) certification.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "Certifications",
+      "publisher": "Birch Living",
+      "url": "https://birchliving.com/pages/certifications",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Birch states its sleep products are GREENGUARD Gold Certified by UL Environment and have been tested for volatile organic compounds, pollutants, phthalates and formaldehyde, and it publishes its GOLS certificate number CU867061.",
+      "is_primary": 1
+    }
+  ],
+  "rapanui-clothing": [
+    {
+      "pillar": "circular",
+      "title": "Remill — The Future, remade",
+      "publisher": "Rapanui Clothing",
+      "url": "https://rapanuiclothing.com/recycle/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Rapanui states that every product it makes is designed from the start to be sent back once worn out, that its Remill technology recovers and reuses old clothing including 100% cotton garments from other brands, and that Remill products blend 50% virgin organic cotton with 50% recovered cotton.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Rapanui — Sustainable Clothing (homepage impact figures)",
+      "publisher": "Rapanui Clothing",
+      "url": "https://rapanuiclothing.com/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Rapanui states that it makes products to order from organic and recycled materials, that once they are worn out customers send them back to be remade, and that its products are made from sustainable materials and printed in a renewable-energy-powered factory.",
+      "is_primary": 1
+    }
+  ],
+  "numi": [
+    {
+      "pillar": "supply_chain",
+      "title": "Fair Trade & Beyond",
+      "publisher": "Numi Organic Tea",
+      "url": "https://numitea.com/pages/fair-trade",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Numi states it is a leading purchaser of Fair Trade Certified tea and that the farmers who grow its tea vote democratically on how Fair Trade Premiums are used, with funds going to roads, schools, scholarships and medical staff.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "From Garden to Cup: What Numi's Fair Trade Efforts Have Built for Workers and Their Families",
+      "publisher": "Numi Organic Tea",
+      "url": "https://numitea.com/blogs/news/from-garden-to-cup-what-numi-s-fair-trade-efforts-have-built-for-workers-and-their-families",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Numi states it has worked directly with small-scale farmers in over 35 countries for more than 25 years and describes itself as the largest brand importer of Fair Trade Certified teas to North America.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "What is Fair Labor? How Numi Champions Ethical Sourcing",
+      "publisher": "Numi Organic Tea",
+      "url": "https://numitea.com/blogs/news/what-is-fair-labor-how-numi-organic-tea-champions-ethical-sourcing",
+      "source_type": "company_report",
+      "published_date": "2024-09-05",
+      "supports": "Numi states that every worker deserves fair treatment and safe working conditions and sets out how it approaches ethical sourcing through its Fair Trade Certified and Verified Fair Labor products.",
+      "is_primary": 1
+    }
+  ],
+  "grove-collaborative": [
+    {
+      "pillar": "circular",
+      "title": "Plastic Impact Tracker",
+      "publisher": "Grove Collaborative",
+      "url": "https://www.grove.co/pages/impact-tracker",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Grove's Plastic Impact Tracker states that its community has saved over 29,130,188 pounds of plastic since 2020, the equivalent of 961,296,215 standard 16.9 oz water bottles.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Environmental Impact",
+      "publisher": "Grove Collaborative",
+      "url": "https://www.grove.co/pages/environmental-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Grove's environmental impact page states that the company is focused on making an impact on the plastic crisis, deforestation and carbon, and notes that only 5% of plastic is recycled.",
+      "is_primary": 1
+    }
+  ],
+  "tru-earth": [
+    {
+      "pillar": "pollution",
+      "title": "Our Critical Cause — Tru Impact",
+      "publisher": "Tru Earth",
+      "url": "https://tru.earth/pages/tru-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Tru Earth states that its mission is driven by the need to eradicate the 864 billion plastic household containers that end up in landfill and oceans each year, and that plastic accounts for at least 60% of annual waste in oceans and on beaches.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Tru Earth Achieves Top SME Rating for Environmental Transparency in 2025 CDP Disclosure",
+      "publisher": "Tru Earth",
+      "url": "https://tru.earth/blogs/press/tru-earth-achieves-top-sme-rating-for-environmental-transparency-in-2025-cdp-disclosure",
+      "source_type": "company_report",
+      "published_date": "2025-12-11",
+      "supports": "Tru Earth announced in December 2025 that it is being recognised by CDP, the global environmental non-profit, for its transparency on environmental issues and sustainability following its 2025 CDP disclosure.",
+      "is_primary": 1
+    }
+  ],
+  "a-good-company": [
+    {
+      "pillar": "circular",
+      "title": "Sustainability 2026",
+      "publisher": "agood company",
+      "url": "https://www.agood.com/pages/sustainability-2026",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "agood company's sustainability page describes agood loop, the company's circular return system, and links its 2024 and 2025 impact reports.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "2023 Impact Report, Social and Environmental Responsibility",
+      "publisher": "agood company",
+      "url": "https://www.agood.com/blogs/impact-reports/impact-report-2023",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "agood company's 2023 impact report states it has been a Certified B Corporation since its 2019 launch with a December 2022 re-certification score of 95.1 points, and reports 157.6 tonnes of CO2e from shipments to customers.",
+      "is_primary": 1
+    }
+  ],
+  "avocado-green-mattress": [
+    {
+      "pillar": "pollution",
+      "title": "Avocado Mattress Certifications",
+      "publisher": "Avocado Green Mattress",
+      "url": "https://www.avocadogreenmattress.com/pages/certifications",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Avocado states its mattresses are certified organic at the finished-product level and hold six finished-product certifications: GOTS, OEKO-TEX Standard 100 Class I, EWG Verified, MADE SAFE, GREENGUARD Gold and UL Formaldehyde Free Validation.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Climate Label Certified",
+      "publisher": "Avocado Green Mattress",
+      "url": "https://www.avocadogreenmattress.com/pages/climate-label-certified",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Avocado states it has measured its full cradle-to-consumer greenhouse gas emissions annually since 2019 under the Climate Label (formerly Climate Neutral Certified), and that about 96% of its emissions come from its value chain.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Business for Good — Certified B Corporation",
+      "publisher": "Avocado Green Mattress",
+      "url": "https://www.avocadogreenmattress.com/pages/b-corp-certified",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Avocado's page presents the company as a Certified B Corporation and describes B Corporations as companies that balance purpose and profit.",
+      "is_primary": 1
+    }
+  ],
+  "miir": [
+    {
+      "pillar": "climate",
+      "title": "Responsibility at MiiR",
+      "publisher": "MiiR",
+      "url": "https://www.miir.com/pages/responsibility",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "MiiR states that its carbon footprint is measured annually with Change Climate (formerly Climate Neutral) and that it has partnered with the Change Climate Project for five years to manage its carbon impacts and achieve certification.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Certifications, Labels, and Memberships",
+      "publisher": "MiiR",
+      "url": "https://www.miir.com/pages/certifications-labels-and-memberships",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "MiiR's certifications page lists its Climate Label certification and states it is a 1% for the Planet member, an organisation whose members contribute at least 1% of annual sales to environmental causes.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "2025 Impact Report",
+      "publisher": "MiiR",
+      "url": "https://www.miir.com/pages/2025-impact-report",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "MiiR states that in 2025 it incorporated The MiiR Foundation, an independently operated nonprofit supported by MiiR and dedicated exclusively to issuing grants to nonprofits.",
+      "is_primary": 1
+    }
+  ],
+  "odylique": [
+    {
+      "pillar": "supply_chain",
+      "title": "Ethical Shopping Accreditation",
+      "publisher": "Odylique",
+      "url": "https://odylique.co.uk/ethical-accreditations/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Odylique states it has been certified by the Soil Association since 2003 and accredited by the Good Shopping Guide, Compassionate Shopping and PETA since 2008.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "Odylique's Independent Organic Certification",
+      "publisher": "Odylique",
+      "url": "https://odylique.co.uk/our-organic-certification/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Odylique states it certifies its products to Soil Association organic standards, which it describes as among the strictest in the world for organic health and beauty products, and that it was the first company to certify its whole range.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Responsibly Packaged",
+      "publisher": "Odylique",
+      "url": "https://odylique.co.uk/responsibly-packaged/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Odylique states that every single bit of its packaging must be entirely recyclable, that it uses recycled material wherever possible, and that its 200ml and 500ml bottles are made from recycled material.",
+      "is_primary": 1
+    }
+  ],
+  "stella-mccartney": [
+    {
+      "pillar": "biodiversity",
+      "title": "Sustainability",
+      "publisher": "Stella McCartney",
+      "url": "https://www.stellamccartney.com/us/en/sustainability/sustainability.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Stella McCartney's sustainability page presents FEVVERS, described as the world's first vegan, cruelty-free and plant-based alternative to feathers, debuted in her Summer 2026 runway show.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Measuring our Impact",
+      "publisher": "Stella McCartney",
+      "url": "https://www.stellamccartney.com/us/en/sustainability/measuring-our-impact.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Stella McCartney's impact page states that its report for year 2024 sets out progress across five pillars of its sustainability strategy: materials and innovation, social compliance, emissions control, traceability and biodiversity.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Social Sustainability",
+      "publisher": "Stella McCartney",
+      "url": "https://www.stellamccartney.com/us/en/sustainability/social-sustainability.html",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Stella McCartney states it has been a member of the Ethical Trading Initiative since 2012, follows the UN Guiding Principles on Business and Human Rights, and audits suppliers against its standards using an internal team or nominated third party.",
+      "is_primary": 1
+    }
+  ],
+  "tonys-chocolonely": [
+    {
+      "pillar": "supply_chain",
+      "title": "Tony's Impact",
+      "publisher": "Tony's Chocolonely",
+      "url": "https://us.tonyschocolonely.com/pages/tonys-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Tony's Chocolonely states it exists to end exploitation in the cocoa industry by fighting poverty, child labour and deforestation, and that it deliberately sources cocoa from Ghana and Côte d'Ivoire.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "It's now or never: farmers need the industry's commitment (2024/2025 Annual FAIR report)",
+      "publisher": "Tony's Chocolonely",
+      "url": "https://us.tonyschocolonely.com/blogs/serious-stuff/annual-fair-report-2024-2025-article",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Tony's reports that its impact reached tens of thousands of cocoa-farming families in Côte d'Ivoire and Ghana in 2024/2025, a season in which West African cocoa harvests hit a historic low.",
+      "is_primary": 1
+    }
+  ],
+  "kuyichi": [
+    {
+      "pillar": "supply_chain",
+      "title": "Reports and Policies",
+      "publisher": "Kuyichi",
+      "url": "https://kuyichi.com/reports-and-policies/",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Kuyichi states that as a member of the Fair Wear Foundation it reports annually on its social performance, and publishes a Social Report covering its supply chain partners from sourcing strategy through to monitoring and remediation.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "How Kuyichi Made Denim Transparent in 2006",
+      "publisher": "Kuyichi",
+      "url": "https://kuyichi.com/blog/2006-we-made-denim-transparent",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Kuyichi states that in 2006 it made the supply chain behind its clothing visible, on the reasoning that if the brand knows how its clothes are made, customers should be able to know too.",
+      "is_primary": 1
+    }
+  ],
+  "bellroy": [
+    {
+      "pillar": "supply_chain",
+      "title": "Our approach to business as a force for good",
+      "publisher": "Bellroy",
+      "url": "https://bellroy.com/responsible-business",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Bellroy states it is part of the B Corp movement, in which certified companies use the power of business to help solve social and environmental problems.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "climate",
+      "title": "Our Commitment to Climate Action",
+      "publisher": "Bellroy",
+      "url": "https://bellroy.com/journal/climate-action-plan-2026",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Bellroy's climate action plan says it made longevity the priority when designing its luggage, with a focus on durability and repairability, and that its self-repair Fix-It Kits avoid the shipment emissions that come with warranty claims.",
+      "is_primary": 1
+    }
+  ],
+  "cotopaxi": [
+    {
+      "pillar": "circular",
+      "title": "Sustainable by Design",
+      "publisher": "Cotopaxi",
+      "url": "https://www.cotopaxi.com/pages/sustainable-by-design",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Cotopaxi states that in 2024 it met its 3Rs commitment so that 100% of its products contain materials that are repurposed, recycled or responsibly certified, and that it then launched a Sustainable Product and Materials Roadmap covering material sustainability, packaging standards and circularity.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Impact",
+      "publisher": "Cotopaxi",
+      "url": "https://www.cotopaxi.com/pages/our-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Cotopaxi states that 1% of its annual revenue goes to the Cotopaxi Foundation, a Utah-based 501c3 nonprofit that is itself a member of 1% for the Planet.",
+      "is_primary": 1
+    }
+  ],
+  "everlane": [
+    {
+      "pillar": "climate",
+      "title": "Impact Report",
+      "publisher": "Everlane",
+      "url": "https://www.everlane.com/pages/impact-report",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Everlane's impact report hub says it released KEEP EARTH COOL on reducing carbon emissions, followed by KEEP EARTH CLEAN on materials, waste and circularity, with DO RIGHT BY PEOPLE still to come on its supply chain.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Sustainability",
+      "publisher": "Everlane",
+      "url": "https://www.everlane.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Everlane's sustainability page describes its KEEP EARTH CLEAN section as covering materials, waste and circularity as part of a three-part impact report.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Social Responsibility",
+      "publisher": "Everlane",
+      "url": "https://www.everlane.com/pages/social-responsibility",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Everlane states that following the Rana Plaza collapse in 2013 it committed to disclosing the name and location of its factory partners, and that it has since built a social responsibility and auditing programme with a Vendor Code of Conduct.",
+      "is_primary": 1
+    }
+  ]
+}
