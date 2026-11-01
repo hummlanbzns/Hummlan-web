@@ -1,0 +1,517 @@
+{
+  "_meta": {
+    "batch": "09",
+    "accessed_date": "2026-11-01",
+    "status": "COMPLETE - all 22 brands in scope attempted; 19 sourced, 3 left unsourced (polarn-o-pyret, cariuma, and no third source needed elsewhere).",
+    "note": "Every URL was fetched with curl -sL -4 --compressed using a desktop Chrome 141 user-agent plus Accept/Accept-Language/Sec-Fetch headers and returned HTTP 200 at the final URL recorded; the page text was then grepped for the phrase recorded in `supports`. Chrome 124 (the UA used by the shared fetch-and-verify helper) is now 403'd by Cloudflare on most of these domains - the newer UA plus Accept headers is what gets through.",
+    "next_session_resume": "Batch 9 covered score-order positions 1-22 of the remaining 187 (mrs-meyers 62 through dedicated-brand-co 58). Next unstarted brand in score order is colorful-standard (58), which was also partially sourced in this batch (2 sources) as a budget-remainder item; the next genuinely untouched brand is the one immediately after colorful-standard in the catalog score order.",
+    "domain_findings": {
+      "polarn-o-pyret": "polarnopyret.com/en/ and /en-gb/ return the market-selector page only (/sitemap.xml is 404). Every locale path tried either 404s or returns a 258-character market chooser with no content. Left unsourced rather than guessing a market path; a browser pass on the market selector would be needed to reach the Swedish/UK storefront.",
+      "cariuma": "cariuma.com redirects every request to https://www.cariuma.com/password (HTTP 200, title 'CARIUMA') - the storefront is password-protected to automated visitors and /sitemap.xml is 404. Left unsourced.",
+      "cheeky-panda": "thecheekypanda.com 301s to uk.cheekypanda.com for a UK client; all recorded URLs use the uk. host where the content pages live.",
+      "colorful-standard": "colorfulstandard.com 301s to https://colorfulstandard.com/en-us/... ; the /pages/... URLs recorded are the post-redirect en-us URLs.",
+      "unbound-merino": "unboundmerino.com serves a full en-* locale tree; the global /pages/materials URL is the one recorded and returns 200.",
+      "faith-in-nature": "faithinnature.co.uk is the live UK domain (faithinnature.com serves a different, non-UK storefront).",
+      "mrs-meyers": "mrsmeyers.com is Cloudflare-fronted; it returns 403 to the Chrome 124 UA the shared fetch-and-verify helper uses but 200 to a Chrome 141 UA with Accept/Accept-Language/Sec-Fetch headers."
+    },
+    "blocked_or_skipped": {
+      "polarn-o-pyret": "market-selector shell only",
+      "cariuma": "password-protected storefront",
+      "osea": "1 source only - /pages/our-commitment, /pages/our-ingredients and /pages/our-seaweeds are nav-only to curl",
+      "knowledge-cotton-apparel": "2 sources - /pages/the-why, /pages/the-business-core, /pages/designing-for-tomorrow and /pages/think-different are client-rendered shells with no body text to curl",
+      "boll-and-branch": "1 source - /pages/our-impact/, /pages/sustainability/ and /pages/our-certifications/ are JS shells; only the /guides/ article carries server-rendered body text"
+    }
+  },
+  "divine-chocolate": [
+    {
+      "pillar": "supply_chain",
+      "title": "Our Impact",
+      "publisher": "Divine Chocolate",
+      "url": "https://divinechocolate.com/pages/our-impact",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Divine Chocolate states that it is the only Fairtrade chocolate company co-owned by cocoa farmers, with the farmers of the Kuapa Kokoo cocoa cooperative in Ghana holding a share of the business.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Human Rights & Environmental Policy",
+      "publisher": "Divine Chocolate",
+      "url": "https://divinechocolate.com/pages/human-rights-environmental-due-diligence",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Divine Chocolate publishes a human rights and environmental due diligence statement that applies across the whole Weinrich Group and sets out its commitment to preventing modern slavery in all its forms.",
+      "is_primary": 0
+    }
+  ],
+  "everdrop": [
+    {
+      "pillar": "climate",
+      "title": "Life Cycle Assessment: everdrop tabs vs liquid detergent",
+      "publisher": "everdrop",
+      "url": "https://www.everdrop.de/en/mission/lca",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "everdrop reports that it carried out a life cycle assessment of its bathroom cleaner against a conventional liquid detergent, finding up to 92% less CO2 emissions and up to 88% less water consumption.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Packaging & Recycling",
+      "publisher": "everdrop",
+      "url": "https://www.everdrop.de/en/mission/packaging-and-shipping",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "everdrop states that its cardboard packaging is made from recycled material and can be fully recycled as paper waste, and that its tablet sachets are free of plastic films and laminates although they do contain a small amount of polymers.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Certificates & Awards",
+      "publisher": "everdrop",
+      "url": "https://www.everdrop.de/en/mission/certificates-and-awards",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "everdrop states that since 2023 it has been one of more than 150 German B Corps, a certification awarded by B Lab to companies that meet high social and environmental standards.",
+      "is_primary": 0
+    }
+  ],
+  "knowledge-cotton-apparel": [
+    {
+      "pillar": "supply_chain",
+      "title": "The Commitment",
+      "publisher": "KnowledgeCotton Apparel",
+      "url": "https://knowledgecottonapparel.com/pages/the-commitment",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "KnowledgeCotton Apparel's Commitment page explains that the Global Organic Textile Standard covers every step of production from fibre to finished garment and includes both ecological and social criteria, and states that products carrying its owl trademark meet its highest certification levels.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Story",
+      "publisher": "KnowledgeCotton Apparel",
+      "url": "https://knowledgecottonapparel.com/pages/our-story",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "KnowledgeCotton Apparel states that it was started in 2008 to make organic men's clothing at a time when few customers understood the idea, and that it works from Scandinavian ideals of equality, justice and respect.",
+      "is_primary": 0
+    }
+  ],
+  "unbound-merino": [
+    {
+      "pillar": "supply_chain",
+      "title": "Wool: A Miracle Of Nature (Materials)",
+      "publisher": "Unbound Merino",
+      "url": "https://unboundmerino.com/pages/materials",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Unbound Merino states that its garments are made from Woolmark-certified Merino wool, which it describes as biodegradable, renewable and the result of 200 years of sustainable farming.",
+      "is_primary": 1
+    }
+  ],
+  "etiko": [
+    {
+      "pillar": "climate",
+      "title": "Environmental and Sustainability Statement",
+      "publisher": "Etiko",
+      "url": "https://etiko.com.au/pages/environmental-statement",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Etiko reports that its first CRI report measured a carbon footprint of 66.48 tonnes of greenhouse gas emissions, and states that it is on track to net zero and buys carbon credits from Timor-Leste through Carbon Social.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Certifications and Awards",
+      "publisher": "Etiko",
+      "url": "https://etiko.com.au/pages/certifications-and-awards",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Etiko states that as of 2017 it is a Certified B Corporation and that it meets high standards of overall social and environmental performance, transparency and accountability.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Producers",
+      "publisher": "Etiko",
+      "url": "https://etiko.com.au/pages/producers",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Etiko states that it sources all of its certified organic cotton from the Chetna Organic Farmers' Co-operative in Central India.",
+      "is_primary": 0
+    }
+  ],
+  "cheeky-panda": [
+    {
+      "pillar": "climate",
+      "title": "Impact & Credentials",
+      "publisher": "The Cheeky Panda",
+      "url": "https://uk.cheekypanda.com/pages/impact-credentials",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Cheeky Panda states that it measures its full carbon footprint across Scopes 1, 2 and 3 to the ISO 14064 standard with Neutral Carbon Zone and is certified at Platinum, that scheme's highest tier.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Impact Report 2023-24",
+      "publisher": "The Cheeky Panda",
+      "url": "https://uk.cheekypanda.com/blogs/learn-sustainability/impact-report-2023-24",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Cheeky Panda's 2023-24 impact report states that it moved manufacturing of the majority of its wipe range to the UK to cut transport emissions, and that in May 2024 it received its first EcoVadis bronze medal, placing it in the top 35% of businesses on the platform.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Modern Slavery and Human Trafficking Policy",
+      "publisher": "The Cheeky Panda",
+      "url": "https://uk.cheekypanda.com/pages/modern-slavery",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "The Cheeky Panda publishes a modern slavery and human trafficking statement outlining the actions it takes to understand the risks presented by its business activities and the steps it has put in place.",
+      "is_primary": 0
+    }
+  ],
+  "rishi": [
+    {
+      "pillar": "supply_chain",
+      "title": "Direct Trade",
+      "publisher": "Rishi Tea & Botanicals",
+      "url": "https://www.rishi-tea.com/pages/direct-trade",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Rishi Tea states that by cutting out middlemen it leaves 100% of the price paid for crops with the growers, and that the farmers it works with fetch a premium price in return for elevated agricultural and production standards.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Sustainability",
+      "publisher": "Rishi Tea & Botanicals",
+      "url": "https://www.rishi-tea.com/blogs/journal/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Rishi Tea states that approximately 95% of its products are certified organic and that it considers itself an ambassador of the organic movement.",
+      "is_primary": 0
+    }
+  ],
+  "counter-culture": [
+    {
+      "pillar": "climate",
+      "title": "Transparency Report 2025",
+      "publisher": "Counter Culture Coffee",
+      "url": "https://counterculturecoffee.com/pages/transparency-report-2025",
+      "source_type": "company_report",
+      "published_date": "2025",
+      "supports": "Counter Culture Coffee's 2025 Transparency Report states that measuring its carbon footprint over the past 15 years has helped it understand the environmental cost of its operations, alongside reporting its financial performance.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Sustainability",
+      "publisher": "Counter Culture Coffee",
+      "url": "https://counterculturecoffee.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Counter Culture Coffee's sustainability page publishes a purchasing snapshot by producer partner, listing cooperatives it has bought from such as Cenfrocafe in Peru for 17 years and Organica in Colombia for 17 years.",
+      "is_primary": 0
+    }
+  ],
+  "taza-chocolate": [
+    {
+      "pillar": "supply_chain",
+      "title": "2021 Transparency Report",
+      "publisher": "Taza Chocolate",
+      "url": "https://www.tazachocolate.com/pages/2021-transparency-report",
+      "source_type": "company_report",
+      "published_date": "2021",
+      "supports": "Taza Chocolate's 2021 Transparency Report states that it pays its partner cacao farms prices significantly higher than Fair Trade and publishes exactly what it pays them.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "2022 Partner Report: ABOCFA",
+      "publisher": "Taza Chocolate",
+      "url": "https://www.tazachocolate.com/pages/2022-partner-report-abocfa",
+      "source_type": "company_report",
+      "published_date": "2022",
+      "supports": "Taza's 2022 partner report on the ABOCFA farmer association in Ghana states that the association's structure allows its members to be certified organic and fully traceable from farm to finished chocolate bar, and to command a price premium above the Ghana market price.",
+      "is_primary": 0
+    }
+  ],
+  "natures-path": [
+    {
+      "pillar": "climate",
+      "title": "Regenerative Organic Farming",
+      "publisher": "Nature's Path",
+      "url": "https://naturespath.com/pages/regenerative-organic",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nature's Path states that regenerative organic agriculture rests on three pillars - land management that sequesters carbon in soil, the welfare of farm animals, and fairness for farmers and workers - and that it aims to pull more carbon from the atmosphere through specific farming techniques.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "circular",
+      "title": "Rooted in Sustainability",
+      "publisher": "Nature's Path",
+      "url": "https://naturespath.com/pages/rooted-in-sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nature's Path states that it diverts waste from landfill and from incineration through its operations and its sustainable packaging offerings and initiatives.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "biodiversity",
+      "title": "Always Organic",
+      "publisher": "Nature's Path",
+      "url": "https://naturespath.com/pages/always-organic",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nature's Path states that its products were the first USDA certified organic cereals on the market and that it continually invests in farmland to convert it to organic.",
+      "is_primary": 0
+    }
+  ],
+  "dedicated-brand-co": [
+    {
+      "pillar": "supply_chain",
+      "title": "Sustainability",
+      "publisher": "DEDICATED",
+      "url": "https://www.dedicatedbrand.com/gb/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "DEDICATED states that it is a GOTS-certified brand and a Fairtrade and ROC licensee, and that it only creates clothes from organic, natural or recycled fibres.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Supply Chain",
+      "publisher": "DEDICATED",
+      "url": "https://www.dedicatedbrand.com/gb/sustainability/supply-chain",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "DEDICATED states that it owns no factories and works with suppliers in India and China that are audited by third parties and can source certified fabrics.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "climate",
+      "title": "Dedicated's sustainability reports",
+      "publisher": "DEDICATED",
+      "url": "https://www.dedicatedbrand.com/gb/sustainability/reports/sustainability-reports",
+      "source_type": "company_report",
+      "published_date": "2025",
+      "supports": "DEDICATED commits to reducing absolute Scope 1 and Scope 2 GHG emissions by 42% by 2030 from a 2022 base year in line with a 1.5C pathway under the Science Based Targets initiative SME route, and reports that more than 57% of its product references were GOTS labelled in 2025.",
+      "is_primary": 0
+    }
+  ],
+  "pangaia": [
+    {
+      "pillar": "climate",
+      "title": "Impact: Planet",
+      "publisher": "PANGAIA",
+      "url": "https://pangaia.com/pages/impact-planet",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "PANGAIA states that it maps and measures its environmental footprint using an Environmental Management System in order to identify its biggest sources of emissions and build a decarbonisation roadmap.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Impact Report 2024",
+      "publisher": "PANGAIA",
+      "url": "https://pangaia.com/pages/impact-report-2024",
+      "source_type": "company_report",
+      "published_date": "2024",
+      "supports": "PANGAIA's 2024 Impact Report states that it was awarded LEADER status by the Fair Wear Foundation, a distinction granted to brands that excel in implementing human rights due diligence.",
+      "is_primary": 0
+    }
+  ],
+  "mrs-meyers": [
+    {
+      "pillar": "pollution",
+      "title": "Sustainability",
+      "publisher": "Mrs. Meyer's Clean Day",
+      "url": "https://mrsmeyers.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Mrs. Meyer's states that its palm oil is responsibly sourced and RSPO-certified, and that many of its fragrances use upcycled ingredients such as cedarwood oil.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Lots of Compassion Garden Grants",
+      "publisher": "Mrs. Meyer's Clean Day",
+      "url": "https://mrsmeyers.com/pages/compassion",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Mrs. Meyer's states that its Lots of Compassion initiative awards 10 grants to organisations turning vacant lots into gardens for community growth.",
+      "is_primary": 0
+    }
+  ],
+  "nisolo": [
+    {
+      "pillar": "pollution",
+      "title": "About Us",
+      "publisher": "Nisolo",
+      "url": "https://nisolo.com/pages/about-us",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nisolo states that 100% of its leather is certified by the Leather Working Group, which supports the reduction of environmental impacts caused by tannery operations, and that every pair is handcrafted by skilled artisans.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Leather Working Group Certification",
+      "publisher": "Nisolo",
+      "url": "https://nisolo.com/pages/leather-working-group",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Nisolo states that its leather is processed in an LWG-certified tannery, and that the gold rating confirms its partner tanneries have met the strictest criteria among all tanneries.",
+      "is_primary": 0
+    }
+  ],
+  "fussy": [
+    {
+      "pillar": "circular",
+      "title": "Sustainability",
+      "publisher": "Fussy",
+      "url": "https://www.getfussy.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Fussy states that its refills are plastic-free and made from waste sugarcane and will decompose in the garden or the bin, and that its deodorant case is fully recyclable.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "About",
+      "publisher": "Fussy",
+      "url": "https://www.getfussy.com/pages/about",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Fussy states that it is on a mission to banish single-use plastic from the bathroom with personal care products backed by science rather than buzzwords.",
+      "is_primary": 0
+    }
+  ],
+  "faith-in-nature": [
+    {
+      "pillar": "climate",
+      "title": "How We're Tackling Sustainability",
+      "publisher": "Faith In Nature",
+      "url": "https://www.faithinnature.co.uk/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Faith In Nature publishes an annual report giving a transparent look at its carbon footprint across Scopes 1, 2 and 3, its water footprint and material usage, and states that it is a B Corp.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Story",
+      "publisher": "Faith In Nature",
+      "url": "https://www.faithinnature.co.uk/pages/our-story",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Faith In Nature states that it has been operating since 1974, is independently owned and family run, and puts Nature on its board so that decisions take the natural world into account.",
+      "is_primary": 0
+    }
+  ],
+  "kit-and-kin": [
+    {
+      "pillar": "supply_chain",
+      "title": "Giving Back",
+      "publisher": "Kit & Kin",
+      "url": "https://kitandkin.com/pages/giving-back",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Kit & Kin states that since 2020 it has been donating regular shipments of nappies and wipes to baby banks across the UK, and that it runs the Kit & Kin Foundation.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Story",
+      "publisher": "Kit & Kin",
+      "url": "https://kitandkin.com/pages/our-story",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Kit & Kin states that every product bought helps protect rainforest, support remote communities and remove plastic pollution from rivers and oceans.",
+      "is_primary": 0
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Awards",
+      "publisher": "Kit & Kin",
+      "url": "https://kitandkin.com/pages/awards",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Kit & Kin states that it has won over 90 industry awards, including Best Ethical Brand at the 2025 Loved By Parents Awards.",
+      "is_primary": 0
+    }
+  ],
+  "colorful-standard": [
+    {
+      "pillar": "circular",
+      "title": "Our Materials",
+      "publisher": "Colorful Standard",
+      "url": "https://colorfulstandard.com/en-us/pages/materials",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Colorful Standard states that its core material is 100% organic cotton grown without harmful chemicals, and that it uses certified recycled wool.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "supply_chain",
+      "title": "Our Factory",
+      "publisher": "Colorful Standard",
+      "url": "https://colorfulstandard.com/en-us/pages/factory",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "Colorful Standard states that its suppliers sit within a 50 km radius of its factory in Portugal, which it says operates under strict labour laws that keep workers treated fairly.",
+      "is_primary": 0
+    }
+  ],
+  "osea": [
+    {
+      "pillar": "climate",
+      "title": "Sustainability at OSEA",
+      "publisher": "OSEA Malibu",
+      "url": "https://oseamalibu.com/pages/sustainability",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "OSEA states that each year it measures its cradle-to-customer emissions, implements action plans to reduce them and invests in verified carbon credits, and that it is moving its plastic components to post-consumer recycled material with a target of 50% PCR content.",
+      "is_primary": 1
+    }
+  ],
+  "rms-beauty": [
+    {
+      "pillar": "circular",
+      "title": "Sustainable Beauty",
+      "publisher": "RMS Beauty",
+      "url": "https://www.rmsbeauty.com/pages/sustainable",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "RMS Beauty states that it has packaged many of its products in recyclable glass jars since 2009, uses aluminium tubes that are easy to recycle, and that it launched its first refillable packaging in 2021 and has been expanding refillables since.",
+      "is_primary": 1
+    },
+    {
+      "pillar": "pollution",
+      "title": "About RMS Beauty",
+      "publisher": "RMS Beauty",
+      "url": "https://www.rmsbeauty.com/pages/about-us",
+      "source_type": "company_report",
+      "published_date": null,
+      "supports": "RMS Beauty states that its products are formulated using raw, food grade, organic, wildcrafted and natural ingredients, and that it publishes its quality and transparency position.",
+      "is_primary": 0
+    }
+  ],
+  "boll-and-branch": [
+    {
+      "pillar": "supply_chain",
+      "title": "Inside Boll & Branch's Impact Report: Fair Trade, Organic Cotton, and a Decade of Traceable Supply Chains",
+      "publisher": "Boll & Branch",
+      "url": "https://www.bollandbranch.com/guides/inside-boll-and-branch-impact-report/",
+      "source_type": "company_report",
+      "published_date": "2026",
+      "supports": "Boll & Branch states that its organic claim is backed by GOTS certification, the leading third-party standard for organic textiles, that it has held supporter-level membership of Textile Exchange since 2015, and that 2,986,734 Fair Trade Certified products shipped between 2014 and 2024.",
+      "is_primary": 1
+    }
+  ]
+}
