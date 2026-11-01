@@ -1,0 +1,365 @@
+{
+ "_meta": {
+  "batch": "11",
+  "accessed_date": "2026-11-01",
+  "next_session_resume": "Score order resumes at public-goods (47) / salt-and-stone (46) / quiet-dose (44) / brooklinen (44) / hello-bello (43), then below.",
+  "blocked_or_skipped": [
+   "on-running: on.com is a client-rendered shell (0 sustainability hrefs, /en-us/pages.xml returns HTTP 500) - no verifiable sustainability page discoverable.",
+   "prana: www.prana.com returns Cloudflare 403 on homepage and sitemap - same wall as hydro-flask/vivobarefoot.",
+   "frank-and-oak: sitemap has 20 pages total, none sustainability-related; /pages/our-story has no environmental or ethical content.",
+   "hello-bello: sitemap pages are blogs only; no sustainability/impact page exists.",
+   "nomo: no sustainability content anywhere in sitemap or /pages/our-story.",
+   "salt-and-stone: /pages/about returns 200 but contains no sustainability, ethics, recycling or carbon text.",
+   "osprey: osprey.com still 403 to curl; cited bluesign System Partner list instead. No second source found.",
+   "the-body-shop commitment page: confirmed the site moved to Shopify - /pages/sustainability-report, /pages/modern-slavery-statement and /pages/about/community-fair-trade all resolve 200 now."
+  ]
+ },
+ "chillis": [
+  {
+   "pillar": "circular",
+   "title": "Chilly's Responsibility",
+   "publisher": "Chilly's",
+   "url": "https://www.chillys.com/en-ae/pages/responsibility",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Chilly's Responsibility page reports a 90% reduction in direct product packaging weight, one million products made with certified 90% post-consumer recycled stainless steel, and 3D printers installed in its in-house prototyping facility to cut reliance on prototypes that were previously made in Asia and delivered by air freight.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "2022/23 Modern Slavery Act Statement",
+   "publisher": "Chilly's",
+   "url": "https://www.chillys.com/en-ae/pages/2022-23-modern-slavery-act",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Chilly's Modern Slavery Statement covering the year ending 31 July 2023 sets out the steps taken to prevent slavery and human trafficking in its supply chain, states that no supply chain is without risk of modern slavery, and describes the ethical audits it requires at every high-risk production site at home and abroad.",
+   "is_primary": 0
+  }
+ ],
+ "liforme": [
+  {
+   "pillar": "circular",
+   "title": "Our Sustainability Achievements",
+   "publisher": "Liforme",
+   "url": "https://liforme.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Liforme's sustainability page states that its packaging has been plastic-free and fully recyclable from source to end customer since day one, that the bulk of its mats are made from high-grade natural tree rubber, and that it has offset courier shipping emissions and planted more than 330,000 trees.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "B Corp",
+   "publisher": "Liforme",
+   "url": "https://liforme.com/pages/b-corp",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Liforme states that it is a certified B Corp and explains that B Corp certification covers governance, workers, community, environment and customers, with applicants needing a B Impact Score of at least 80 points to be certified.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "biodiversity",
+   "title": "Environmental Conservation & Friends of the Earth",
+   "publisher": "Liforme",
+   "url": "https://liforme.com/pages/giving-back-environmental-conservation",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Liforme states it has raised and donated over $400,000 to Friends of the Earth, with 3% of all sales of its Purple Earth mats and 1% of all sales of its Mother Earth mat going to support the organisation's conservation work.",
+   "is_primary": 0
+  }
+ ],
+ "earth-harbor": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability",
+   "publisher": "Earth Harbor Naturals",
+   "url": "https://earthharbor.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Earth Harbor describes itself as Climate Neutral, Plastic Negative and 1% for the Planet certified, and says it has pioneered a plastic-free refill programme and runs a public sustainability transparency programme covering everything from packaging and sourcing onwards.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Wholesale Sustainability",
+   "publisher": "Earth Harbor Naturals",
+   "url": "https://earthharbor.com/pages/wholesale-sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Earth Harbor's wholesale sustainability page states that its packaging is nearly 100% locally sourced within 50 miles, that it runs responsible in-house ingredient sourcing with ethical trade practices, partners with local farmers to repurpose waste, uses upcycled ingredients where possible, uses 100% non-GMO ingredients with a focus on organic and EcoCert-certified inputs, and recycles through Pact Collective.",
+   "is_primary": 0
+  }
+ ],
+ "parachute": [
+  {
+   "pillar": "circular",
+   "title": "Sustainability",
+   "publisher": "Parachute",
+   "url": "https://parachutehome.com/pages/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Parachute's sustainability page states that its organic cotton is GOTS certified, its recycled polyester GRS certified and its down RDS certified, all certified by Control Union 887265, and explains what each of those standards requires across the supply chain.",
+   "is_primary": 1
+  }
+ ],
+ "the-body-shop": [
+  {
+   "pillar": "supply_chain",
+   "title": "Modern slavery statement",
+   "publisher": "The Body Shop",
+   "url": "https://www.thebodyshop.com/pages/modern-slavery-statement",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "The Body Shop's Modern Slavery Statement outlines the actions, activities and progress towards targets it takes to prevent and address all forms of modern slavery in its global operations and supply chains.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Community Fair Trade",
+   "publisher": "The Body Shop",
+   "url": "https://www.thebodyshop.com/pages/about/community-fair-trade",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "The Body Shop's Community Fair Trade page describes regular auditing of suppliers and of its own business operations by an independent assessment agency, and a Sustainable Sourcing Charter that sets out how it envisions sustainable supply chains and the core principles of its Community Fair Trade programme.",
+   "is_primary": 0
+  }
+ ],
+ "nike": [
+  {
+   "pillar": "climate",
+   "title": "Sustainability",
+   "publisher": "NIKE, Inc.",
+   "url": "https://about.nike.com/en/mission/focus-areas/sustainability",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Nike's sustainability page reports progress against its 2030 science-based targets on an FY15 baseline, including a 77% absolute emissions reduction in NIKE, Inc. operations, 47% in manufacturing and transportation, 100% renewable electricity in its owned or operated facilities, 98% of waste diverted from landfill and a 19% reduction in freshwater use per kg of textile dyeing and finishing.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Nike - Fair Labor Association Accredited Member",
+   "publisher": "Fair Labor Association",
+   "url": "https://www.fairlabor.org/member/nike/",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "The Fair Labor Association lists Nike as an Accredited Member, meaning its supply chain compliance programme has been accredited against the FLA's Fair Labor Code and workplace standards.",
+   "is_primary": 0
+  }
+ ],
+ "obakki": [
+  {
+   "pillar": "supply_chain",
+   "title": "Obakki's Ethical Impact",
+   "publisher": "Obakki",
+   "url": "https://obakki.com/pages/ethical-impact",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Obakki's ethical impact page describes its work with artisan partners and community projects, including bringing access to safe, reliable water which it calls the first step toward long-term sustainability, health and economic growth, and direct humanitarian aid to partners in Ukraine.",
+   "is_primary": 1
+  }
+ ],
+ "osprey": [
+  {
+   "pillar": "pollution",
+   "title": "Find bluesign System Partner Brands & Products",
+   "publisher": "bluesign technologies ag",
+   "url": "https://www.bluesign.com/en/find-sustainable-brands",
+   "source_type": "certifier",
+   "published_date": null,
+   "supports": "bluesign's System Partner brand list names Osprey among the brands that participate in the bluesign System, alongside Deuter, Arc'teryx, Burton, Patagonia, The North Face, Mammut and Thule; bluesign states it works in the supply chain to approve products that are safe for the environment, workers and customers.",
+   "is_primary": 1
+  }
+ ],
+ "nuud": [
+  {
+   "pillar": "circular",
+   "title": "Certifications",
+   "publisher": "nuud",
+   "url": "https://nuudcare.nl/pages/certifications",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "nuud's certifications page states that all its products are 100% vegan and that it ships CO2-neutrally, alongside the other certifications it lists for its deodorant.",
+   "is_primary": 1
+  }
+ ],
+ "axiology": [
+  {
+   "pillar": "circular",
+   "title": "Packaging",
+   "publisher": "Axiology",
+   "url": "https://axiologybeauty.com/pages/packaging",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Axiology's packaging page states that its Balmies are completely plastic-free, wrapped in recycled paper and stored in boxes made from 100% recycled paper waste, that its boxes are recyclable and compostable, and that its lipstick tubes are made of 50% post-consumer recycled plastic.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "100% Evil Free",
+   "publisher": "Axiology",
+   "url": "https://axiologybeauty.com/pages/100-evil-free",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Axiology's '100% Evil Free' page states that its lipsticks are ethically sourced, cruelty-free and vegan, and recounts that in 2022 the company ditched all of its plastic packaging after deciding that 50% post-consumer recycled tubes were still waste bound for landfill or the oceans.",
+   "is_primary": 0
+  }
+ ],
+ "equal-exchange": [
+  {
+   "pillar": "supply_chain",
+   "title": "About Us",
+   "publisher": "Equal Exchange",
+   "url": "https://shop.equalexchange.coop/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Equal Exchange's About Us page states that it partners with farmer cooperatives that are democratically organised and share resources and decision-making among their members, and that the co-op's purpose is to demonstrate through its success the contribution of worker co-operatives and fair trade to a more equitable, democratic and sustainable world.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "Our Packaging",
+   "publisher": "Equal Exchange",
+   "url": "https://shop.equalexchange.coop/pages/our-packaging",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Equal Exchange's packaging page states that its commitment to responsible sourcing extends from the ingredients in its products to the packaging materials it puts them in, and sets out which of its packaging components can be recycled, composted or only landfilled.",
+   "is_primary": 0
+  }
+ ],
+ "dandelion-chocolate": [
+  {
+   "pillar": "supply_chain",
+   "title": "Origins",
+   "publisher": "Dandelion Chocolate",
+   "url": "https://www.dandelionchocolate.com/pages/origins",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Dandelion Chocolate's origins page describes direct relationships with cocoa producers based on trust, communication and reliability, and its work with Kokoa Kamili in Tanzania since 2014, where consistent quality control lets producers command a premium price for specialty cocoa.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "supply_chain",
+   "title": "Donations",
+   "publisher": "Dandelion Chocolate",
+   "url": "https://www.dandelionchocolate.com/pages/donations",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Dandelion Chocolate's donations page states that it supports organisations that bolster San Franciscans and cacao farming and cocoa production around the globe, and that it reviews donation requests each month.",
+   "is_primary": 0
+  }
+ ],
+ "sheamoisture": [
+  {
+   "pillar": "supply_chain",
+   "title": "Ethical Sourcing",
+   "publisher": "SheaMoisture",
+   "url": "https://www.sheamoistureuk.com/ethical-sourcing.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "SheaMoisture's ethical sourcing page states that it provides a year-round income for women beyond the seasonal shea nut collection, keeps wealth in the community, and provides long-term funding that supports women's cooperatives to create lasting generational change.",
+   "is_primary": 1
+  }
+ ],
+ "public-goods": [
+  {
+   "pillar": "pollution",
+   "title": "About Us",
+   "publisher": "Public Goods",
+   "url": "https://www.publicgoods.com/pages/about-us",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Public Goods' About Us page states that it has eliminated 400+ harmful ingredients, planted nearly half a million trees one order at a time, and works to reduce plastic use and shipping pollution by getting rid of plastic where it can and using biodegradable packaging.",
+   "is_primary": 1
+  }
+ ],
+ "quiet-dose": [
+  {
+   "pillar": "pollution",
+   "title": "Ingredients",
+   "publisher": "Quiet Dose",
+   "url": "https://quietdose.com/pages/ingredients",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Quiet Dose's ingredients page states that the serum is dermatologically tested, fragrance-free, vegan and cruelty-free and EU-registered (CPNP), and publishes every ingredient with its concentration and the research behind it, formulated out of everything sensitive skin reacts to.",
+   "is_primary": 1
+  }
+ ],
+ "brooklinen": [
+  {
+   "pillar": "supply_chain",
+   "title": "About Us",
+   "publisher": "Brooklinen",
+   "url": "https://www.brooklinen.com/pages/about",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Brooklinen's About Us page states that its linen products, and the factories at which they are produced, are committed to and compliant with the highest standards of social compliance, safety and ethical labour practices, and that this means requiring industry-standard responsible sourcing audits on a regular basis.",
+   "is_primary": 1
+  }
+ ],
+ "ikea": [
+  {
+   "pillar": "climate",
+   "title": "Climate and Environment",
+   "publisher": "IKEA UK",
+   "url": "https://www.ikea.com/gb/en/this-is-ikea/climate-environment/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "IKEA UK's Climate and Environment page states that the company is working to reduce carbon emissions across its value chain, that Ingka Group is targeting more than 90% of customer deliveries globally to be made by electric or other zero-tailpipe-emission vehicles, and points readers to its annual Sustainability Report for the greenhouse gas baseline, reduction targets and progress.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "climate",
+   "title": "Ingka Group Annual Summary and Sustainability Report FY25",
+   "publisher": "Ingka Group",
+   "url": "https://www.ingka.com/annual-summary-and-sustainability-report/",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Ingka Group's FY25 Annual Summary and Sustainability Report states that the group matched 94.8% of its electricity use with renewable electricity sourcing and that 60.1% of its retail home deliveries were made by electric or other zero-tailpipe-emission vehicles.",
+   "is_primary": 0
+  }
+ ],
+ "rituals": [
+  {
+   "pillar": "supply_chain",
+   "title": "Sustainability Efforts",
+   "publisher": "Rituals Cosmetics",
+   "url": "https://www.rituals.com/en-nl/lp/sustainability-efforts",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "Rituals' Sustainability Efforts page states that Rituals is a B Corp, verified as meeting standards for social and environmental performance, transparency and accountability, that its refills carry the same product with less packaging, and that the company dedicates 10% of its annual net profit to causes that improve the wellbeing of people and planet through its 10% Profit for Impact pledge.",
+   "is_primary": 1
+  }
+ ],
+ "adidas": [
+  {
+   "pillar": "climate",
+   "title": "ESRS E1 Climate Change - Metrics and Targets",
+   "publisher": "adidas AG",
+   "url": "https://report.adidas-group.com/2025/en/group-management-report-sustainability-statement/esrs-e1-climate-change/metrics-and-targets.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "adidas' 2025 annual report states that it follows SBTi guidance for its climate targets to be aligned with a 1.5C pathway, that offsets and avoided emissions do not count toward its science-based targets, and sets out 2030 targets of a 70% reduction in Scope 1 and 2 emissions and a 42% reduction in Scope 3 emissions from a 2022 baseline, against which Scope 1 and 2 emissions were 22% above baseline and Scope 3 5% above baseline in the reporting year.",
+   "is_primary": 1
+  },
+  {
+   "pillar": "circular",
+   "title": "ESRS E5 Resource Use and Circular Economy - Overview",
+   "publisher": "adidas AG",
+   "url": "https://report.adidas-group.com/2025/en/group-management-report-sustainability-statement/esrs-e5-resource-use-and-circular-economy/overview.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "adidas' 2025 annual report states that product creation guidelines mandate the use of recycled and sustainably sourced renewable materials, and that it targets 100% third-party certified recycled polyester, achieved at 99% since 2023, and 100% third-party certified cotton, achieved since 2018.",
+   "is_primary": 0
+  },
+  {
+   "pillar": "pollution",
+   "title": "ESRS E2 Pollution - Overview",
+   "publisher": "adidas AG",
+   "url": "https://report.adidas-group.com/2025/en/group-management-report-sustainability-statement/esrs-e2-pollution/overview.html",
+   "source_type": "company_report",
+   "published_date": null,
+   "supports": "adidas' 2025 annual report states that its pollution targets focus on preventing and minimising water pollution and the use of substances of concern by its Tier 1 and Tier 2 suppliers, and reports that its wastewater discharge quality target was achieved at 90% against the 2025 target.",
+   "is_primary": 0
+  }
+ ]
+}
